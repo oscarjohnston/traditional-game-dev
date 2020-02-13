@@ -6,6 +6,8 @@ public class PlayerInput : MonoBehaviour
 {
     public float SPEED = 10.0f;
 
+    public string PlayerNumber = "1";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +17,8 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float VerticalTranslation = Input.GetAxis("Vertical") * SPEED;
-        float HorizontalTranslation = Input.GetAxis("Horizontal") * SPEED;
+        float VerticalTranslation = Input.GetAxis("Vertical" +  PlayerNumber) * SPEED;
+        float HorizontalTranslation = Input.GetAxis("Horizontal" + PlayerNumber) * SPEED;
 
         VerticalTranslation *= Time.deltaTime;
         HorizontalTranslation *= Time.deltaTime;
