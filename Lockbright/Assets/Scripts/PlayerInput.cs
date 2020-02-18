@@ -23,6 +23,6 @@ public class PlayerInput : MonoBehaviour
         VerticalTranslation *= Time.deltaTime;
         HorizontalTranslation *= Time.deltaTime;
 
-        transform.Translate(HorizontalTranslation, 0, VerticalTranslation);
+        transform.Translate(HorizontalTranslation, VerticalTranslation, 0);
     }
 }
