@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerInput : MonoBehaviour
 {
+    private float xInput, yInput;
     public float SPEED = 1.0f;
 
     public string PlayerNumber = "1";
@@ -12,27 +13,25 @@ public class PlayerInput : MonoBehaviour
     public Image SpeechBubble;
     public Text BubbleText;
 
-    private Rigidbody2D rb2d;
+    private Rigidbody2D Body;
 
     // Start is called before the first frame update
     void Start()
     {
         ToggleSpeechBubble(false);
-        rb2d = GetComponent<Rigidbody2D>();
+        Body = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        float VerticalTranslation = Input.GetAxis("Vertical" +  PlayerNumber) * SPEED;
-        float HorizontalTranslation = Input.GetAxis("Horizontal" + PlayerNumber) * SPEED;
 
-        VerticalTranslation *= Time.deltaTime;
-        HorizontalTranslation *= Time.deltaTime;
+        // Input
+        xInput = Input.GetAxis("Horizontal" +  PlayerNumber);
+        yInput = Input.GetAxis("Vertical" + PlayerNumber);
+        var moveVector = new Vector3(xInput, yInput, 0) * SPEED * Time.deltaTime;
 
-        //transform.Translate(HorizontalTranslation, VerticalTranslation, 0);
-        //rb2d.MovePosition(new Vector2(HorizontalTranslation, VerticalTranslation));
-        rb2d.velocity = new Vector2(HorizontalTranslation, VerticalTranslation);
+        Body.MovePosition(new Vector2(transform.position.x + moveVector.x, transform.position.y + moveVector.y));
     }
 
     /// <summary>
@@ -45,17 +44,17 @@ public class PlayerInput : MonoBehaviour
         BubbleText.enabled = changeTo;
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        print("Colliding!");
+        print("Player " + PlayerNumber + " has collided with" + collision.collider.name);
 
         ToggleSpeechBubble(true);
         BubbleText.text = "Life is pain";
     }
 
-    void OnTriggerExit2D(Collider2D collision)
+    void OnCollisionExit2D(Collision2D collision)
     {
         ToggleSpeechBubble(false);
     }
-    
+
 }
