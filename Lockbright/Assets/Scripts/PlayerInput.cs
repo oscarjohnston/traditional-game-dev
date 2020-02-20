@@ -12,6 +12,7 @@ public class PlayerInput : MonoBehaviour
 
     public Image SpeechBubble;
     public Text BubbleText;
+    private bool Interactable;
 
     private Rigidbody2D Body;
 
@@ -20,18 +21,21 @@ public class PlayerInput : MonoBehaviour
     {
         ToggleSpeechBubble(false);
         Body = GetComponent<Rigidbody2D>();
+
+        Interactable = true;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        // Input
+        // Input for movement
         xInput = Input.GetAxis("Horizontal" +  PlayerNumber);
         yInput = Input.GetAxis("Vertical" + PlayerNumber);
         var moveVector = new Vector3(xInput, yInput, 0) * SPEED * Time.deltaTime;
 
         Body.MovePosition(new Vector2(transform.position.x + moveVector.x, transform.position.y + moveVector.y));
+
     }
 
     /// <summary>
@@ -46,15 +50,36 @@ public class PlayerInput : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        print("Player " + PlayerNumber + " has collided with" + collision.collider.name);
+        print("Player " + PlayerNumber + " has collided with " + collision.collider.name);
 
-        ToggleSpeechBubble(true);
-        BubbleText.text = "Life is pain";
+        //ToggleSpeechBubble(true);
+       // BubbleText.text = "Life is pain";
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
         ToggleSpeechBubble(false);
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        // Interacte with what you're colliding with by pressing the A button
+        if(Interactable && Input.GetButton("A_Button_" + PlayerNumber))
+        {
+            Interactable = false;
+
+            // Set Interactable to true after 1 second
+            Invoke("SetInteractable", 0.2f);
+
+            print("Player " + PlayerNumber + " has interacted with " + collision.collider.name);
+            ToggleSpeechBubble(true);
+            BubbleText.text = "Wow! It's a " + collision.collider.name;
+        }
+    }
+
+    private void SetInteractable()
+    {
+        Interactable = true;
     }
 
 }
