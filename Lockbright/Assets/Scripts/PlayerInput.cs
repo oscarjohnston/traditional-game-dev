@@ -8,7 +8,7 @@ public class PlayerInput : MonoBehaviour
     private float xInput, yInput;
     public float SPEED = 1.0f;
 
-    public string PlayerNumber = "1";
+    public int PlayerNumber = 1;
 
     public Image SpeechBubble;
     public Text BubbleText;
