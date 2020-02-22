@@ -16,6 +16,8 @@ public class PlayerInput : MonoBehaviour
 
     private Rigidbody2D Body;
 
+    private bool AbleToChangePlayerNumber;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class PlayerInput : MonoBehaviour
         Body = GetComponent<Rigidbody2D>();
 
         Interactable = true;
+        AbleToChangePlayerNumber = true;
     }
 
     // Update is called once per frame
@@ -35,6 +38,18 @@ public class PlayerInput : MonoBehaviour
         var moveVector = new Vector3(xInput, yInput, 0) * SPEED * Time.deltaTime;
 
         Body.MovePosition(new Vector2(transform.position.x + moveVector.x, transform.position.y + moveVector.y));
+
+        // Trying to change character input
+        if(AbleToChangePlayerNumber && Input.GetButton("LB_Button_" + PlayerNumber))
+        {
+            //print("Player " + PlayerNumber + " has pressed the LB Button");
+            ChangePlayerNumberDown();
+        }
+        else if(AbleToChangePlayerNumber && Input.GetButton("RB_Button_" + PlayerNumber))
+        {
+            //print("Player " + PlayerNumber + " has pressed the RB Button");
+            ChangePlayerNumberUp();
+        }
 
     }
 
@@ -68,7 +83,7 @@ public class PlayerInput : MonoBehaviour
         {
             Interactable = false;
 
-            // Set Interactable to true after 1 second
+            // Set Interactable to true after 0.2 seconds
             Invoke("SetInteractable", 0.2f);
 
             print("Player " + PlayerNumber + " has interacted with " + collision.collider.name);
@@ -80,6 +95,39 @@ public class PlayerInput : MonoBehaviour
     private void SetInteractable()
     {
         Interactable = true;
+    }
+
+    private void ChangePlayerNumberUp()
+    {
+        if(AbleToChangePlayerNumber && PlayerNumber != 4)
+        {
+            AbleToChangePlayerNumber = false;
+            PlayerNumber++;
+
+            // Set Interactable to true after 0.2 seconds
+            Invoke("ActivatePlayerNumberChange", 1.0f);
+
+            print("Increased Player Number");
+        }
+    }
+
+    private void ChangePlayerNumberDown()
+    {
+        if (AbleToChangePlayerNumber && PlayerNumber != 1)
+        {
+            AbleToChangePlayerNumber = false;
+            PlayerNumber--;
+
+            // Set Interactable to true after 0.2 seconds
+            Invoke("ActivatePlayerNumberChange", 1.0f);
+
+            print("Decreased Player Number");
+        }
+    }
+
+    private void ActivatePlayerNumberChange()
+    {
+        AbleToChangePlayerNumber = true;
     }
 
 }
