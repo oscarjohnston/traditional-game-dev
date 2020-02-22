@@ -109,6 +109,16 @@ public class PlayerInput : MonoBehaviour
 
             print("Increased Player Number");
         }
+        else
+        {
+            AbleToChangePlayerNumber = false;
+            PlayerNumber = 1;
+
+            // Set Interactable to true after 0.2 seconds
+            Invoke("ActivatePlayerNumberChange", 1.0f);
+
+            print("Increased Player Number");
+        }
     }
 
     private void ChangePlayerNumberDown()
@@ -122,6 +132,16 @@ public class PlayerInput : MonoBehaviour
             Invoke("ActivatePlayerNumberChange", 1.0f);
 
             print("Decreased Player Number");
+        }
+        else
+        {
+            AbleToChangePlayerNumber = false;
+            PlayerNumber = 4;
+
+            // Set Interactable to true after 0.2 seconds
+            Invoke("ActivatePlayerNumberChange", 1.0f);
+
+            print("Increased Player Number");
         }
     }
 
