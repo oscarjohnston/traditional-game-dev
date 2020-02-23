@@ -10,18 +10,18 @@ public class PlayerInput : MonoBehaviour
 
     public int PlayerNumber = 1;
 
-    public Image SpeechBubble;
+    public GameObject SpeechBubble;
     public Text BubbleText;
     private bool Interactable;
 
     private Rigidbody2D Body;
 
     private bool AbleToChangePlayerNumber;
+    private float INTERACTABLE_TIME = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
-        ToggleSpeechBubble(false);
         Body = GetComponent<Rigidbody2D>();
 
         Interactable = true;
@@ -53,16 +53,6 @@ public class PlayerInput : MonoBehaviour
 
     }
 
-    /// <summary>
-    /// Toggles the speech bubble that goes over the player.
-    /// </summary>
-    /// <param name="changeTo">The state you want the bubble to be</param>
-    private void ToggleSpeechBubble(bool changeTo)
-    {
-        SpeechBubble.enabled = changeTo;
-        BubbleText.enabled = changeTo;
-    }
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         print("Player " + PlayerNumber + " has collided with " + collision.collider.name);
@@ -73,7 +63,7 @@ public class PlayerInput : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        ToggleSpeechBubble(false);
+        //ToggleSpeechBubble(false);
     }
 
     void OnCollisionStay2D(Collision2D collision)
@@ -83,11 +73,11 @@ public class PlayerInput : MonoBehaviour
         {
             Interactable = false;
 
-            // Set Interactable to true after 0.2 seconds
-            Invoke("SetInteractable", 0.2f);
+            // Set Interactable to true after wait
+            Invoke("SetInteractable", INTERACTABLE_TIME);
 
             print("Player " + PlayerNumber + " has interacted with " + collision.collider.name);
-            ToggleSpeechBubble(true);
+            ActivateSpeechBubble();
             BubbleText.text = "Wow! It's a " + collision.collider.name;
         }
     }
@@ -148,6 +138,17 @@ public class PlayerInput : MonoBehaviour
     private void ActivatePlayerNumberChange()
     {
         AbleToChangePlayerNumber = true;
+    }
+
+    private void ActivateSpeechBubble()
+    {
+        SpeechBubble.SetActive(true);
+        Invoke("DeactivateSpeechBubble", INTERACTABLE_TIME);
+    }
+
+    private void DeactivateSpeechBubble()
+    {
+        SpeechBubble.SetActive(false);
     }
 
 }

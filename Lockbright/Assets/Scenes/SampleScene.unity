@@ -120,6 +120,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &14072398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 799189106, guid: 45fbd0dd51e8cdf44a00d8915e6312d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 2265485377834366976}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &20420238
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +288,12 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &177979656 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1254647299, guid: 63ed065883981db4995668cf4e83d0c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 7820781319139772183}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &206130338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1764,6 +1776,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524530558}
   m_CullTransparentMesh: 0
+--- !u!1 &541588745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1797356738, guid: 8e2d4ab0f4fc6e3408f30f00042ad269,
+    type: 3}
+  m_PrefabInstance: {fileID: 2951271327453125803}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &550575745
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,6 +2337,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733832241}
   m_CullTransparentMesh: 0
+--- !u!1 &739083430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1554563867, guid: f3ba6f255f2294342b8bff1e57fd2f81,
+    type: 3}
+  m_PrefabInstance: {fileID: 4070121652253065926}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &817562535
 GameObject:
   m_ObjectHideFlags: 0
@@ -3877,7 +3901,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -30.00003}
+  m_AnchoredPosition: {x: 0, y: -30}
   m_SizeDelta: {x: 350, y: 450}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1246584702
@@ -6074,7 +6098,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1285.6998, y: -30.000061}
+  m_AnchoredPosition: {x: 1285.6998, y: -30.000122}
   m_SizeDelta: {x: 350, y: 450}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2115681233
@@ -6375,6 +6399,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 799189106, guid: 45fbd0dd51e8cdf44a00d8915e6312d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1745396705, guid: 45fbd0dd51e8cdf44a00d8915e6312d2, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -6543,6 +6571,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.21757899
       objectReference: {fileID: 0}
+    - target: {fileID: 2265485377095915925, guid: 45fbd0dd51e8cdf44a00d8915e6312d2,
+        type: 3}
+      propertyPath: SpeechBubble
+      value: 
+      objectReference: {fileID: 14072398}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45fbd0dd51e8cdf44a00d8915e6312d2, type: 3}
 --- !u!1001 &2951271327453125803
@@ -6552,10 +6585,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100704942, guid: 8e2d4ab0f4fc6e3408f30f00042ad269, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100704946, guid: 8e2d4ab0f4fc6e3408f30f00042ad269, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 1797356738, guid: 8e2d4ab0f4fc6e3408f30f00042ad269, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4000774612252156320, guid: 8e2d4ab0f4fc6e3408f30f00042ad269,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6611,6 +6652,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4000774612252156321, guid: 8e2d4ab0f4fc6e3408f30f00042ad269,
+        type: 3}
+      propertyPath: SpeechBubble
+      value: 
+      objectReference: {fileID: 541588745}
     - target: {fileID: 4000774612252156324, guid: 8e2d4ab0f4fc6e3408f30f00042ad269,
         type: 3}
       propertyPath: m_Name
@@ -6625,10 +6671,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 945193181, guid: f3ba6f255f2294342b8bff1e57fd2f81, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 945193185, guid: f3ba6f255f2294342b8bff1e57fd2f81, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 1554563867, guid: f3ba6f255f2294342b8bff1e57fd2f81, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4070121653363845122, guid: f3ba6f255f2294342b8bff1e57fd2f81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6684,6 +6738,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4070121653363845126, guid: f3ba6f255f2294342b8bff1e57fd2f81,
+        type: 3}
+      propertyPath: SpeechBubble
+      value: 
+      objectReference: {fileID: 739083430}
     - target: {fileID: 4070121653363845241, guid: f3ba6f255f2294342b8bff1e57fd2f81,
         type: 3}
       propertyPath: m_Name
@@ -6698,10 +6757,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1254647299, guid: 63ed065883981db4995668cf4e83d0c6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1704756275, guid: 63ed065883981db4995668cf4e83d0c6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1704756279, guid: 63ed065883981db4995668cf4e83d0c6, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 8356536716987322904, guid: 63ed065883981db4995668cf4e83d0c6,
+        type: 3}
+      propertyPath: SpeechBubble
+      value: 
+      objectReference: {fileID: 177979656}
     - target: {fileID: 8356536716987322905, guid: 63ed065883981db4995668cf4e83d0c6,
         type: 3}
       propertyPath: m_LocalPosition.x
