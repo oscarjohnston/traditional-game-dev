@@ -19,6 +19,16 @@ public class PlayerInput : MonoBehaviour
     private bool AbleToChangePlayerNumber;
     private float INTERACTABLE_TIME = 1f;
 
+    //Grabber Code
+    public bool grabbed;
+    RaycastHit2D hit;
+    public float distance = 5f;
+    public Transform holdpoint;
+
+    Vector3 previousGood = Vector3.zero;
+
+    public GameObject HeldItem;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +59,49 @@ public class PlayerInput : MonoBehaviour
         {
             //print("Player " + PlayerNumber + " has pressed the RB Button");
             ChangePlayerNumberUp();
+        }
+
+        //Grabber code
+        Vector3 dir = new Vector2(xInput, yInput);
+        if (dir == Vector3.zero)
+        {
+            dir = previousGood;
+        }
+        else
+        {
+            previousGood = dir;
+        }
+
+        if (Input.GetButton("A_Button_" + PlayerNumber))
+        {
+            if (!grabbed)
+            {
+
+                //So you don't pick yourself up
+                Physics2D.queriesStartInColliders = false;
+
+                //Raycast Zone of pickup
+                hit = Physics2D.Raycast(transform.position, dir * transform.localScale.x, distance);
+                Debug.DrawRay(transform.position, dir, Color.green);
+
+                //Makes sure you can actually pick item up before moving it
+                if (hit.collider != null && hit.collider.tag == "Item")
+                {
+                    grabbed = true;
+                    HeldItem = hit.collider.gameObject;
+                }
+            }
+            else if(!Physics2D.OverlapPoint(holdpoint.position))
+            {
+                grabbed = false;
+                HeldItem = null;
+            }
+        }
+
+        //Moves item to holdpoint
+        if (grabbed)
+        {
+            hit.collider.gameObject.transform.position = holdpoint.position;
         }
 
     }
