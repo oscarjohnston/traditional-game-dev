@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interaction : MonoBehaviour
+public class Interaction2 : MonoBehaviour
 {
     public GameObject reward;
     public Transform spawnPoint;
@@ -22,7 +22,8 @@ public class Interaction : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E) && !spawned)
+        GameObject test = collision.gameObject.GetComponent("HeldItem");
+        if (collision.gameObject.GetComponent("HeldItem").gameObject.name == "Cube" && Input.GetKeyDown(KeyCode.E) && !spawned)
         {
             print("Yay");
             Instantiate(reward, spawnPoint, true);

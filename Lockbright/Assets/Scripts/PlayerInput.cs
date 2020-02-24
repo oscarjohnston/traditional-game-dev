@@ -72,7 +72,7 @@ public class PlayerInput : MonoBehaviour
             previousGood = dir;
         }
 
-        if (Input.GetButton("A_Button_" + PlayerNumber))
+        if (Input.GetButtonDown("A_Button_" + PlayerNumber) || Input.GetKeyDown(KeyCode.Space))
         {
             if (!grabbed)
             {
