@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class PlayerInput : MonoBehaviour
@@ -28,6 +29,10 @@ public class PlayerInput : MonoBehaviour
     Vector3 previousGood = Vector3.zero;
 
     public GameObject HeldItem;
+
+    public UnityEvent InteractWithStove;
+    public UnityEvent InteractWithFridge;
+    public UnityEvent WinGame;
 
     // Start is called before the first frame update
     void Start()
@@ -72,11 +77,10 @@ public class PlayerInput : MonoBehaviour
             previousGood = dir;
         }
 
-        if (Input.GetButtonDown("A_Button_" + PlayerNumber) || Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButton("A_Button_" + PlayerNumber) || Input.GetKeyDown(KeyCode.Space))
         {
             if (!grabbed)
             {
-
                 //So you don't pick yourself up
                 Physics2D.queriesStartInColliders = false;
 
@@ -104,14 +108,17 @@ public class PlayerInput : MonoBehaviour
             hit.collider.gameObject.transform.position = holdpoint.position;
         }
 
+
+        // Win the protoype
+        if(HeldItem != null && HeldItem.name == "CharredKey")
+        {
+            WinGame.Invoke();
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         print("Player " + PlayerNumber + " has collided with " + collision.collider.name);
-
-        //ToggleSpeechBubble(true);
-       // BubbleText.text = "Life is pain";
     }
 
     void OnCollisionExit2D(Collision2D collision)
@@ -131,7 +138,23 @@ public class PlayerInput : MonoBehaviour
 
             print("Player " + PlayerNumber + " has interacted with " + collision.collider.name);
             ActivateSpeechBubble();
-            BubbleText.text = "Wow! It's a " + collision.collider.name;
+            BubbleText.text = "It's a " + collision.collider.name;
+
+            if(collision.gameObject.name == "Stove" && HeldItem.name == "Books")
+            {
+                print("Interacted with Stove, spawning key");
+                BubbleText.text = "Yay! A Key!";
+                InteractWithStove.Invoke();
+
+                HeldItem = null;
+                grabbed = false;
+            }
+            else if(collision.gameObject.name == "Fridge")
+            {
+                print("Interacted with Fridge, spawning books on floor");
+                BubbleText.text = "Books for the stove fell";
+                InteractWithFridge.Invoke();
+            }
         }
     }
 

@@ -22,11 +22,13 @@ public class Interaction : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        /*
         if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E) && !spawned)
         {
-            print("Yay");
+            print("Interacted with fridge, spawning book");
             Instantiate(reward, spawnPoint, true);
             spawned = true;
         }
+        */
     }
 }
