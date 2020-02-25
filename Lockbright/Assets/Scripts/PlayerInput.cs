@@ -50,7 +50,7 @@ public class PlayerInput : MonoBehaviour
         // Input for movement
         xInput = Input.GetAxis("Horizontal" +  PlayerNumber);
         yInput = Input.GetAxis("Vertical" + PlayerNumber);
-        var moveVector = new Vector3(xInput, yInput, 0) * SPEED * Time.deltaTime;
+        var moveVector = new Vector3(xInput, yInput, 0) * SPEED * Time.deltaTime * 100;
 
         Body.MovePosition(new Vector2(transform.position.x + moveVector.x, transform.position.y + moveVector.y));
 

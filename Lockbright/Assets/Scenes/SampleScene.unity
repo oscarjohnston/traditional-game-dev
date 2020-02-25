@@ -7285,6 +7285,11 @@ PrefabInstance:
       propertyPath: WinGame.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2265485377095915925, guid: 45fbd0dd51e8cdf44a00d8915e6312d2,
+        type: 3}
+      propertyPath: SPEED
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45fbd0dd51e8cdf44a00d8915e6312d2, type: 3}
 --- !u!1001 &2951271327453125803
@@ -7505,6 +7510,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InteractWithStove.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000774612252156321, guid: 8e2d4ab0f4fc6e3408f30f00042ad269,
+        type: 3}
+      propertyPath: SPEED
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4000774612252156324, guid: 8e2d4ab0f4fc6e3408f30f00042ad269,
         type: 3}
@@ -7732,6 +7742,11 @@ PrefabInstance:
       propertyPath: InteractWithFridge.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4070121653363845126, guid: f3ba6f255f2294342b8bff1e57fd2f81,
+        type: 3}
+      propertyPath: SPEED
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4070121653363845241, guid: f3ba6f255f2294342b8bff1e57fd2f81,
         type: 3}
       propertyPath: m_Name
@@ -7896,6 +7911,11 @@ PrefabInstance:
     - target: {fileID: 8356536716987322904, guid: 63ed065883981db4995668cf4e83d0c6,
         type: 3}
       propertyPath: InteractWithStove.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356536716987322904, guid: 63ed065883981db4995668cf4e83d0c6,
+        type: 3}
+      propertyPath: SPEED
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8356536716987322905, guid: 63ed065883981db4995668cf4e83d0c6,
