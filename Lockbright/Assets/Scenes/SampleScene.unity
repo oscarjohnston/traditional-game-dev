@@ -6899,6 +6899,8 @@ GameObject:
   - component: {fileID: 564832046}
   - component: {fileID: 564832045}
   - component: {fileID: 564832048}
+  - component: {fileID: 564832050}
+  - component: {fileID: 564832049}
   m_Layer: 0
   m_Name: Stove
   m_TagString: Untagged
@@ -7031,6 +7033,40 @@ MonoBehaviour:
   reward: {fileID: 5219302805056900968, guid: 6692953a75f66dc4daabb496f6592ee9, type: 3}
   spawnPoint: {fileID: 1884390392}
   spawned: 0
+--- !u!114 &564832049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564832043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiremnt: {fileID: 0}
+  reward: {fileID: 0}
+  spawnPoint: {fileID: 0}
+  spawned: 0
+  bubbleText: 
+--- !u!114 &564832050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564832043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiremnt: {fileID: 1968841780}
+  reward: {fileID: 986136747}
+  spawnPoint: {fileID: 0}
+  spawned: 0
+  bubbleText: I had a fun time!
 --- !u!1 &580583520
 GameObject:
   m_ObjectHideFlags: 0
@@ -8222,9 +8258,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiremnt: {fileID: 0}
   reward: {fileID: 5219302805056900968, guid: 6692953a75f66dc4daabb496f6592ee9, type: 3}
   spawnPoint: {fileID: 797820024}
   spawned: 0
+  bubbleText: 
 --- !u!1 &1006655856
 GameObject:
   m_ObjectHideFlags: 0

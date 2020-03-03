@@ -22,8 +22,14 @@ public class Interaction2 : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        PlayerInput test = collision.collider.GetComponent<PlayerInput>();
+
+        if (test != null)
+        {
+            GameObject item = test.HeldItem;
+        }
+
         /*
-        GameObject test = collision.gameObject.GetComponent("HeldItem");
         if (collision.gameObject.GetComponent("HeldItem").gameObject.name == "Cube" && Input.GetKeyDown(KeyCode.E) && !spawned)
         {
             print("Interacted with stove, spawning key");

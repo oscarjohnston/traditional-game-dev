@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
+    public GameObject requiremnt;
     public GameObject reward;
     public Transform spawnPoint;
     public bool spawned;
+    public string bubbleText = "";
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,21 @@ public class Interaction : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+       PlayerInput player = collision.collider.GetComponent<PlayerInput>();
+
+        player.BubbleText.text = bubbleText;
+
+        if (player != null)
+        {
+            // Is the player holding the right item?
+            if (player.HeldItem == requiremnt)
+            {
+                Destroy(player.HeldItem);
+                GameObject newItem = Instantiate(reward);
+                player.HeldItem = newItem;
+            }
+        }
+
         /*
         if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E) && !spawned)
         {
