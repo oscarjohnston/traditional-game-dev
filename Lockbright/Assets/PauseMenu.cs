@@ -24,7 +24,7 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
-    private void Resume()
+    public void Resume()
     {
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -36,6 +36,11 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 
 }
