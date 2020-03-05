@@ -22,7 +22,6 @@ public class PlayerInput : MonoBehaviour
 
     //Grabber Code
     public bool grabbed;
-    RaycastHit2D hit;
     public float distance = 5f;
     public Transform holdpoint;
 
@@ -81,31 +80,38 @@ public class PlayerInput : MonoBehaviour
         {
             if (!grabbed)
             {
-                //So you don't pick yourself up
-                Physics2D.queriesStartInColliders = false;
+                //Raycast Zone of pickup after shifting the pickup orgin down
+                Vector3 Adjustment = new Vector2(0, -0.5f);
+                Collider2D[] collide = Physics2D.OverlapBoxAll(transform.position + Adjustment + dir, new Vector2(1, 1), 0);
 
-                //Raycast Zone of pickup
-                hit = Physics2D.Raycast(transform.position, dir * transform.localScale.x, distance);
-                Debug.DrawRay(transform.position, dir, Color.green);
-
-                //Makes sure you can actually pick item up before moving it
-                if (hit.collider != null && hit.collider.tag == "Item")
+                // Search each collision looking for an item to pickup
+                foreach(Collider2D collision in collide)
                 {
-                    grabbed = true;
-                    HeldItem = hit.collider.gameObject;
+                    //Makes sure you can actually pick item up before moving it
+                    if (collision.tag == "Item")
+                    {
+                        grabbed = true;
+                        HeldItem = collision.gameObject;
+                    }
                 }
+                               
+
+                
             }
-            else if(!Physics2D.OverlapPoint(holdpoint.position))
+            //else if(!Physics2D.OverlapPoint(holdpoint.position))
+            else
             {
+                print("Dropped Item");
                 grabbed = false;
                 HeldItem = null;
             }
+
         }
 
         //Moves item to holdpoint
         if (grabbed)
         {
-            hit.collider.gameObject.transform.position = holdpoint.position;
+            HeldItem.transform.position = holdpoint.position;
         }
 
 
