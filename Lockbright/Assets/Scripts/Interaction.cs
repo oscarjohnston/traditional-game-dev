@@ -6,14 +6,14 @@ public class Interaction : MonoBehaviour
 {
     public GameObject requiremnt;
     public GameObject reward;
-    public Transform spawnPoint;
+    public Vector3 spawnPoint;
     public bool spawned;
-    public string bubbleText = "";
+    public string bubbleText;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        spawned = false;
     }
 
     // Update is called once per frame
@@ -24,28 +24,31 @@ public class Interaction : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-       PlayerInput player = collision.collider.GetComponent<PlayerInput>();
-
-        player.BubbleText.text = bubbleText;
-
-        if (player != null)
+        if (!spawned)
         {
-            // Is the player holding the right item?
-            if (player.HeldItem == requiremnt)
+            PlayerInput player = collision.collider.GetComponent<PlayerInput>();
+
+            player.BubbleText.text = bubbleText;
+
+            if (player != null)
             {
-                Destroy(player.HeldItem);
-                GameObject newItem = Instantiate(reward);
-                player.HeldItem = newItem;
+                // Is the player holding the right item?
+                if (player.HeldItem == requiremnt)
+                {
+                    Destroy(player.HeldItem);
+                    Instantiate(reward, spawnPoint, new Quaternion(0, 0, 0, 0));
+                    spawned = true;
+                }
             }
-        }
 
-        /*
-        if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E) && !spawned)
-        {
-            print("Interacted with fridge, spawning book");
-            Instantiate(reward, spawnPoint, true);
-            spawned = true;
+            /*
+            if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E) && !spawned)
+            {
+                print("Interacted with fridge, spawning book");
+                Instantiate(reward, spawnPoint, true);
+                spawned = true;
+            }
+            */
         }
-        */
     }
 }
