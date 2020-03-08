@@ -11,7 +11,7 @@ public class PlayerInput : MonoBehaviour
     public float SPEED = 1.0f;
 
     //Distinguish players from each other
-    public int PlayerNumber = 1;
+    public int PlayerNumber;
 
     //Speech Bubble holders
     public GameObject SpeechBubble;
@@ -22,7 +22,6 @@ public class PlayerInput : MonoBehaviour
     private Rigidbody2D Body;
 
     //Player Switching mechanic
-    private bool AbleToChangePlayerNumber;
     private float INTERACTABLE_TIME = 1f;
 
     //Grabber Code
@@ -42,19 +41,27 @@ public class PlayerInput : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(PlayerNumber == 0) { PlayerNumber = 1; }
-
         //Sets up body
         Body = GetComponent<Rigidbody2D>();
 
         //Sets up ability to change player
         Interactable = true;
-        AbleToChangePlayerNumber = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Change character input
+        if (Input.GetButtonDown("LB_Button_" + PlayerNumber))
+        {
+            Invoke("ChangePlayerNumberDown", 1f);
+            return;
+        }
+        else if (Input.GetButtonDown("RB_Button_" + PlayerNumber))
+        {
+            Invoke("ChangePlayerNumberUp", 1f);
+            return;
+        }
 
         // Input for movement
         xInput = Input.GetAxis("Horizontal" +  PlayerNumber);
@@ -63,17 +70,6 @@ public class PlayerInput : MonoBehaviour
 
         Body.MovePosition(new Vector2(transform.position.x + moveVector.x, transform.position.y + moveVector.y));
 
-        // Trying to change character input
-        if(AbleToChangePlayerNumber && Input.GetButton("LB_Button_" + PlayerNumber))
-        {
-            //print("Player " + PlayerNumber + " has pressed the LB Button");
-            ChangePlayerNumberDown();
-        }
-        else if(AbleToChangePlayerNumber && Input.GetButton("RB_Button_" + PlayerNumber))
-        {
-            //print("Player " + PlayerNumber + " has pressed the RB Button");
-            ChangePlayerNumberUp();
-        }
 
         //Grabber code
         Vector3 dir = new Vector2(xInput, yInput);
@@ -86,43 +82,7 @@ public class PlayerInput : MonoBehaviour
             previousGood = dir;
         }
 
-        // Press A
-        if (Input.GetButtonDown("A_Button_" + PlayerNumber))
-        {
-            print("Player " + PlayerNumber + " has pressed A");
-        }
-
-        // Press B
-        if (Input.GetButtonDown("B_Button_" + PlayerNumber))
-        {
-            print("Player " + PlayerNumber + " has pressed B");
-        }
-
-        // Press Y
-        if (Input.GetButtonDown("Y_Button_" + PlayerNumber))
-        {
-            print("Player " + PlayerNumber + " has pressed Y");
-        }
-
-        // Press X
-        if (Input.GetButtonDown("X_Button_" + PlayerNumber))
-        {
-            print("Player " + PlayerNumber + " has pressed X");
-        }
-
-        // Press RB
-        if (Input.GetButtonDown("RB_Button_" + PlayerNumber))
-        {
-            print("Player " + PlayerNumber + " has pressed RB");
-        }
-
-        // Press LB
-        if (Input.GetButtonDown("LB_Button_" + PlayerNumber))
-        {
-            print("Player " + PlayerNumber + " has pressed LB");
-        }
-
-        if (Input.GetButton("A_Button_" + PlayerNumber) || Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("A_Button_" + PlayerNumber) || Input.GetKeyDown(KeyCode.Space))
         {
             if (!grabbed)
             {
@@ -181,7 +141,7 @@ public class PlayerInput : MonoBehaviour
     void OnCollisionStay2D(Collision2D collision)
     {
         // Interacte with what you're colliding with by pressing the A button
-        if(Interactable && Input.GetButton("A_Button_" + PlayerNumber))
+        if(Interactable && Input.GetButtonDown("A_Button_" + PlayerNumber))
         {
             Interactable = false;
 
@@ -215,57 +175,48 @@ public class PlayerInput : MonoBehaviour
         Interactable = true;
     }
 
+    /// <summary>
+    /// 1 -> 4
+    /// 2 -> 1
+    /// 3 -> 2
+    /// 4 -> 3
+    /// </summary>
+    private int shiftRight(int PlayerNumber)
+    {
+        if(PlayerNumber == 1) { return 4; }
+        else { return PlayerNumber - 1; }
+    }
+
+    /// <summary>
+    /// 1 -> 2
+    /// 2 -> 3
+    /// 3 -> 4
+    /// 4 -> 1
+    /// </summary>
+    private int shiftLeft(int PlayerNumber)
+    {
+        if (PlayerNumber == 4) { return 1; }
+        else { return PlayerNumber + 1; }
+    }
+
     private void ChangePlayerNumberUp()
     {
-        if(AbleToChangePlayerNumber && PlayerNumber != 4)
-        {
-            AbleToChangePlayerNumber = false;
-            PlayerNumber++;
+        GameObject.Find("Player 1").GetComponent<PlayerInput>().PlayerNumber = shiftRight(GameObject.Find("Player 1").GetComponent<PlayerInput>().PlayerNumber);
+        GameObject.Find("Player 2").GetComponent<PlayerInput>().PlayerNumber = shiftRight(GameObject.Find("Player 2").GetComponent<PlayerInput>().PlayerNumber);
+        GameObject.Find("Player 3").GetComponent<PlayerInput>().PlayerNumber = shiftRight(GameObject.Find("Player 3").GetComponent<PlayerInput>().PlayerNumber);
+        GameObject.Find("Player 4").GetComponent<PlayerInput>().PlayerNumber = shiftRight(GameObject.Find("Player 4").GetComponent<PlayerInput>().PlayerNumber);
 
-            // Set Interactable to true after 0.2 seconds
-            Invoke("ActivatePlayerNumberChange", 1.0f);
-
-            print("Increased Player Number");
-        }
-        else
-        {
-            AbleToChangePlayerNumber = false;
-            PlayerNumber = 1;
-
-            // Set Interactable to true after 0.2 seconds
-            Invoke("ActivatePlayerNumberChange", 1.0f);
-
-            print("Increased Player Number");
-        }
+        print("Players shift right");
     }
 
     private void ChangePlayerNumberDown()
     {
-        if (AbleToChangePlayerNumber && PlayerNumber != 1)
-        {
-            AbleToChangePlayerNumber = false;
-            PlayerNumber--;
+        GameObject.Find("Player 1").GetComponent<PlayerInput>().PlayerNumber = shiftLeft(GameObject.Find("Player 1").GetComponent<PlayerInput>().PlayerNumber);
+        GameObject.Find("Player 2").GetComponent<PlayerInput>().PlayerNumber = shiftLeft(GameObject.Find("Player 2").GetComponent<PlayerInput>().PlayerNumber);
+        GameObject.Find("Player 3").GetComponent<PlayerInput>().PlayerNumber = shiftLeft(GameObject.Find("Player 3").GetComponent<PlayerInput>().PlayerNumber);
+        GameObject.Find("Player 4").GetComponent<PlayerInput>().PlayerNumber = shiftLeft(GameObject.Find("Player 4").GetComponent<PlayerInput>().PlayerNumber);
 
-            // Set Interactable to true after 0.2 seconds
-            Invoke("ActivatePlayerNumberChange", 1.0f);
-
-            print("Decreased Player Number");
-        }
-        else
-        {
-            AbleToChangePlayerNumber = false;
-            PlayerNumber = 4;
-
-            // Set Interactable to true after 0.2 seconds
-            Invoke("ActivatePlayerNumberChange", 1.0f);
-
-            print("Increased Player Number");
-        }
-    }
-
-    private void ActivatePlayerNumberChange()
-    {
-        AbleToChangePlayerNumber = true;
+        print("Players shift left");
     }
 
     private void ActivateSpeechBubble()
