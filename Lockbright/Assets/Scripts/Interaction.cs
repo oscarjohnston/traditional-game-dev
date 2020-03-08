@@ -24,14 +24,14 @@ public class Interaction : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (!spawned)
+        if (!spawned && collision.gameObject.tag == "Player")
         {
             PlayerInput player = collision.collider.GetComponent<PlayerInput>();
 
-            player.BubbleText.text = bubbleText;
-
-            if (player != null)
+            if(player != null && Input.GetButtonDown("A_Button_" + player.PlayerNumber))
             {
+                player.BubbleText.text = bubbleText;
+
                 // Is the player holding the right item?
                 if (player.HeldItem == requiremnt)
                 {
@@ -40,15 +40,6 @@ public class Interaction : MonoBehaviour
                     spawned = true;
                 }
             }
-
-            /*
-            if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E) && !spawned)
-            {
-                print("Interacted with fridge, spawning book");
-                Instantiate(reward, spawnPoint, true);
-                spawned = true;
-            }
-            */
         }
     }
 }

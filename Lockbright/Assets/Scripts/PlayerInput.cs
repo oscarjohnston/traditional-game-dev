@@ -10,13 +10,12 @@ public class PlayerInput : MonoBehaviour
     private float xInput, yInput;
     public float SPEED = 1.0f;
 
-    //Distinguish players from each other
+    //Distinguish player's input from each other
     public int PlayerNumber;
 
     //Speech Bubble holders
     public GameObject SpeechBubble;
     public Text BubbleText;
-    private bool Interactable;
 
     //Body holder
     private Rigidbody2D Body;
@@ -43,9 +42,6 @@ public class PlayerInput : MonoBehaviour
     {
         //Sets up body
         Body = GetComponent<Rigidbody2D>();
-
-        //Sets up ability to change player
-        Interactable = true;
     }
 
     // Update is called once per frame
@@ -54,12 +50,12 @@ public class PlayerInput : MonoBehaviour
         // Change character input
         if (Input.GetButtonDown("LB_Button_" + PlayerNumber))
         {
-            Invoke("ChangePlayerNumberDown", 1f);
+            Invoke("ChangePlayerNumberDown", INTERACTABLE_TIME);
             return;
         }
         else if (Input.GetButtonDown("RB_Button_" + PlayerNumber))
         {
-            Invoke("ChangePlayerNumberUp", 1f);
+            Invoke("ChangePlayerNumberUp", INTERACTABLE_TIME);
             return;
         }
 
@@ -82,6 +78,13 @@ public class PlayerInput : MonoBehaviour
             previousGood = dir;
         }
 
+        // B Button Pressed
+        if (Input.GetButtonDown("B_Button_" + PlayerNumber))
+        {
+            DropItem();
+        }
+
+        // A Button Pressed
         if (Input.GetButtonDown("A_Button_" + PlayerNumber) || Input.GetKeyDown(KeyCode.Space))
         {
             if (!grabbed)
@@ -100,55 +103,64 @@ public class PlayerInput : MonoBehaviour
                         HeldItem = collision.gameObject;
                     }
                 }
-                               
-
-                
             }
-            //else if(!Physics2D.OverlapPoint(holdpoint.position))
-            else
-            {
-                print("Dropped Item");
-                grabbed = false;
-                HeldItem = null;
-            }
-
         }
 
-        //Moves item to holdpoint
+        // X Button Pressed
+        if (Input.GetButtonDown("X_Button_" + PlayerNumber))
+        {
+            print(this.name + " tried to inspect");
+        }
+
+        // Y Button Pressed
+        if (Input.GetButtonDown("Y_Button_" + PlayerNumber))
+        {
+            print(this.name + " just used their ability");
+        }
+
+        // If an item is being held, then tell that game object to move to the player's hold point with the player's movement
         if (grabbed)
         {
             HeldItem.transform.position = holdpoint.position;
         }
 
 
-        // Win the protoype
+        // Win the prototype
         if(HeldItem != null && HeldItem.name == "CharredKey")
         {
             WinGame.Invoke();
         }
     }
 
+    /// <summary>
+    /// This function will drop an item if there is one. This is done by dereferncing the item held
+    /// </summary>
+    void DropItem()
+    {
+        if (grabbed)
+        {
+            print("Dropped Item");
+            HeldItem = null;
+            grabbed = false;
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        print("Player " + PlayerNumber + " has collided with " + collision.collider.name);
+        print(this.name + " has collided with " + collision.collider.name);
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        //ToggleSpeechBubble(false);
     }
 
     void OnCollisionStay2D(Collision2D collision)
     {
         // Interacte with what you're colliding with by pressing the A button
-        if(Interactable && Input.GetButtonDown("A_Button_" + PlayerNumber))
+        if(Input.GetButtonDown("A_Button_" + PlayerNumber))
         {
-            Interactable = false;
 
-            // Set Interactable to true after wait
-            Invoke("SetInteractable", INTERACTABLE_TIME);
-
-            print("Player " + PlayerNumber + " has interacted with " + collision.collider.name);
+            print(this.name + " has interacted with " + collision.collider.name);
             ActivateSpeechBubble();
             BubbleText.text = "It's a " + collision.collider.name;
 
@@ -168,11 +180,6 @@ public class PlayerInput : MonoBehaviour
                 InteractWithFridge.Invoke();
             }
         }
-    }
-
-    private void SetInteractable()
-    {
-        Interactable = true;
     }
 
     /// <summary>
