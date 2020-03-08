@@ -42,6 +42,8 @@ public class PlayerInput : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(PlayerNumber == 0) { PlayerNumber = 1; }
+
         //Sets up body
         Body = GetComponent<Rigidbody2D>();
 
@@ -84,10 +86,40 @@ public class PlayerInput : MonoBehaviour
             previousGood = dir;
         }
 
-        // Press B
-        if(Input.GetButtonDown("B_Button_" + PlayerNumber))
+        // Press A
+        if (Input.GetButtonDown("A_Button_" + PlayerNumber))
         {
-            print("Player " + PlayerNumber + " has pressed the B button successfully");
+            print("Player " + PlayerNumber + " has pressed A");
+        }
+
+        // Press B
+        if (Input.GetButtonDown("B_Button_" + PlayerNumber))
+        {
+            print("Player " + PlayerNumber + " has pressed B");
+        }
+
+        // Press Y
+        if (Input.GetButtonDown("Y_Button_" + PlayerNumber))
+        {
+            print("Player " + PlayerNumber + " has pressed Y");
+        }
+
+        // Press X
+        if (Input.GetButtonDown("X_Button_" + PlayerNumber))
+        {
+            print("Player " + PlayerNumber + " has pressed X");
+        }
+
+        // Press RB
+        if (Input.GetButtonDown("RB_Button_" + PlayerNumber))
+        {
+            print("Player " + PlayerNumber + " has pressed RB");
+        }
+
+        // Press LB
+        if (Input.GetButtonDown("LB_Button_" + PlayerNumber))
+        {
+            print("Player " + PlayerNumber + " has pressed LB");
         }
 
         if (Input.GetButton("A_Button_" + PlayerNumber) || Input.GetKeyDown(KeyCode.Space))
