@@ -106,6 +106,17 @@ public class PlayerInput : MonoBehaviour
             DropItem();
         }
 
+        // X Button Pressed
+        if(Input.GetButtonDown("X_Button_" + PlayerNumber))
+        {
+            if(grabbed)
+            {
+                SpeechBubble.SetActive(true);
+                BubbleText.text = "Looks like I'm holding " + HeldItem.name;
+                Invoke("DeactivateSpeechBubble", 4f);
+            }
+        }
+
         // A Button Pressed
         if (Input.GetButtonDown("A_Button_" + PlayerNumber) || Input.GetKeyDown(KeyCode.Space))
         {
@@ -133,16 +144,25 @@ public class PlayerInput : MonoBehaviour
             }
         }
 
-        // X Button Pressed
-        if (Input.GetButtonDown("X_Button_" + PlayerNumber))
-        {
-            print(this.name + " tried to inspect");
-        }
-
         // Y Button Pressed
         if (Input.GetButtonDown("Y_Button_" + PlayerNumber))
         {
             print(this.name + " just used their ability");
+
+            // If scholar...
+            if(this.gameObject.name == "Player 3")
+            {
+                switch (HeldItem.name)
+                {
+                    case "Books":
+                        BubbleText.text = "Whatever the book says";
+                        break;
+                    case "Cookbook":
+                        // TODO: Activate speechbubble
+                        BubbleText.text = "Cultist Wine: Tastes much like blood and is attractive to water-dwellers. Combine Pale Tonic, Fresh Mossflower, and Pomegranate together; then warm to body temperature.";
+                        break;
+                }
+            }
         }
 
         // If an item is being held, then tell that game object to move to the player's hold point with the player's movement
@@ -186,7 +206,6 @@ public class PlayerInput : MonoBehaviour
         // Interacte with what you're colliding with by pressing the A button
         if(Input.GetButtonDown("A_Button_" + PlayerNumber))
         {
-
             print(this.name + " has interacted with " + collision.collider.name);
             ActivateSpeechBubble();
             BubbleText.text = "It's a " + collision.collider.name;

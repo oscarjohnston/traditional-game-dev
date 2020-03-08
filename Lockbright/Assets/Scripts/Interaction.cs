@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
-    public GameObject requiremnt;
+    public GameObject requirement;
     public GameObject reward;
     public Vector3 spawnPoint;
     public bool spawned;
@@ -33,10 +33,18 @@ public class Interaction : MonoBehaviour
                 player.BubbleText.text = bubbleText;
 
                 // Is the player holding the right item?
-                if (player.HeldItem == requiremnt)
+                if (player.HeldItem == requirement)
                 {
                     Destroy(player.HeldItem);
-                    Instantiate(reward, spawnPoint, new Quaternion(0, 0, 0, 0));
+                    if(reward != null) 
+                    { 
+                        player.HeldItem = reward;
+                    }
+                    else
+                    {
+                        player.grabbed = false;
+                    }
+                    //Instantiate(reward, spawnPoint, new Quaternion(0, 0, 0, 0));
                     spawned = true;
                 }
             }
