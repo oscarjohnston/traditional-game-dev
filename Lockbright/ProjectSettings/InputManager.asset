@@ -258,7 +258,7 @@ InputManager:
     sensitivity: 1000
     snap: 0
     invert: 0
-    type: 2
+    type: 0
     axis: 0
     joyNum: 1
   - serializedVersion: 3
@@ -274,9 +274,9 @@ InputManager:
     sensitivity: 1000
     snap: 0
     invert: 0
-    type: 2
+    type: 0
     axis: 0
-    joyNum: 1
+    joyNum: 2
   - serializedVersion: 3
     m_Name: A_Button_3
     descriptiveName: 
@@ -290,9 +290,9 @@ InputManager:
     sensitivity: 1000
     snap: 0
     invert: 0
-    type: 2
+    type: 0
     axis: 0
-    joyNum: 1
+    joyNum: 3
   - serializedVersion: 3
     m_Name: A_Button_4
     descriptiveName: 
@@ -306,9 +306,73 @@ InputManager:
     sensitivity: 1000
     snap: 0
     invert: 0
-    type: 2
+    type: 0
+    axis: 0
+    joyNum: 4
+  - serializedVersion: 3
+    m_Name: B_Button_1
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: joystick button 1
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
     axis: 0
     joyNum: 1
+  - serializedVersion: 3
+    m_Name: B_Button_2
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: joystick button 1
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 2
+  - serializedVersion: 3
+    m_Name: B_Button_3
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: joystick button 1
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 3
+  - serializedVersion: 3
+    m_Name: B_Button_4
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: joystick button 1
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 4
   - serializedVersion: 3
     m_Name: LB_Button_1
     descriptiveName: 
@@ -322,7 +386,7 @@ InputManager:
     sensitivity: 1000
     snap: 0
     invert: 0
-    type: 2
+    type: 0
     axis: 0
     joyNum: 1
   - serializedVersion: 3
@@ -338,7 +402,7 @@ InputManager:
     sensitivity: 1000
     snap: 0
     invert: 0
-    type: 2
+    type: 0
     axis: 0
     joyNum: 2
   - serializedVersion: 3
@@ -354,7 +418,7 @@ InputManager:
     sensitivity: 1000
     snap: 0
     invert: 0
-    type: 2
+    type: 0
     axis: 0
     joyNum: 3
   - serializedVersion: 3
@@ -370,7 +434,7 @@ InputManager:
     sensitivity: 1000
     snap: 0
     invert: 0
-    type: 2
+    type: 0
     axis: 0
     joyNum: 4
   - serializedVersion: 3
@@ -386,7 +450,7 @@ InputManager:
     sensitivity: 1000
     snap: 0
     invert: 0
-    type: 2
+    type: 0
     axis: 0
     joyNum: 1
   - serializedVersion: 3
@@ -402,7 +466,7 @@ InputManager:
     sensitivity: 1000
     snap: 0
     invert: 0
-    type: 2
+    type: 0
     axis: 0
     joyNum: 2
   - serializedVersion: 3
@@ -418,7 +482,7 @@ InputManager:
     sensitivity: 1000
     snap: 0
     invert: 0
-    type: 2
+    type: 0
     axis: 0
     joyNum: 3
   - serializedVersion: 3
@@ -434,6 +498,6 @@ InputManager:
     sensitivity: 1000
     snap: 0
     invert: 0
-    type: 2
+    type: 0
     axis: 0
     joyNum: 4

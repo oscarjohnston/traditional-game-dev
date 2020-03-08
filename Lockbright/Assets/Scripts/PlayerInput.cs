@@ -76,6 +76,12 @@ public class PlayerInput : MonoBehaviour
             previousGood = dir;
         }
 
+        // Press B
+        if(Input.GetButtonDown("B_Button_" + PlayerNumber))
+        {
+            print("Player " + PlayerNumber + " has pressed the B button successfully");
+        }
+
         if (Input.GetButton("A_Button_" + PlayerNumber) || Input.GetKeyDown(KeyCode.Space))
         {
             if (!grabbed)
