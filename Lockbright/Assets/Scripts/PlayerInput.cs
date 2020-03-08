@@ -27,6 +27,8 @@ public class PlayerInput : MonoBehaviour
     public bool grabbed;
     public float distance = 5f;
     public Transform holdpoint;
+    private bool PromptOn = false;
+    private GameObject PromptObject = null;
 
     Vector3 previousGood = Vector3.zero;
 
@@ -47,6 +49,26 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Don't progress further with input if the prompt is on
+        if (PromptOn)
+        {
+            // Confirm pickup
+            if (Input.GetButtonDown("A_Button_" + PlayerNumber))
+            {
+                grabbed = true;
+                HeldItem = PromptObject;
+                SpeechBubble.SetActive(false);
+                PromptOn = false;
+            }
+            // Deny pickup
+            else if(Input.GetButtonDown("B_Button_" + PlayerNumber))
+            {
+                SpeechBubble.SetActive(false);
+                PromptOn = false;
+            }
+            return;
+        }
+
         // Change character input
         if (Input.GetButtonDown("LB_Button_" + PlayerNumber))
         {
@@ -96,11 +118,16 @@ public class PlayerInput : MonoBehaviour
                 // Search each collision looking for an item to pickup
                 foreach(Collider2D collision in collide)
                 {
-                    //Makes sure you can actually pick item up before moving it
+                    // Make sure you can actually pick item up before moving it
                     if (collision.tag == "Item")
                     {
-                        grabbed = true;
-                        HeldItem = collision.gameObject;
+                        // Prompt player to pick up item
+                        SpeechBubble.SetActive(true);
+                        BubbleText.text = "Do you want to pick this " + collision.name + " up?\n A : Pickup    B : Ignore";
+
+                        PromptOn = true;
+                        PromptObject = collision.gameObject;
+                        return;
                     }
                 }
             }
