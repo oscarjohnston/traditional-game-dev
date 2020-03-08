@@ -6,17 +6,22 @@ using UnityEngine.UI;
 
 public class PlayerInput : MonoBehaviour
 {
+    //Movement
     private float xInput, yInput;
     public float SPEED = 1.0f;
 
+    //Distinguish players from each other
     public int PlayerNumber = 1;
 
+    //Speech Bubble holders
     public GameObject SpeechBubble;
     public Text BubbleText;
     private bool Interactable;
 
+    //Body holder
     private Rigidbody2D Body;
 
+    //Player Switching mechanic
     private bool AbleToChangePlayerNumber;
     private float INTERACTABLE_TIME = 1f;
 
@@ -29,6 +34,7 @@ public class PlayerInput : MonoBehaviour
 
     public GameObject HeldItem;
 
+    //Unity Events to win prototype
     public UnityEvent InteractWithStove;
     public UnityEvent InteractWithFridge;
     public UnityEvent WinGame;
@@ -36,8 +42,10 @@ public class PlayerInput : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Sets up body
         Body = GetComponent<Rigidbody2D>();
 
+        //Sets up ability to change player
         Interactable = true;
         AbleToChangePlayerNumber = true;
     }
