@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interaction2 : MonoBehaviour
+public class StoveScript : MonoBehaviour
 {
     public GameObject reward;
     public Transform spawnPoint;
