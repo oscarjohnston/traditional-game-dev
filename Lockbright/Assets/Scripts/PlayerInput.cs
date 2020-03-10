@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class PlayerInput : MonoBehaviour
 {
-    // UI Controller
+    // Controllers
     public UIController ui_Controller;
+    public GameController game_controller;
 
     //Movement
     private float xInput, yInput;
@@ -45,7 +46,6 @@ public class PlayerInput : MonoBehaviour
     // Unity Events to win prototype
     public UnityEvent InteractWithStove;
     public UnityEvent InteractWithFridge;
-    public UnityEvent WinGame;
 
     // Start is called before the first frame update
     void Start()
@@ -168,7 +168,7 @@ public class PlayerInput : MonoBehaviour
             foreach (Collider2D collision in collide)
             {
                 // Make sure you can actually pick item up before moving it
-                if (collision.tag == "Item")
+                if (collision.tag == "Item" && collision.gameObject != HeldItem)
                 {
                     if (!grabbed)
                     {
@@ -229,7 +229,7 @@ public class PlayerInput : MonoBehaviour
         // Win the prototype
         if(HeldItem != null && HeldItem.name == "CharredKey")
         {
-            WinGame.Invoke();
+            game_controller.InvokeWinGameEvent();
         }
     }
 
