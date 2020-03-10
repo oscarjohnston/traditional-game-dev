@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class PlayerInput : MonoBehaviour
 {
+    // UI Controller
+    public UIController ui_Controller;
+
     //Movement
     private float xInput, yInput;
     public float SPEED = 1.0f;
@@ -49,6 +52,9 @@ public class PlayerInput : MonoBehaviour
     {
         //Sets up body
         Body = GetComponent<Rigidbody2D>();
+
+        // Initialize UI Controller
+        //ui_Controller = (UIController)GameObject.Find("UI Controller");
     }
 
     // Update is called once per frame
@@ -193,7 +199,7 @@ public class PlayerInput : MonoBehaviour
         {
             print(this.name + " just used their ability");
 
-            // TODO: Activate particle effects for pressing Y
+            ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
 
             // Call the correct ability based on object name
             switch (this.gameObject.name)
