@@ -5,6 +5,8 @@ using UnityEngine;
 public class Interaction : MonoBehaviour
 {
     public GameObject requirement;
+    public string PlayerRequirement;
+
     public GameObject reward;
     public Vector3 spawnPoint;
     public bool spawned;
@@ -32,8 +34,8 @@ public class Interaction : MonoBehaviour
             {
                 player.BubbleText.text = bubbleText;
 
-                // Is the player holding the right item?
-                if (player.HeldItem == requirement)
+                // Is the player holding the right item? (and optionally the correct Player?)
+                if (player.HeldItem == requirement && (PlayerRequirement != null && player.name.Equals(PlayerRequirement)))
                 {
                     Destroy(player.HeldItem);
                     if(reward != null) 

@@ -43,6 +43,10 @@ public class PlayerInput : MonoBehaviour
 
     public GameObject HeldItem;
 
+    // Sprite UI
+    public Image defaultItem;
+    public Image HeldItemImage;
+
     // Unity Events to win prototype
     public UnityEvent InteractWithStove;
     public UnityEvent InteractWithFridge;
@@ -73,6 +77,7 @@ public class PlayerInput : MonoBehaviour
                 PickupPromptOn = false;
 
                 // TODO: Put into UI Inventory
+                HeldItemImage.sprite = HeldItem.GetComponent<Image>().sprite;
             }
             // Deny pickup
             else if(Input.GetButtonDown("B_Button_" + PlayerNumber))
@@ -98,6 +103,7 @@ public class PlayerInput : MonoBehaviour
                 SwapPromptOn = false;
 
                 // TODO: Put into UI Inventory
+                HeldItemImage.sprite = HeldItem.GetComponent<Image>().sprite;
             }
             // Deny pickup
             else if (Input.GetButtonDown("B_Button_" + PlayerNumber))
@@ -144,6 +150,7 @@ public class PlayerInput : MonoBehaviour
         {
             DropItem();
             // TODO: Take out of UI Inventory
+            HeldItemImage.sprite = defaultItem.sprite;
         }
 
         // X Button Pressed
