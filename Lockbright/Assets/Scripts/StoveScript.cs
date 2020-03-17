@@ -4,38 +4,47 @@ using UnityEngine;
 
 public class StoveScript : MonoBehaviour
 {
-    public GameObject reward;
-    public Transform spawnPoint;
-    public bool spawned;
+    // Controller for particle
+    public UIController game;
 
-    // Start is called before the first frame update
+    // Bollean for identifying if the stove is on
+    private bool StoveIsLit;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        StoveIsLit = false;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        PlayerInput test = collision.collider.GetComponent<PlayerInput>();
-
-        if (test != null)
+        // Try to turn the stove on if it's not lit yet
+        if (!StoveIsLit)
         {
-            GameObject item = test.HeldItem;
+            PlayerInput player = collision.collider.GetComponent<PlayerInput>();
+
+            // If the burner presses Y, light the stove
+            if (player != null && Input.GetButtonDown("Y_Button_3") && player.PlayerNumber == 3)
+            {
+                StoveIsLit = true;
+                game.FireTurnOnStove();
+
+                print("Turning on stove");
+            }
         }
 
-        /*
-        if (collision.gameObject.GetComponent("HeldItem").gameObject.name == "Cube" && Input.GetKeyDown(KeyCode.E) && !spawned)
+        // Otherwise turn it off
+        else
         {
-            print("Interacted with stove, spawning key");
-            Instantiate(reward, spawnPoint, true);
-            spawned = true;
+            PlayerInput player = collision.collider.GetComponent<PlayerInput>();
+
+            // If the burner presses Y, light the stove
+            if (player != null && Input.GetButtonDown("Y_Button_3") && player.PlayerNumber == 3)
+            {
+                StoveIsLit = false;
+                game.FireTurnOffStove();
+
+                print("Turning off stove");
+            }
         }
-        */
     }
 }
