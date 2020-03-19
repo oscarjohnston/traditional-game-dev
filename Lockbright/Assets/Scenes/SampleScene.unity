@@ -13199,6 +13199,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1963840516, guid: 45fbd0dd51e8cdf44a00d8915e6312d2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2265485377095915920, guid: 45fbd0dd51e8cdf44a00d8915e6312d2,
         type: 3}
       propertyPath: m_Name
@@ -13305,6 +13309,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 1006655860, guid: 8e2d4ab0f4fc6e3408f30f00042ad269, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4000774612252156320, guid: 8e2d4ab0f4fc6e3408f30f00042ad269,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13399,6 +13407,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 206130342, guid: f3ba6f255f2294342b8bff1e57fd2f81, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 524530559, guid: f3ba6f255f2294342b8bff1e57fd2f81, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -13513,6 +13525,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1295159001, guid: 63ed065883981db4995668cf4e83d0c6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8e247f44ff29c7b4d957a4bbf7a8ca9b,
+        type: 3}
     - target: {fileID: 1704756279, guid: 63ed065883981db4995668cf4e83d0c6, type: 3}
       propertyPath: m_Camera
       value: 
@@ -13521,6 +13538,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 1919350729, guid: 63ed065883981db4995668cf4e83d0c6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8356536716987322904, guid: 63ed065883981db4995668cf4e83d0c6,
         type: 3}
       propertyPath: ui_Controller
