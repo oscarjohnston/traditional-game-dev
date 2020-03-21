@@ -296,6 +296,8 @@ public class PlayerInput : MonoBehaviour
     {
         // TODO: Figure out healing radius
         // TODO: Fire off healing glow effect
+
+        // Heal a Dried Mossflower
     }
 
     /// <summary>
