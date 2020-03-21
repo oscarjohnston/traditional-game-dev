@@ -10,7 +10,8 @@ public class Interaction : MonoBehaviour
     public GameObject reward;
     public Vector3 spawnPoint;
     public bool spawned;
-    public string bubbleText;
+    public string RewardText;
+    public string InteractionText;
 
     // Start is called before the first frame update
     void Start()
@@ -26,17 +27,22 @@ public class Interaction : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        // Check if this object has spawned its item yet, then make sure it's colliding with a player
         if (!spawned && collision.gameObject.tag == "Player")
         {
             PlayerInput player = collision.collider.GetComponent<PlayerInput>();
 
+            // If the colliding player exists...
+            // And that player has pressed the A button...
             if(player != null && Input.GetButtonDown("A_Button_" + player.PlayerNumber))
             {
-                player.BubbleText.text = bubbleText;
+                player.BubbleText.text = InteractionText;
 
                 // Is the player holding the right item? (and optionally the correct Player?)
                 if (player.HeldItem == requirement && (PlayerRequirement != null && player.name.Equals(PlayerRequirement)))
                 {
+                    player.BubbleText.text = RewardText;
+
                     Destroy(player.HeldItem);
                     if(reward != null) 
                     { 

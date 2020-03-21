@@ -10,12 +10,15 @@ public class PlayerInput : MonoBehaviour
     public UIController ui_Controller;
     public GameController game_controller;
 
-    //Movement
+    // Movement
     private float xInput, yInput;
     public float SPEED = 1.0f;
 
-    //Distinguish player's input from each other
+    // Distinguish player's input from each other
     public int PlayerNumber;
+
+    // Describe this player's class for interaction requirements
+    public string Class;
 
     // Speech Bubble holders
     public GameObject SpeechBubble;
