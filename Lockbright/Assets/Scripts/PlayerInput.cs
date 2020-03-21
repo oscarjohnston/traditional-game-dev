@@ -176,8 +176,18 @@ public class PlayerInput : MonoBehaviour
         {
             if(grabbed)
             {
+                // Get the helditem's description
+                HeldItems item = HeldItem.GetComponent<HeldItems>();
+                if(item != null)
+                {
+                    BubbleText.text = item.ItemDescription;
+                }
+                else
+                {
+                    BubbleText.text = "Looks like I'm holding " + HeldItem.name;
+                }
+
                 SpeechBubble.SetActive(true);
-                BubbleText.text = "Looks like I'm holding " + HeldItem.name;
                 Invoke("DeactivateSpeechBubble", 4f);
             }
         }
