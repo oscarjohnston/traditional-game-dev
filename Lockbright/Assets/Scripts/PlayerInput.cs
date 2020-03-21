@@ -148,9 +148,14 @@ public class PlayerInput : MonoBehaviour
         // B Button Pressed
         if (Input.GetButtonDown("B_Button_" + PlayerNumber))
         {
-            DropItem();
-            // TODO: Take out of UI Inventory
-            HeldItemImage.sprite = defaultItem.sprite;
+            // Drop a held Item, handle UI images
+            if (grabbed)
+            {
+                DropItem();
+                // TODO: Take out of UI Inventory
+                HeldItemImage.sprite = defaultItem.sprite;
+            }
+            
         }
 
         // X Button Pressed
@@ -297,7 +302,12 @@ public class PlayerInput : MonoBehaviour
         // TODO: Figure out healing radius
         // TODO: Fire off healing glow effect
 
-        // Heal a Dried Mossflower
+        // Heal a Dried Mossflower if held
+        if(grabbed && HeldItem.name == "Dried Mossflower")
+        {
+            Destroy(HeldItem);
+            HeldItem = GameObject.Find("Living Mossflower");
+        }
     }
 
     /// <summary>
