@@ -261,7 +261,7 @@ public class PlayerInput : MonoBehaviour
         {
             print(this.name + " just used their ability");
 
-            ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
+            
 
             // Call the correct ability based on object name
             switch (Class)
@@ -301,6 +301,8 @@ public class PlayerInput : MonoBehaviour
     void DoBurnerAbility()
     {
         // TODO: Activate glow effect
+        ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
+        game_controller.PlayBurnerAbilitySound();
     }
 
     /// <summary>
@@ -313,6 +315,9 @@ public class PlayerInput : MonoBehaviour
             this.SPEED *= 2;
             Invoke("TurnOffSpeedBoost", 1f);
             ParkourCanDouble = false;
+
+            game_controller.PlayParkouristAbilitySound();
+            ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
         }
         
     }
@@ -334,6 +339,9 @@ public class PlayerInput : MonoBehaviour
             SpeechBubble.SetActive(true);
             Invoke("DeactivateSpeechBubble", SCHOLAR_BUBBLE_TIME);
 
+            ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
+            game_controller.PlayScholarAbilitySound();
+
             switch (HeldItem.name)
             {
                 case "Books":
@@ -347,7 +355,6 @@ public class PlayerInput : MonoBehaviour
                     return;
             }
         }
-        
     }
 
     /// <summary>
@@ -355,11 +362,14 @@ public class PlayerInput : MonoBehaviour
     /// </summary>
     void DoIllusionistAbility()
     {
+        ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
+        game_controller.PlayIllusionistAbilitySound();
+
         // TODO: Figure out healing radius
         // TODO: Fire off healing glow effect
 
         // Heal a Dried Mossflower if held
-        if(grabbed && HeldItem.name == "Dried Mossflower")
+        if (grabbed && HeldItem.name == "Dried Mossflower")
         {
             Destroy(HeldItem);
             HeldItem = GameObject.Find("Living Mossflower");
