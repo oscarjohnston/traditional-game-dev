@@ -69,9 +69,6 @@ public class PlayerInput : MonoBehaviour
 
         // Allow Parkourist to double from the start
         ParkourCanDouble = true;
-
-        // Initialize UI Controller
-        //ui_Controller = (UIController)GameObject.Find("UI Controller");
     }
 
     // Update is called once per frame
@@ -405,35 +402,6 @@ public class PlayerInput : MonoBehaviour
     {
         InteractingWith = null;
         Interacting = false;
-    }
-
-    void OnCollisionStay2D(Collision2D collision)
-    {
-        /*
-        // Interacte with what you're colliding with by pressing the A button
-        if(Input.GetButtonDown("A_Button_" + PlayerNumber))
-        {
-            print(this.name + " has interacted with " + collision.collider.name);
-            ActivateSpeechBubble();
-            BubbleText.text = "It's a " + collision.collider.name;
-
-            if(collision.gameObject.name == "Stove" && HeldItem.name == "Books")
-            {
-                print("Interacted with Stove, spawning key");
-                BubbleText.text = "Yay! A Key!";
-                InteractWithStove.Invoke();
-
-                HeldItem = null;
-                grabbed = false;
-            }
-            //else if(collision.gameObject.name == "Fridge")
-            //{
-            //    print("Interacted with Fridge, spawning books on floor");
-            //    BubbleText.text = "Books for the stove fell";
-            //    InteractWithFridge.Invoke();
-            //}
-        }
-        */
     }
 
     /// <summary>
