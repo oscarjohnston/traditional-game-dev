@@ -20,6 +20,9 @@ public class PlayerInput : MonoBehaviour
     // Describe this player's class for interaction requirements
     public string Class;
 
+    // This variable is to keep the Parkourist from doubling her speed over and over
+    private bool ParkourCanDouble;
+
     // Speech Bubble holders
     public GameObject SpeechBubble;
     public Text BubbleText;
@@ -50,6 +53,10 @@ public class PlayerInput : MonoBehaviour
     public Image defaultItem;
     public Image HeldItemImage;
 
+    // Interactable variables
+    private Interaction InteractingWith;
+    public bool Interacting;
+
     // Unity Events to win prototype
     public UnityEvent InteractWithStove;
     public UnityEvent InteractWithFridge;
@@ -59,6 +66,9 @@ public class PlayerInput : MonoBehaviour
     {
         //Sets up body
         Body = GetComponent<Rigidbody2D>();
+
+        // Allow Parkourist to double from the start
+        ParkourCanDouble = true;
 
         // Initialize UI Controller
         //ui_Controller = (UIController)GameObject.Find("UI Controller");
@@ -175,16 +185,33 @@ public class PlayerInput : MonoBehaviour
         // A Button Pressed
         if (Input.GetButtonDown("A_Button_" + PlayerNumber) || Input.GetKeyDown(KeyCode.Space))
         {
+            // try to interact
+            if (Interacting)
+            {
+                ActivateSpeechBubble();
+                
+                InteractingWith.TryToInteractWithThisObject(this.Class, ref this.HeldItem, ref this.BubbleText, ref this.grabbed);
+                return;
+            }
+
+            print("Throwing out raycast to look for objects to pickup");
+
+
             //Raycast Zone of pickup after shifting the pickup orgin down
-            Vector3 Adjustment = new Vector2(0, -0.5f);
+            Vector3 Adjustment = new Vector2(0, -1f);
             Collider2D[] collide = Physics2D.OverlapBoxAll(transform.position + Adjustment + dir, new Vector2(1, 1), 0);
 
+
+            bool collidedWithAnItem = false;
+            string collidedWithName = null;
             // Search each collision looking for an item to pickup
             foreach (Collider2D collision in collide)
             {
                 // Make sure you can actually pick item up before moving it
                 if (collision.tag == "Item" && collision.gameObject != HeldItem)
                 {
+                    collidedWithAnItem = true;
+
                     if (!grabbed)
                     {
                         // Prompt player to pick up item
@@ -206,6 +233,16 @@ public class PlayerInput : MonoBehaviour
                         return;
                     }
                 }
+
+                // Save the collided with name for later to put in speech bubble
+                collidedWithName = collision.name;
+            }
+
+            // Show a speech bubble of whatever else was collided with
+            if(!collidedWithAnItem && collidedWithName != null)
+            {
+                ActivateSpeechBubble();
+                BubbleText.text = "It's a " + collidedWithName;
             }
         }
 
@@ -217,18 +254,18 @@ public class PlayerInput : MonoBehaviour
             ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
 
             // Call the correct ability based on object name
-            switch (this.gameObject.name)
+            switch (Class)
             {
-                case "Player 1":
+                case "Scholar":
                     DoScholarAbility();
                     return;
-                case "Player 2":
+                case "Burner":
                     DoBurnerAbility();
                     return;
-                case "Player 3":
+                case "Parkourist":
                     DoParkouristAbility();
                     return;
-                case "Player 4":
+                case "Illusionist":
                     DoIllusionistAbility();
                     return;
             }
@@ -261,13 +298,19 @@ public class PlayerInput : MonoBehaviour
     /// </summary>
     void DoParkouristAbility()
     {
-        this.SPEED *= 2;
-        Invoke("TurnOffSpeedBoost", 1f);
+        if (ParkourCanDouble)
+        {
+            this.SPEED *= 2;
+            Invoke("TurnOffSpeedBoost", 1f);
+            ParkourCanDouble = false;
+        }
+        
     }
 
     void TurnOffSpeedBoost()
     {
         this.SPEED /= 2;
+        ParkourCanDouble = true;
     }
 
     /// <summary>
@@ -329,14 +372,24 @@ public class PlayerInput : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         print(this.name + " has collided with " + collision.collider.name);
+
+        // Get the interaction object if it exists
+        this.InteractingWith = collision.collider.GetComponent<Interaction>();
+        if(InteractingWith != null)
+        {
+            Interacting = true;
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
+        InteractingWith = null;
+        Interacting = false;
     }
 
     void OnCollisionStay2D(Collision2D collision)
     {
+        /*
         // Interacte with what you're colliding with by pressing the A button
         if(Input.GetButtonDown("A_Button_" + PlayerNumber))
         {
@@ -353,13 +406,14 @@ public class PlayerInput : MonoBehaviour
                 HeldItem = null;
                 grabbed = false;
             }
-            else if(collision.gameObject.name == "Fridge")
-            {
-                print("Interacted with Fridge, spawning books on floor");
-                BubbleText.text = "Books for the stove fell";
-                InteractWithFridge.Invoke();
-            }
+            //else if(collision.gameObject.name == "Fridge")
+            //{
+            //    print("Interacted with Fridge, spawning books on floor");
+            //    BubbleText.text = "Books for the stove fell";
+            //    InteractWithFridge.Invoke();
+            //}
         }
+        */
     }
 
     /// <summary>
