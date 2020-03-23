@@ -3,71 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StoveScript : MonoBehaviour
+public class StoveItemInteraction : MonoBehaviour
 {
-    // Controller for particle
-    public UIController game;
-
-    // Boolean for identifying if the stove is on
-    private bool StoveIsLit;
-
-    // Required Objects
     public GameObject PaleTonic;
     public GameObject LivingMossFlower;
     public GameObject Pomegranate;
 
-    // Number of items still required
+    public StoveScript stove;
+
     public int itemsleft = 3;
 
-    // Interaction helpers
     public GameObject reward;
     public bool spawned;
     public string RewardText;
     public string InteractionText;
 
+    // Start is called before the first frame update
     void Start()
     {
-        StoveIsLit = false;
+        spawned = false;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    // Update is called once per frame
+    void Update()
     {
-        // Try to turn the stove on if it's not lit yet
-        if (!StoveIsLit)
-        {
-            PlayerInput player = collision.collider.GetComponent<PlayerInput>();
 
-            // If the burner presses Y, light the stove
-            if (player != null && Input.GetButtonDown("Y_Button_3") && player.PlayerNumber == 3)
-            {
-                StoveIsLit = true;
-                game.FireTurnOnStove();
-
-                print("Turning on stove");
-            }
-        }
-
-        // Otherwise turn it off
-        else
-        {
-            PlayerInput player = collision.collider.GetComponent<PlayerInput>();
-
-            // If the burner presses Y, light the stove
-            if (player != null && Input.GetButtonDown("Y_Button_3") && player.PlayerNumber == 3)
-            {
-                StoveIsLit = false;
-                game.FireTurnOffStove();
-
-                print("Turning off stove");
-            }
-        }
     }
+
     public void TryToInteractWithThisObject(string Class, ref GameObject HeldItem, ref Text BubbleText, ref bool grabbed)
     {
         // No items added gives first message
-        if (itemsleft == 3)
+        if(itemsleft == 3)
         {
-            BubbleText.text = InteractionText;
+        BubbleText.text = InteractionText;
         }
         // Otherwise gives this message
         else
@@ -111,18 +79,18 @@ public class StoveScript : MonoBehaviour
             }
 
 
-            if (reward != null && itemsleft == 0 && StoveIsLit == true)
-            {
-                HeldItem = reward;
-                grabbed = true;
-                BubbleText.text = RewardText;
+            if (reward != null && itemsleft == 0)
+                {
+                    HeldItem = reward;
+                    grabbed = true;
+                    BubbleText.text = RewardText;
+                }
+                else
+                {
+                    grabbed = false;
+                }
+                //Instantiate(reward, spawnPoint, new Quaternion(0, 0, 0, 0));
+                spawned = true;
             }
-            else
-            {
-                grabbed = false;
-            }
-            //Instantiate(reward, spawnPoint, new Quaternion(0, 0, 0, 0));
-            spawned = true;
         }
     }
-}
