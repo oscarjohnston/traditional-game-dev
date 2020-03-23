@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour
 {
-    public GameObject requirement;
+    public GameObject[] requirement;
     public string PlayerRequirement;
 
     public GameObject reward;
@@ -23,7 +23,7 @@ public class Interaction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void TryToInteractWithThisObject(string Class, ref GameObject HeldItem, ref Text BubbleText, ref bool grabbed)
@@ -33,8 +33,10 @@ public class Interaction : MonoBehaviour
         // Check if this object has spawned its item yet
         if (!spawned)
         {
-                // Is the player holding the right item? (and optionally the correct Player?)
-                if (HeldItem == requirement && (PlayerRequirement != null && Class.Equals(PlayerRequirement)))
+            // Is the player holding the right item? (and optionally the correct Player?)
+            foreach (GameObject required in requirement)
+            {
+                if (HeldItem == required || (PlayerRequirement != null && Class.Equals(PlayerRequirement)))
                 {
                     BubbleText.text = RewardText;
 
@@ -51,6 +53,8 @@ public class Interaction : MonoBehaviour
                     //Instantiate(reward, spawnPoint, new Quaternion(0, 0, 0, 0));
                     spawned = true;
                 }
+            }
         }
     }
 }
+

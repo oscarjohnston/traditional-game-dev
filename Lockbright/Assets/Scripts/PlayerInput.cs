@@ -56,6 +56,9 @@ public class PlayerInput : MonoBehaviour
     // Interactable variables
     private Interaction InteractingWith;
     public bool Interacting;
+    // Optionally
+    private StoveScript StoveInteractingWith;
+    public bool StoveInteracting;
 
     // Unity Events to win prototype
     public UnityEvent InteractWithStove;
@@ -200,6 +203,13 @@ public class PlayerInput : MonoBehaviour
                 InteractingWith.TryToInteractWithThisObject(this.Class, ref this.HeldItem, ref this.BubbleText, ref this.grabbed);
                 return;
             }
+            else if (StoveInteracting)
+            {
+                ActivateSpeechBubble();
+
+                StoveInteractingWith.TryToInteractWithThisObject(this.Class, ref this.HeldItem, ref this.BubbleText, ref this.grabbed);
+                return;
+            }
 
             print("Throwing out raycast to look for objects to pickup");
 
@@ -286,7 +296,7 @@ public class PlayerInput : MonoBehaviour
 
 
         // Win the prototype
-        if(HeldItem != null && HeldItem.name == "CharredKey")
+        if(HeldItem != null && HeldItem.name == "Charred Key")
         {
             game_controller.InvokeWinGameEvent();
         }
@@ -396,12 +406,20 @@ public class PlayerInput : MonoBehaviour
         {
             Interacting = true;
         }
+        // Or Get stove
+        this.StoveInteractingWith = collision.collider.GetComponent<StoveScript>();
+        if(StoveInteractingWith != null)
+        {
+            StoveInteracting = true;
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
         InteractingWith = null;
         Interacting = false;
+        StoveInteractingWith = null;
+        StoveInteracting = false;
     }
 
     /// <summary>
