@@ -10341,6 +10341,7 @@ GameObject:
   - component: {fileID: 482240699}
   - component: {fileID: 482240701}
   - component: {fileID: 482240700}
+  - component: {fileID: 482240702}
   m_Layer: 0
   m_Name: Living Mossflower
   m_TagString: Item
@@ -10437,6 +10438,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &482240702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482240698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a4607119391df42b632b2084f4704e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemDescription: The fresh mossflower smells of rain and grass, a wonderful scent.
 --- !u!1 &503711578
 GameObject:
   m_ObjectHideFlags: 0
@@ -10575,6 +10589,7 @@ GameObject:
   - component: {fileID: 549967890}
   - component: {fileID: 549967892}
   - component: {fileID: 549967891}
+  - component: {fileID: 549967893}
   m_Layer: 0
   m_Name: Charred Key
   m_TagString: Item
@@ -10671,6 +10686,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &549967893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549967889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a4607119391df42b632b2084f4704e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemDescription: A simple key - nothing original about it, yet it matches the front
+    door.
 --- !u!1 &564832043
 GameObject:
   m_ObjectHideFlags: 0
@@ -11032,6 +11061,7 @@ GameObject:
   - component: {fileID: 737379590}
   - component: {fileID: 737379592}
   - component: {fileID: 737379591}
+  - component: {fileID: 737379593}
   m_Layer: 0
   m_Name: Cultist Wine
   m_TagString: Item
@@ -11128,6 +11158,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &737379593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737379589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a4607119391df42b632b2084f4704e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemDescription: The concoction looks eerily like blood.
 --- !u!1 &764436480
 GameObject:
   m_ObjectHideFlags: 0
@@ -12664,6 +12707,7 @@ GameObject:
   - component: {fileID: 1416568728}
   - component: {fileID: 1416568730}
   - component: {fileID: 1416568729}
+  - component: {fileID: 1416568731}
   m_Layer: 0
   m_Name: Dried Mossflower
   m_TagString: Item
@@ -12760,6 +12804,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1416568731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416568727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a4607119391df42b632b2084f4704e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemDescription: You carefully examine the dried mossflower. Your fingers itch to
+    reinvigorate it.
 --- !u!1 &1566658817
 GameObject:
   m_ObjectHideFlags: 0
@@ -13245,7 +13303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a4607119391df42b632b2084f4704e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemDescription: Yep, here's some books
+  ItemDescription: 'You examine the cookbook. It is written in a foreign language. '
 --- !u!212 &1832139212
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13665,6 +13723,7 @@ GameObject:
   - component: {fileID: 1980840908}
   - component: {fileID: 1980840910}
   - component: {fileID: 1980840909}
+  - component: {fileID: 1980840911}
   m_Layer: 0
   m_Name: Rusty Knife
   m_TagString: Item
@@ -13761,6 +13820,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1980840911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980840907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a4607119391df42b632b2084f4704e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemDescription: The knife may be rusty, but it could still cut a b!%@#.
 --- !u!1 &2023555116
 GameObject:
   m_ObjectHideFlags: 0
@@ -13772,6 +13844,7 @@ GameObject:
   - component: {fileID: 2023555117}
   - component: {fileID: 2023555119}
   - component: {fileID: 2023555118}
+  - component: {fileID: 2023555120}
   m_Layer: 0
   m_Name: Pale tonic
   m_TagString: Item
@@ -13868,6 +13941,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2023555120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023555116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a4607119391df42b632b2084f4704e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemDescription: An intricate container filled with a sort of a pale tonic. It looks
+    unharmed by age.
 --- !u!1 &2038375323
 GameObject:
   m_ObjectHideFlags: 0
@@ -13879,6 +13966,7 @@ GameObject:
   - component: {fileID: 2038375324}
   - component: {fileID: 2038375326}
   - component: {fileID: 2038375325}
+  - component: {fileID: 2038375327}
   m_Layer: 0
   m_Name: Pomegranate
   m_TagString: Item
@@ -13975,6 +14063,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2038375327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038375323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a4607119391df42b632b2084f4704e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemDescription: A somewhat shriveled pomegranate. There doesn't appear to be anything
+    specifically UNhealthy about it.
 --- !u!1 &2129650441
 GameObject:
   m_ObjectHideFlags: 0
