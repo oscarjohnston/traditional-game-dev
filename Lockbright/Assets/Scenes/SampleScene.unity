@@ -10599,7 +10599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &522503919
 Light:
   m_ObjectHideFlags: 0
@@ -12319,7 +12319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1178440536
 Light:
   m_ObjectHideFlags: 0
@@ -14218,7 +14218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &2102640629
 Light:
   m_ObjectHideFlags: 0
@@ -14375,6 +14375,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 445414348, guid: 45fbd0dd51e8cdf44a00d8915e6312d2, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445414348, guid: 45fbd0dd51e8cdf44a00d8915e6312d2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445414348, guid: 45fbd0dd51e8cdf44a00d8915e6312d2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1745396708, guid: 45fbd0dd51e8cdf44a00d8915e6312d2, type: 3}
       propertyPath: m_Camera
       value: 
@@ -14395,6 +14407,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265485377095915920, guid: 45fbd0dd51e8cdf44a00d8915e6312d2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2265485377095915924, guid: 45fbd0dd51e8cdf44a00d8915e6312d2,
         type: 3}
@@ -14510,6 +14527,18 @@ PrefabInstance:
     - target: {fileID: 1006655860, guid: 8e2d4ab0f4fc6e3408f30f00042ad269, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1473505710, guid: 8e2d4ab0f4fc6e3408f30f00042ad269, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1473505710, guid: 8e2d4ab0f4fc6e3408f30f00042ad269, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1473505710, guid: 8e2d4ab0f4fc6e3408f30f00042ad269, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1507785008, guid: 8e2d4ab0f4fc6e3408f30f00042ad269, type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -14699,6 +14728,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4000774612252156324, guid: 8e2d4ab0f4fc6e3408f30f00042ad269,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e2d4ab0f4fc6e3408f30f00042ad269, type: 3}
 --- !u!1001 &4070121652253065926
@@ -14779,6 +14813,14 @@ PrefabInstance:
     - target: {fileID: 1448707439, guid: f3ba6f255f2294342b8bff1e57fd2f81, type: 3}
       propertyPath: m_Name
       value: BurnerGlow3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1448707439, guid: f3ba6f255f2294342b8bff1e57fd2f81, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1448707441, guid: f3ba6f255f2294342b8bff1e57fd2f81, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1554563868, guid: f3ba6f255f2294342b8bff1e57fd2f81, type: 3}
       propertyPath: m_LocalScale.x
