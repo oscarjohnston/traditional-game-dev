@@ -339,6 +339,13 @@ public class PlayerInput : MonoBehaviour
 
         ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
         game_controller.PlayBurnerAbilitySound();
+
+        // Also try to light the stove
+        if (StoveInteracting)
+        {
+            StoveInteractingWith.LightOrUnlightTheStove();
+            return;
+        }
     }
 
     private void TurnOffBurnerGlow()
