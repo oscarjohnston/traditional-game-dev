@@ -101,14 +101,14 @@ ScriptedImporter:
     internalID: 0
     spriteBone:
     - name: hair3
-      position: {x: 47.581898, y: -0.00000031890806, z: 0}
+      position: {x: 47.581905, y: -0.000013636499, z: 0}
       rotation: {x: 0, y: 0, z: 0.48933187, w: 0.87209773}
       length: 17.120968
       parentId: 1
     - name: hair2
-      position: {x: 70.405464, y: 0.00001942507, z: 0}
-      rotation: {x: 0, y: 0, z: -0.16198874, w: 0.9867927}
-      length: 47.58193
+      position: {x: 70.40547, y: 0.000026158912, z: 0}
+      rotation: {x: 0, y: 0, z: -0.1619887, w: 0.9867927}
+      length: 47.58191
       parentId: 2
     - name: bone_3
       position: {x: 39.623253, y: -29.811602, z: 0}
@@ -1591,31 +1591,31 @@ ScriptedImporter:
       length: 47.71595
       parentId: -1
     - name: chest_10
-      position: {x: 43.007763, y: -0.000019561478, z: 0}
-      rotation: {x: 0, y: 0, z: 0.1145465, w: 0.9934179}
-      length: 35.040356
+      position: {x: 43.007767, y: -0.0000130986455, z: 0}
+      rotation: {x: 0, y: 0, z: 0.11454638, w: 0.9934179}
+      length: 35.04035
       parentId: 2
-    - name: chest_9
+    - name: right arm
       position: {x: 35.969833, y: -24.969496, z: 0}
-      rotation: {x: 0, y: 0, z: -0.9965576, w: 0.08290355}
-      length: 43.00775
+      rotation: {x: 0, y: 0, z: -0.9965576, w: 0.08290347}
+      length: 43.00776
       parentId: 0
-    - name: chest_8
+    - name: right skirt
       position: {x: -4.4030027, y: -31.868011, z: 0}
       rotation: {x: 0, y: 0, z: -0.9190413, w: 0.39416134}
       length: 64.73205
       parentId: 0
-    - name: chest_12
+    - name: left arm
       position: {x: 46.23154, y: 8.55502, z: 0}
       rotation: {x: 0, y: 0, z: 0.96964175, w: 0.24453016}
-      length: 45.335533
+      length: 45.335537
       parentId: 0
     - name: chest_13
       position: {x: 45.33555, y: 0.0000013052786, z: 0}
-      rotation: {x: 0, y: 0, z: 0.043164898, w: 0.999068}
-      length: 48.070698
+      rotation: {x: 0, y: 0, z: 0.043165244, w: 0.999068}
+      length: 48.070717
       parentId: 4
-    - name: chest_7
+    - name: left skirt
       position: {x: -3.5926764, y: 23.24127, z: 0}
       rotation: {x: 0, y: 0, z: 0.9074056, w: 0.4202559}
       length: 65.20517
@@ -2394,64 +2394,64 @@ ScriptedImporter:
     spriteID: d94176768a3b821468cbeceb9e998597
     internalID: 0
     spriteBone:
-    - name: chest_1
-      position: {x: -30.469677, y: 10.40515, z: 0}
-      rotation: {x: 0, y: 0, z: -0.9997396, w: 0.022820238}
-      length: 58.777508
-      parentId: 7
-    - name: chest_4
-      position: {x: -30.79953, y: -0.06453647, z: 0}
-      rotation: {x: 0, y: 0, z: -0.99982864, w: 0.01851674}
-      length: 60.42138
-      parentId: 7
+    - name: left leg
+      position: {x: 72.166504, y: 45.7126, z: 0}
+      rotation: {x: 0, y: 0, z: -0.6673943, w: 0.7447046}
+      length: 58.777496
+      parentId: -1
+    - name: right leg
+      position: {x: 82.63594, y: 46.050323, z: 0}
+      rotation: {x: 0, y: 0, z: -0.6705936, w: 0.741825}
+      length: 60.421383
+      parentId: -1
     - name: chest_11
-      position: {x: 35.040348, y: -0.000016501068, z: 0}
-      rotation: {x: 0, y: 0, z: 0.014755836, w: 0.99989116}
-      length: 17.978848
+      position: {x: 35.040314, y: 0.0000058368264, z: 0}
+      rotation: {x: 0, y: 0, z: 0.014755975, w: 0.99989116}
+      length: 17.978846
       parentId: 11
-    - name: chest_8
+    - name: right skirt
       position: {x: -4.4030266, y: -31.868, z: 0}
       rotation: {x: 0, y: 0, z: -0.9190413, w: 0.39416134}
       length: 64.73205
       parentId: 7
     - name: hair3
-      position: {x: 47.581882, y: 0.000029235749, z: 0}
+      position: {x: 47.5819, y: 0.000011524159, z: 0}
       rotation: {x: 0, y: 0, z: 0.48933193, w: 0.8720977}
       length: 17.120968
       parentId: 5
     - name: hair2
       position: {x: 132.28134, y: 113.257355, z: 0}
-      rotation: {x: 0, y: 0, z: -0.6468201, w: 0.7626427}
-      length: 47.58193
+      rotation: {x: 0, y: 0, z: -0.64682007, w: 0.7626427}
+      length: 47.58191
       parentId: -1
-    - name: chest_9
+    - name: right arm
       position: {x: 35.969822, y: -24.969494, z: 0}
-      rotation: {x: 0, y: 0, z: -0.9965576, w: 0.08290355}
-      length: 43.00775
+      rotation: {x: 0, y: 0, z: -0.9965576, w: 0.08290347}
+      length: 43.00776
       parentId: 7
     - name: chest
       position: {x: 80.6096, y: 76.78319, z: 0}
       rotation: {x: 0, y: 0, z: 0.7292806, w: 0.68421483}
       length: 47.71595
       parentId: -1
-    - name: chest_7
+    - name: left skirt
       position: {x: -3.5926855, y: 23.24127, z: 0}
       rotation: {x: 0, y: 0, z: 0.9074056, w: 0.4202559}
       length: 65.20517
       parentId: 7
     - name: chest_13
-      position: {x: 50.21445, y: 81.1736, z: 0}
-      rotation: {x: 0, y: 0, z: 0.81768805, w: -0.57566166}
-      length: 48.07071
+      position: {x: 50.214447, y: 81.1736, z: 0}
+      rotation: {x: 0, y: 0, z: 0.81768787, w: -0.57566196}
+      length: 48.070724
       parentId: -1
     - name: chest_14
-      position: {x: 48.070724, y: 0.00002452829, z: 0}
-      rotation: {x: 0, y: 0, z: -0.08245537, w: 0.99659485}
-      length: 16.631016
+      position: {x: 48.070744, y: -0.000007974515, z: 0}
+      rotation: {x: 0, y: 0, z: -0.08245574, w: 0.9965948}
+      length: 16.631014
       parentId: 9
     - name: chest_10
-      position: {x: 43.00777, y: -0.00002084076, z: 0}
-      rotation: {x: 0, y: 0, z: 0.11454649, w: 0.9934179}
+      position: {x: 43.00777, y: -0.000007538295, z: 0}
+      rotation: {x: 0, y: 0, z: 0.1145464, w: 0.993418}
       length: 35.04035
       parentId: 6
     spriteOutline: []
@@ -3731,29 +3731,29 @@ ScriptedImporter:
     internalID: 0
     spriteBone:
     - name: chest_6
-      position: {x: 66.53761, y: 0.00011708772, z: 0}
-      rotation: {x: 0, y: 0, z: -0.623644, w: 0.78170854}
-      length: 26.383656
+      position: {x: 66.53755, y: 0.00009635932, z: 0}
+      rotation: {x: 0, y: 0, z: -0.62364393, w: 0.78170854}
+      length: 26.383646
       parentId: 1
     - name: chest_5
-      position: {x: 60.42139, y: 0.00011003181, z: 0}
+      position: {x: 60.42139, y: 0.00008725976, z: 0}
       rotation: {x: 0, y: 0, z: 0.00048826405, w: 0.9999999}
-      length: 66.537605
+      length: 66.5376
       parentId: 2
-    - name: chest_4
+    - name: right leg
       position: {x: 19.63594, y: 138.05032, z: 0}
       rotation: {x: 0, y: 0, z: -0.6705936, w: 0.741825}
-      length: 60.421394
+      length: 60.421383
       parentId: -1
     - name: chest_2
-      position: {x: 15.583237, y: 79.28641, z: 0}
+      position: {x: 15.583221, y: 79.28641, z: 0}
       rotation: {x: 0, y: 0, z: -0.67275345, w: 0.7398668}
-      length: 64.11862
+      length: 64.11861
       parentId: -1
     - name: chest_3
-      position: {x: 64.11859, y: 0.000009345291, z: 0}
-      rotation: {x: 0, y: 0, z: -0.6174546, w: 0.78660655}
-      length: 24.672102
+      position: {x: 64.11859, y: -0.000005776041, z: 0}
+      rotation: {x: 0, y: 0, z: -0.6174546, w: 0.7866066}
+      length: 24.672094
       parentId: 3
     spriteOutline: []
     vertices:
@@ -4817,34 +4817,34 @@ ScriptedImporter:
     internalID: 0
     spriteBone:
     - name: chest_6
-      position: {x: 66.53763, y: 0.00014826619, z: 0}
-      rotation: {x: 0, y: 0, z: -0.623644, w: 0.78170854}
-      length: 26.383656
+      position: {x: 66.53751, y: 0.00012405668, z: 0}
+      rotation: {x: 0, y: 0, z: -0.62364393, w: 0.78170854}
+      length: 26.383646
       parentId: 2
     - name: chest_2
       position: {x: 58.777428, y: 0.000015749038, z: 0}
-      rotation: {x: 0, y: 0, z: -0.007219728, w: 0.999974}
-      length: 64.11862
+      rotation: {x: 0, y: 0, z: -0.007219732, w: 0.99997395}
+      length: 64.1186
       parentId: 4
     - name: chest_5
-      position: {x: 60.42135, y: 0.00009631821, z: 0}
+      position: {x: 60.42135, y: 0.000088727524, z: 0}
       rotation: {x: 0, y: 0, z: 0.00048826405, w: 0.9999999}
-      length: 66.537605
+      length: 66.5376
       parentId: 3
-    - name: chest_4
+    - name: right leg
       position: {x: 25.63594, y: 135.0503, z: 0}
       rotation: {x: 0, y: 0, z: -0.6705936, w: 0.741825}
-      length: 60.421394
+      length: 60.421383
       parentId: -1
-    - name: chest_1
+    - name: left leg
       position: {x: 15.166504, y: 134.71259, z: 0}
       rotation: {x: 0, y: 0, z: -0.6673943, w: 0.7447046}
-      length: 58.777504
+      length: 58.777496
       parentId: -1
     - name: chest_3
-      position: {x: 64.11866, y: -0.0000016684971, z: 0}
+      position: {x: 64.11866, y: -0.000019766008, z: 0}
       rotation: {x: 0, y: 0, z: -0.6174546, w: 0.78660655}
-      length: 24.672102
+      length: 24.672094
       parentId: 1
     spriteOutline: []
     vertices:
@@ -5843,34 +5843,34 @@ ScriptedImporter:
     internalID: 0
     spriteBone:
     - name: chest_11
-      position: {x: 35.040302, y: 0.000038206883, z: 0}
-      rotation: {x: 0, y: 0, z: 0.014755813, w: 0.99989116}
-      length: 17.978848
+      position: {x: 35.040314, y: 0.000019992855, z: 0}
+      rotation: {x: 0, y: 0, z: 0.014756013, w: 0.99989116}
+      length: 17.978844
       parentId: 2
-    - name: chest_8
+    - name: right skirt
       position: {x: -4.4030237, y: -31.868002, z: 0}
       rotation: {x: 0, y: 0, z: -0.9190413, w: 0.39416134}
       length: 64.73205
       parentId: 6
     - name: chest_10
-      position: {x: 43.007816, y: -0.000025265443, z: 0}
-      rotation: {x: 0, y: 0, z: 0.1145465, w: 0.9934179}
-      length: 35.040356
+      position: {x: 43.00776, y: -0.000033014043, z: 0}
+      rotation: {x: 0, y: 0, z: 0.11454638, w: 0.9934179}
+      length: 35.04035
       parentId: 5
     - name: hair3
-      position: {x: 47.581894, y: 0.00002032043, z: 0}
+      position: {x: 47.581852, y: 0.000023667068, z: 0}
       rotation: {x: 0, y: 0, z: 0.48933193, w: 0.8720977}
       length: 17.120968
       parentId: 4
     - name: hair2
       position: {x: 41.28134, y: 92.257355, z: 0}
-      rotation: {x: 0, y: 0, z: -0.6468201, w: 0.7626427}
-      length: 47.58193
+      rotation: {x: 0, y: 0, z: -0.64682007, w: 0.7626427}
+      length: 47.58191
       parentId: -1
-    - name: chest_9
+    - name: right arm
       position: {x: 35.96981, y: -24.969494, z: 0}
-      rotation: {x: 0, y: 0, z: -0.9965576, w: 0.08290355}
-      length: 43.00775
+      rotation: {x: 0, y: 0, z: -0.9965576, w: 0.08290347}
+      length: 43.00776
       parentId: 6
     - name: chest
       position: {x: -10.390404, y: 55.783203, z: 0}
@@ -6489,24 +6489,24 @@ ScriptedImporter:
     internalID: 0
     spriteBone:
     - name: chest_14
-      position: {x: 48.070717, y: 0.00001872153, z: 0}
-      rotation: {x: 0, y: 0, z: -0.08245536, w: 0.9965948}
-      length: 16.631018
+      position: {x: 48.070675, y: -0.000020516123, z: 0}
+      rotation: {x: 0, y: 0, z: -0.08245576, w: 0.9965947}
+      length: 16.631021
       parentId: 3
-    - name: chest_7
+    - name: left skirt
       position: {x: 37.64438, y: 54.717346, z: 0}
       rotation: {x: 0, y: 0, z: 0.92734486, w: -0.37420797}
       length: 65.20517
       parentId: -1
-    - name: chest_12
+    - name: left arm
       position: {x: 49.12699, y: 105.375885, z: 0}
       rotation: {x: 0, y: 0, z: 0.8417743, w: -0.53982973}
-      length: 45.335556
+      length: 45.33556
       parentId: -1
     - name: chest_13
-      position: {x: 45.33554, y: -0.000007110139, z: 0}
-      rotation: {x: 0, y: 0, z: 0.043164875, w: 0.99906796}
-      length: 48.07073
+      position: {x: 45.33554, y: -0.000010577049, z: 0}
+      rotation: {x: 0, y: 0, z: 0.043165226, w: 0.99906796}
+      length: 48.070744
       parentId: 2
     spriteOutline: []
     vertices:
@@ -7147,87 +7147,87 @@ ScriptedImporter:
       parentId: 0
     - name: bone_3
       position: {x: 39.62324, y: -29.811604, z: 0}
-      rotation: {x: 0, y: 0, z: -0.9724952, w: 0.23292294}
+      rotation: {x: 0, y: -0, z: -0.9724952, w: 0.23292296}
       length: 70.40548
       parentId: 1
     - name: hair2
-      position: {x: 70.40548, y: 0.0000029699086, z: 0}
+      position: {x: 70.40548, y: 0.00000056313183, z: 0}
       rotation: {x: 0, y: 0, z: -0.16198875, w: 0.9867926}
-      length: 47.581924
+      length: 47.5819
       parentId: 2
     - name: hair3
-      position: {x: 47.58191, y: -0.0000006617406, z: 0}
+      position: {x: 47.5819, y: 0.00000033894776, z: 0}
       rotation: {x: 0, y: 0, z: 0.48933184, w: 0.8720977}
       length: 17.120968
       parentId: 3
-    - name: chest_1
-      position: {x: -30.46966, y: 10.405153, z: 0}
-      rotation: {x: 0, y: -0, z: -0.9997396, w: 0.022820238}
-      length: 58.777504
-      parentId: 0
+    - name: left leg
+      position: {x: 82.166504, y: 140.7126, z: 0}
+      rotation: {x: 0, y: 0, z: -0.6673943, w: 0.7447046}
+      length: 58.777496
+      parentId: -1
     - name: chest_2
-      position: {x: 58.777493, y: -0.0000030591086, z: 0}
+      position: {x: 58.777485, y: -0.0000022262086, z: 0}
       rotation: {x: 0, y: 0, z: -0.0072197136, w: 0.99997395}
       length: 64.11861
       parentId: 5
     - name: chest_3
-      position: {x: 64.11861, y: -0.0000038649227, z: 0}
+      position: {x: 64.11861, y: -0.0000031416125, z: 0}
       rotation: {x: 0, y: 0, z: -0.6174546, w: 0.78660655}
       length: 24.672098
       parentId: 6
-    - name: chest_4
-      position: {x: -30.799528, y: -0.064532906, z: 0}
-      rotation: {x: 0, y: -0, z: -0.9998286, w: 0.01851675}
-      length: 60.42139
-      parentId: 0
+    - name: right leg
+      position: {x: 92.63594, y: 141.05032, z: 0}
+      rotation: {x: 0, y: 0, z: -0.6705936, w: 0.741825}
+      length: 60.421383
+      parentId: -1
     - name: chest_5
-      position: {x: 60.42138, y: 0.00009517624, z: 0}
+      position: {x: 60.42137, y: 0.00008835314, z: 0}
       rotation: {x: 0, y: 0, z: 0.0004882813, w: 0.9999999}
       length: 66.53758
       parentId: 8
     - name: chest_6
-      position: {x: 66.53758, y: 0.000107895554, z: 0}
-      rotation: {x: 0, y: 0, z: -0.62364393, w: 0.7817086}
+      position: {x: 66.537575, y: 0.00010112009, z: 0}
+      rotation: {x: 0, y: 0, z: -0.62364393, w: 0.78170854}
       length: 26.383646
       parentId: 9
-    - name: chest_7
+    - name: left skirt
       position: {x: -3.5926833, y: 23.241274, z: 0}
       rotation: {x: 0, y: -0, z: 0.9074056, w: 0.42025593}
       length: 65.20517
       parentId: 0
-    - name: chest_8
+    - name: right skirt
       position: {x: -4.4030094, y: -31.867998, z: 0}
       rotation: {x: 0, y: -0, z: -0.9190413, w: 0.39416134}
       length: 64.73205
       parentId: 0
-    - name: chest_9
+    - name: right arm
       position: {x: 35.969826, y: -24.96949, z: 0}
-      rotation: {x: 0, y: -0, z: -0.9965576, w: 0.082903564}
-      length: 43.007748
+      rotation: {x: 0, y: -0, z: -0.9965576, w: 0.08290345}
+      length: 43.00776
       parentId: 0
     - name: chest_10
-      position: {x: 43.007755, y: -0.000016071332, z: 0}
+      position: {x: 43.007767, y: -0.00000638771, z: 0}
       rotation: {x: 0, y: 0, z: 0.114546455, w: 0.9934179}
-      length: 35.04035
+      length: 35.040356
       parentId: 13
     - name: chest_11
-      position: {x: 35.04035, y: -0.00000794741, z: 0}
-      rotation: {x: 0, y: 0, z: 0.014755835, w: 0.99989116}
+      position: {x: 35.04035, y: 0.000011825706, z: 0}
+      rotation: {x: 0, y: 0, z: 0.014755969, w: 0.99989116}
       length: 17.978846
       parentId: 14
-    - name: chest_12
+    - name: left arm
       position: {x: 46.23155, y: 8.5550165, z: 0}
       rotation: {x: 0, y: -0, z: 0.9696417, w: 0.24453016}
-      length: 45.335545
+      length: 45.33555
       parentId: 0
     - name: chest_13
-      position: {x: 45.335556, y: -0.000006058714, z: 0}
-      rotation: {x: 0, y: 0, z: 0.04316494, w: 0.99906796}
-      length: 48.070713
+      position: {x: 45.335556, y: -0.000009525623, z: 0}
+      rotation: {x: 0, y: 0, z: 0.043165278, w: 0.99906796}
+      length: 48.07073
       parentId: 16
     - name: chest_14
-      position: {x: 48.070724, y: 0.000014051285, z: 0}
-      rotation: {x: 0, y: 0, z: -0.08245541, w: 0.9965948}
+      position: {x: 48.070744, y: -0.000019139388, z: 0}
+      rotation: {x: 0, y: 0, z: -0.0824558, w: 0.9965948}
       length: 16.631016
       parentId: 17
     parts:
@@ -7307,33 +7307,33 @@ ScriptedImporter:
     index: 3
   - go: {fileID: 3134617818065399061, guid: a447205212c588042bb58016f4f123c7, type: 3}
     index: 4
-  - go: {fileID: -3434419520624553613, guid: a447205212c588042bb58016f4f123c7, type: 3}
+  - go: {fileID: 3209420246887161306, guid: a447205212c588042bb58016f4f123c7, type: 3}
     index: 5
-  - go: {fileID: -1932577333277581802, guid: a447205212c588042bb58016f4f123c7, type: 3}
+  - go: {fileID: -8769392060876229969, guid: a447205212c588042bb58016f4f123c7, type: 3}
     index: 6
-  - go: {fileID: -1563205975064922281, guid: a447205212c588042bb58016f4f123c7, type: 3}
+  - go: {fileID: -4589506052636479050, guid: a447205212c588042bb58016f4f123c7, type: 3}
     index: 7
-  - go: {fileID: -1249841902513439245, guid: a447205212c588042bb58016f4f123c7, type: 3}
+  - go: {fileID: 9140850160145170581, guid: a447205212c588042bb58016f4f123c7, type: 3}
     index: 8
-  - go: {fileID: -7874256091241689706, guid: a447205212c588042bb58016f4f123c7, type: 3}
+  - go: {fileID: -6257915513688409074, guid: a447205212c588042bb58016f4f123c7, type: 3}
     index: 9
-  - go: {fileID: 2675751720559595482, guid: a447205212c588042bb58016f4f123c7, type: 3}
+  - go: {fileID: 6414604031601422892, guid: a447205212c588042bb58016f4f123c7, type: 3}
     index: 10
-  - go: {fileID: -3718603551785125300, guid: a447205212c588042bb58016f4f123c7, type: 3}
+  - go: {fileID: -1037108452080193315, guid: a447205212c588042bb58016f4f123c7, type: 3}
     index: 11
-  - go: {fileID: -4041517532483804027, guid: a447205212c588042bb58016f4f123c7, type: 3}
+  - go: {fileID: 3670937386559556255, guid: a447205212c588042bb58016f4f123c7, type: 3}
     index: 12
-  - go: {fileID: -211464666723419482, guid: a447205212c588042bb58016f4f123c7, type: 3}
+  - go: {fileID: -9125223476974834650, guid: a447205212c588042bb58016f4f123c7, type: 3}
     index: 13
-  - go: {fileID: 1374024990869950868, guid: a447205212c588042bb58016f4f123c7, type: 3}
+  - go: {fileID: 3166135607250836155, guid: a447205212c588042bb58016f4f123c7, type: 3}
     index: 14
-  - go: {fileID: -2659343310320680436, guid: a447205212c588042bb58016f4f123c7, type: 3}
+  - go: {fileID: -8985382701403645704, guid: a447205212c588042bb58016f4f123c7, type: 3}
     index: 15
-  - go: {fileID: 8118160353253350557, guid: a447205212c588042bb58016f4f123c7, type: 3}
+  - go: {fileID: -2785303447996818990, guid: a447205212c588042bb58016f4f123c7, type: 3}
     index: 16
-  - go: {fileID: 673591317780483224, guid: a447205212c588042bb58016f4f123c7, type: 3}
+  - go: {fileID: -9034009919382295158, guid: a447205212c588042bb58016f4f123c7, type: 3}
     index: 17
-  - go: {fileID: 3435485571694831481, guid: a447205212c588042bb58016f4f123c7, type: 3}
+  - go: {fileID: -3340056875569541714, guid: a447205212c588042bb58016f4f123c7, type: 3}
     index: 18
   generateGOHierarchy: 0
   textureAssetName: s_side Texture
