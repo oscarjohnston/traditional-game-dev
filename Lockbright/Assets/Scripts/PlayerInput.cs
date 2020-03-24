@@ -64,6 +64,9 @@ public class PlayerInput : MonoBehaviour
     public UnityEvent InteractWithStove;
     public UnityEvent InteractWithFridge;
 
+    // Burner Glow Light
+    public Light BurnerGlowLight;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -72,6 +75,9 @@ public class PlayerInput : MonoBehaviour
 
         // Allow Parkourist to double from the start
         ParkourCanDouble = true;
+
+        // Zero out the glow instensity
+        BurnerGlowLight.intensity = 0;
     }
 
     // Update is called once per frame
@@ -141,7 +147,28 @@ public class PlayerInput : MonoBehaviour
 
         // Input for movement
         xInput = Input.GetAxis("Horizontal" +  PlayerNumber);
+
+        // Handle the player moving horizontally
+        if(xInput == 1)
+        {
+            // Moving Right
+        }
+        else if(xInput == -1)
+        {
+            // Moving Left
+        }
+
+        // Handle Moving vertically
         yInput = Input.GetAxis("Vertical" + PlayerNumber);
+        if (yInput == 1)
+        {
+            // Moving Up
+        }
+        else if (yInput == -1)
+        {
+            // Moving Down
+        }
+
         var moveVector = new Vector3(xInput, yInput, 0) * SPEED * Time.deltaTime * 10;
 
         Body.MovePosition(new Vector2(transform.position.x + moveVector.x, transform.position.y + moveVector.y));
@@ -307,9 +334,16 @@ public class PlayerInput : MonoBehaviour
     /// </summary>
     void DoBurnerAbility()
     {
-        // TODO: Activate glow effect
+        BurnerGlowLight.intensity = 600;
+        Invoke("TurnOffBurnerGlow", 0.5f);
+
         ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
         game_controller.PlayBurnerAbilitySound();
+    }
+
+    private void TurnOffBurnerGlow()
+    {
+        BurnerGlowLight.intensity = 0;
     }
 
     /// <summary>

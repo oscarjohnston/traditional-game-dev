@@ -8,7 +8,7 @@ public class StoveScript : MonoBehaviour
     // Controller for particle
     public UIController game;
 
-    // Bollean for identifying if the stove is on
+    // Boolean for identifying if the stove is on
     private bool StoveIsLit;
 
     // Required Items

@@ -34,9 +34,9 @@ public class Interaction : MonoBehaviour
         if (!spawned)
         {
             // Is the player holding the right item? (and optionally the correct Player?)
-            foreach (GameObject required in requirement)
+            if(requirement.Length == 0)
             {
-                if (HeldItem == required || (PlayerRequirement != null && Class.Equals(PlayerRequirement)))
+                if (PlayerRequirement != null && Class.Equals(PlayerRequirement))
                 {
                     BubbleText.text = RewardText;
 
@@ -52,6 +52,29 @@ public class Interaction : MonoBehaviour
                     }
                     //Instantiate(reward, spawnPoint, new Quaternion(0, 0, 0, 0));
                     spawned = true;
+                }
+            }
+            else
+            {
+                foreach (GameObject required in requirement)
+                {
+                    if (HeldItem == required || (PlayerRequirement != null && Class.Equals(PlayerRequirement)))
+                    {
+                        BubbleText.text = RewardText;
+
+                        Destroy(HeldItem);
+                        if (reward != null)
+                        {
+                            HeldItem = reward;
+                            grabbed = true;
+                        }
+                        else
+                        {
+                            grabbed = false;
+                        }
+                        //Instantiate(reward, spawnPoint, new Quaternion(0, 0, 0, 0));
+                        spawned = true;
+                    }
                 }
             }
         }
