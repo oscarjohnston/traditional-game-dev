@@ -11653,6 +11653,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &866651822 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1434038002, guid: 8e2d4ab0f4fc6e3408f30f00042ad269,
+    type: 3}
+  m_PrefabInstance: {fileID: 2951271327453125803}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &904865180 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000774612252156320, guid: 8e2d4ab0f4fc6e3408f30f00042ad269,
@@ -13055,6 +13067,18 @@ Transform:
   m_Father: {fileID: 503711579}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1623462567 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2120785050, guid: f3ba6f255f2294342b8bff1e57fd2f81,
+    type: 3}
+  m_PrefabInstance: {fileID: 4070121652253065926}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1638677335
 GameObject:
   m_ObjectHideFlags: 0
@@ -14503,6 +14527,12 @@ PrefabInstance:
       propertyPath: BurnerGlowLight
       value: 
       objectReference: {fileID: 2102640629}
+    - target: {fileID: 2265485377095915925, guid: 45fbd0dd51e8cdf44a00d8915e6312d2,
+        type: 3}
+      propertyPath: defaultItem
+      value: 
+      objectReference: {fileID: 21300000, guid: b46eea48c09a7e340a546b39bff7a035,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45fbd0dd51e8cdf44a00d8915e6312d2, type: 3}
 --- !u!1001 &2951271327453125803
@@ -14723,6 +14753,17 @@ PrefabInstance:
       propertyPath: BurnerGlowLight
       value: 
       objectReference: {fileID: 1178440536}
+    - target: {fileID: 4000774612252156321, guid: 8e2d4ab0f4fc6e3408f30f00042ad269,
+        type: 3}
+      propertyPath: defaultItem
+      value: 
+      objectReference: {fileID: 21300000, guid: b46eea48c09a7e340a546b39bff7a035,
+        type: 3}
+    - target: {fileID: 4000774612252156321, guid: 8e2d4ab0f4fc6e3408f30f00042ad269,
+        type: 3}
+      propertyPath: HeldItemImage
+      value: 
+      objectReference: {fileID: 866651822}
     - target: {fileID: 4000774612252156324, guid: 8e2d4ab0f4fc6e3408f30f00042ad269,
         type: 3}
       propertyPath: m_Name
@@ -14953,6 +14994,17 @@ PrefabInstance:
       propertyPath: BurnerGlowLight
       value: 
       objectReference: {fileID: 1194637559}
+    - target: {fileID: 4070121653363845126, guid: f3ba6f255f2294342b8bff1e57fd2f81,
+        type: 3}
+      propertyPath: defaultItem
+      value: 
+      objectReference: {fileID: 21300000, guid: b46eea48c09a7e340a546b39bff7a035,
+        type: 3}
+    - target: {fileID: 4070121653363845126, guid: f3ba6f255f2294342b8bff1e57fd2f81,
+        type: 3}
+      propertyPath: HeldItemImage
+      value: 
+      objectReference: {fileID: 1623462567}
     - target: {fileID: 4070121653363845241, guid: f3ba6f255f2294342b8bff1e57fd2f81,
         type: 3}
       propertyPath: m_Name
@@ -15114,7 +15166,8 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultItem
       value: 
-      objectReference: {fileID: 780947195}
+      objectReference: {fileID: 21300000, guid: b46eea48c09a7e340a546b39bff7a035,
+        type: 3}
     - target: {fileID: 8356536716987322904, guid: 63ed065883981db4995668cf4e83d0c6,
         type: 3}
       propertyPath: Class

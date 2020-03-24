@@ -50,7 +50,7 @@ public class PlayerInput : MonoBehaviour
     public GameObject HeldItem;
 
     // Sprite UI
-    public Image defaultItem;
+    public Sprite defaultItem;
     public Image HeldItemImage;
 
     // Interactable variables
@@ -95,8 +95,8 @@ public class PlayerInput : MonoBehaviour
                 SpeechBubble.SetActive(false);
                 PickupPromptOn = false;
 
-                // TODO: Put into UI Inventory
-                HeldItemImage.sprite = HeldItem.GetComponent<Image>().sprite;
+                // Put into UI Inventory
+                HeldItemImage.sprite = HeldItem.GetComponent<SpriteRenderer>().sprite;
             }
             // Deny pickup
             else if(Input.GetButtonDown("B_Button_" + PlayerNumber))
@@ -121,8 +121,8 @@ public class PlayerInput : MonoBehaviour
                 SpeechBubble.SetActive(false);
                 SwapPromptOn = false;
 
-                // TODO: Put into UI Inventory
-                HeldItemImage.sprite = HeldItem.GetComponent<Image>().sprite;
+                // Put into UI Inventory
+                HeldItemImage.sprite = HeldItem.GetComponent<SpriteRenderer>().sprite;
             }
             // Deny pickup
             else if (Input.GetButtonDown("B_Button_" + PlayerNumber))
@@ -192,8 +192,9 @@ public class PlayerInput : MonoBehaviour
             if (grabbed)
             {
                 DropItem();
-                // TODO: Take out of UI Inventory
-                HeldItemImage.sprite = defaultItem.sprite;
+
+                // Take out of UI Inventory
+                HeldItemImage.sprite = defaultItem;
             }
             
         }
