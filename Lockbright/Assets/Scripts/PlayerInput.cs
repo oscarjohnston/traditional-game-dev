@@ -83,6 +83,8 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         // First look for any prompts
         // Pickup Prompt
         if (PickupPromptOn)
