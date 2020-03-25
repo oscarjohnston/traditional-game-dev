@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Item
+  - Interactable
   layers:
   - Default
   - TransparentFX
@@ -44,6 +45,9 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: HeldItems
+    uniqueID: 146239393
     locked: 0
   - name: Player
     uniqueID: 1418791767

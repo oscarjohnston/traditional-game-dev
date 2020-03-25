@@ -10,12 +10,18 @@ public class PlayerInput : MonoBehaviour
     public UIController ui_Controller;
     public GameController game_controller;
 
-    //Movement
+    // Movement
     private float xInput, yInput;
     public float SPEED = 1.0f;
 
-    //Distinguish player's input from each other
+    // Distinguish player's input from each other
     public int PlayerNumber;
+
+    // Describe this player's class for interaction requirements
+    public string Class;
+
+    // This variable is to keep the Parkourist from doubling her speed over and over
+    private bool ParkourCanDouble;
 
     // Speech Bubble holders
     public GameObject SpeechBubble;
@@ -44,12 +50,22 @@ public class PlayerInput : MonoBehaviour
     public GameObject HeldItem;
 
     // Sprite UI
-    public Image defaultItem;
+    public Sprite defaultItem;
     public Image HeldItemImage;
+
+    // Interactable variables
+    private Interaction InteractingWith;
+    public bool Interacting;
+    // Optionally
+    private StoveScript StoveInteractingWith;
+    public bool StoveInteracting;
 
     // Unity Events to win prototype
     public UnityEvent InteractWithStove;
     public UnityEvent InteractWithFridge;
+
+    // Burner Glow Light
+    public Light BurnerGlowLight;
 
     // Start is called before the first frame update
     void Start()
@@ -57,8 +73,11 @@ public class PlayerInput : MonoBehaviour
         //Sets up body
         Body = GetComponent<Rigidbody2D>();
 
-        // Initialize UI Controller
-        //ui_Controller = (UIController)GameObject.Find("UI Controller");
+        // Allow Parkourist to double from the start
+        ParkourCanDouble = true;
+
+        // Zero out the glow instensity
+        BurnerGlowLight.intensity = 0;
     }
 
     // Update is called once per frame
@@ -76,8 +95,11 @@ public class PlayerInput : MonoBehaviour
                 SpeechBubble.SetActive(false);
                 PickupPromptOn = false;
 
-                // TODO: Put into UI Inventory
-                HeldItemImage.sprite = HeldItem.GetComponent<Image>().sprite;
+                // Put into UI Inventory
+                HeldItemImage.sprite = HeldItem.GetComponent<SpriteRenderer>().sprite;
+
+                // Turn off the item
+                HeldItem.SetActive(false);
             }
             // Deny pickup
             else if(Input.GetButtonDown("B_Button_" + PlayerNumber))
@@ -96,14 +118,18 @@ public class PlayerInput : MonoBehaviour
             {
                 // Swap the location of the held item with the swap item
                 HeldItem.transform.position = SwapPromptObject.transform.position;
+                HeldItem.SetActive(true);
 
                 // Pickup the new item
                 HeldItem = SwapPromptObject;
                 SpeechBubble.SetActive(false);
                 SwapPromptOn = false;
 
-                // TODO: Put into UI Inventory
-                HeldItemImage.sprite = HeldItem.GetComponent<Image>().sprite;
+                // Put into UI Inventory
+                HeldItemImage.sprite = HeldItem.GetComponent<SpriteRenderer>().sprite;
+
+                // Turn off the item
+                HeldItem.SetActive(false);
             }
             // Deny pickup
             else if (Input.GetButtonDown("B_Button_" + PlayerNumber))
@@ -128,7 +154,28 @@ public class PlayerInput : MonoBehaviour
 
         // Input for movement
         xInput = Input.GetAxis("Horizontal" +  PlayerNumber);
+
+        // Handle the player moving horizontally
+        if(xInput == 1)
+        {
+            // Moving Right
+        }
+        else if(xInput == -1)
+        {
+            // Moving Left
+        }
+
+        // Handle Moving vertically
         yInput = Input.GetAxis("Vertical" + PlayerNumber);
+        if (yInput == 1)
+        {
+            // Moving Up
+        }
+        else if (yInput == -1)
+        {
+            // Moving Down
+        }
+
         var moveVector = new Vector3(xInput, yInput, 0) * SPEED * Time.deltaTime * 10;
 
         Body.MovePosition(new Vector2(transform.position.x + moveVector.x, transform.position.y + moveVector.y));
@@ -148,9 +195,15 @@ public class PlayerInput : MonoBehaviour
         // B Button Pressed
         if (Input.GetButtonDown("B_Button_" + PlayerNumber))
         {
-            DropItem();
-            // TODO: Take out of UI Inventory
-            HeldItemImage.sprite = defaultItem.sprite;
+            // Drop a held Item, handle UI images
+            if (grabbed)
+            {
+                DropItem();
+
+                // Take out of UI Inventory
+                HeldItemImage.sprite = defaultItem;
+            }
+            
         }
 
         // X Button Pressed
@@ -158,8 +211,18 @@ public class PlayerInput : MonoBehaviour
         {
             if(grabbed)
             {
+                // Get the helditem's description
+                HeldItems item = HeldItem.GetComponent<HeldItems>();
+                if(item != null)
+                {
+                    BubbleText.text = item.ItemDescription;
+                }
+                else
+                {
+                    BubbleText.text = "Looks like I'm holding " + HeldItem.name;
+                }
+
                 SpeechBubble.SetActive(true);
-                BubbleText.text = "Looks like I'm holding " + HeldItem.name;
                 Invoke("DeactivateSpeechBubble", 4f);
             }
         }
@@ -167,16 +230,68 @@ public class PlayerInput : MonoBehaviour
         // A Button Pressed
         if (Input.GetButtonDown("A_Button_" + PlayerNumber) || Input.GetKeyDown(KeyCode.Space))
         {
+            // try to interact
+            if (Interacting)
+            {
+                ActivateSpeechBubble();
+                
+                InteractingWith.TryToInteractWithThisObject(this.Class, ref this.HeldItem, ref this.BubbleText, ref this.grabbed);
+
+                if(grabbed)
+                {
+                    // Put into UI Inventory
+                    HeldItemImage.sprite = HeldItem.GetComponent<SpriteRenderer>().sprite;
+
+                    // Turn off the item
+                    HeldItem.SetActive(false);
+                }
+                else
+                {
+                    // Take out of UI Inventory
+                    HeldItemImage.sprite = defaultItem;
+                }
+                return;
+            }
+            else if (StoveInteracting)
+            {
+                ActivateSpeechBubble();
+
+                StoveInteractingWith.TryToInteractWithThisObject(this.Class, ref this.HeldItem, ref this.BubbleText, ref this.grabbed);
+
+                if (grabbed)
+                {
+                    // Put into UI Inventory
+                    HeldItemImage.sprite = HeldItem.GetComponent<SpriteRenderer>().sprite;
+
+                    // Turn off the item
+                    HeldItem.SetActive(false);
+                }
+                else
+                {
+                    // Take out of UI Inventory
+                    HeldItemImage.sprite = defaultItem;
+                }
+                return;
+            }
+
+            print("Throwing out raycast to look for objects to pickup");
+
+
             //Raycast Zone of pickup after shifting the pickup orgin down
-            Vector3 Adjustment = new Vector2(0, -0.5f);
+            Vector3 Adjustment = new Vector2(0, -1f);
             Collider2D[] collide = Physics2D.OverlapBoxAll(transform.position + Adjustment + dir, new Vector2(1, 1), 0);
 
+
+            bool collidedWithAnItem = false;
+            string collidedWithName = null;
             // Search each collision looking for an item to pickup
             foreach (Collider2D collision in collide)
             {
                 // Make sure you can actually pick item up before moving it
                 if (collision.tag == "Item" && collision.gameObject != HeldItem)
                 {
+                    collidedWithAnItem = true;
+
                     if (!grabbed)
                     {
                         // Prompt player to pick up item
@@ -198,6 +313,16 @@ public class PlayerInput : MonoBehaviour
                         return;
                     }
                 }
+
+                // Save the collided with name for later to put in speech bubble
+                collidedWithName = collision.name;
+            }
+
+            // Show a speech bubble of whatever else was collided with
+            if(!collidedWithAnItem && collidedWithName != null)
+            {
+                ActivateSpeechBubble();
+                BubbleText.text = "It's a " + collidedWithName;
             }
         }
 
@@ -206,21 +331,21 @@ public class PlayerInput : MonoBehaviour
         {
             print(this.name + " just used their ability");
 
-            ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
+            
 
             // Call the correct ability based on object name
-            switch (this.gameObject.name)
+            switch (Class)
             {
-                case "Player 1":
+                case "Scholar":
                     DoScholarAbility();
                     return;
-                case "Player 2":
+                case "Burner":
                     DoBurnerAbility();
                     return;
-                case "Player 3":
+                case "Parkourist":
                     DoParkouristAbility();
                     return;
-                case "Player 4":
+                case "Illusionist":
                     DoIllusionistAbility();
                     return;
             }
@@ -229,12 +354,13 @@ public class PlayerInput : MonoBehaviour
         // If an item is being held, then tell that game object to move to the player's hold point with the player's movement
         if (grabbed)
         {
-            HeldItem.transform.position = holdpoint.position;
+            //HeldItem.transform.position = holdpoint.position;
+            
         }
 
 
         // Win the prototype
-        if(HeldItem != null && HeldItem.name == "CharredKey")
+        if(HeldItem != null && HeldItem.name == "Charred Key")
         {
             game_controller.InvokeWinGameEvent();
         }
@@ -245,7 +371,23 @@ public class PlayerInput : MonoBehaviour
     /// </summary>
     void DoBurnerAbility()
     {
-        // TODO: Activate glow effect
+        BurnerGlowLight.intensity = 600;
+        Invoke("TurnOffBurnerGlow", 0.5f);
+
+        ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
+        game_controller.PlayBurnerAbilitySound();
+
+        // Also try to light the stove
+        if (StoveInteracting)
+        {
+            StoveInteractingWith.LightOrUnlightTheStove();
+            return;
+        }
+    }
+
+    private void TurnOffBurnerGlow()
+    {
+        BurnerGlowLight.intensity = 0;
     }
 
     /// <summary>
@@ -253,13 +395,22 @@ public class PlayerInput : MonoBehaviour
     /// </summary>
     void DoParkouristAbility()
     {
-        this.SPEED *= 2;
-        Invoke("TurnOffSpeedBoost", 1f);
+        if (ParkourCanDouble)
+        {
+            this.SPEED *= 2;
+            Invoke("TurnOffSpeedBoost", 1f);
+            ParkourCanDouble = false;
+
+            game_controller.PlayParkouristAbilitySound();
+            ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
+        }
+        
     }
 
     void TurnOffSpeedBoost()
     {
         this.SPEED /= 2;
+        ParkourCanDouble = true;
     }
 
     /// <summary>
@@ -272,6 +423,9 @@ public class PlayerInput : MonoBehaviour
         {
             SpeechBubble.SetActive(true);
             Invoke("DeactivateSpeechBubble", SCHOLAR_BUBBLE_TIME);
+
+            ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
+            game_controller.PlayScholarAbilitySound();
 
             switch (HeldItem.name)
             {
@@ -286,7 +440,6 @@ public class PlayerInput : MonoBehaviour
                     return;
             }
         }
-        
     }
 
     /// <summary>
@@ -294,8 +447,18 @@ public class PlayerInput : MonoBehaviour
     /// </summary>
     void DoIllusionistAbility()
     {
+        ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
+        game_controller.PlayIllusionistAbilitySound();
+
         // TODO: Figure out healing radius
         // TODO: Fire off healing glow effect
+
+        // Heal a Dried Mossflower if held
+        if (grabbed && HeldItem.name == "Dried Mossflower")
+        {
+            Destroy(HeldItem);
+            HeldItem = GameObject.Find("Living Mossflower");
+        }
     }
 
     /// <summary>
@@ -303,48 +466,41 @@ public class PlayerInput : MonoBehaviour
     /// </summary>
     void DropItem()
     {
-        if (grabbed)
-        {
-            print("Dropped Item");
-            HeldItem = null;
-            grabbed = false;
-        }
+        print("Dropped Item");
+
+        HeldItem.SetActive(true);
+
+        // Move the item near the feet
+        HeldItem.transform.position = holdpoint.position + new Vector3(0,-2.5f,0);
+
+        HeldItem = null;
+        grabbed = false;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         print(this.name + " has collided with " + collision.collider.name);
+
+        // Get the interaction object if it exists
+        this.InteractingWith = collision.collider.GetComponent<Interaction>();
+        if(InteractingWith != null)
+        {
+            Interacting = true;
+        }
+        // Or Get stove
+        this.StoveInteractingWith = collision.collider.GetComponent<StoveScript>();
+        if(StoveInteractingWith != null)
+        {
+            StoveInteracting = true;
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-    }
-
-    void OnCollisionStay2D(Collision2D collision)
-    {
-        // Interacte with what you're colliding with by pressing the A button
-        if(Input.GetButtonDown("A_Button_" + PlayerNumber))
-        {
-            print(this.name + " has interacted with " + collision.collider.name);
-            ActivateSpeechBubble();
-            BubbleText.text = "It's a " + collision.collider.name;
-
-            if(collision.gameObject.name == "Stove" && HeldItem.name == "Books")
-            {
-                print("Interacted with Stove, spawning key");
-                BubbleText.text = "Yay! A Key!";
-                InteractWithStove.Invoke();
-
-                HeldItem = null;
-                grabbed = false;
-            }
-            else if(collision.gameObject.name == "Fridge")
-            {
-                print("Interacted with Fridge, spawning books on floor");
-                BubbleText.text = "Books for the stove fell";
-                InteractWithFridge.Invoke();
-            }
-        }
+        InteractingWith = null;
+        Interacting = false;
+        StoveInteractingWith = null;
+        StoveInteracting = false;
     }
 
     /// <summary>

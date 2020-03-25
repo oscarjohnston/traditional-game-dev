@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour
 {
-    public GameObject requirement;
+    public GameObject[] requirement;
     public string PlayerRequirement;
 
     public GameObject reward;
     public Vector3 spawnPoint;
     public bool spawned;
-    public string bubbleText;
+    public string RewardText;
+    public string InteractionText;
 
     // Start is called before the first frame update
     void Start()
@@ -21,35 +23,61 @@ public class Interaction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    public void TryToInteractWithThisObject(string Class, ref GameObject HeldItem, ref Text BubbleText, ref bool grabbed)
     {
-        if (!spawned && collision.gameObject.tag == "Player")
+        BubbleText.text = InteractionText;
+
+        // Check if this object has spawned its item yet
+        if (!spawned)
         {
-            PlayerInput player = collision.collider.GetComponent<PlayerInput>();
-
-            if(player != null && Input.GetButtonDown("A_Button_" + player.PlayerNumber))
+            // Is the player holding the right item? (and optionally the correct Player?)
+            if(requirement.Length == 0)
             {
-                player.BubbleText.text = bubbleText;
-
-                // Is the player holding the right item? (and optionally the correct Player?)
-                if (player.HeldItem == requirement && (PlayerRequirement != null && player.name.Equals(PlayerRequirement)))
+                if (PlayerRequirement != null && Class.Equals(PlayerRequirement))
                 {
-                    Destroy(player.HeldItem);
-                    if(reward != null) 
-                    { 
-                        player.HeldItem = reward;
+                    BubbleText.text = RewardText;
+
+                    Destroy(HeldItem);
+                    if (reward != null)
+                    {
+                        HeldItem = reward;
+                        grabbed = true;
                     }
                     else
                     {
-                        player.grabbed = false;
+                        grabbed = false;
                     }
                     //Instantiate(reward, spawnPoint, new Quaternion(0, 0, 0, 0));
                     spawned = true;
                 }
             }
+            else
+            {
+                foreach (GameObject required in requirement)
+                {
+                    if (HeldItem == required || (PlayerRequirement != null && Class.Equals(PlayerRequirement)))
+                    {
+                        BubbleText.text = RewardText;
+
+                        Destroy(HeldItem);
+                        if (reward != null)
+                        {
+                            HeldItem = reward;
+                            grabbed = true;
+                        }
+                        else
+                        {
+                            grabbed = false;
+                        }
+                        //Instantiate(reward, spawnPoint, new Quaternion(0, 0, 0, 0));
+                        spawned = true;
+                    }
+                }
+            }
         }
     }
 }
+
