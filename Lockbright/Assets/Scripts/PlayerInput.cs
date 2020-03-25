@@ -83,8 +83,6 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
         // First look for any prompts
         // Pickup Prompt
         if (PickupPromptOn)
@@ -99,6 +97,9 @@ public class PlayerInput : MonoBehaviour
 
                 // Put into UI Inventory
                 HeldItemImage.sprite = HeldItem.GetComponent<SpriteRenderer>().sprite;
+
+                // Turn off the item
+                HeldItem.SetActive(false);
             }
             // Deny pickup
             else if(Input.GetButtonDown("B_Button_" + PlayerNumber))
@@ -117,6 +118,7 @@ public class PlayerInput : MonoBehaviour
             {
                 // Swap the location of the held item with the swap item
                 HeldItem.transform.position = SwapPromptObject.transform.position;
+                HeldItem.SetActive(true);
 
                 // Pickup the new item
                 HeldItem = SwapPromptObject;
@@ -125,6 +127,9 @@ public class PlayerInput : MonoBehaviour
 
                 // Put into UI Inventory
                 HeldItemImage.sprite = HeldItem.GetComponent<SpriteRenderer>().sprite;
+
+                // Turn off the item
+                HeldItem.SetActive(false);
             }
             // Deny pickup
             else if (Input.GetButtonDown("B_Button_" + PlayerNumber))
@@ -236,6 +241,14 @@ public class PlayerInput : MonoBehaviour
                 {
                     // Put into UI Inventory
                     HeldItemImage.sprite = HeldItem.GetComponent<SpriteRenderer>().sprite;
+
+                    // Turn off the item
+                    HeldItem.SetActive(false);
+                }
+                else
+                {
+                    // Take out of UI Inventory
+                    HeldItemImage.sprite = defaultItem;
                 }
                 return;
             }
@@ -249,6 +262,14 @@ public class PlayerInput : MonoBehaviour
                 {
                     // Put into UI Inventory
                     HeldItemImage.sprite = HeldItem.GetComponent<SpriteRenderer>().sprite;
+
+                    // Turn off the item
+                    HeldItem.SetActive(false);
+                }
+                else
+                {
+                    // Take out of UI Inventory
+                    HeldItemImage.sprite = defaultItem;
                 }
                 return;
             }
@@ -333,7 +354,8 @@ public class PlayerInput : MonoBehaviour
         // If an item is being held, then tell that game object to move to the player's hold point with the player's movement
         if (grabbed)
         {
-            HeldItem.transform.position = holdpoint.position;
+            //HeldItem.transform.position = holdpoint.position;
+            
         }
 
 
@@ -444,12 +466,15 @@ public class PlayerInput : MonoBehaviour
     /// </summary>
     void DropItem()
     {
-        if (grabbed)
-        {
-            print("Dropped Item");
-            HeldItem = null;
-            grabbed = false;
-        }
+        print("Dropped Item");
+
+        HeldItem.SetActive(true);
+
+        // Move the item near the feet
+        HeldItem.transform.position = holdpoint.position + new Vector3(0,-2.5f,0);
+
+        HeldItem = null;
+        grabbed = false;
     }
 
     void OnCollisionEnter2D(Collision2D collision)

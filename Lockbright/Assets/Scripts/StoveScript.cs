@@ -61,7 +61,7 @@ public class StoveScript : MonoBehaviour
         }
         else if (itemsLeft == 0)
         {
-            BubbleText.text = "Recipe is good to go";
+            BubbleText.text = "Now we just need to heat it up!";
         }
         else if(itemsLeft < 3)
         {
@@ -74,9 +74,11 @@ public class StoveScript : MonoBehaviour
             if (HeldItem == (Pomegranate || LivingMossFlower || PaleTonic))
             {
                 itemsLeft--;
-                BubbleText.text = "Good Job! We only need " + itemsLeft + " more items!";
                 Destroy(HeldItem);
                 grabbed = false;
+
+                if (itemsLeft > 0) { BubbleText.text = "Good Job! We only need " + itemsLeft + " more items!"; }
+                else { BubbleText.text = "Now we just need to heat it up!"; }
             }
         }
 
