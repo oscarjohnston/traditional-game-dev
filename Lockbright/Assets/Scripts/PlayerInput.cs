@@ -229,6 +229,12 @@ public class PlayerInput : MonoBehaviour
                 ActivateSpeechBubble();
                 
                 InteractingWith.TryToInteractWithThisObject(this.Class, ref this.HeldItem, ref this.BubbleText, ref this.grabbed);
+
+                if(grabbed)
+                {
+                    // Put into UI Inventory
+                    HeldItemImage.sprite = HeldItem.GetComponent<SpriteRenderer>().sprite;
+                }
                 return;
             }
             else if (StoveInteracting)
@@ -236,6 +242,12 @@ public class PlayerInput : MonoBehaviour
                 ActivateSpeechBubble();
 
                 StoveInteractingWith.TryToInteractWithThisObject(this.Class, ref this.HeldItem, ref this.BubbleText, ref this.grabbed);
+
+                if (grabbed)
+                {
+                    // Put into UI Inventory
+                    HeldItemImage.sprite = HeldItem.GetComponent<SpriteRenderer>().sprite;
+                }
                 return;
             }
 
