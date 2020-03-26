@@ -370,6 +370,13 @@ public class PlayerInput : MonoBehaviour
         {
             game_controller.InvokeWinGameEvent();
         }
+
+        // Health check
+        if(health != 5)
+        {
+            // Do something to change health bar
+
+        }
     }
 
     /// <summary>
