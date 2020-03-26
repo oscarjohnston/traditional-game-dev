@@ -34,7 +34,13 @@ AnimatorController:
   m_PrefabAsset: {fileID: 0}
   m_Name: B_front
   serializedVersion: 5
-  m_AnimatorParameters: []
+  m_AnimatorParameters:
+  - m_Name: Walk
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -84,11 +90,16 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
+<<<<<<< HEAD
     m_State: {fileID: 6262198028256798981}
     m_Position: {x: 490, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -559605759082050224}
     m_Position: {x: 470, y: 50, z: 0}
+=======
+    m_State: {fileID: -318048324598039199}
+    m_Position: {x: 320, y: 120, z: 0}
+>>>>>>> b1f0e6b7df73fb4fc6daca8aa54e15cfd73be154
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions:
