@@ -70,12 +70,6 @@ public class PlayerInput : MonoBehaviour
     // Health
     public int health;
 
-    // Animation Variables
-    public Animator front;
-    public Animator side;
-    public Animator back;
-    private bool CurrentlyWalking;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -171,13 +165,10 @@ public class PlayerInput : MonoBehaviour
         if(xInput == 1)
         {
             // Moving Right
-
-            side.transform.localScale = new Vector3(-1,1,1); // This will flip the image across the x axis to the flipped view
         }
         else if(xInput == -1)
         {
             // Moving Left
-            side.transform.localScale = new Vector3(1, 1, 1); // This will flip the image across the x axis to the normal view
         }
 
         // Handle Moving vertically
@@ -189,21 +180,6 @@ public class PlayerInput : MonoBehaviour
         else if (yInput == -1)
         {
             // Moving Down
-            // TODO: Set all other animators to false
-
-            front.gameObject.SetActive(true);
-
-            if (CurrentlyWalking)
-            {
-                front.SetBool("Walk", true); // This will turn on the walk animation
-                side.SetBool("Walk", true);
-                back.SetBool("Walk", true);
-            }
-            else
-            {
-                front.SetBool("Walk", false);
-            }
-            
         }
 
         var moveVector = new Vector3(xInput, yInput, 0) * SPEED * Time.deltaTime * 10;
