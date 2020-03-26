@@ -67,6 +67,9 @@ public class PlayerInput : MonoBehaviour
     // Burner Glow Light
     public Light BurnerGlowLight;
 
+    // Health
+    public int health;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -78,6 +81,9 @@ public class PlayerInput : MonoBehaviour
 
         // Zero out the glow instensity
         BurnerGlowLight.intensity = 0;
+
+        // Set Up Health
+        health = 5;
     }
 
     // Update is called once per frame
@@ -364,6 +370,13 @@ public class PlayerInput : MonoBehaviour
         {
             game_controller.InvokeWinGameEvent();
         }
+
+        // Health check
+        if(health != 5)
+        {
+            // Do something to change health bar
+
+        }
     }
 
     /// <summary>
@@ -458,6 +471,9 @@ public class PlayerInput : MonoBehaviour
         {
             Destroy(HeldItem);
             HeldItem = GameObject.Find("Living Mossflower");
+
+            // Put into UI Inventory
+            HeldItemImage.sprite = HeldItem.GetComponent<SpriteRenderer>().sprite;
         }
     }
 
