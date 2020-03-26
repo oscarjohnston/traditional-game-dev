@@ -464,6 +464,9 @@ public class PlayerInput : MonoBehaviour
         {
             Destroy(HeldItem);
             HeldItem = GameObject.Find("Living Mossflower");
+
+            // Put into UI Inventory
+            HeldItemImage.sprite = HeldItem.GetComponent<SpriteRenderer>().sprite;
         }
     }
 
