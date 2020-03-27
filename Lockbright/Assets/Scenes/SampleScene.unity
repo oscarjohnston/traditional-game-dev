@@ -13667,7 +13667,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416568727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6, y: 0.37, z: 0}
+  m_LocalPosition: {x: -7.08, y: 1.4, z: 0}
   m_LocalScale: {x: 0.6149573, y: 0.6149573, z: 0.6149573}
   m_Children: []
   m_Father: {fileID: 44763305}
@@ -15530,7 +15530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a4607119391df42b632b2084f4704e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemDescription: 'You examine the cookbook. It is written in a foreign language. '
+  ItemDescription: mine the book of fruit. It doesn't seem to have any use.
 --- !u!61 &1954522121
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15633,8 +15633,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980840907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.92, y: -2.16, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.38, y: -2.44, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 44763305}
   m_RootOrder: 5
@@ -15663,7 +15663,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.87, y: 0.84}
+  m_Size: {x: 0.84, y: 0.53}
   m_EdgeRadius: 0
 --- !u!212 &1980840910
 SpriteRenderer:
@@ -15754,8 +15754,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023555116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.77, y: 2.04, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.53, y: 1.76, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 44763305}
   m_RootOrder: 3
@@ -15784,7 +15784,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.61, y: 0.94}
+  m_Size: {x: 1.42, y: 1.66}
   m_EdgeRadius: 0
 --- !u!212 &2023555119
 SpriteRenderer:
@@ -15876,8 +15876,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038375323}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15, y: -1.98, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.08, y: -2.81, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 44763305}
   m_RootOrder: 4
@@ -15906,7 +15906,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.85, y: 0.87}
+  m_Size: {x: 1.19, y: 1.09}
   m_EdgeRadius: 0
 --- !u!212 &2038375326
 SpriteRenderer:
@@ -16284,12 +16284,17 @@ PrefabInstance:
     - target: {fileID: 2265485377095915922, guid: 45fbd0dd51e8cdf44a00d8915e6312d2,
         type: 3}
       propertyPath: m_Size.y
-      value: 13.04
+      value: 9.13
       objectReference: {fileID: 0}
     - target: {fileID: 2265485377095915922, guid: 45fbd0dd51e8cdf44a00d8915e6312d2,
         type: 3}
       propertyPath: m_Offset.y
-      value: -11.39
+      value: -13.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265485377095915922, guid: 45fbd0dd51e8cdf44a00d8915e6312d2,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 8.3
       objectReference: {fileID: 0}
     - target: {fileID: 2265485377095915923, guid: 45fbd0dd51e8cdf44a00d8915e6312d2,
         type: 3}
@@ -16636,12 +16641,17 @@ PrefabInstance:
     - target: {fileID: 4000774612252156326, guid: 8e2d4ab0f4fc6e3408f30f00042ad269,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.12
+      value: 0.83
       objectReference: {fileID: 0}
     - target: {fileID: 4000774612252156326, guid: 8e2d4ab0f4fc6e3408f30f00042ad269,
         type: 3}
       propertyPath: m_Offset.y
-      value: -1.08
+      value: -1.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000774612252156326, guid: 8e2d4ab0f4fc6e3408f30f00042ad269,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 4000774612252156327, guid: 8e2d4ab0f4fc6e3408f30f00042ad269,
         type: 3}
@@ -16836,12 +16846,17 @@ PrefabInstance:
     - target: {fileID: 4070121653363845124, guid: f3ba6f255f2294342b8bff1e57fd2f81,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.12
+      value: 0.76
       objectReference: {fileID: 0}
     - target: {fileID: 4070121653363845124, guid: f3ba6f255f2294342b8bff1e57fd2f81,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.87
+      value: -1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4070121653363845124, guid: f3ba6f255f2294342b8bff1e57fd2f81,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4070121653363845125, guid: f3ba6f255f2294342b8bff1e57fd2f81,
         type: 3}
@@ -17135,12 +17150,17 @@ PrefabInstance:
     - target: {fileID: 8356536716987322911, guid: 63ed065883981db4995668cf4e83d0c6,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.94
+      value: 0.61
       objectReference: {fileID: 0}
     - target: {fileID: 8356536716987322911, guid: 63ed065883981db4995668cf4e83d0c6,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.68
+      value: -0.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356536716987322911, guid: 63ed065883981db4995668cf4e83d0c6,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.63
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63ed065883981db4995668cf4e83d0c6, type: 3}
