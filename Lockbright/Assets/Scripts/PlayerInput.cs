@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -74,6 +75,7 @@ public class PlayerInput : MonoBehaviour
     public Animator front;
     public Animator side;
     public Animator back;
+    private bool IsWalking;
 
     // Start is called before the first frame update
     void Start()
@@ -89,6 +91,14 @@ public class PlayerInput : MonoBehaviour
 
         // Set Up Health
         health = 5;
+
+
+        // Set the image to front
+        front.gameObject.SetActive(true);
+        back.gameObject.SetActive(false);
+        side.gameObject.SetActive(false);
+
+        IsWalking = false;
     }
 
     // Update is called once per frame
@@ -165,26 +175,106 @@ public class PlayerInput : MonoBehaviour
 
         // Input for movement
         xInput = Input.GetAxis("Horizontal" +  PlayerNumber);
+        yInput = Input.GetAxis("Vertical" + PlayerNumber);
 
         // Handle the player moving horizontally
-        if(xInput == 1)
+        if (xInput >= 0.5f)
         {
             // Moving Right
+            IsWalking = true;
+
+            // Toggle animation
+            front.SetBool("Walk", IsWalking);
+            side.SetBool("Walk", IsWalking);
+            back.SetBool("Walk", IsWalking);
+
+            if (Class == "Illusionist")
+            {
+                side.transform.localScale = new Vector3(Math.Abs(side.transform.localScale.x), side.transform.localScale.y, side.transform.localScale.z);
+            }
+            else
+            {
+                side.transform.localScale = new Vector3(Math.Abs(side.transform.localScale.x) * -1, side.transform.localScale.y, side.transform.localScale.z);
+            }
+            
+
+            // Set the side to active
+            side.gameObject.SetActive(true);
+
+
+            // Turn of the others
+            front.gameObject.SetActive(false);
+            back.gameObject.SetActive(false);
         }
-        else if(xInput == -1)
+        else if(xInput <= -0.5f)
         {
             // Moving Left
-        }
+            IsWalking = true;
 
-        // Handle Moving vertically
-        yInput = Input.GetAxis("Vertical" + PlayerNumber);
-        if (yInput == 1)
+            // Toggle animation
+            front.SetBool("Walk", IsWalking);
+            side.SetBool("Walk", IsWalking);
+            back.SetBool("Walk", IsWalking);
+
+            if(Class == "Illusionist")
+            {
+                side.transform.localScale = new Vector3(Math.Abs(side.transform.localScale.x) * -1, side.transform.localScale.y, side.transform.localScale.z);
+            }
+            else
+            {
+                side.transform.localScale = new Vector3(Math.Abs(side.transform.localScale.x), side.transform.localScale.y, side.transform.localScale.z);
+            }
+            
+
+            // Set the side to active
+            side.gameObject.SetActive(true);
+
+            // Turn off the others
+            front.gameObject.SetActive(false);
+            back.gameObject.SetActive(false);
+        }
+        else if (yInput >= 0.5f)
         {
             // Moving Up
+            IsWalking = true;
+
+            // Toggle animation
+            front.SetBool("Walk", IsWalking);
+            side.SetBool("Walk", IsWalking);
+            back.SetBool("Walk", IsWalking);
+
+            // Set the back to active
+            back.gameObject.SetActive(true);
+
+            // Turn off the others
+            front.gameObject.SetActive(false);
+            side.gameObject.SetActive(false);
         }
-        else if (yInput == -1)
+        else if (yInput <= -0.5f)
         {
             // Moving Down
+            IsWalking = true;
+
+            // Toggle animation
+            front.SetBool("Walk", IsWalking);
+            side.SetBool("Walk", IsWalking);
+            back.SetBool("Walk", IsWalking);
+
+            // Set the front to active
+            front.gameObject.SetActive(true);
+
+            // Turn off the others
+            back.gameObject.SetActive(false);
+            side.gameObject.SetActive(false);
+        }
+        else
+        {
+            IsWalking = false;
+
+            // Toggle animation
+            front.SetBool("Walk", IsWalking);
+            side.SetBool("Walk", IsWalking);
+            back.SetBool("Walk", IsWalking);
         }
 
         var moveVector = new Vector3(xInput, yInput, 0) * SPEED * Time.deltaTime * 10;
