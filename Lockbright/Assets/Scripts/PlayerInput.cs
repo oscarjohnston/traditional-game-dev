@@ -70,6 +70,11 @@ public class PlayerInput : MonoBehaviour
     // Health
     public int health;
 
+    // Animators
+    public Animator front;
+    public Animator side;
+    public Animator back;
+
     // Start is called before the first frame update
     void Start()
     {
