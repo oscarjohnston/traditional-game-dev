@@ -480,7 +480,7 @@ public class PlayerInput : MonoBehaviour
     void DoBurnerAbility()
     {
         BurnerGlowLight.intensity = 600;
-        Invoke("TurnOffBurnerGlow", 0.5f);
+        Invoke("TurnOffBurnerGlow", 1f);
 
         ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
         game_controller.PlayBurnerAbilitySound();
