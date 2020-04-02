@@ -39,7 +39,7 @@ public class PlayerInput : MonoBehaviour
 
     //Grabber Code
     public bool grabbed;
-    public float distance = 5f;
+    public float distance = 50f;
     public Transform holdpoint;
     private bool PickupPromptOn = false;
     private GameObject PickupPromptObject = null;
@@ -379,8 +379,8 @@ public class PlayerInput : MonoBehaviour
 
 
             //Raycast Zone of pickup after shifting the pickup orgin down
-            Vector3 Adjustment = new Vector2(0, -1f);
-            Collider2D[] collide = Physics2D.OverlapBoxAll(transform.position + Adjustment + dir, new Vector2(1, 1), 0);
+            Vector3 Adjustment = new Vector2(0, -10f);
+            Collider2D[] collide = Physics2D.OverlapBoxAll(transform.position + Adjustment + dir, new Vector2(10, 10), 0);
 
 
             bool collidedWithAnItem = false;

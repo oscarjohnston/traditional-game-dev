@@ -305,17 +305,17 @@ PrefabInstance:
     - target: {fileID: 3839994721498342241, guid: 55cfd119f36a896429a089eb7654b3c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3839994721498342241, guid: 55cfd119f36a896429a089eb7654b3c2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.75272
       objectReference: {fileID: 0}
     - target: {fileID: 3839994721498342241, guid: 55cfd119f36a896429a089eb7654b3c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.001084
       objectReference: {fileID: 0}
     - target: {fileID: 3839994721498342241, guid: 55cfd119f36a896429a089eb7654b3c2,
         type: 3}
@@ -360,17 +360,17 @@ PrefabInstance:
     - target: {fileID: 3839994721498342241, guid: 55cfd119f36a896429a089eb7654b3c2,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 10.5
       objectReference: {fileID: 0}
     - target: {fileID: 3839994721498342241, guid: 55cfd119f36a896429a089eb7654b3c2,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 10.5
       objectReference: {fileID: 0}
     - target: {fileID: 3839994721498342241, guid: 55cfd119f36a896429a089eb7654b3c2,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 10.5
       objectReference: {fileID: 0}
     - target: {fileID: 8479916930755524158, guid: 55cfd119f36a896429a089eb7654b3c2,
         type: 3}
@@ -10768,7 +10768,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -5.0822735, y: -0.036128998}
+  m_Offset: {x: 5.05, y: -0.036128998}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -12253,7 +12253,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.053028166, y: -0.51}
+  m_Offset: {x: -0.053028166, y: 0.43}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -13059,7 +13059,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!4 &1007444372
 Transform:
   m_ObjectHideFlags: 0
@@ -13095,13 +13095,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui_Controller: {fileID: 764436481}
   game_controller: {fileID: 585379530}
-  SPEED: 0.5
+  SPEED: 5
   PlayerNumber: 1
   Class: Parkourist
   SpeechBubble: {fileID: 2265485377370984562}
   BubbleText: {fileID: 2265485377476703659}
   grabbed: 0
-  distance: 10
+  distance: 50
   holdpoint: {fileID: 2265485377677572098}
   HeldItem: {fileID: 0}
   defaultItem: {fileID: 21300000, guid: b46eea48c09a7e340a546b39bff7a035, type: 3}
@@ -13404,7 +13404,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -5.6}
+  m_Offset: {x: 0, y: -5.73}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -13415,7 +13415,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.85, y: 0.36}
+  m_Size: {x: 11.27, y: 0.76}
   m_EdgeRadius: 0
 --- !u!212 &1083825302
 SpriteRenderer:
@@ -13513,7 +13513,7 @@ GameObject:
   - component: {fileID: 4070121652253065929}
   m_Layer: 0
   m_Name: Player 3
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13532,13 +13532,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui_Controller: {fileID: 764436481}
   game_controller: {fileID: 585379530}
-  SPEED: 0.5
+  SPEED: 5
   PlayerNumber: 3
   Class: Burner
   SpeechBubble: {fileID: 4070121653533884893}
   BubbleText: {fileID: 4070121652687963841}
   grabbed: 0
-  distance: 5
+  distance: 50
   holdpoint: {fileID: 4070121653511613707}
   HeldItem: {fileID: 0}
   defaultItem: {fileID: 21300000, guid: b46eea48c09a7e340a546b39bff7a035, type: 3}
@@ -13684,7 +13684,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!4 &1179331268
 Transform:
   m_ObjectHideFlags: 0
@@ -13897,12 +13897,12 @@ PrefabInstance:
     - target: {fileID: -1478507320102989770, guid: c8824b425017b5648aa709809a688dd0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.0032854
       objectReference: {fileID: 0}
     - target: {fileID: -1478507320102989770, guid: c8824b425017b5648aa709809a688dd0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.30446
       objectReference: {fileID: 0}
     - target: {fileID: -1478507320102989770, guid: c8824b425017b5648aa709809a688dd0,
         type: 3}
@@ -13952,17 +13952,17 @@ PrefabInstance:
     - target: {fileID: -1478507320102989770, guid: c8824b425017b5648aa709809a688dd0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 10.2
       objectReference: {fileID: 0}
     - target: {fileID: -1478507320102989770, guid: c8824b425017b5648aa709809a688dd0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 10.2
       objectReference: {fileID: 0}
     - target: {fileID: -1478507320102989770, guid: c8824b425017b5648aa709809a688dd0,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 10.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 4947355586876692052, guid: c8824b425017b5648aa709809a688dd0,
@@ -14786,12 +14786,12 @@ PrefabInstance:
     - target: {fileID: 4653112919436477921, guid: f9eda469437ce7e4b9b19e2539f4209b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4653112919436477921, guid: f9eda469437ce7e4b9b19e2539f4209b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4653112919436477921, guid: f9eda469437ce7e4b9b19e2539f4209b,
         type: 3}
@@ -14841,17 +14841,17 @@ PrefabInstance:
     - target: {fileID: 4653112919436477921, guid: f9eda469437ce7e4b9b19e2539f4209b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 6.826019
       objectReference: {fileID: 0}
     - target: {fileID: 4653112919436477921, guid: f9eda469437ce7e4b9b19e2539f4209b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 6.826019
       objectReference: {fileID: 0}
     - target: {fileID: 4653112919436477921, guid: f9eda469437ce7e4b9b19e2539f4209b,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 6.826019
       objectReference: {fileID: 0}
     - target: {fileID: 7897397562812941470, guid: f9eda469437ce7e4b9b19e2539f4209b,
         type: 3}
@@ -15217,8 +15217,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1418791767
-  m_SortingLayer: 2
+  m_SortingLayerID: -1019477407
+  m_SortingLayer: 3
   m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: b7090dc6a5dd5654aa4b6d42f0672fcd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -15602,9 +15602,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1418791767
-  m_SortingLayer: 2
-  m_SortingOrder: 7
+  m_SortingLayerID: -1019477407
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6ad71b55db2bcb84ab75d5f552a8a752, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -18141,13 +18141,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui_Controller: {fileID: 764436481}
   game_controller: {fileID: 585379530}
-  SPEED: 0.5
+  SPEED: 5
   PlayerNumber: 2
   Class: Scholar
   SpeechBubble: {fileID: 2951271327098658921}
   BubbleText: {fileID: 2951271326796309915}
   grabbed: 0
-  distance: 5
+  distance: 50
   holdpoint: {fileID: 2951271328016538826}
   HeldItem: {fileID: 0}
   defaultItem: {fileID: 21300000, guid: b46eea48c09a7e340a546b39bff7a035, type: 3}
@@ -18267,7 +18267,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!61 &2265485378294349069
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18331,7 +18331,7 @@ GameObject:
   - component: {fileID: 2951271327841777042}
   m_Layer: 0
   m_Name: Player 2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18732,7 +18732,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &2265485378576160010
 GameObject:
   m_ObjectHideFlags: 0
@@ -18749,7 +18749,7 @@ GameObject:
   - component: {fileID: 70542375}
   m_Layer: 0
   m_Name: Player 4
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18810,13 +18810,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui_Controller: {fileID: 764436481}
   game_controller: {fileID: 585379530}
-  SPEED: 0.5
+  SPEED: 5
   PlayerNumber: 4
   Class: Illusionist
   SpeechBubble: {fileID: 7820781317970075924}
   BubbleText: {fileID: 7820781318414537387}
   grabbed: 0
-  distance: 5
+  distance: 50
   holdpoint: {fileID: 7820781318246713247}
   HeldItem: {fileID: 0}
   defaultItem: {fileID: 21300000, guid: b46eea48c09a7e340a546b39bff7a035, type: 3}
@@ -23294,8 +23294,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3785349542689645057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: 0.41185, y: 0.13813, z: 0}
+  m_LocalScale: {x: 9.566695, y: 9.566695, z: 9.566695}
   m_Children:
   - {fileID: 7670826112591190610}
   - {fileID: 7145340674178242789}
