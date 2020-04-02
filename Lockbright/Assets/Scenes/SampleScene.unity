@@ -5706,7 +5706,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1526603025}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &318153630
+--- !u!114 &318153633
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13730,7 +13730,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1526603025}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1192537240
+--- !u!114 &1192537243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14264,7 +14264,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1526603025}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1335135713
+--- !u!114 &1335135716
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14314,7 +14314,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1526603025}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1388311803
+--- !u!114 &1388311806
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14917,7 +14917,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1526603025}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1625189242
+--- !u!114 &1625189245
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16088,7 +16088,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1526603025}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1986711307
+--- !u!114 &1986711310
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16783,8 +16783,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 3065356283052926786, guid: 66b29b79535b5b24890a69d2c03185a3,
     type: 3}
@@ -17058,8 +17058,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 4
   m_Sprite: {fileID: -6094596861775230081, guid: 66b29b79535b5b24890a69d2c03185a3,
     type: 3}
@@ -17084,6 +17084,7 @@ GameObject:
   - component: {fileID: 3055003599499018530}
   - component: {fileID: 3715312036219623481}
   - component: {fileID: 499277364525813545}
+  - component: {fileID: 905583128689147410}
   m_Layer: 0
   m_Name: S Front Forearms
   m_TagString: Untagged
@@ -17091,6 +17092,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &905583128689147410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905583128689147409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: -1
 --- !u!4 &936322341511186558
 Transform:
   m_ObjectHideFlags: 0
@@ -17344,6 +17359,7 @@ GameObject:
   - component: {fileID: 6959711197118057798}
   - component: {fileID: 7866145522811255196}
   - component: {fileID: 6854540304717893308}
+  - component: {fileID: 1714383682632298339}
   m_Layer: 0
   m_Name: S Front Head
   m_TagString: Untagged
@@ -17351,6 +17367,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1714383682632298339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714383682632298338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: -1
 --- !u!4 &1735990602950738701
 Transform:
   m_ObjectHideFlags: 0
@@ -17472,6 +17502,7 @@ GameObject:
   - component: {fileID: 6526599300094635622}
   - component: {fileID: 7448262477154342915}
   - component: {fileID: 3453598441259633786}
+  - component: {fileID: 2050437479856807872}
   m_Layer: 0
   m_Name: S Side Backleg
   m_TagString: Untagged
@@ -17479,6 +17510,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2050437479856807872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050437479856807871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: -1
 --- !u!1 &2137028883528839290
 GameObject:
   m_ObjectHideFlags: 0
@@ -17490,6 +17535,7 @@ GameObject:
   - component: {fileID: 1105236325155614276}
   - component: {fileID: 6772549185815085426}
   - component: {fileID: 2181338379828718715}
+  - component: {fileID: 2137028883528839291}
   m_Layer: 0
   m_Name: S Front Dress
   m_TagString: Untagged
@@ -17497,6 +17543,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2137028883528839291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137028883528839290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: -1
 --- !u!114 &2181338379828718715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20974,6 +21034,7 @@ GameObject:
   - component: {fileID: 1800546586544231086}
   - component: {fileID: 6459833305748801788}
   - component: {fileID: 5527229288491688923}
+  - component: {fileID: 3047530664308839808}
   m_Layer: 0
   m_Name: S Back Legs
   m_TagString: Untagged
@@ -20981,6 +21042,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3047530664308839808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3047530664308839807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: -1
 --- !u!4 &3055003599499018530
 Transform:
   m_ObjectHideFlags: 0
@@ -21205,8 +21280,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 4
   m_Sprite: {fileID: -3268039939559179937, guid: 0fc74baa8cfb99f4d98ff861700aa793,
     type: 3}
@@ -21329,8 +21404,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 4
   m_Sprite: {fileID: 2778793369010364271, guid: 6e32df3cca6a8c4439d0ca7b5792944e,
     type: 3}
@@ -22757,6 +22832,7 @@ GameObject:
   - component: {fileID: 761057224172914493}
   - component: {fileID: 8758911960112643838}
   - component: {fileID: 1908710333137473144}
+  - component: {fileID: 4216536082238109924}
   m_Layer: 0
   m_Name: S Side Head
   m_TagString: Untagged
@@ -22764,6 +22840,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4216536082238109924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4216536082238109923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: -1
 --- !u!4 &4294581910139195267
 Transform:
   m_ObjectHideFlags: 0
@@ -22845,8 +22935,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 5
   m_Sprite: {fileID: -8769556865997237956, guid: 6e32df3cca6a8c4439d0ca7b5792944e,
     type: 3}
@@ -22895,8 +22985,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 631231100321114821, guid: 6e32df3cca6a8c4439d0ca7b5792944e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -22967,6 +23057,7 @@ GameObject:
   - component: {fileID: 1574229236708345768}
   - component: {fileID: 7107440862970846367}
   - component: {fileID: 6587479982054318000}
+  - component: {fileID: 4525191141770465028}
   m_Layer: 0
   m_Name: S Side Chest
   m_TagString: Untagged
@@ -22974,6 +23065,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4525191141770465028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4525191141770465027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: -1
 --- !u!1 &4606896504493448102
 GameObject:
   m_ObjectHideFlags: 0
@@ -22985,6 +23090,7 @@ GameObject:
   - component: {fileID: 1212816786842112121}
   - component: {fileID: 350127821605558435}
   - component: {fileID: 2812112930600219797}
+  - component: {fileID: 4606896504493448103}
   m_Layer: 0
   m_Name: S Side Foreleg
   m_TagString: Untagged
@@ -22992,6 +23098,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4606896504493448103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4606896504493448102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: -1
 --- !u!1 &4633865983421067456
 GameObject:
   m_ObjectHideFlags: 0
@@ -23103,8 +23223,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 5077864949799018365, guid: 6e32df3cca6a8c4439d0ca7b5792944e,
     type: 3}
@@ -23339,6 +23459,7 @@ GameObject:
   - component: {fileID: 4496127375048791282}
   - component: {fileID: 7765010810137225889}
   - component: {fileID: 8654145772843971928}
+  - component: {fileID: 5960293649127978805}
   m_Layer: 0
   m_Name: S Side Backarm
   m_TagString: Untagged
@@ -23346,6 +23467,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5960293649127978805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5960293649127978804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: -1
 --- !u!4 &5969695294215165920
 Transform:
   m_ObjectHideFlags: 0
@@ -23542,8 +23677,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -6038635307407378834, guid: 6e32df3cca6a8c4439d0ca7b5792944e,
     type: 3}
@@ -23596,6 +23731,7 @@ GameObject:
   - component: {fileID: 6082848591328237227}
   - component: {fileID: 8295113793382435728}
   - component: {fileID: 1439261138879763228}
+  - component: {fileID: 6563954364367418254}
   m_Layer: 0
   m_Name: S Front Legs
   m_TagString: Untagged
@@ -23603,6 +23739,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6563954364367418254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6563954364367418253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: -1
 --- !u!114 &6587479982054318000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23677,8 +23827,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: -994414884429584756, guid: 0fc74baa8cfb99f4d98ff861700aa793,
     type: 3}
@@ -23837,6 +23987,7 @@ GameObject:
   - component: {fileID: 1655433829608268991}
   - component: {fileID: 4423943713257177671}
   - component: {fileID: 967084256592050560}
+  - component: {fileID: 6969636437077969801}
   m_Layer: 0
   m_Name: S Back Arms
   m_TagString: Untagged
@@ -23844,6 +23995,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6969636437077969801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6969636437077969800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: -1
 --- !u!1 &7013362917363368323
 GameObject:
   m_ObjectHideFlags: 0
@@ -23871,6 +24036,7 @@ GameObject:
   - component: {fileID: 2620415842910107514}
   - component: {fileID: 891899303413375098}
   - component: {fileID: 6962531934650411027}
+  - component: {fileID: 7046668747566064367}
   m_Layer: 0
   m_Name: S Side Skirt
   m_TagString: Untagged
@@ -23878,6 +24044,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7046668747566064367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7046668747566064366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: -1
 --- !u!1 &7071418693506479007
 GameObject:
   m_ObjectHideFlags: 0
@@ -23929,8 +24109,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 5
   m_Sprite: {fileID: -5813185186811322525, guid: 66b29b79535b5b24890a69d2c03185a3,
     type: 3}
@@ -24069,8 +24249,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -6876630854596261430, guid: 66b29b79535b5b24890a69d2c03185a3,
     type: 3}
@@ -24216,8 +24396,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: -7297994696571068470, guid: 66b29b79535b5b24890a69d2c03185a3,
     type: 3}
@@ -25577,8 +25757,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: -98096241858741737, guid: 0fc74baa8cfb99f4d98ff861700aa793, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -25664,8 +25844,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 4658442384049351106, guid: 0fc74baa8cfb99f4d98ff861700aa793,
     type: 3}
@@ -25736,6 +25916,7 @@ GameObject:
   - component: {fileID: 588653648271489919}
   - component: {fileID: 8950180640633160948}
   - component: {fileID: 3669818699766165910}
+  - component: {fileID: 8563676379823842654}
   m_Layer: 0
   m_Name: S Side Forearm
   m_TagString: Untagged
@@ -25743,6 +25924,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8563676379823842654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8563676379823842653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: -1
 --- !u!4 &8591126179967008791
 Transform:
   m_ObjectHideFlags: 0
@@ -25910,8 +26105,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 7
   m_Sprite: {fileID: -2094812158738894433, guid: 66b29b79535b5b24890a69d2c03185a3,
     type: 3}
@@ -25950,6 +26145,7 @@ GameObject:
   - component: {fileID: 2938832361701576354}
   - component: {fileID: 4412720814630053127}
   - component: {fileID: 1817843311006781556}
+  - component: {fileID: 8927207490611159619}
   m_Layer: 0
   m_Name: S Back Head
   m_TagString: Untagged
@@ -25957,6 +26153,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8927207490611159619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8927207490611159618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: -1
 --- !u!4 &8939580737288590782
 Transform:
   m_ObjectHideFlags: 0
@@ -26007,8 +26217,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 6
   m_Sprite: {fileID: -7466917366681644142, guid: 66b29b79535b5b24890a69d2c03185a3,
     type: 3}
@@ -26033,6 +26243,7 @@ GameObject:
   - component: {fileID: 48050588049770307}
   - component: {fileID: 3976031269083966870}
   - component: {fileID: 8731813536153259862}
+  - component: {fileID: 8950308087874846906}
   m_Layer: 0
   m_Name: S Back Chest
   m_TagString: Untagged
@@ -26040,6 +26251,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8950308087874846906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8950308087874846905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: -1
 --- !u!1 &9001064062199135058
 GameObject:
   m_ObjectHideFlags: 0
@@ -26051,6 +26276,7 @@ GameObject:
   - component: {fileID: 3843038061449121991}
   - component: {fileID: 5070330306050407858}
   - component: {fileID: 8663426298586940368}
+  - component: {fileID: 9001064062199135059}
   m_Layer: 0
   m_Name: S Back Skirt
   m_TagString: Untagged
@@ -26058,6 +26284,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9001064062199135059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9001064062199135058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: -1
 --- !u!1 &9140850160405463523
 GameObject:
   m_ObjectHideFlags: 0
