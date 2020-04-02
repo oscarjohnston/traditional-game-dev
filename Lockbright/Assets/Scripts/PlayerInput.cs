@@ -379,8 +379,8 @@ public class PlayerInput : MonoBehaviour
 
 
             //Raycast Zone of pickup after shifting the pickup orgin down
-            Vector3 Adjustment = new Vector2(0, -10f);
-            Collider2D[] collide = Physics2D.OverlapBoxAll(transform.position + Adjustment + dir, new Vector2(10, 10), 0);
+            Vector3 Adjustment = new Vector2(0, 3.3f);
+            Collider2D[] collide = Physics2D.OverlapBoxAll(transform.position + Adjustment + (dir * 10), new Vector2(10, 10), 0);
 
 
             bool collidedWithAnItem = false;
