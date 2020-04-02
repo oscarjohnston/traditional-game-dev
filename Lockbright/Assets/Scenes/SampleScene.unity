@@ -302,6 +302,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1179331268}
     m_Modifications:
+    - target: {fileID: -8681450208775092424, guid: 55cfd119f36a896429a089eb7654b3c2,
+        type: 3}
+      propertyPath: m_Name
+      value: _B Side Back Thigh Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: -7609604112818921986, guid: 55cfd119f36a896429a089eb7654b3c2,
+        type: 3}
+      propertyPath: m_Name
+      value: B Side Head
+      objectReference: {fileID: 0}
+    - target: {fileID: -7176616039456929119, guid: 55cfd119f36a896429a089eb7654b3c2,
+        type: 3}
+      propertyPath: m_Name
+      value: B Side Front Calf
+      objectReference: {fileID: 0}
+    - target: {fileID: -6559194352595781303, guid: 55cfd119f36a896429a089eb7654b3c2,
+        type: 3}
+      propertyPath: m_Name
+      value: B Side Body
+      objectReference: {fileID: 0}
+    - target: {fileID: -3411908560147702556, guid: 55cfd119f36a896429a089eb7654b3c2,
+        type: 3}
+      propertyPath: m_Name
+      value: _B Side Chest Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420326214755627998, guid: 55cfd119f36a896429a089eb7654b3c2,
+        type: 3}
+      propertyPath: m_Name
+      value: B Side Leg
+      objectReference: {fileID: 0}
     - target: {fileID: 3839994721498342241, guid: 55cfd119f36a896429a089eb7654b3c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -340,7 +370,7 @@ PrefabInstance:
     - target: {fileID: 3839994721498342241, guid: 55cfd119f36a896429a089eb7654b3c2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3839994721498342241, guid: 55cfd119f36a896429a089eb7654b3c2,
         type: 3}
@@ -372,10 +402,25 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 10.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5197286232852722064, guid: 55cfd119f36a896429a089eb7654b3c2,
+        type: 3}
+      propertyPath: m_Name
+      value: _B Side Front Thigh Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386968513340016868, guid: 55cfd119f36a896429a089eb7654b3c2,
+        type: 3}
+      propertyPath: m_Name
+      value: B Side Front Thigh
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367928142640647325, guid: 55cfd119f36a896429a089eb7654b3c2,
+        type: 3}
+      propertyPath: m_Name
+      value: B Side Front Arm
+      objectReference: {fileID: 0}
     - target: {fileID: 8479916930755524158, guid: 55cfd119f36a896429a089eb7654b3c2,
         type: 3}
       propertyPath: m_Name
-      value: B_side
+      value: Burner Side Animator
       objectReference: {fileID: 0}
     - target: {fileID: 8479916930755524158, guid: 55cfd119f36a896429a089eb7654b3c2,
         type: 3}
@@ -392,10 +437,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1179331268}
     m_Modifications:
+    - target: {fileID: -4781503614594098195, guid: a4d96c0b867d75b429c9918138d0c7dc,
+        type: 3}
+      propertyPath: m_Name
+      value: Right Arm
+      objectReference: {fileID: 0}
+    - target: {fileID: -4569060389002202881, guid: a4d96c0b867d75b429c9918138d0c7dc,
+        type: 3}
+      propertyPath: m_Name
+      value: B Front Body
+      objectReference: {fileID: 0}
+    - target: {fileID: -3796338440710739469, guid: a4d96c0b867d75b429c9918138d0c7dc,
+        type: 3}
+      propertyPath: m_Name
+      value: B Front Shoulders
+      objectReference: {fileID: 0}
     - target: {fileID: -3006525338518837568, guid: a4d96c0b867d75b429c9918138d0c7dc,
         type: 3}
       propertyPath: m_Name
-      value: B_front
+      value: Burner Front Animator
+      objectReference: {fileID: 0}
+    - target: {fileID: -3006525338518837568, guid: a4d96c0b867d75b429c9918138d0c7dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2157673447885660874, guid: a4d96c0b867d75b429c9918138d0c7dc,
+        type: 3}
+      propertyPath: m_Name
+      value: Left Arm
+      objectReference: {fileID: 0}
+    - target: {fileID: -1880606268989621756, guid: a4d96c0b867d75b429c9918138d0c7dc,
+        type: 3}
+      propertyPath: m_Name
+      value: Head
+      objectReference: {fileID: 0}
+    - target: {fileID: 144874282065976456, guid: a4d96c0b867d75b429c9918138d0c7dc,
+        type: 3}
+      propertyPath: m_Name
+      value: B Front Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 172685946706813842, guid: a4d96c0b867d75b429c9918138d0c7dc,
+        type: 3}
+      propertyPath: m_Name
+      value: B Front Head
       objectReference: {fileID: 0}
     - target: {fileID: 2574856735099202887, guid: a4d96c0b867d75b429c9918138d0c7dc,
         type: 3}
@@ -435,7 +520,7 @@ PrefabInstance:
     - target: {fileID: 2574856735099202887, guid: a4d96c0b867d75b429c9918138d0c7dc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2574856735099202887, guid: a4d96c0b867d75b429c9918138d0c7dc,
         type: 3}
@@ -466,6 +551,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128819914339053034, guid: a4d96c0b867d75b429c9918138d0c7dc,
+        type: 3}
+      propertyPath: m_Name
+      value: _B Right Thigh Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402258677668847281, guid: a4d96c0b867d75b429c9918138d0c7dc,
+        type: 3}
+      propertyPath: m_Name
+      value: _B Chest Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 5692609142119434104, guid: a4d96c0b867d75b429c9918138d0c7dc,
+        type: 3}
+      propertyPath: m_Name
+      value: B Front Middle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6947822885607084624, guid: a4d96c0b867d75b429c9918138d0c7dc,
+        type: 3}
+      propertyPath: m_Name
+      value: _B Left Thigh Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913134489695123348, guid: a4d96c0b867d75b429c9918138d0c7dc,
+        type: 3}
+      propertyPath: m_Name
+      value: B Front Legs
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -4261198357946254659, guid: a4d96c0b867d75b429c9918138d0c7dc,
@@ -588,16 +698,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1007444372}
     m_Modifications:
+    - target: {fileID: -8937777989812649981, guid: e035cb9d81f2e0140afce774f6318abd,
+        type: 3}
+      propertyPath: m_Name
+      value: P Side Right Dress
+      objectReference: {fileID: 0}
+    - target: {fileID: -8243535214219524795, guid: e035cb9d81f2e0140afce774f6318abd,
+        type: 3}
+      propertyPath: m_Name
+      value: P Side Back Arm
+      objectReference: {fileID: 0}
     - target: {fileID: -6865961541557265805, guid: e035cb9d81f2e0140afce774f6318abd,
         type: 3}
       propertyPath: m_Name
-      value: p_side
+      value: Parkourist Side Animator
       objectReference: {fileID: 0}
     - target: {fileID: -6865961541557265805, guid: e035cb9d81f2e0140afce774f6318abd,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6571096555901038625, guid: e035cb9d81f2e0140afce774f6318abd,
+        type: 3}
+      propertyPath: m_Name
+      value: P Side Front Arm
+      objectReference: {fileID: 0}
+    - target: {fileID: -5758787131872630954, guid: e035cb9d81f2e0140afce774f6318abd,
+        type: 3}
+      propertyPath: m_Name
+      value: P Side Front Leg
+      objectReference: {fileID: 0}
+    - target: {fileID: -5552651858013979918, guid: e035cb9d81f2e0140afce774f6318abd,
+        type: 3}
+      propertyPath: m_Name
+      value: P Side Head
+      objectReference: {fileID: 0}
     - target: {fileID: -4091764264735452846, guid: e035cb9d81f2e0140afce774f6318abd,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -618,6 +753,16 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -2009339678309579319, guid: e035cb9d81f2e0140afce774f6318abd,
+        type: 3}
+      propertyPath: m_Name
+      value: P Side Back Leg
+      objectReference: {fileID: 0}
+    - target: {fileID: -1795946232133989374, guid: e035cb9d81f2e0140afce774f6318abd,
+        type: 3}
+      propertyPath: m_Name
+      value: P Side Back Leg
+      objectReference: {fileID: 0}
     - target: {fileID: -569056424900681068, guid: e035cb9d81f2e0140afce774f6318abd,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -637,6 +782,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 325609644262997560, guid: e035cb9d81f2e0140afce774f6318abd,
+        type: 3}
+      propertyPath: m_Name
+      value: S Side Skirt
+      objectReference: {fileID: 0}
+    - target: {fileID: 869155942209764177, guid: e035cb9d81f2e0140afce774f6318abd,
+        type: 3}
+      propertyPath: m_Name
+      value: P Side Hair
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424901129272862865, guid: e035cb9d81f2e0140afce774f6318abd,
+        type: 3}
+      propertyPath: m_Name
+      value: P Side Left Dress
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128105401500718180, guid: e035cb9d81f2e0140afce774f6318abd,
+        type: 3}
+      propertyPath: m_Name
+      value: S Side Leg
       objectReference: {fileID: 0}
     - target: {fileID: 4205315120953622965, guid: e035cb9d81f2e0140afce774f6318abd,
         type: 3}
@@ -686,7 +851,7 @@ PrefabInstance:
     - target: {fileID: 4331175430360517829, guid: e035cb9d81f2e0140afce774f6318abd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4331175430360517829, guid: e035cb9d81f2e0140afce774f6318abd,
         type: 3}
@@ -718,6 +883,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5115343267451168433, guid: e035cb9d81f2e0140afce774f6318abd,
+        type: 3}
+      propertyPath: m_Name
+      value: _P Side Chest
+      objectReference: {fileID: 0}
     - target: {fileID: 5563713571821780179, guid: e035cb9d81f2e0140afce774f6318abd,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -737,6 +907,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855128247028191583, guid: e035cb9d81f2e0140afce774f6318abd,
+        type: 3}
+      propertyPath: m_Name
+      value: S Side Head
+      objectReference: {fileID: 0}
+    - target: {fileID: 7385976852966109641, guid: e035cb9d81f2e0140afce774f6318abd,
+        type: 3}
+      propertyPath: m_Name
+      value: P Side Back Arm
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650389869713816163, guid: e035cb9d81f2e0140afce774f6318abd,
+        type: 3}
+      propertyPath: m_Name
+      value: S Side Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876853251338618137, guid: e035cb9d81f2e0140afce774f6318abd,
+        type: 3}
+      propertyPath: m_Name
+      value: P Side Front Arm
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -2393860575263229295, guid: e035cb9d81f2e0140afce774f6318abd,
@@ -11015,6 +11205,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2265485378576160014}
     m_Modifications:
+    - target: {fileID: -7901185197504852813, guid: 5539260eda7d3a24ba18e9e3be6c4f24,
+        type: 3}
+      propertyPath: m_Name
+      value: I Side Head
+      objectReference: {fileID: 0}
     - target: {fileID: -6657693237543309916, guid: 5539260eda7d3a24ba18e9e3be6c4f24,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11085,15 +11280,65 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: -6494086161845262300, guid: 5539260eda7d3a24ba18e9e3be6c4f24,
+        type: 3}
+      propertyPath: m_Name
+      value: I Side Front Leg
+      objectReference: {fileID: 0}
+    - target: {fileID: -5820241517655161985, guid: 5539260eda7d3a24ba18e9e3be6c4f24,
+        type: 3}
+      propertyPath: m_Name
+      value: I Side Back Arm
+      objectReference: {fileID: 0}
+    - target: {fileID: -1003056496114134677, guid: 5539260eda7d3a24ba18e9e3be6c4f24,
+        type: 3}
+      propertyPath: m_Name
+      value: _I Side Back Thigh Bone
+      objectReference: {fileID: 0}
     - target: {fileID: 1071126531468699470, guid: 5539260eda7d3a24ba18e9e3be6c4f24,
         type: 3}
       propertyPath: m_Name
-      value: i_side
+      value: Illusionist Side Animator
       objectReference: {fileID: 0}
     - target: {fileID: 1071126531468699470, guid: 5539260eda7d3a24ba18e9e3be6c4f24,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964255175582203680, guid: 5539260eda7d3a24ba18e9e3be6c4f24,
+        type: 3}
+      propertyPath: m_Name
+      value: I Side Dress
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006755483620431654, guid: 5539260eda7d3a24ba18e9e3be6c4f24,
+        type: 3}
+      propertyPath: m_Name
+      value: I Side Front Arm
+      objectReference: {fileID: 0}
+    - target: {fileID: 5819255107476986595, guid: 5539260eda7d3a24ba18e9e3be6c4f24,
+        type: 3}
+      propertyPath: m_Name
+      value: _I Side Top Thigh Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347643187206043197, guid: 5539260eda7d3a24ba18e9e3be6c4f24,
+        type: 3}
+      propertyPath: m_Name
+      value: I Side Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 6769062217903058009, guid: 5539260eda7d3a24ba18e9e3be6c4f24,
+        type: 3}
+      propertyPath: m_Name
+      value: Head
+      objectReference: {fileID: 0}
+    - target: {fileID: 7904761816690926855, guid: 5539260eda7d3a24ba18e9e3be6c4f24,
+        type: 3}
+      propertyPath: m_Name
+      value: _I Side Chest Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031609239187112191, guid: 5539260eda7d3a24ba18e9e3be6c4f24,
+        type: 3}
+      propertyPath: m_Name
+      value: I Side Back Leg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 8429349530036251289, guid: 5539260eda7d3a24ba18e9e3be6c4f24,
@@ -12635,6 +12880,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1007444372}
     m_Modifications:
+    - target: {fileID: -8919988033462289301, guid: e0ac378ae65de2b4695513a4ac2eb9df,
+        type: 3}
+      propertyPath: m_Name
+      value: S Front Shoulders
+      objectReference: {fileID: 0}
     - target: {fileID: -8131989419738978619, guid: e0ac378ae65de2b4695513a4ac2eb9df,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -12644,6 +12894,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7297300907142982062, guid: e0ac378ae65de2b4695513a4ac2eb9df,
+        type: 3}
+      propertyPath: m_Name
+      value: _P Front Bone Chest
       objectReference: {fileID: 0}
     - target: {fileID: -7129897737111046393, guid: e0ac378ae65de2b4695513a4ac2eb9df,
         type: 3}
@@ -12715,6 +12970,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: -6896971508468076838, guid: e0ac378ae65de2b4695513a4ac2eb9df,
+        type: 3}
+      propertyPath: m_Name
+      value: _P Front Left Thigh
+      objectReference: {fileID: 0}
+    - target: {fileID: -3650761134867554677, guid: e0ac378ae65de2b4695513a4ac2eb9df,
+        type: 3}
+      propertyPath: m_Name
+      value: Head
+      objectReference: {fileID: 0}
+    - target: {fileID: -3643605225263221949, guid: e0ac378ae65de2b4695513a4ac2eb9df,
+        type: 3}
+      propertyPath: m_Name
+      value: _P Front Right Thigh
+      objectReference: {fileID: 0}
+    - target: {fileID: -2922484280669153371, guid: e0ac378ae65de2b4695513a4ac2eb9df,
+        type: 3}
+      propertyPath: m_Name
+      value: Left Hair
+      objectReference: {fileID: 0}
     - target: {fileID: -2712153769623527506, guid: e0ac378ae65de2b4695513a4ac2eb9df,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -12735,6 +13010,11 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1320210487082284669, guid: e0ac378ae65de2b4695513a4ac2eb9df,
+        type: 3}
+      propertyPath: m_Name
+      value: S Front Arms
+      objectReference: {fileID: 0}
     - target: {fileID: 1427741316704931406, guid: e0ac378ae65de2b4695513a4ac2eb9df,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -12745,6 +13025,11 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2914397377374074040, guid: e0ac378ae65de2b4695513a4ac2eb9df,
+        type: 3}
+      propertyPath: m_Name
+      value: Right Hair
+      objectReference: {fileID: 0}
     - target: {fileID: 3246540511936708256, guid: e0ac378ae65de2b4695513a4ac2eb9df,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -12754,11 +13039,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557365855752251072, guid: e0ac378ae65de2b4695513a4ac2eb9df,
+        type: 3}
+      propertyPath: m_Name
+      value: S Front Head
+      objectReference: {fileID: 0}
+    - target: {fileID: 5641578847982706864, guid: e0ac378ae65de2b4695513a4ac2eb9df,
+        type: 3}
+      propertyPath: m_Name
+      value: S Front Legs
       objectReference: {fileID: 0}
     - target: {fileID: 5649864852369444061, guid: e0ac378ae65de2b4695513a4ac2eb9df,
         type: 3}
       propertyPath: m_Name
-      value: p_front
+      value: Parkourist Front Animator
       objectReference: {fileID: 0}
     - target: {fileID: 5649864852369444061, guid: e0ac378ae65de2b4695513a4ac2eb9df,
         type: 3}
@@ -12774,6 +13069,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827742321486841686, guid: e0ac378ae65de2b4695513a4ac2eb9df,
+        type: 3}
+      propertyPath: m_Name
+      value: S Front Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 7678018365494509472, guid: e0ac378ae65de2b4695513a4ac2eb9df,
+        type: 3}
+      propertyPath: m_Name
+      value: S Front Dress
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 3251059669048479228, guid: e0ac378ae65de2b4695513a4ac2eb9df,
@@ -13206,8 +13511,8 @@ Transform:
   - {fileID: 2265485378018700292}
   - {fileID: 2102640630}
   - {fileID: 1407636307}
-  - {fileID: 651661631}
   - {fileID: 1664742234}
+  - {fileID: 651661631}
   m_Father: {fileID: 1058902736}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13830,9 +14135,9 @@ Transform:
   - {fileID: 4070121653511613707}
   - {fileID: 4070121653633419190}
   - {fileID: 4070121652189580896}
-  - {fileID: 1156852686}
   - {fileID: 42954048}
   - {fileID: 1479821020}
+  - {fileID: 1156852686}
   m_Father: {fileID: 1058902736}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14014,15 +14319,55 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1179331268}
     m_Modifications:
+    - target: {fileID: -7690356434029286996, guid: c8824b425017b5648aa709809a688dd0,
+        type: 3}
+      propertyPath: m_Name
+      value: B Back Feet
+      objectReference: {fileID: 0}
+    - target: {fileID: -7059397688503118346, guid: c8824b425017b5648aa709809a688dd0,
+        type: 3}
+      propertyPath: m_Name
+      value: _B Left Leg
+      objectReference: {fileID: 0}
+    - target: {fileID: -6123701557407451005, guid: c8824b425017b5648aa709809a688dd0,
+        type: 3}
+      propertyPath: m_Name
+      value: B Back Middle
+      objectReference: {fileID: 0}
+    - target: {fileID: -5262549744980674725, guid: c8824b425017b5648aa709809a688dd0,
+        type: 3}
+      propertyPath: m_Name
+      value: Right Arm
+      objectReference: {fileID: 0}
+    - target: {fileID: -5073819470266997373, guid: c8824b425017b5648aa709809a688dd0,
+        type: 3}
+      propertyPath: m_Name
+      value: B Back Upper Body
+      objectReference: {fileID: 0}
+    - target: {fileID: -4816053964705877212, guid: c8824b425017b5648aa709809a688dd0,
+        type: 3}
+      propertyPath: m_Name
+      value: Left Arm
+      objectReference: {fileID: 0}
     - target: {fileID: -4265205072206983563, guid: c8824b425017b5648aa709809a688dd0,
         type: 3}
       propertyPath: m_Name
-      value: B_back
+      value: Burner Back Animator
       objectReference: {fileID: 0}
     - target: {fileID: -4265205072206983563, guid: c8824b425017b5648aa709809a688dd0,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2509033933307000613, guid: c8824b425017b5648aa709809a688dd0,
+        type: 3}
+      propertyPath: m_Name
+      value: _B Right Leg
+      objectReference: {fileID: 0}
+    - target: {fileID: -1849461320363930695, guid: c8824b425017b5648aa709809a688dd0,
+        type: 3}
+      propertyPath: m_Name
+      value: B Back Body
       objectReference: {fileID: 0}
     - target: {fileID: -1478507320102989770, guid: c8824b425017b5648aa709809a688dd0,
         type: 3}
@@ -14062,7 +14407,7 @@ PrefabInstance:
     - target: {fileID: -1478507320102989770, guid: c8824b425017b5648aa709809a688dd0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -1478507320102989770, guid: c8824b425017b5648aa709809a688dd0,
         type: 3}
@@ -14093,6 +14438,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 10.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299650476323446142, guid: c8824b425017b5648aa709809a688dd0,
+        type: 3}
+      propertyPath: m_Name
+      value: B Back Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 4158687594287180387, guid: c8824b425017b5648aa709809a688dd0,
+        type: 3}
+      propertyPath: m_Name
+      value: _B Chest Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817613777671904959, guid: c8824b425017b5648aa709809a688dd0,
+        type: 3}
+      propertyPath: m_Name
+      value: Head
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122043711046608046, guid: c8824b425017b5648aa709809a688dd0,
+        type: 3}
+      propertyPath: m_Name
+      value: B Back Head
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 4947355586876692052, guid: c8824b425017b5648aa709809a688dd0,
@@ -14811,7 +15176,7 @@ PrefabInstance:
     - target: {fileID: -9135752650506565712, guid: bb42f94ad94845e4eaae7670eefd3361,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -9135752650506565712, guid: bb42f94ad94845e4eaae7670eefd3361,
         type: 3}
@@ -14843,15 +15208,90 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: -8172416565587946201, guid: bb42f94ad94845e4eaae7670eefd3361,
+        type: 3}
+      propertyPath: m_Name
+      value: _I Front Right Leg
+      objectReference: {fileID: 0}
+    - target: {fileID: -3000420508931076074, guid: bb42f94ad94845e4eaae7670eefd3361,
+        type: 3}
+      propertyPath: m_Name
+      value: Right Arm
+      objectReference: {fileID: 0}
+    - target: {fileID: -2708985373849898134, guid: bb42f94ad94845e4eaae7670eefd3361,
+        type: 3}
+      propertyPath: m_Name
+      value: I Front Right Leg
+      objectReference: {fileID: 0}
     - target: {fileID: -1835290792717356706, guid: bb42f94ad94845e4eaae7670eefd3361,
         type: 3}
       propertyPath: m_Name
-      value: I_front
+      value: Illusionist Front Animator
       objectReference: {fileID: 0}
     - target: {fileID: -1835290792717356706, guid: bb42f94ad94845e4eaae7670eefd3361,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1397900032370114106, guid: bb42f94ad94845e4eaae7670eefd3361,
+        type: 3}
+      propertyPath: m_Name
+      value: Head
+      objectReference: {fileID: 0}
+    - target: {fileID: -1015642474509692918, guid: bb42f94ad94845e4eaae7670eefd3361,
+        type: 3}
+      propertyPath: m_Name
+      value: I Front Right Arm
+      objectReference: {fileID: 0}
+    - target: {fileID: -125632106225665311, guid: bb42f94ad94845e4eaae7670eefd3361,
+        type: 3}
+      propertyPath: m_Name
+      value: Left Arm
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209514499377064699, guid: bb42f94ad94845e4eaae7670eefd3361,
+        type: 3}
+      propertyPath: m_Name
+      value: Left Dress
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365224439637047758, guid: bb42f94ad94845e4eaae7670eefd3361,
+        type: 3}
+      propertyPath: m_Name
+      value: _I Front Left Leg
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399327361725476858, guid: bb42f94ad94845e4eaae7670eefd3361,
+        type: 3}
+      propertyPath: m_Name
+      value: _I Front Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555377634333946452, guid: bb42f94ad94845e4eaae7670eefd3361,
+        type: 3}
+      propertyPath: m_Name
+      value: I Front Left Leg
+      objectReference: {fileID: 0}
+    - target: {fileID: 7011094457353762826, guid: bb42f94ad94845e4eaae7670eefd3361,
+        type: 3}
+      propertyPath: m_Name
+      value: I Front Left Arm
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880435461071305040, guid: bb42f94ad94845e4eaae7670eefd3361,
+        type: 3}
+      propertyPath: m_Name
+      value: I Front Head
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910672227190163784, guid: bb42f94ad94845e4eaae7670eefd3361,
+        type: 3}
+      propertyPath: m_Name
+      value: I Front Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 8682070833443368933, guid: bb42f94ad94845e4eaae7670eefd3361,
+        type: 3}
+      propertyPath: m_Name
+      value: Right Dress
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173347921861452052, guid: bb42f94ad94845e4eaae7670eefd3361,
+        type: 3}
+      propertyPath: m_Name
+      value: I Front Skirt
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -1561478586955955143, guid: bb42f94ad94845e4eaae7670eefd3361,
@@ -14863,6 +15303,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1007444372}
     m_Modifications:
+    - target: {fileID: -7295104831596053714, guid: f9eda469437ce7e4b9b19e2539f4209b,
+        type: 3}
+      propertyPath: m_Name
+      value: P Back Shoulders
+      objectReference: {fileID: 0}
+    - target: {fileID: -5384986162328589535, guid: f9eda469437ce7e4b9b19e2539f4209b,
+        type: 3}
+      propertyPath: m_Name
+      value: P Back Dress
+      objectReference: {fileID: 0}
+    - target: {fileID: -3126796194140972710, guid: f9eda469437ce7e4b9b19e2539f4209b,
+        type: 3}
+      propertyPath: m_Name
+      value: P Back Body
+      objectReference: {fileID: 0}
     - target: {fileID: -3087558263392499549, guid: f9eda469437ce7e4b9b19e2539f4209b,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -14872,6 +15327,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1803250759790859686, guid: f9eda469437ce7e4b9b19e2539f4209b,
+        type: 3}
+      propertyPath: m_Name
+      value: P Back Head
       objectReference: {fileID: 0}
     - target: {fileID: -1731887472192654826, guid: f9eda469437ce7e4b9b19e2539f4209b,
         type: 3}
@@ -14893,6 +15353,26 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -526036377757420331, guid: f9eda469437ce7e4b9b19e2539f4209b,
+        type: 3}
+      propertyPath: m_Name
+      value: Left Hair
+      objectReference: {fileID: 0}
+    - target: {fileID: -339377043624316454, guid: f9eda469437ce7e4b9b19e2539f4209b,
+        type: 3}
+      propertyPath: m_Name
+      value: _P Back Bone Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 254275685701108669, guid: f9eda469437ce7e4b9b19e2539f4209b,
+        type: 3}
+      propertyPath: m_Name
+      value: Right Hair
+      objectReference: {fileID: 0}
+    - target: {fileID: 2666372909874152672, guid: f9eda469437ce7e4b9b19e2539f4209b,
+        type: 3}
+      propertyPath: m_Name
+      value: _P Back Right Thigh Bone
+      objectReference: {fileID: 0}
     - target: {fileID: 2830177419484870999, guid: f9eda469437ce7e4b9b19e2539f4209b,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -14902,6 +15382,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074720496322050223, guid: f9eda469437ce7e4b9b19e2539f4209b,
+        type: 3}
+      propertyPath: m_Name
+      value: _P Back Left Thigh Bone
       objectReference: {fileID: 0}
     - target: {fileID: 3383952208146343845, guid: f9eda469437ce7e4b9b19e2539f4209b,
         type: 3}
@@ -14951,7 +15436,7 @@ PrefabInstance:
     - target: {fileID: 4653112919436477921, guid: f9eda469437ce7e4b9b19e2539f4209b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4653112919436477921, guid: f9eda469437ce7e4b9b19e2539f4209b,
         type: 3}
@@ -14983,10 +15468,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 6.826019
       objectReference: {fileID: 0}
+    - target: {fileID: 4716741398881270983, guid: f9eda469437ce7e4b9b19e2539f4209b,
+        type: 3}
+      propertyPath: m_Name
+      value: P Back Legs
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741675893046377753, guid: f9eda469437ce7e4b9b19e2539f4209b,
+        type: 3}
+      propertyPath: m_Name
+      value: P Back Chest
+      objectReference: {fileID: 0}
     - target: {fileID: 7897397562812941470, guid: f9eda469437ce7e4b9b19e2539f4209b,
         type: 3}
       propertyPath: m_Name
-      value: P_back
+      value: Parkourist Back Animator
       objectReference: {fileID: 0}
     - target: {fileID: 7897397562812941470, guid: f9eda469437ce7e4b9b19e2539f4209b,
         type: 3}
@@ -16228,15 +16723,70 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2265485378576160014}
     m_Modifications:
+    - target: {fileID: -7633340106466780351, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
+        type: 3}
+      propertyPath: m_Name
+      value: I Back Left Leg
+      objectReference: {fileID: 0}
+    - target: {fileID: -7292450854244198151, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
+        type: 3}
+      propertyPath: m_Name
+      value: Left Dress
+      objectReference: {fileID: 0}
+    - target: {fileID: -4520194229330569554, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
+        type: 3}
+      propertyPath: m_Name
+      value: I Back Skirt
+      objectReference: {fileID: 0}
+    - target: {fileID: -4517678239802105991, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
+        type: 3}
+      propertyPath: m_Name
+      value: Right Arm
+      objectReference: {fileID: 0}
     - target: {fileID: -1911497594256482023, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
         type: 3}
       propertyPath: m_Name
-      value: I_back
+      value: Illusionist Back Animator
       objectReference: {fileID: 0}
     - target: {fileID: -1911497594256482023, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1340665128581663310, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
+        type: 3}
+      propertyPath: m_Name
+      value: I Back Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 461671207740148702, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
+        type: 3}
+      propertyPath: m_Name
+      value: Right Dress
+      objectReference: {fileID: 0}
+    - target: {fileID: 890022952453846047, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
+        type: 3}
+      propertyPath: m_Name
+      value: _I Back Left Leg
+      objectReference: {fileID: 0}
+    - target: {fileID: 1477495523293081633, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
+        type: 3}
+      propertyPath: m_Name
+      value: I Back Right Leg
+      objectReference: {fileID: 0}
+    - target: {fileID: 2040653560734621846, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
+        type: 3}
+      propertyPath: m_Name
+      value: _I Back Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892152584466555354, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
+        type: 3}
+      propertyPath: m_Name
+      value: I Back Head
+      objectReference: {fileID: 0}
+    - target: {fileID: 3061246479736122727, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
+        type: 3}
+      propertyPath: m_Name
+      value: _I Back Right Leg
       objectReference: {fileID: 0}
     - target: {fileID: 3371054461104587621, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
         type: 3}
@@ -16276,7 +16826,7 @@ PrefabInstance:
     - target: {fileID: 3371054461104587621, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3371054461104587621, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
         type: 3}
@@ -16307,6 +16857,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366877585902028848, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
+        type: 3}
+      propertyPath: m_Name
+      value: Left Hair
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339565786012303950, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
+        type: 3}
+      propertyPath: m_Name
+      value: Left Arm
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411324489503055775, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
+        type: 3}
+      propertyPath: m_Name
+      value: Right Hair
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819641874691157264, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
+        type: 3}
+      propertyPath: m_Name
+      value: Head
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083508579063019355, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
+        type: 3}
+      propertyPath: m_Name
+      value: I Back Arms
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 408334207936230506, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
@@ -16591,7 +17166,7 @@ Transform:
   - {fileID: 3055003599499018530}
   - {fileID: 6082848591328237227}
   m_Father: {fileID: 2265485378294349067}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &350127821605558435
 SpriteRenderer:
@@ -18342,8 +18917,8 @@ Transform:
   - {fileID: 2951271327419547140}
   - {fileID: 2951271328016538826}
   - {fileID: 2951271328325551583}
-  - {fileID: 8087344455598575119}
   - {fileID: 295802218762106381}
+  - {fileID: 8087344455598575119}
   - {fileID: 6386018592512152057}
   - {fileID: 2951271326345465842}
   m_Father: {fileID: 1058902736}
@@ -18920,8 +19495,8 @@ Transform:
   - {fileID: 7820781318246713247}
   - {fileID: 7820781317828686046}
   - {fileID: 522503920}
-  - {fileID: 1975000480}
   - {fileID: 913059474}
+  - {fileID: 1975000480}
   - {fileID: 611256161}
   m_Father: {fileID: 1058902736}
   m_RootOrder: 3
@@ -25636,7 +26211,7 @@ Transform:
   - {fileID: 1800546586544231086}
   - {fileID: 3843038061449121991}
   m_Father: {fileID: 2265485378294349067}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8186263585051685291
 GameObject:
