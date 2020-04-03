@@ -66,6 +66,7 @@ public class Interaction : MonoBehaviour
                         if (reward != null)
                         {
                             HeldItem = reward;
+                            HeldItem.GetComponent<HeldItems>().CanPickThisUp = true;
                             grabbed = true;
                         }
                         else

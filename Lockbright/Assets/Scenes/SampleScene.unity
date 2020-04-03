@@ -11160,8 +11160,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cae2801ea06792a4b982523d15f485ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -11187,6 +11187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemDescription: The fresh mossflower smells of rain and grass, a wonderful scent.
+  CanPickThisUp: 1
 --- !u!114 &482240703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11674,7 +11675,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07, y: -0.65}
+  m_Offset: {x: -0.07, y: -0.53}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11685,7 +11686,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.83, y: 1.43}
+  m_Size: {x: 3.83, y: 1.64}
   m_EdgeRadius: 0
 --- !u!212 &541579403
 SpriteRenderer:
@@ -11831,8 +11832,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cb0071118df33b6418fd0561045eb8ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -11859,6 +11860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemDescription: A simple key - nothing original about it, yet it matches the front
     door.
+  CanPickThisUp: 1
 --- !u!114 &549967894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12394,8 +12396,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8c26f67680821fb439e2398df9fe463f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -12421,6 +12423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemDescription: The concoction looks eerily like blood.
+  CanPickThisUp: 1
 --- !u!114 &737379594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12723,7 +12726,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824548175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.2, y: -13.4, z: 0}
+  m_LocalPosition: {x: -48.2, y: -1.3, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 503711579}
@@ -12763,10 +12766,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04, y: -0.27}
+  m_Offset: {x: 0.04, y: -1.36}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.77}
     oldSize: {x: 2, y: 4.5}
     newSize: {x: 10.8, y: 10.8}
     adaptiveTilingThreshold: 0.5
@@ -12774,7 +12777,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.46, y: 3.01}
+  m_Size: {x: 1.46, y: 2.44}
   m_EdgeRadius: 0
 --- !u!212 &824548179
 SpriteRenderer:
@@ -12813,7 +12816,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1418791767
   m_SortingLayer: 2
-  m_SortingOrder: 5
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9420127de5ca91642bab97ddf206b830, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12824,7 +12827,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &824548180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13362,7 +13365,6 @@ GameObject:
   - component: {fileID: 986136750}
   - component: {fileID: 986136749}
   - component: {fileID: 986136752}
-  - component: {fileID: 986136753}
   m_Layer: 0
   m_Name: Fridge
   m_TagString: Interactable
@@ -13378,7 +13380,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986136747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.8, y: -31.8, z: 0}
+  m_LocalPosition: {x: -43.8, y: -10.7, z: 0}
   m_LocalScale: {x: 11.12616, y: 11.12616, z: 11.12616}
   m_Children: []
   m_Father: {fileID: 503711579}
@@ -13418,10 +13420,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.11, y: -0.41}
+  m_Offset: {x: -0.11, y: -2.06}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 1}
     oldSize: {x: 2.25, y: 3.75}
     newSize: {x: 10.8, y: 10.8}
     adaptiveTilingThreshold: 0.5
@@ -13429,7 +13431,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.65, y: 1.98}
+  m_Size: {x: 1.33, y: 2.45}
   m_EdgeRadius: 0
 --- !u!212 &986136751
 SpriteRenderer:
@@ -13468,7 +13470,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1418791767
   m_SortingLayer: 2
-  m_SortingOrder: 6
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8366710fae756c24d80ec14c15d4bc02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13479,7 +13481,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &986136752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13499,20 +13501,6 @@ MonoBehaviour:
   spawned: 0
   RewardText: I got the books!
   InteractionText: Seems to be books on top of the fridge.
---- !u!114 &986136753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 986136747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingOrderBase: 5000
-  offset: 2
 --- !u!1 &996291204
 GameObject:
   m_ObjectHideFlags: 0
@@ -14970,7 +14958,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353554978}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.2, y: -46.4, z: 0}
+  m_LocalPosition: {x: -25.2, y: -32.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15092,6 +15080,7 @@ GameObject:
   - component: {fileID: 1416568729}
   - component: {fileID: 1416568731}
   - component: {fileID: 1416568732}
+  - component: {fileID: 1416568733}
   m_Layer: 0
   m_Name: Dried Mossflower
   m_TagString: Item
@@ -15107,7 +15096,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416568727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -46, y: 22.8, z: 0}
+  m_LocalPosition: {x: -46, y: 12.5, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 44763305}
@@ -15126,10 +15115,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.23}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.22}
     oldSize: {x: 2.5, y: 3}
     newSize: {x: 2.5, y: 3}
     adaptiveTilingThreshold: 0.5
@@ -15137,7 +15126,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 1.64}
+  m_Size: {x: 0.8, y: 0.53}
   m_EdgeRadius: 0
 --- !u!212 &1416568730
 SpriteRenderer:
@@ -15174,8 +15163,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 92c474e23fb6b974fbf455779ee5ff97, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -15187,7 +15176,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &1416568731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15202,6 +15191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemDescription: You carefully examine the dried mossflower. Your fingers itch to
     reinvigorate it.
+  CanPickThisUp: 1
 --- !u!114 &1416568732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15216,6 +15206,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sortingOrderBase: 5000
   offset: 0
+--- !u!50 &1416568733
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416568727}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 100
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1479821018 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4265205072206983563, guid: c8824b425017b5648aa709809a688dd0,
@@ -15983,6 +15994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemDescription: 'You examine the cookbook. It is written in a foreign language. '
+  CanPickThisUp: 0
 --- !u!212 &1832139212
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16020,7 +16032,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1019477407
   m_SortingLayer: 3
-  m_SortingOrder: 7
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b7090dc6a5dd5654aa4b6d42f0672fcd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -16040,7 +16052,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832139210}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -48.1, y: -15.4, z: 0}
+  m_LocalPosition: {x: -48.1, y: -16.5, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 44763305}
@@ -16323,7 +16335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954522118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -47.8, y: 1.8, z: 0}
+  m_LocalPosition: {x: -47.8, y: -2.7, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 44763305}
@@ -16342,6 +16354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemDescription: mine the book of fruit. It doesn't seem to have any use.
+  CanPickThisUp: 1
 --- !u!61 &1954522121
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16490,7 +16503,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980840907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -13.3, z: 0}
+  m_LocalPosition: {x: 0, y: -14.2, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 44763305}
@@ -16584,6 +16597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemDescription: The knife may be rusty, but it could still cut a b!%@#.
+  CanPickThisUp: 1
 --- !u!114 &1980840912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16713,8 +16727,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 381b252936ae0ab479e4fc2cbcdec329, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -16741,6 +16755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemDescription: An intricate container filled with a sort of a pale tonic. It looks
     unharmed by age.
+  CanPickThisUp: 1
 --- !u!114 &2023555121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16850,8 +16865,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1019477407
-  m_SortingLayer: 3
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 139b707cbc463ec40a64b8536f733b59, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -16878,6 +16893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemDescription: A somewhat shriveled pomegranate. There doesn't appear to be anything
     specifically UNhealthy about it.
+  CanPickThisUp: 1
 --- !u!114 &2038375328
 MonoBehaviour:
   m_ObjectHideFlags: 0

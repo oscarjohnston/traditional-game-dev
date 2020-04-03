@@ -392,7 +392,7 @@ public class PlayerInput : MonoBehaviour
             foreach (Collider2D collision in collide)
             {
                 // Make sure you can actually pick item up before moving it
-                if (collision.tag == "Item" && collision.gameObject != HeldItem)
+                if (collision.tag == "Item" && collision.gameObject != HeldItem && collision.gameObject.GetComponent<HeldItems>().CanPickThisUp)
                 {
                     collidedWithAnItem = true;
 
