@@ -6035,8 +6035,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1019477407
-  m_SortingLayer: 3
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c267d4d2db1bf9342bee3dc5a06065f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -11077,7 +11077,6 @@ GameObject:
   - component: {fileID: 482240701}
   - component: {fileID: 482240700}
   - component: {fileID: 482240702}
-  - component: {fileID: 482240703}
   m_Layer: 0
   m_Name: Living Mossflower
   m_TagString: Item
@@ -11093,7 +11092,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482240698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -73, z: 0}
+  m_LocalPosition: {x: 0, y: -94.1, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 44763305}
@@ -11112,10 +11111,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.31}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.16}
     oldSize: {x: 2.5, y: 3}
     newSize: {x: 2.5, y: 3}
     adaptiveTilingThreshold: 0.5
@@ -11123,7 +11122,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.06, y: 2.05}
+  m_Size: {x: 0.74, y: 0.61}
   m_EdgeRadius: 0
 --- !u!212 &482240701
 SpriteRenderer:
@@ -11188,20 +11187,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemDescription: The fresh mossflower smells of rain and grass, a wonderful scent.
   CanPickThisUp: 1
---- !u!114 &482240703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 482240698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingOrderBase: 5000
-  offset: 0
 --- !u!1 &503711578
 GameObject:
   m_ObjectHideFlags: 0
@@ -11749,7 +11734,6 @@ GameObject:
   - component: {fileID: 549967892}
   - component: {fileID: 549967891}
   - component: {fileID: 549967893}
-  - component: {fileID: 549967894}
   m_Layer: 0
   m_Name: Charred Key
   m_TagString: Item
@@ -11765,7 +11749,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549967889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.9, y: -78.4, z: 0}
+  m_LocalPosition: {x: 12.9, y: -92.3, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 44763305}
@@ -11861,20 +11845,6 @@ MonoBehaviour:
   ItemDescription: A simple key - nothing original about it, yet it matches the front
     door.
   CanPickThisUp: 1
---- !u!114 &549967894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 549967889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingOrderBase: 5000
-  offset: 0
 --- !u!1 &564832043
 GameObject:
   m_ObjectHideFlags: 0
@@ -12025,7 +11995,7 @@ MonoBehaviour:
   CultistWine: {fileID: 737379589}
   spawned: 0
   RewardText: We did it!
-  InteractionText: 
+  InteractionText: Looks like a stove we can cook something on.
 --- !u!1 &585379528
 GameObject:
   m_ObjectHideFlags: 0
@@ -12313,7 +12283,6 @@ GameObject:
   - component: {fileID: 737379592}
   - component: {fileID: 737379591}
   - component: {fileID: 737379593}
-  - component: {fileID: 737379594}
   m_Layer: 0
   m_Name: Cultist Wine
   m_TagString: Item
@@ -12329,7 +12298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737379589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.9, y: -78.5, z: 0}
+  m_LocalPosition: {x: -21, y: -91.7, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 44763305}
@@ -12424,20 +12393,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemDescription: The concoction looks eerily like blood.
   CanPickThisUp: 1
---- !u!114 &737379594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 737379589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingOrderBase: 5000
-  offset: 0
 --- !u!1 &763546905
 GameObject:
   m_ObjectHideFlags: 0
@@ -12463,7 +12418,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763546905}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 295802218762106381}
@@ -12710,7 +12665,6 @@ GameObject:
   - component: {fileID: 824548179}
   - component: {fileID: 824548178}
   - component: {fileID: 824548177}
-  - component: {fileID: 824548180}
   m_Layer: 0
   m_Name: CounterSide
   m_TagString: Untagged
@@ -12726,7 +12680,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824548175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.2, y: -1.3, z: 0}
+  m_LocalPosition: {x: -48.2, y: -13.5, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 503711579}
@@ -12766,10 +12720,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04, y: -1.36}
+  m_Offset: {x: 0.04, y: -0.12}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.77}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2, y: 4.5}
     newSize: {x: 10.8, y: 10.8}
     adaptiveTilingThreshold: 0.5
@@ -12828,20 +12782,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &824548180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824548175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingOrderBase: 5000
-  offset: 1
 --- !u!1 &830288687 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8919988033462289301, guid: e0ac378ae65de2b4695513a4ac2eb9df,
@@ -13297,7 +13237,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979011513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.1, y: -15, z: 0}
+  m_LocalPosition: {x: 4.1, y: -20, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 503711579}
@@ -13340,7 +13280,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1418791767
   m_SortingLayer: 2
-  m_SortingOrder: 6
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4f30e919f380af440ae99461a36104dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13351,7 +13291,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &986136747
 GameObject:
   m_ObjectHideFlags: 0
@@ -13380,7 +13320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986136747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.8, y: -10.7, z: 0}
+  m_LocalPosition: {x: -43.8, y: -31.7, z: 0}
   m_LocalScale: {x: 11.12616, y: 11.12616, z: 11.12616}
   m_Children: []
   m_Father: {fileID: 503711579}
@@ -13420,10 +13360,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.11, y: -2.06}
+  m_Offset: {x: -0.11, y: -0.21}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 1}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.25, y: 3.75}
     newSize: {x: 10.8, y: 10.8}
     adaptiveTilingThreshold: 0.5
@@ -15079,7 +15019,6 @@ GameObject:
   - component: {fileID: 1416568730}
   - component: {fileID: 1416568729}
   - component: {fileID: 1416568731}
-  - component: {fileID: 1416568732}
   - component: {fileID: 1416568733}
   m_Layer: 0
   m_Name: Dried Mossflower
@@ -15192,20 +15131,6 @@ MonoBehaviour:
   ItemDescription: You carefully examine the dried mossflower. Your fingers itch to
     reinvigorate it.
   CanPickThisUp: 1
---- !u!114 &1416568732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1416568727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingOrderBase: 5000
-  offset: 0
 --- !u!50 &1416568733
 Rigidbody2D:
   serializedVersion: 4
@@ -15973,7 +15898,6 @@ GameObject:
   - component: {fileID: 1832139212}
   - component: {fileID: 1832139214}
   - component: {fileID: 1832139211}
-  - component: {fileID: 1832139215}
   m_Layer: 0
   m_Name: Cookbook
   m_TagString: Item
@@ -16052,7 +15976,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832139210}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -48.1, y: -16.5, z: 0}
+  m_LocalPosition: {x: -46.9, y: -15, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 44763305}
@@ -16084,20 +16008,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.22, y: 0.64}
   m_EdgeRadius: 0
---- !u!114 &1832139215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832139210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingOrderBase: 5000
-  offset: 0
 --- !u!1 &1845721306
 GameObject:
   m_ObjectHideFlags: 0
@@ -16165,7 +16075,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.78, y: 0.01}
+  m_Offset: {x: 0.78, y: -0.34}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -16176,7 +16086,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.22, y: 1.77}
+  m_Size: {x: 2.22, y: 0.35}
   m_EdgeRadius: 0
 --- !u!212 &1845721310
 SpriteRenderer:
@@ -16319,7 +16229,6 @@ GameObject:
   - component: {fileID: 1954522122}
   - component: {fileID: 1954522121}
   - component: {fileID: 1954522120}
-  - component: {fileID: 1954522123}
   m_Layer: 0
   m_Name: Book Of Fruit
   m_TagString: Item
@@ -16335,7 +16244,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954522118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -47.8, y: -2.7, z: 0}
+  m_LocalPosition: {x: -47.6, y: -4.7, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 44763305}
@@ -16430,20 +16339,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1954522123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1954522118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingOrderBase: 5000
-  offset: 0
 --- !u!1 &1975000478 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1911497594256482023, guid: 3dd6f90d2b5e3424ea7ad86e5b065e59,
@@ -16487,7 +16382,6 @@ GameObject:
   - component: {fileID: 1980840910}
   - component: {fileID: 1980840909}
   - component: {fileID: 1980840911}
-  - component: {fileID: 1980840912}
   m_Layer: 0
   m_Name: Rusty Knife
   m_TagString: Item
@@ -16598,20 +16492,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemDescription: The knife may be rusty, but it could still cut a b!%@#.
   CanPickThisUp: 1
---- !u!114 &1980840912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980840907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingOrderBase: 5000
-  offset: 0
 --- !u!1 &1986711306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5384986162328589535, guid: f9eda469437ce7e4b9b19e2539f4209b,
@@ -16660,8 +16540,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023555116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.6, y: 28.6, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: -3.6, y: 24.3, z: 0}
+  m_LocalScale: {x: 8.0764, y: 8.0764, z: 8.0764}
   m_Children: []
   m_Father: {fileID: 44763305}
   m_RootOrder: 3
@@ -16679,10 +16559,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.09}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -16690,7 +16570,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.42, y: 1.66}
+  m_Size: {x: 0.47, y: 0.29}
   m_EdgeRadius: 0
 --- !u!212 &2023555119
 SpriteRenderer:
@@ -16756,20 +16636,27 @@ MonoBehaviour:
   ItemDescription: An intricate container filled with a sort of a pale tonic. It looks
     unharmed by age.
   CanPickThisUp: 1
---- !u!114 &2023555121
-MonoBehaviour:
+--- !u!50 &2023555121
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023555116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingOrderBase: 5000
-  offset: 0
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 100
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &2038375323
 GameObject:
   m_ObjectHideFlags: 0
@@ -16782,7 +16669,6 @@ GameObject:
   - component: {fileID: 2038375326}
   - component: {fileID: 2038375325}
   - component: {fileID: 2038375327}
-  - component: {fileID: 2038375328}
   m_Layer: 0
   m_Name: Pomegranate
   m_TagString: Item
@@ -16798,8 +16684,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038375323}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.2, y: -21.2, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: 19.5, y: -22.6, z: 0}
+  m_LocalScale: {x: 6.4929004, y: 6.4929004, z: 6.4929004}
   m_Children: []
   m_Father: {fileID: 44763305}
   m_RootOrder: 4
@@ -16817,7 +16703,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.03, y: -0.18}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -16828,7 +16714,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.19, y: 1.09}
+  m_Size: {x: 0.87, y: 0.51}
   m_EdgeRadius: 0
 --- !u!212 &2038375326
 SpriteRenderer:
@@ -16894,20 +16780,6 @@ MonoBehaviour:
   ItemDescription: A somewhat shriveled pomegranate. There doesn't appear to be anything
     specifically UNhealthy about it.
   CanPickThisUp: 1
---- !u!114 &2038375328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038375323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingOrderBase: 5000
-  offset: 0
 --- !u!1001 &2084654737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17345,7 +17217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892205078456127848}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 4433206456206056930}
@@ -24187,7 +24059,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3785349542689645057}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.41184998, y: 0.13813019, z: 0}
+  m_LocalPosition: {x: 0.41184998, y: -1.8618698, z: 0}
   m_LocalScale: {x: 9.566695, y: 9.566695, z: 9.566695}
   m_Children:
   - {fileID: 7670826112591190610}
@@ -26387,7 +26259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5682543607867481075}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 818423095727995777}
