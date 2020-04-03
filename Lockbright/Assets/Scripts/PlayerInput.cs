@@ -478,6 +478,14 @@ public class PlayerInput : MonoBehaviour
     }
 
     /// <summary>
+    /// Use this helper method to have this player take damage
+    /// </summary>
+    public void TakeDamage()
+    {
+
+    }
+
+    /// <summary>
     /// The burner will activate a glow. It will be the whitebox's scripts responsibility to fulfill burner requirements for events
     /// </summary>
     void DoBurnerAbility()

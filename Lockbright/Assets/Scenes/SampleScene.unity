@@ -13689,7 +13689,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   BurnerGlowLight: {fileID: 2102640629}
-  health: 0
+  health: 5
   front: {fileID: 1407636306}
   side: {fileID: 651661630}
   back: {fileID: 1664742233}
