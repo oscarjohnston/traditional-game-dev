@@ -19523,7 +19523,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PARKOURIST
+  m_Text: ACROBAT
 --- !u!222 &2265485378398426051
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22949,7 +22949,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: BURNER
+  m_Text: ARSONIST
 --- !u!1 &4070121653244417127
 GameObject:
   m_ObjectHideFlags: 0
@@ -25431,7 +25431,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ALCHEMIST
+  m_Text: RESTORER
 --- !u!224 &7820781317625484158
 RectTransform:
   m_ObjectHideFlags: 0
