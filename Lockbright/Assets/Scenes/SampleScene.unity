@@ -230,20 +230,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sortingOrderBase: 5000
   offset: -1
---- !u!114 &70542375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2265485378576160010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingOrderBase: 5000
-  offset: 0
 --- !u!1 &83662567
 GameObject:
   m_ObjectHideFlags: 0
@@ -12287,20 +12273,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 259595322}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &702821738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007444368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingOrderBase: 5000
-  offset: -1
 --- !u!1 &737379589
 GameObject:
   m_ObjectHideFlags: 0
@@ -13561,7 +13533,6 @@ GameObject:
   - component: {fileID: 1007444370}
   - component: {fileID: 1007444369}
   - component: {fileID: 1007444373}
-  - component: {fileID: 702821738}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -13752,6 +13723,7 @@ MonoBehaviour:
         m_CallState: 2
   BurnerGlowLight: {fileID: 2102640629}
   health: 5
+  HealthBar: {fileID: 2265485377623365772}
   front: {fileID: 1407636306}
   side: {fileID: 651661630}
   back: {fileID: 1664742233}
@@ -14113,7 +14085,6 @@ GameObject:
   - component: {fileID: 1179331266}
   - component: {fileID: 1179331265}
   - component: {fileID: 1179331264}
-  - component: {fileID: 4070121652253065929}
   m_Layer: 0
   m_Name: Player 3
   m_TagString: Player
@@ -14189,6 +14160,7 @@ MonoBehaviour:
         m_CallState: 2
   BurnerGlowLight: {fileID: 4070121653633419191}
   health: 0
+  HealthBar: {fileID: 4070121652806012154}
   front: {fileID: 42954047}
   side: {fileID: 1156852685}
   back: {fileID: 1479821019}
@@ -19316,6 +19288,7 @@ MonoBehaviour:
         m_CallState: 2
   BurnerGlowLight: {fileID: 2951271326345465843}
   health: 0
+  HealthBar: {fileID: 2951271327600180426}
   front: {fileID: 2951271328010797103}
   side: {fileID: 2951271327124412355}
   back: {fileID: 2951271326610818018}
@@ -19447,7 +19420,6 @@ GameObject:
   - component: {fileID: 2265485378294349069}
   - component: {fileID: 2265485378294349070}
   - component: {fileID: 2265485378294349066}
-  - component: {fileID: 2951271327841777042}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Player
@@ -19865,7 +19837,6 @@ GameObject:
   - component: {fileID: 2265485378576160008}
   - component: {fileID: 2265485378576160011}
   - component: {fileID: 2265485378576160015}
-  - component: {fileID: 70542375}
   m_Layer: 0
   m_Name: Player 4
   m_TagString: Player
@@ -19981,6 +19952,7 @@ MonoBehaviour:
         m_CallState: 2
   BurnerGlowLight: {fileID: 522503919}
   health: 0
+  HealthBar: {fileID: 7820781318474931314}
   front: {fileID: 913059473}
   side: {fileID: 611256160}
   back: {fileID: 1975000479}
@@ -21385,20 +21357,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2951271327841777042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2265485378294349071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingOrderBase: 5000
-  offset: -1
 --- !u!224 &2951271327864554856
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22357,20 +22315,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &4070121652253065929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179331263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e648b70be2f5ff34da0d791665867ece, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingOrderBase: 5000
-  offset: 0
 --- !u!114 &4070121652408037702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23634,7 +23578,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 14.099976, y: -780}
+  m_AnchoredPosition: {x: 14.0998535, y: -780}
   m_SizeDelta: {x: 85, y: 85}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &4107926684892486926

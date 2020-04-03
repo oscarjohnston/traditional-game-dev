@@ -70,6 +70,9 @@ public class PlayerInput : MonoBehaviour
 
     // Health
     public int health;
+    public Slider HealthBar;
+    private Vector3 StartingPosition;
+    private bool Dead;
 
     // Animators
     public Animator front;
@@ -99,11 +102,19 @@ public class PlayerInput : MonoBehaviour
         side.gameObject.SetActive(false);
 
         IsWalking = false;
+
+        StartingPosition = this.transform.position;
+        Dead = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Dead)
+        {
+            return;
+        }
+
         // First look for any prompts
         // Pickup Prompt
         if (PickupPromptOn)
@@ -299,6 +310,9 @@ public class PlayerInput : MonoBehaviour
         // B Button Pressed
         if (Input.GetButtonDown("B_Button_" + PlayerNumber))
         {
+            print("Took some damage");
+            TakeDamage();
+
             // Drop a held Item, handle UI images
             if (grabbed)
             {
@@ -468,13 +482,6 @@ public class PlayerInput : MonoBehaviour
         {
             game_controller.InvokeWinGameEvent();
         }
-
-        // Health check
-        if(health != 5)
-        {
-            // Do something to change health bar
-
-        }
     }
 
     /// <summary>
@@ -482,7 +489,40 @@ public class PlayerInput : MonoBehaviour
     /// </summary>
     public void TakeDamage()
     {
+        health--;
 
+        // Change Health UI Meter
+        HealthBar.value = health;
+
+        // Check if it's time to die
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    /// <summary>
+    /// This kills the character and puts a time for them to come back to life
+    /// </summary>
+    private void Die()
+    {
+        Dead = true;
+        this.gameObject.SetActive(false);
+
+        // Bring back to life in 2 seconds
+        Invoke("ResetCharacter", 2f);
+    }
+
+    /// <summary>
+    /// Resets the health and position of this character back to where it started.
+    /// </summary>
+    private void ResetCharacter()
+    {
+        health = 5;
+        HealthBar.value = health;
+        Dead = false;
+        transform.position = StartingPosition;
+        this.gameObject.SetActive(true);
     }
 
     /// <summary>
