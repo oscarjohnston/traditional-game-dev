@@ -121,6 +121,9 @@ public class PlayerInput : MonoBehaviour
 
                 // Turn off the item
                 HeldItem.SetActive(false);
+
+                // Whatever sort group the item was before, just make it be the player level now
+                HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
             }
             // Deny pickup
             else if(Input.GetButtonDown("B_Button_" + PlayerNumber))
