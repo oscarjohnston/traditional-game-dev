@@ -6,6 +6,10 @@ public class Monster : MonoBehaviour
 {
     public int damage;
 
+    // Animators
+    public Animator Front_Animator;
+    public Animator Back_Animator;
+
     // Start is called before the first frame update
     void Start()
     {
