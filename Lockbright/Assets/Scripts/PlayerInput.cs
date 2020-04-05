@@ -310,9 +310,6 @@ public class PlayerInput : MonoBehaviour
         // B Button Pressed
         if (Input.GetButtonDown("B_Button_" + PlayerNumber))
         {
-            print("Took some damage");
-            TakeDamage();
-
             // Drop a held Item, handle UI images
             if (grabbed)
             {
@@ -342,6 +339,12 @@ public class PlayerInput : MonoBehaviour
 
                 SpeechBubble.SetActive(true);
                 Invoke("DeactivateSpeechBubble", 4f);
+
+                // Special case for Rusty knife that hurts the player
+                if(HeldItem.name == "Rusty Knife")
+                {
+                    TakeDamage();
+                }
             }
         }
 
