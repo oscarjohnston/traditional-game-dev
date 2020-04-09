@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -10,7 +12,10 @@ public class PauseMenu : MonoBehaviour
     public GameObject PauseMenuUI;
 
     // This variable is so only one player can control the pause screen at one time
-    private int PlayerWhoPaused;
+    private int PlayerWhoPaused = 1;
+
+    public Button ResumeButton;
+    public Button HighlightedButton;
 
     // Update is called once per frame
     void Update()
@@ -43,6 +48,8 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     private void Pause()
@@ -50,6 +57,8 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+
+        EventSystem.current.SetSelectedGameObject(ResumeButton.gameObject);
     }
 
     public void ExitGame()
@@ -86,4 +95,97 @@ public class PauseMenu : MonoBehaviour
         else { return false; }
     }
 
+    /*
+    /// <summary>
+    /// Sends an input to the party menu.
+    /// </summary>
+    public void SendPartyMenuInput(MenuInputs menuInput)
+    {
+        switch (menuInput)
+        {
+            case (MenuInputs.Up):
+                if (highlightedButton.navigation.selectOnUp != null)
+                {
+                    EventSystem.current.SetSelectedGameObject(highlightedButton.navigation.selectOnUp.gameObject);
+                    highlightedButton = highlightedButton.navigation.selectOnUp.GetComponent<Button>();
+                }
+                else if (highlightedButton.FindSelectableOnUp() != null)
+                {
+                    EventSystem.current.SetSelectedGameObject(highlightedButton.FindSelectableOnUp().gameObject);
+                    highlightedButton = highlightedButton.FindSelectableOnUp().GetComponent<Button>();
+                }
+                break;
+            case (MenuInputs.Right):
+                if (highlightedButton.navigation.selectOnRight != null)
+                {
+                    EventSystem.current.SetSelectedGameObject(highlightedButton.navigation.selectOnRight.gameObject);
+                    highlightedButton = highlightedButton.navigation.selectOnRight.GetComponent<Button>();
+                }
+                else if (highlightedButton.FindSelectableOnRight() != null)
+                {
+                    EventSystem.current.SetSelectedGameObject(highlightedButton.FindSelectableOnRight().gameObject);
+                    highlightedButton = highlightedButton.FindSelectableOnRight().GetComponent<Button>();
+                }
+                break;
+            case (MenuInputs.Left):
+                if (highlightedButton.navigation.selectOnLeft != null)
+                {
+                    EventSystem.current.SetSelectedGameObject(highlightedButton.navigation.selectOnLeft.gameObject);
+                    highlightedButton = highlightedButton.navigation.selectOnLeft.GetComponent<Button>();
+                }
+                else if (highlightedButton.FindSelectableOnLeft() != null)
+                {
+                    EventSystem.current.SetSelectedGameObject(highlightedButton.FindSelectableOnLeft().gameObject);
+                    highlightedButton = highlightedButton.FindSelectableOnLeft().GetComponent<Button>();
+                }
+                break;
+            case (MenuInputs.Down):
+                if (highlightedButton.navigation.selectOnDown != null)
+                {
+                    EventSystem.current.SetSelectedGameObject(highlightedButton.navigation.selectOnDown.gameObject);
+                    highlightedButton = highlightedButton.navigation.selectOnDown.GetComponent<Button>();
+                }
+                else if (highlightedButton.FindSelectableOnDown() != null)
+                {
+                    EventSystem.current.SetSelectedGameObject(highlightedButton.FindSelectableOnDown().gameObject);
+                    highlightedButton = highlightedButton.FindSelectableOnDown().GetComponent<Button>();
+                }
+                break;
+            case (MenuInputs.Confirm):
+                if (highlightedButton != null)
+                    highlightedButton.onClick.Invoke();
+                break;
+        }
+
+        switch (currentPartyMenuScreen)
+        {
+            case (PartyMenuScreens.Main):
+                MainScreen.HandleScreenInputs(menuInput);
+                break;
+            case (PartyMenuScreens.GeneralItems):
+                GeneralItemsScreen.HandleScreenInputs(menuInput);
+                break;
+            case (PartyMenuScreens.BattleItems):
+                BattleItemsScreen.HandleScreenInputs(menuInput);
+                break;
+            case (PartyMenuScreens.Accessories):
+                AccessoriesScreen.HandleScreenInputs(menuInput);
+                break;
+            case (PartyMenuScreens.Provisions):
+                ProvisionsScreen.HandleScreenInputs(menuInput);
+                break;
+            case (PartyMenuScreens.Status):
+                StatusScreen.HandleScreenInputs(menuInput);
+                break;
+            case (PartyMenuScreens.Controls):
+                ControlsScreen.HandleScreenInputs(menuInput);
+                break;
+                //case(PartyMenuScreens.Options):
+                //    OptionsScreen.HandleScreenInputs(menuInput);
+                //    break;
+        }
+    }*/
+
 }
+
+
