@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 2a49148eaa9c38344aca55c8bf84cf28
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: COCOGOOSE LETTERPRESS
+  fontNames:
+  - COCOGOOSE LETTERPRESS
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
