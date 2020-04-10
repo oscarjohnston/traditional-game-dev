@@ -57,7 +57,7 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
-
+        EventSystem.current.SetSelectedGameObject(this.gameObject);
         EventSystem.current.SetSelectedGameObject(ResumeButton.gameObject);
     }
 
