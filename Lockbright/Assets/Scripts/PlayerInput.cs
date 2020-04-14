@@ -545,6 +545,16 @@ public class PlayerInput : MonoBehaviour
             StoveInteractingWith.LightOrUnlightTheStove();
             return;
         }
+
+        // Fireball optional
+        if (grabbed && HeldItem.name == "Dim-ball")
+        {
+            Destroy(HeldItem);
+            HeldItem = GameObject.Find("Fireball");
+
+            // Put into UI Inventory
+            HeldItemImage.sprite = HeldItem.GetComponent<SpriteRenderer>().sprite;
+        }
     }
 
     private void TurnOffBurnerGlow()
