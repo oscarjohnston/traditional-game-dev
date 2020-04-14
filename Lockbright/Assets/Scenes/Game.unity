@@ -776,6 +776,7 @@ GameObject:
   - component: {fileID: 80446557}
   - component: {fileID: 80446559}
   - component: {fileID: 80446558}
+  - component: {fileID: 80446560}
   m_Layer: 0
   m_Name: Side Table
   m_TagString: Untagged
@@ -872,6 +873,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &80446560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80446556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requirement:
+  - {fileID: 761338591}
+  PlayerRequirement: 
+  reward: {fileID: 0}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  spawned: 0
+  RewardText: 
+  InteractionText: 
 --- !u!1 &83662567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1821,12 +1842,12 @@ PrefabInstance:
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.4
+      value: 56.2
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 71.9
+      value: 109.1
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
@@ -1967,6 +1988,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 174942880}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &174942882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 575599246506003719, guid: 17318ea8484fbb5419ada5bea45efc55,
+    type: 3}
+  m_PrefabInstance: {fileID: 174942880}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &189689467
 GameObject:
   m_ObjectHideFlags: 0
@@ -2073,12 +2100,12 @@ PrefabInstance:
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.9
+      value: 56.7
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -74
+      value: -57.6
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
@@ -2216,6 +2243,12 @@ PrefabInstance:
 --- !u!4 &191367694 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
+    type: 3}
+  m_PrefabInstance: {fileID: 191367693}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &191367695 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 575599246506003719, guid: 17318ea8484fbb5419ada5bea45efc55,
     type: 3}
   m_PrefabInstance: {fileID: 191367693}
   m_PrefabAsset: {fileID: 0}
@@ -2733,6 +2766,7 @@ GameObject:
   - component: {fileID: 267423903}
   - component: {fileID: 267423905}
   - component: {fileID: 267423904}
+  - component: {fileID: 267423906}
   m_Layer: 0
   m_Name: Ladder
   m_TagString: Untagged
@@ -2829,6 +2863,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &267423906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267423902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requirement: []
+  PlayerRequirement: Parkourist
+  reward: {fileID: 0}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  spawned: 0
+  RewardText: 
+  InteractionText: 
 --- !u!1 &269298908
 GameObject:
   m_ObjectHideFlags: 0
@@ -13190,6 +13243,7 @@ GameObject:
   - component: {fileID: 418541108}
   - component: {fileID: 418541110}
   - component: {fileID: 418541109}
+  - component: {fileID: 418541111}
   m_Layer: 0
   m_Name: Trunk
   m_TagString: Untagged
@@ -13286,6 +13340,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &418541111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418541107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requirement: []
+  PlayerRequirement: 
+  reward: {fileID: 174942882}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  spawned: 0
+  RewardText: 
+  InteractionText: 
 --- !u!1 &437331776
 GameObject:
   m_ObjectHideFlags: 0
@@ -14495,6 +14568,7 @@ GameObject:
   - component: {fileID: 535436333}
   - component: {fileID: 535436335}
   - component: {fileID: 535436334}
+  - component: {fileID: 535436336}
   m_Layer: 0
   m_Name: BookCase 1
   m_TagString: Untagged
@@ -14591,6 +14665,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &535436336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535436332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requirement:
+  - {fileID: 191367695}
+  PlayerRequirement: 
+  reward: {fileID: 0}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  spawned: 0
+  RewardText: 
+  InteractionText: 
 --- !u!1 &541579399
 GameObject:
   m_ObjectHideFlags: 0
@@ -14735,12 +14829,12 @@ PrefabInstance:
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.3
+      value: -47.7
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 91
+      value: 113.8
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
@@ -14874,6 +14968,12 @@ PrefabInstance:
 --- !u!4 &546148881 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
+    type: 3}
+  m_PrefabInstance: {fileID: 546148880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &546148882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 575599246506003719, guid: 17318ea8484fbb5419ada5bea45efc55,
     type: 3}
   m_PrefabInstance: {fileID: 546148880}
   m_PrefabAsset: {fileID: 0}
@@ -15015,12 +15115,12 @@ PrefabInstance:
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.3
+      value: -29.8
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 113.2
+      value: 113.7
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
@@ -15166,6 +15266,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 555109898}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &555109900 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 575599246506003719, guid: 17318ea8484fbb5419ada5bea45efc55,
+    type: 3}
+  m_PrefabInstance: {fileID: 555109898}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &559537868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15181,12 +15287,12 @@ PrefabInstance:
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40
+      value: 56.4
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -89.9
+      value: -69.5
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
@@ -15325,6 +15431,12 @@ PrefabInstance:
 --- !u!4 &559537869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
+    type: 3}
+  m_PrefabInstance: {fileID: 559537868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &559537870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 575599246506003719, guid: 17318ea8484fbb5419ada5bea45efc55,
     type: 3}
   m_PrefabInstance: {fileID: 559537868}
   m_PrefabAsset: {fileID: 0}
@@ -15490,6 +15602,7 @@ GameObject:
   - component: {fileID: 565389390}
   - component: {fileID: 565389392}
   - component: {fileID: 565389391}
+  - component: {fileID: 565389393}
   m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
@@ -15586,6 +15699,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &565389393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565389389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requirement: []
+  PlayerRequirement: Parkourist
+  reward: {fileID: 555109900}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  spawned: 0
+  RewardText: 
+  InteractionText: 
 --- !u!1 &585379528
 GameObject:
   m_ObjectHideFlags: 0
@@ -15734,12 +15866,12 @@ PrefabInstance:
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.5
+      value: 14.1
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 115.3
+      value: 114.8
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
@@ -16005,6 +16137,7 @@ GameObject:
   - component: {fileID: 642270153}
   - component: {fileID: 642270155}
   - component: {fileID: 642270154}
+  - component: {fileID: 642270156}
   m_Layer: 0
   m_Name: Chair
   m_TagString: Untagged
@@ -16101,6 +16234,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &642270156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642270152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requirement:
+  - {fileID: 2035202171}
+  PlayerRequirement: 
+  reward: {fileID: 0}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  spawned: 0
+  RewardText: 
+  InteractionText: 
 --- !u!1 &644056432
 GameObject:
   m_ObjectHideFlags: 0
@@ -17061,6 +17214,12 @@ PrefabInstance:
 --- !u!4 &761338590 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
+    type: 3}
+  m_PrefabInstance: {fileID: 761338589}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &761338591 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 575599246506003719, guid: 17318ea8484fbb5419ada5bea45efc55,
     type: 3}
   m_PrefabInstance: {fileID: 761338589}
   m_PrefabAsset: {fileID: 0}
@@ -19129,6 +19288,7 @@ GameObject:
   - component: {fileID: 1006905184}
   - component: {fileID: 1006905186}
   - component: {fileID: 1006905185}
+  - component: {fileID: 1006905187}
   m_Layer: 0
   m_Name: Chandelier
   m_TagString: Untagged
@@ -19225,6 +19385,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1006905187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006905183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requirement: []
+  PlayerRequirement: Acrobat
+  reward: {fileID: 0}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  spawned: 0
+  RewardText: 
+  InteractionText: 
 --- !u!1 &1007444368
 GameObject:
   m_ObjectHideFlags: 0
@@ -19597,12 +19776,12 @@ PrefabInstance:
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.2
+      value: -65.3
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 110.2
+      value: 111.2
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
@@ -19744,6 +19923,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1030057021}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1030057023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 575599246506003719, guid: 17318ea8484fbb5419ada5bea45efc55,
+    type: 3}
+  m_PrefabInstance: {fileID: 1030057021}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1032330220
 GameObject:
   m_ObjectHideFlags: 0
@@ -19755,6 +19940,7 @@ GameObject:
   - component: {fileID: 1032330221}
   - component: {fileID: 1032330223}
   - component: {fileID: 1032330222}
+  - component: {fileID: 1032330224}
   m_Layer: 0
   m_Name: BookCase 2
   m_TagString: Untagged
@@ -19851,6 +20037,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1032330224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032330220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requirement:
+  - {fileID: 559537870}
+  PlayerRequirement: 
+  reward: {fileID: 0}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  spawned: 0
+  RewardText: 
+  InteractionText: 
 --- !u!1 &1055738732
 GameObject:
   m_ObjectHideFlags: 0
@@ -19862,8 +20068,9 @@ GameObject:
   - component: {fileID: 1055738733}
   - component: {fileID: 1055738735}
   - component: {fileID: 1055738734}
+  - component: {fileID: 1055738736}
   m_Layer: 0
-  m_Name: Boiler
+  m_Name: Boiler (Broken)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19958,6 +20165,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1055738736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055738732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requirement:
+  - {fileID: 1030057023}
+  - {fileID: 555109900}
+  - {fileID: 546148882}
+  PlayerRequirement: 
+  reward: {fileID: 0}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  spawned: 0
+  RewardText: 
+  InteractionText: 
 --- !u!1 &1058346408
 GameObject:
   m_ObjectHideFlags: 0
@@ -26530,6 +26759,7 @@ GameObject:
   - component: {fileID: 1822100717}
   - component: {fileID: 1822100719}
   - component: {fileID: 1822100718}
+  - component: {fileID: 1822100720}
   m_Layer: 0
   m_Name: Ladder
   m_TagString: Untagged
@@ -26626,6 +26856,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1822100720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822100716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requirement: []
+  PlayerRequirement: Parkourist
+  reward: {fileID: 0}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  spawned: 0
+  RewardText: 
+  InteractionText: 
 --- !u!1 &1825968241
 GameObject:
   m_ObjectHideFlags: 0
@@ -27075,6 +27324,7 @@ GameObject:
   - component: {fileID: 1847371873}
   - component: {fileID: 1847371875}
   - component: {fileID: 1847371874}
+  - component: {fileID: 1847371876}
   m_Layer: 0
   m_Name: BookCase 3
   m_TagString: Untagged
@@ -27171,6 +27421,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1847371876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847371872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requirement: []
+  PlayerRequirement: 
+  reward: {fileID: 0}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  spawned: 0
+  RewardText: 
+  InteractionText: 
 --- !u!1 &1861619824
 GameObject:
   m_ObjectHideFlags: 0
@@ -27536,6 +27805,7 @@ GameObject:
   - component: {fileID: 1930381936}
   - component: {fileID: 1930381938}
   - component: {fileID: 1930381937}
+  - component: {fileID: 1930381939}
   m_Layer: 0
   m_Name: FirePlace
   m_TagString: Untagged
@@ -27632,6 +27902,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1930381939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930381935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requirement: []
+  PlayerRequirement: Burner
+  reward: {fileID: 0}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  spawned: 0
+  RewardText: 
+  InteractionText: 
 --- !u!1 &1954522118
 GameObject:
   m_ObjectHideFlags: 0
@@ -28481,12 +28770,12 @@ PrefabInstance:
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: 55.1
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 113.6
+      value: 71.9
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
@@ -28625,6 +28914,12 @@ PrefabInstance:
 --- !u!4 &2035202170 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
+    type: 3}
+  m_PrefabInstance: {fileID: 2035202169}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2035202171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 575599246506003719, guid: 17318ea8484fbb5419ada5bea45efc55,
     type: 3}
   m_PrefabInstance: {fileID: 2035202169}
   m_PrefabAsset: {fileID: 0}
