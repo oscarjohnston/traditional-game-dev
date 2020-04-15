@@ -314,9 +314,6 @@ public class PlayerInput : MonoBehaviour
             if (grabbed)
             {
                 DropItem();
-
-                // Take out of UI Inventory
-                HeldItemImage.sprite = defaultItem;
             }
             
         }
@@ -509,6 +506,8 @@ public class PlayerInput : MonoBehaviour
     /// </summary>
     private void Die()
     {
+        DropItem();
+
         Dead = true;
         this.gameObject.SetActive(false);
 
@@ -650,6 +649,9 @@ public class PlayerInput : MonoBehaviour
 
         HeldItem = null;
         grabbed = false;
+
+        // Take out of UI Inventory
+        HeldItemImage.sprite = defaultItem;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -677,6 +679,7 @@ public class PlayerInput : MonoBehaviour
         StoveInteractingWith = null;
         StoveInteracting = false;
     }
+
 
     /// <summary>
     /// 1 -> 4
