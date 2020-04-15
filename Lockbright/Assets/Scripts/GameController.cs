@@ -32,11 +32,17 @@ public class GameController : MonoBehaviour
         if(TimeLeft < 0)
         {
             GameOverText.gameObject.SetActive(true);
+            Invoke("SendToMainMenu", 3f);
         }
         else
         {
             TimerText.text = "" + ((int)TimeLeft / 60) + ":" + ((int)TimeLeft % 60);
         }
+    }
+
+    void SendToMainMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
 
