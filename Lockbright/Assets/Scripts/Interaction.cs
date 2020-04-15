@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour
 {
+    public GameController game_controller;
     public GameObject[] requirement;
     public string PlayerRequirement;
 
@@ -13,6 +14,7 @@ public class Interaction : MonoBehaviour
     public bool spawned;
     public string RewardText;
     public string InteractionText;
+    public bool CanWinTheGame = false;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +62,12 @@ public class Interaction : MonoBehaviour
                 {
                     if (HeldItem == required || (PlayerRequirement != null && Class.Equals(PlayerRequirement)))
                     {
+                        // This will fire the game winning event
+                        if (CanWinTheGame)
+                        {
+                            game_controller.InvokeWinGameEvent();
+                        }
+
                         BubbleText.text = RewardText;
 
                         Destroy(HeldItem);

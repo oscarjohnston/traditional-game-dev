@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -11,9 +12,6 @@ public class GameController : MonoBehaviour
     public UnityEvent BurnerAbilitySound;
     public UnityEvent ScholarAbilitySound;
     public UnityEvent IllusionistAbilitySound;
-
-    // Game Events
-    public UnityEvent WinGame;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +51,7 @@ public class GameController : MonoBehaviour
     /// </summary>
     public void InvokeWinGameEvent()
     {
-        WinGame.Invoke();
+        // Go to main game scene
+        SceneManager.LoadScene("Epilogue");
     }
 }

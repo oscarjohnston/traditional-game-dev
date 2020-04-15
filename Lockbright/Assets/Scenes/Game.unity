@@ -885,6 +885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
   requirement:
   - {fileID: 761338591}
   PlayerRequirement: 
@@ -893,6 +894,7 @@ MonoBehaviour:
   spawned: 0
   RewardText: 
   InteractionText: 
+  CanWinTheGame: 0
 --- !u!1 &83662567
 GameObject:
   m_ObjectHideFlags: 0
@@ -2875,6 +2877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
   requirement: []
   PlayerRequirement: Parkourist
   reward: {fileID: 0}
@@ -2882,6 +2885,7 @@ MonoBehaviour:
   spawned: 0
   RewardText: 
   InteractionText: 
+  CanWinTheGame: 0
 --- !u!1 &269298908
 GameObject:
   m_ObjectHideFlags: 0
@@ -13352,6 +13356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
   requirement: []
   PlayerRequirement: 
   reward: {fileID: 174942882}
@@ -13359,6 +13364,7 @@ MonoBehaviour:
   spawned: 0
   RewardText: 
   InteractionText: 
+  CanWinTheGame: 0
 --- !u!1 &437331776
 GameObject:
   m_ObjectHideFlags: 0
@@ -13702,6 +13708,158 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &461873252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 461873257}
+  - component: {fileID: 461873256}
+  - component: {fileID: 461873255}
+  - component: {fileID: 461873254}
+  - component: {fileID: 461873253}
+  m_Layer: 0
+  m_Name: Front Door
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &461873253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461873252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game_controller: {fileID: 585379530}
+  requirement:
+  - {fileID: 549967889}
+  PlayerRequirement: 
+  reward: {fileID: 0}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  spawned: 0
+  RewardText: 
+  InteractionText: 
+  CanWinTheGame: 1
+--- !u!50 &461873254
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461873252}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &461873255
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461873252}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.04, y: -0.12}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 4.5}
+    newSize: {x: 10.8, y: 10.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.29, y: 0.92}
+  m_EdgeRadius: 0
+--- !u!212 &461873256
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461873252}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 40985296ee755af4293e3cb65cd3d3e2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1418791767
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 10.8, y: 10.8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 1
+--- !u!4 &461873257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461873252}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.7, y: -53.2, z: 0}
+  m_LocalScale: {x: 8.2, y: 8.2, z: 8.2}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &482240698
 GameObject:
   m_ObjectHideFlags: 0
@@ -14677,6 +14835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
   requirement:
   - {fileID: 191367695}
   PlayerRequirement: 
@@ -14685,6 +14844,7 @@ MonoBehaviour:
   spawned: 0
   RewardText: 
   InteractionText: 
+  CanWinTheGame: 0
 --- !u!1 &541579399
 GameObject:
   m_ObjectHideFlags: 0
@@ -15711,6 +15871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
   requirement: []
   PlayerRequirement: Parkourist
   reward: {fileID: 555109900}
@@ -15718,6 +15879,7 @@ MonoBehaviour:
   spawned: 0
   RewardText: 
   InteractionText: 
+  CanWinTheGame: 0
 --- !u!1 &585379528
 GameObject:
   m_ObjectHideFlags: 0
@@ -16246,6 +16408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
   requirement:
   - {fileID: 2035202171}
   PlayerRequirement: 
@@ -16254,6 +16417,7 @@ MonoBehaviour:
   spawned: 0
   RewardText: 
   InteractionText: 
+  CanWinTheGame: 0
 --- !u!1 &644056432
 GameObject:
   m_ObjectHideFlags: 0
@@ -19187,6 +19351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
   requirement: []
   PlayerRequirement: Parkourist
   reward: {fileID: 1832139210}
@@ -19194,6 +19359,7 @@ MonoBehaviour:
   spawned: 0
   RewardText: I got the book!
   InteractionText: You notice books on the fridge; only an acrobat can reach them...
+  CanWinTheGame: 0
 --- !u!1 &996291204
 GameObject:
   m_ObjectHideFlags: 0
@@ -19397,6 +19563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
   requirement: []
   PlayerRequirement: Acrobat
   reward: {fileID: 0}
@@ -19404,6 +19571,7 @@ MonoBehaviour:
   spawned: 0
   RewardText: 
   InteractionText: 
+  CanWinTheGame: 0
 --- !u!1 &1007444368
 GameObject:
   m_ObjectHideFlags: 0
@@ -20049,6 +20217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
   requirement:
   - {fileID: 559537870}
   PlayerRequirement: 
@@ -20057,6 +20226,7 @@ MonoBehaviour:
   spawned: 0
   RewardText: 
   InteractionText: 
+  CanWinTheGame: 0
 --- !u!1 &1055738732
 GameObject:
   m_ObjectHideFlags: 0
@@ -20177,6 +20347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
   requirement:
   - {fileID: 1030057023}
   - {fileID: 555109900}
@@ -20187,6 +20358,7 @@ MonoBehaviour:
   spawned: 0
   RewardText: 
   InteractionText: 
+  CanWinTheGame: 0
 --- !u!1 &1058346408
 GameObject:
   m_ObjectHideFlags: 0
@@ -22405,6 +22577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
   requirement:
   - {fileID: 1980840907}
   - {fileID: 737379589}
@@ -22414,6 +22587,7 @@ MonoBehaviour:
   spawned: 0
   RewardText: This simple key seems to fit the front door!
   InteractionText: You hear scratching sound coming from the sink...
+  CanWinTheGame: 0
 --- !u!1001 &1241702610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26868,6 +27042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
   requirement: []
   PlayerRequirement: Parkourist
   reward: {fileID: 0}
@@ -26875,6 +27050,7 @@ MonoBehaviour:
   spawned: 0
   RewardText: 
   InteractionText: 
+  CanWinTheGame: 0
 --- !u!1 &1825968241
 GameObject:
   m_ObjectHideFlags: 0
@@ -27433,6 +27609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
   requirement: []
   PlayerRequirement: 
   reward: {fileID: 0}
@@ -27440,6 +27617,7 @@ MonoBehaviour:
   spawned: 0
   RewardText: 
   InteractionText: 
+  CanWinTheGame: 0
 --- !u!1 &1861619824
 GameObject:
   m_ObjectHideFlags: 0
@@ -27914,6 +28092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
   requirement: []
   PlayerRequirement: Burner
   reward: {fileID: 0}
@@ -27921,6 +28100,7 @@ MonoBehaviour:
   spawned: 0
   RewardText: 
   InteractionText: 
+  CanWinTheGame: 0
 --- !u!1 &1954522118
 GameObject:
   m_ObjectHideFlags: 0
