@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Interaction : MonoBehaviour
 {
     public GameController game_controller;
+    public FridgeMonster fridgeMonster;
     public GameObject[] requirement;
     public string PlayerRequirement;
 
@@ -15,6 +16,7 @@ public class Interaction : MonoBehaviour
     public string RewardText;
     public string InteractionText;
     public bool CanWinTheGame = false;
+    public bool SpawnsAMonster = false;
 
     // Start is called before the first frame update
     void Start()
@@ -66,6 +68,10 @@ public class Interaction : MonoBehaviour
                         if (CanWinTheGame)
                         {
                             game_controller.InvokeWinGameEvent();
+                        }
+                        else if (SpawnsAMonster)
+                        {
+                            fridgeMonster.SpawnMonster();
                         }
 
                         BubbleText.text = RewardText;
