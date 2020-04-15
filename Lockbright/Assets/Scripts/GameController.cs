@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class GameController : MonoBehaviour
     public UnityEvent BurnerAbilitySound;
     public UnityEvent ScholarAbilitySound;
     public UnityEvent IllusionistAbilitySound;
+
+    public float TimeLeft;
+    public Text TimerText;
+    public Text GameOverText;
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +28,18 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        TimeLeft -= Time.deltaTime;
+        if(TimeLeft < 0)
+        {
+            GameOverText.gameObject.SetActive(true);
+        }
+        else
+        {
+            TimerText.text = "" + ((int)TimeLeft / 60) + ":" + ((int)TimeLeft % 60);
+        }
     }
+
+
 
     public void PlayParkouristAbilitySound()
     {
