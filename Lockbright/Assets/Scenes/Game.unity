@@ -579,10 +579,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 3.5}
+    newSize: {x: 2, y: 3.5}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -627,15 +627,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 8eaf363d201421a44ab230447d79462e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 3.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &65234946 stripped
@@ -899,7 +899,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 0
 --- !u!1 &83662567
 GameObject:
@@ -2948,7 +2947,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 1
 --- !u!1 &269298908
 GameObject:
@@ -8065,7 +8063,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 1
 --- !u!1 &313831448
 GameObject:
@@ -13576,7 +13573,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 1
 --- !u!1 &437331776
 GameObject:
@@ -13967,7 +13963,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 0
 --- !u!50 &461873254
 Rigidbody2D:
@@ -15090,7 +15085,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 1
 --- !u!1 &541579399
 GameObject:
@@ -16161,7 +16155,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 1
 --- !u!1 &585379528
 GameObject:
@@ -16740,7 +16733,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 0
 --- !u!1 &644056432
 GameObject:
@@ -19868,7 +19860,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 1
 --- !u!1 &996291204
 GameObject:
@@ -20086,7 +20077,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 1
 --- !u!1 &1007444368
 GameObject:
@@ -20757,7 +20747,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 1
 --- !u!1 &1055738732
 GameObject:
@@ -20786,8 +20775,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055738732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.2, y: -42.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 11, y: -42.6, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1712318158}
   m_RootOrder: 1
@@ -20808,10 +20797,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.5, y: 4}
+    newSize: {x: 2.5, y: 4}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -20856,15 +20845,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 7b6716ac7f271ba44b745bb65b0708a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.5, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1055738736
@@ -20895,7 +20884,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 1
   Sink: 0
-  Ladder: 0
   working: 0
 --- !u!1 &1058346408
 GameObject:
@@ -22751,7 +22739,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 1
 --- !u!61 &1126745286
 BoxCollider2D:
@@ -23610,7 +23597,6 @@ MonoBehaviour:
   SpawnsAMonster: 1
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 1
 --- !u!1001 &1241702610
 PrefabInstance:
@@ -23823,7 +23809,7 @@ Transform:
   m_GameObject: {fileID: 1256216066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.6, y: -42.1, z: 0}
-  m_LocalScale: {x: 30.984325, y: 30.984325, z: 30.984325}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1712318158}
   m_RootOrder: 0
@@ -23866,7 +23852,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cc383a5d4a9754048ad7d3559e9b61eb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 24242cd17da45514689b0d03eb200fb4, type: 3}
   m_Color: {r: 0.84819186, g: 0.6933962, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -23935,8 +23921,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273129316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.7, y: -5.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 31, y: -18, z: 0}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_Children: []
   m_Father: {fileID: 1712318158}
   m_RootOrder: 2
@@ -23957,10 +23943,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.75, y: 3}
+    newSize: {x: 4.75, y: 3}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -24005,15 +23991,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 7617078debaf47242946a684476a0953, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4.75, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1317821592
@@ -25459,7 +25445,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 1
-  Ladder: 0
   working: 0
 --- !u!1 &1475431168
 GameObject:
@@ -26162,7 +26147,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 1
 --- !u!61 &1516205134
 BoxCollider2D:
@@ -26832,7 +26816,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 1
 --- !u!1 &1607981472
 GameObject:
@@ -28060,7 +28043,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 1
 --- !u!1 &1802041587
 GameObject:
@@ -28695,7 +28677,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 1
 --- !u!1 &1825968241
 GameObject:
@@ -29269,7 +29250,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 1
 --- !u!1 &1861619824
 GameObject:
@@ -29812,7 +29792,6 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  Ladder: 0
   working: 1
 --- !u!1 &1954522118
 GameObject:
