@@ -23,6 +23,8 @@ public class Interaction : MonoBehaviour
 
     public bool working;
 
+    public Interaction preReq;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -99,6 +101,7 @@ public class Interaction : MonoBehaviour
                         }
                         //Instantiate(reward, spawnPoint, new Quaternion(0, 0, 0, 0));
                         spawned = true;
+
                         if (Boiler)
                         {
                             working = true;
@@ -112,6 +115,11 @@ public class Interaction : MonoBehaviour
     void SinkIsHot()
     {
         working = true;
+    }
+
+    public bool IsWorking()
+    {
+        return working;
     }
 }
 
