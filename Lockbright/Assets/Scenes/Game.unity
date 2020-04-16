@@ -900,6 +900,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 0
+  preReq: {fileID: 0}
 --- !u!1 &83662567
 GameObject:
   m_ObjectHideFlags: 0
@@ -2948,6 +2949,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 1
+  preReq: {fileID: 0}
 --- !u!1 &269298908
 GameObject:
   m_ObjectHideFlags: 0
@@ -8064,6 +8066,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 1
+  preReq: {fileID: 0}
 --- !u!1 &313831448
 GameObject:
   m_ObjectHideFlags: 0
@@ -13574,6 +13577,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 1
+  preReq: {fileID: 0}
 --- !u!1 &437331776
 GameObject:
   m_ObjectHideFlags: 0
@@ -13964,6 +13968,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 0
+  preReq: {fileID: 0}
 --- !u!50 &461873254
 Rigidbody2D:
   serializedVersion: 4
@@ -15086,6 +15091,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 1
+  preReq: {fileID: 0}
 --- !u!1 &541579399
 GameObject:
   m_ObjectHideFlags: 0
@@ -15157,7 +15163,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.15, y: 2.89}
+    oldSize: {x: 5, y: 3}
     newSize: {x: 4.15, y: 2.89}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -15204,7 +15210,7 @@ SpriteRenderer:
   m_SortingLayerID: 1418791767
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c04e347b862c6d44ca72657e71504bc7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b0f5fa7c565078141b7da2c74bec3282, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15943,7 +15949,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
+    oldSize: {x: 3, y: 3}
     newSize: {x: 10.8, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -15989,8 +15995,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -636104201
   m_SortingLayer: -1
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 90a2807feb85339488762440ca5aa21b, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: e0f0b34f04fd9ad4f988ef5b0fcef81f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -16156,6 +16162,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 1
+  preReq: {fileID: 0}
 --- !u!1 &585379528
 GameObject:
   m_ObjectHideFlags: 0
@@ -16734,6 +16741,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 0
+  preReq: {fileID: 0}
 --- !u!1 &644056432
 GameObject:
   m_ObjectHideFlags: 0
@@ -18247,7 +18255,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 4.5}
+    oldSize: {x: 2.5, y: 5}
     newSize: {x: 10.8, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -18294,7 +18302,7 @@ SpriteRenderer:
   m_SortingLayerID: 1418791767
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9420127de5ca91642bab97ddf206b830, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c534ff689dd02454c95ea4f22a54a596, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -19641,7 +19649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &979011514
 Transform:
   m_ObjectHideFlags: 0
@@ -19650,7 +19658,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979011513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.1, y: -20, z: 0}
+  m_LocalPosition: {x: 4.1, y: -19.3, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 503711579}
@@ -19694,7 +19702,7 @@ SpriteRenderer:
   m_SortingLayerID: 1418791767
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4f30e919f380af440ae99461a36104dd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ebee86ebb7346f549b384f9dcf13834b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -19777,7 +19785,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.25, y: 3.75}
+    oldSize: {x: 2.5, y: 3.72}
     newSize: {x: 10.8, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -19824,7 +19832,7 @@ SpriteRenderer:
   m_SortingLayerID: 1418791767
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8366710fae756c24d80ec14c15d4bc02, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d7b7006c1a99a1245a597d128bf5c8c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -19861,6 +19869,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 1
+  preReq: {fileID: 0}
 --- !u!1 &996291204
 GameObject:
   m_ObjectHideFlags: 0
@@ -20078,6 +20087,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 1
+  preReq: {fileID: 0}
 --- !u!1 &1007444368
 GameObject:
   m_ObjectHideFlags: 0
@@ -20748,6 +20758,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 1
+  preReq: {fileID: 0}
 --- !u!1 &1055738732
 GameObject:
   m_ObjectHideFlags: 0
@@ -20885,6 +20896,7 @@ MonoBehaviour:
   Boiler: 1
   Sink: 0
   working: 0
+  preReq: {fileID: 0}
 --- !u!1 &1058346408
 GameObject:
   m_ObjectHideFlags: 0
@@ -22740,6 +22752,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 1
+  preReq: {fileID: 0}
 --- !u!61 &1126745286
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23512,7 +23525,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 1.5}
+    oldSize: {x: 1.5, y: 1}
     newSize: {x: 10.8, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -23559,7 +23572,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 75bb7998aefaaa341af8ee76738414d6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6e14236b99ca2e245aeb0281d2eb3e38, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -23598,6 +23611,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 1
+  preReq: {fileID: 0}
 --- !u!1001 &1241702610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25446,6 +25460,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 1
   working: 0
+  preReq: {fileID: 0}
 --- !u!1 &1475431168
 GameObject:
   m_ObjectHideFlags: 0
@@ -26148,6 +26163,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 1
+  preReq: {fileID: 0}
 --- !u!61 &1516205134
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26817,6 +26833,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 1
+  preReq: {fileID: 0}
 --- !u!1 &1607981472
 GameObject:
   m_ObjectHideFlags: 0
@@ -28044,6 +28061,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 1
+  preReq: {fileID: 0}
 --- !u!1 &1802041587
 GameObject:
   m_ObjectHideFlags: 0
@@ -28678,6 +28696,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 1
+  preReq: {fileID: 0}
 --- !u!1 &1825968241
 GameObject:
   m_ObjectHideFlags: 0
@@ -29058,7 +29077,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.5, y: 2}
+    oldSize: {x: 5, y: 2}
     newSize: {x: 10.8, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -29104,8 +29123,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -636104201
   m_SortingLayer: -1
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a8043d02f70fdf14bb6aceb2351bd87d, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: a55c6a3ec7088904abb895d0acd8b2f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -29251,6 +29270,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 1
+  preReq: {fileID: 0}
 --- !u!1 &1861619824
 GameObject:
   m_ObjectHideFlags: 0
@@ -29306,7 +29326,7 @@ SpriteRenderer:
   m_SortingLayerID: -636104201
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fc101c9c23d7f914cb3138014ba34380, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a6ba80efd60ddc743bf38644109aa7d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -29793,6 +29813,7 @@ MonoBehaviour:
   Boiler: 0
   Sink: 0
   working: 1
+  preReq: {fileID: 0}
 --- !u!1 &1954522118
 GameObject:
   m_ObjectHideFlags: 0
