@@ -18,6 +18,11 @@ public class Interaction : MonoBehaviour
     public bool CanWinTheGame = false;
     public bool SpawnsAMonster = false;
 
+    public bool Boiler;
+    public bool Sink;
+
+    public bool working;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +39,11 @@ public class Interaction : MonoBehaviour
     {
         BubbleText.text = InteractionText;
 
+        if (Sink && !(working))
+        {
+            Invoke("SinkIsHot", 10f);
+        }
+
         // Check if this object has spawned its item yet
         if (!spawned)
         {
@@ -45,7 +55,7 @@ public class Interaction : MonoBehaviour
                     BubbleText.text = RewardText;
 
                     Destroy(HeldItem);
-                    if (reward != null)
+                    if (reward != null && working)
                     {
                         HeldItem = reward;
                         grabbed = true;
@@ -77,7 +87,7 @@ public class Interaction : MonoBehaviour
                         BubbleText.text = RewardText;
 
                         Destroy(HeldItem);
-                        if (reward != null)
+                        if (reward != null && working)
                         {
                             HeldItem = reward;
                             HeldItem.GetComponent<HeldItems>().CanPickThisUp = true;
@@ -89,10 +99,19 @@ public class Interaction : MonoBehaviour
                         }
                         //Instantiate(reward, spawnPoint, new Quaternion(0, 0, 0, 0));
                         spawned = true;
+                        if (Boiler)
+                        {
+                            working = true;
+                        }
                     }
                 }
             }
         }
+    }
+
+    void SinkIsHot()
+    {
+        working = true;
     }
 }
 

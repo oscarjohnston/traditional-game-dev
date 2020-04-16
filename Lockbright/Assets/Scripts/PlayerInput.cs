@@ -57,7 +57,7 @@ public class PlayerInput : MonoBehaviour
     // Interactable variables
     private Interaction InteractingWith;
     public bool Interacting;
-    // Optionally
+    // Optionally Stove
     private StoveScript StoveInteractingWith;
     public bool StoveInteracting;
 
@@ -629,6 +629,16 @@ public class PlayerInput : MonoBehaviour
         {
             Destroy(HeldItem);
             HeldItem = GameObject.Find("Living Mossflower");
+
+            // Put into UI Inventory
+            HeldItemImage.sprite = HeldItem.GetComponent<SpriteRenderer>().sprite;
+        }
+
+        // Restore Dim Vial
+        if (grabbed && HeldItem.name == "Dim Vial")
+        {
+            Destroy(HeldItem);
+            HeldItem = GameObject.Find("Glow Oil");
 
             // Put into UI Inventory
             HeldItemImage.sprite = HeldItem.GetComponent<SpriteRenderer>().sprite;
