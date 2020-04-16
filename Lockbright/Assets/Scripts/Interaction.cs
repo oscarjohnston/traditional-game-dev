@@ -60,6 +60,8 @@ public class Interaction : MonoBehaviour
                     if (reward != null && working)
                     {
                         HeldItem = reward;
+                        HeldItem.GetComponent<HeldItems>().CanPickThisUp = true;
+                        HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
                         grabbed = true;
                     }
                     else
@@ -93,6 +95,7 @@ public class Interaction : MonoBehaviour
                         {
                             HeldItem = reward;
                             HeldItem.GetComponent<HeldItems>().CanPickThisUp = true;
+                            HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
                             grabbed = true;
                         }
                         else

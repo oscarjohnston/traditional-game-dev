@@ -23244,7 +23244,7 @@ MonoBehaviour:
         m_CallState: 2
   BurnerGlowLight: {fileID: 4070121653633419191}
   health: 0
-  HealthBar: {fileID: 0}
+  HealthBar: {fileID: 1695986908}
   front: {fileID: 42954047}
   side: {fileID: 1156852685}
   back: {fileID: 1479821019}
@@ -34181,7 +34181,7 @@ MonoBehaviour:
         m_CallState: 2
   BurnerGlowLight: {fileID: 522503919}
   health: 0
-  HealthBar: {fileID: 0}
+  HealthBar: {fileID: 1121390346}
   front: {fileID: 913059473}
   side: {fileID: 611256160}
   back: {fileID: 1975000479}
