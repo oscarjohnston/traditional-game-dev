@@ -18,12 +18,17 @@ public class Interaction : MonoBehaviour
     public bool CanWinTheGame = false;
     public bool SpawnsAMonster = false;
 
+    // Added for Sink and Boiler
     public bool Boiler;
     public bool Sink;
 
     public bool working;
 
+    // Added for bookshelfs
+    public bool finalShelf;
     public Interaction preReq;
+    public GameObject[] returns;
+    public Vector3[] spawnpoints;
 
     // Start is called before the first frame update
     void Start()
@@ -112,6 +117,14 @@ public class Interaction : MonoBehaviour
                             if (Boiler)
                             {
                                 working = true;
+                            }
+
+                            if (finalShelf)
+                            {
+                                for (int i = 0; i < returns.Length; i++)
+                                {
+                                    Instantiate(returns[i], spawnpoints[i], new Quaternion(0, 0, 0, 0));
+                                }
                             }
                         }
                     }
