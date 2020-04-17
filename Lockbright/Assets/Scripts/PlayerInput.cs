@@ -469,11 +469,10 @@ public class PlayerInput : MonoBehaviour
             }
         }
 
-        // If an item is being held, then tell that game object to move to the player's hold point with the player's movement
-        if (grabbed)
+        // If someone other than burner is holding fireball they take damage
+        if (HeldItem.name == "Fireball" && Class != "Burner")
         {
-            //HeldItem.transform.position = holdpoint.position;
-            
+            Invoke("TakeDamage", 1.5f);
         }
 
 
