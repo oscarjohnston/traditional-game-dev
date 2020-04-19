@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     public UnityEvent BurnerAbilitySound;
     public UnityEvent ScholarAbilitySound;
     public UnityEvent IllusionistAbilitySound;
+    public UnityEvent TakeDamageSound;
 
     public float TimeLeft;
     public Text TimerText;
@@ -74,5 +75,10 @@ public class GameController : MonoBehaviour
     {
         // Go to main game scene
         SceneManager.LoadScene("Epilogue");
+    }
+
+    public void PlayTakeDamageSound()
+    {
+        TakeDamageSound.Invoke();
     }
 }

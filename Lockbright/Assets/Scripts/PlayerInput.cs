@@ -493,6 +493,9 @@ public class PlayerInput : MonoBehaviour
         // Change Health UI Meter
         HealthBar.value = health;
 
+        // Play noise
+        game_controller.PlayTakeDamageSound();
+
         // Check if it's time to die
         if (health <= 0)
         {
