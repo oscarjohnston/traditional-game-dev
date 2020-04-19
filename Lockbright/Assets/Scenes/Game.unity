@@ -25809,6 +25809,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  TakeDamageSound:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1331387915}
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 099b2c19b0218824cb83a089c70bc0c0,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   TimeLeft: 600
   TimerText: {fileID: 720699787}
   GameOverText: {fileID: 1404380957}
