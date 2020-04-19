@@ -80,6 +80,8 @@ public class PlayerInput : MonoBehaviour
     public Animator back;
     private bool IsWalking;
 
+    public UnityEvent FireParticle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -94,7 +96,6 @@ public class PlayerInput : MonoBehaviour
 
         // Set Up Health
         health = 5;
-
 
         // Set the image to front
         front.gameObject.SetActive(true);
@@ -450,7 +451,6 @@ public class PlayerInput : MonoBehaviour
             print(this.name + " just used their ability");
 
             
-
             // Call the correct ability based on object name
             switch (Class)
             {
@@ -470,7 +470,7 @@ public class PlayerInput : MonoBehaviour
         }
 
         // If someone other than burner is holding fireball they take damage
-        if (HeldItem.name == "Fireball" && Class != "Burner")
+        if (grabbed && HeldItem.name == "Fireball" && Class != "Burner")
         {
             Invoke("TakeDamage", 1.5f);
         }
@@ -534,7 +534,7 @@ public class PlayerInput : MonoBehaviour
         BurnerGlowLight.intensity = 600;
         Invoke("TurnOffBurnerGlow", 1f);
 
-        ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
+        FireParticle.Invoke();
         game_controller.PlayBurnerAbilitySound();
 
         // Also try to light the stove
@@ -572,7 +572,7 @@ public class PlayerInput : MonoBehaviour
             ParkourCanDouble = false;
 
             game_controller.PlayParkouristAbilitySound();
-            ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
+            FireParticle.Invoke();
         }
         
     }
@@ -594,7 +594,7 @@ public class PlayerInput : MonoBehaviour
             SpeechBubble.SetActive(true);
             Invoke("DeactivateSpeechBubble", SCHOLAR_BUBBLE_TIME);
 
-            ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
+            FireParticle.Invoke();
             game_controller.PlayScholarAbilitySound();
 
             switch (HeldItem.name)
@@ -617,7 +617,7 @@ public class PlayerInput : MonoBehaviour
     /// </summary>
     void DoIllusionistAbility()
     {
-        ui_Controller.FireOffUsedAbilityParticles(this.transform.position);
+        FireParticle.Invoke();
         game_controller.PlayIllusionistAbilitySound();
 
         // TODO: Figure out healing radius
