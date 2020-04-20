@@ -561,7 +561,7 @@ Transform:
   m_LocalScale: {x: 8.096101, y: 8.096101, z: 8.096101}
   m_Children: []
   m_Father: {fileID: 1712318158}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &55601972
 BoxCollider2D:
@@ -796,7 +796,7 @@ Transform:
   m_LocalScale: {x: 9.689064, y: 9.689064, z: 9.689064}
   m_Children: []
   m_Father: {fileID: 1712318158}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &80446558
 BoxCollider2D:
@@ -22989,7 +22989,7 @@ Transform:
   m_LocalScale: {x: 10.26, y: 10.26, z: 10.26}
   m_Children: []
   m_Father: {fileID: 1712318158}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &418541109
 BoxCollider2D:
@@ -23094,8 +23094,10 @@ MonoBehaviour:
   working: 1
   finalShelf: 0
   preReq: {fileID: 0}
-  returns: []
-  spawnpoints: []
+  returns:
+  - {fileID: 1182866660}
+  spawnpoints:
+  - {x: -14.3, y: -54.4, z: 0}
 --- !u!1 &437331776
 GameObject:
   m_ObjectHideFlags: 0
@@ -25583,7 +25585,7 @@ Transform:
   m_LocalScale: {x: 10.864051, y: 10.864051, z: 10.864051}
   m_Children: []
   m_Father: {fileID: 1712318158}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &565389391
 BoxCollider2D:
@@ -26004,6 +26006,146 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 586227711}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &586959760
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 586959764}
+  - component: {fileID: 586959763}
+  - component: {fileID: 586959762}
+  - component: {fileID: 586959761}
+  m_Layer: 0
+  m_Name: Boiler (Fixed)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &586959761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586959760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
+  fridgeMonster: {fileID: 0}
+  requirement: []
+  PlayerRequirement: Burner
+  reward: {fileID: 0}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  spawned: 0
+  RewardText: 
+  InteractionText: 
+  CanWinTheGame: 0
+  SpawnsAMonster: 0
+  Boiler: 1
+  Sink: 0
+  working: 0
+  finalShelf: 0
+  preReq: {fileID: 0}
+  returns:
+  - {fileID: 0}
+  spawnpoints:
+  - {x: 11, y: -56.3, z: 0}
+--- !u!61 &586959762
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586959760}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.12, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.5, y: 4}
+    newSize: {x: 2.5, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.97, y: 3.94}
+  m_EdgeRadius: 0
+--- !u!212 &586959763
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586959760}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 1760025daa1d85d4890e8f73d191bd0f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.5, y: 4}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &586959764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586959760}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -99.4, y: -56.3, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1712318158}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &611256159 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1071126531468699470, guid: 5539260eda7d3a24ba18e9e3be6c4f24,
@@ -26179,7 +26321,7 @@ Transform:
   m_LocalScale: {x: 8.2892, y: 8.2892, z: 8.2892}
   m_Children: []
   m_Father: {fileID: 1712318158}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &642270154
 BoxCollider2D:
@@ -26271,9 +26413,10 @@ MonoBehaviour:
   game_controller: {fileID: 0}
   fridgeMonster: {fileID: 0}
   requirement:
-  - {fileID: 0}
+  - {fileID: 2035202171}
+  - {fileID: 761338591}
   PlayerRequirement: 
-  reward: {fileID: 0}
+  reward: {fileID: 661931162}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
   RewardText: 
@@ -26282,7 +26425,7 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  working: 0
+  working: 1
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -27391,6 +27534,12 @@ PrefabInstance:
 --- !u!4 &761338590 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
+    type: 3}
+  m_PrefabInstance: {fileID: 761338589}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &761338591 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 575599246506003719, guid: 17318ea8484fbb5419ada5bea45efc55,
     type: 3}
   m_PrefabInstance: {fileID: 761338589}
   m_PrefabAsset: {fileID: 0}
@@ -35094,7 +35243,7 @@ GameObject:
   - component: {fileID: 1055738734}
   - component: {fileID: 1055738736}
   m_Layer: 0
-  m_Name: Boiler
+  m_Name: Boiler (Broken)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35207,7 +35356,7 @@ MonoBehaviour:
   - {fileID: 1030057023}
   - {fileID: 555109900}
   - {fileID: 546148882}
-  PlayerRequirement: Burner
+  PlayerRequirement: 
   reward: {fileID: 0}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
@@ -35220,8 +35369,10 @@ MonoBehaviour:
   working: 0
   finalShelf: 0
   preReq: {fileID: 0}
-  returns: []
-  spawnpoints: []
+  returns:
+  - {fileID: 0}
+  spawnpoints:
+  - {x: 11, y: -56.3, z: 0}
 --- !u!1 &1058346408
 GameObject:
   m_ObjectHideFlags: 0
@@ -37705,6 +37856,146 @@ Transform:
   m_Father: {fileID: 1058902736}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1182866660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1182866661}
+  - component: {fileID: 1182866664}
+  - component: {fileID: 1182866663}
+  - component: {fileID: 1182866662}
+  m_Layer: 0
+  m_Name: Opened Trunk/Sun Puzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1182866661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182866660}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -121.9, y: -39.2, z: 0}
+  m_LocalScale: {x: 10.26, y: 10.26, z: 10.26}
+  m_Children: []
+  m_Father: {fileID: 1712318158}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1182866662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182866660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
+  fridgeMonster: {fileID: 0}
+  requirement:
+  - {fileID: 1809808387}
+  - {fileID: 360585960}
+  PlayerRequirement: 
+  reward: {fileID: 586227713}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  spawned: 0
+  RewardText: 
+  InteractionText: 
+  CanWinTheGame: 0
+  SpawnsAMonster: 0
+  Boiler: 0
+  Sink: 0
+  working: 1
+  finalShelf: 0
+  preReq: {fileID: 0}
+  returns: []
+  spawnpoints: []
+--- !u!61 &1182866663
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182866660}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.25, y: 2.5}
+    newSize: {x: 3.25, y: 1.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.28, y: 1.61}
+  m_EdgeRadius: 0
+--- !u!212 &1182866664
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182866660}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1019477407
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 98a76c604ae70204084e428fe57d102a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.25, y: 1.5}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1192537239 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6741675893046377753, guid: f9eda469437ce7e4b9b19e2539f4209b,
@@ -38285,7 +38576,7 @@ Transform:
   m_LocalScale: {x: 8.475932, y: 8.475932, z: 9.417702}
   m_Children: []
   m_Father: {fileID: 1712318158}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1273129318
 BoxCollider2D:
@@ -39702,7 +39993,7 @@ Transform:
   m_LocalScale: {x: 8.625665, y: 8.625665, z: 8.625665}
   m_Children: []
   m_Father: {fileID: 1712318158}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1462076913
 BoxCollider2D:
@@ -39807,7 +40098,7 @@ MonoBehaviour:
   Sink: 1
   working: 0
   finalShelf: 0
-  preReq: {fileID: 0}
+  preReq: {fileID: 586959761}
   returns: []
   spawnpoints: []
 --- !u!1 &1475431168
@@ -40482,7 +40773,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1712318158}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1516205133
 MonoBehaviour:
@@ -41740,11 +42031,13 @@ Transform:
   m_Children:
   - {fileID: 1256216067}
   - {fileID: 1055738733}
+  - {fileID: 586959764}
   - {fileID: 1273129317}
   - {fileID: 55601971}
   - {fileID: 1462076912}
   - {fileID: 565389390}
   - {fileID: 418541108}
+  - {fileID: 1182866661}
   - {fileID: 80446557}
   - {fileID: 642270153}
   - {fileID: 1757518280}
@@ -46535,7 +46828,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1712318158}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1757518281
 BoxCollider2D:
@@ -49951,6 +50244,12 @@ PrefabInstance:
 --- !u!4 &2035202170 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
+    type: 3}
+  m_PrefabInstance: {fileID: 2035202169}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2035202171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 575599246506003719, guid: 17318ea8484fbb5419ada5bea45efc55,
     type: 3}
   m_PrefabInstance: {fileID: 2035202169}
   m_PrefabAsset: {fileID: 0}
