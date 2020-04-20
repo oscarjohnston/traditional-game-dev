@@ -37,6 +37,10 @@ public class Interaction : MonoBehaviour
     public Vector3 studyLocation;
     public Vector3 loungeLocation;
 
+    // Record player
+    public bool musicPlayer;
+    public AudioSource song;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -218,6 +222,19 @@ public class Interaction : MonoBehaviour
                                 working = true;
                                 preReq.working = true;
                             }
+
+                            if (musicPlayer)
+                            {
+                                //play music
+                                song.Play();
+
+                                Invoke("bingbong", 16f);
+
+                                HeldItem = reward;
+                                HeldItem.GetComponent<HeldItems>().CanPickThisUp = true;
+                                HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
+                                grabbed = true;
+                            }
                         }
                     }
                 }
@@ -229,6 +246,11 @@ public class Interaction : MonoBehaviour
     void SinkIsHot()
     {
         working = true;
+    }
+
+    void bingbong()
+    {
+
     }
 }
 

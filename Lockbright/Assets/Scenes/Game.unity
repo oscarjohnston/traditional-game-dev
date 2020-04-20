@@ -695,6 +695,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!1 &83662567
 GameObject:
   m_ObjectHideFlags: 0
@@ -2751,6 +2753,8 @@ MonoBehaviour:
   player: {fileID: 1007444368}
   studyLocation: {x: -129.3, y: -18, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!1 &269298908
 GameObject:
   m_ObjectHideFlags: 0
@@ -7876,6 +7880,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!1 &313831448
 GameObject:
   m_ObjectHideFlags: 0
@@ -22903,6 +22909,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!1 &437331776
 GameObject:
   m_ObjectHideFlags: 0
@@ -23305,6 +23313,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!50 &461873254
 Rigidbody2D:
   serializedVersion: 4
@@ -24436,6 +24446,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!1 &541579399
 GameObject:
   m_ObjectHideFlags: 0
@@ -25515,6 +25527,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!1 &585379528
 GameObject:
   m_ObjectHideFlags: 0
@@ -25883,6 +25897,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!61 &586959762
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26259,6 +26275,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!1 &644056432
 GameObject:
   m_ObjectHideFlags: 0
@@ -32930,6 +32948,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 885251247}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &885251249 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 575599246506003719, guid: 17318ea8484fbb5419ada5bea45efc55,
+    type: 3}
+  m_PrefabInstance: {fileID: 885251247}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &895371313 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1320210487082284669, guid: e0ac378ae65de2b4695513a4ac2eb9df,
@@ -34047,6 +34071,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!1 &996291204
 GameObject:
   m_ObjectHideFlags: 0
@@ -34273,6 +34299,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!1 &1007444368
 GameObject:
   m_ObjectHideFlags: 0
@@ -34967,6 +34995,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!1 &1055738732
 GameObject:
   m_ObjectHideFlags: 0
@@ -35115,6 +35145,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!1 &1058346408
 GameObject:
   m_ObjectHideFlags: 0
@@ -36844,9 +36876,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116999455}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -152.6, y: 26.7, z: 0}
+  m_LocalPosition: {x: -151.2, y: 23.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1936881955}
   m_Father: {fileID: 1666800954}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36867,7 +36900,7 @@ MonoBehaviour:
   requirement:
   - {fileID: 1878713177}
   PlayerRequirement: 
-  reward: {fileID: 0}
+  reward: {fileID: 885251249}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
   RewardText: 
@@ -36876,7 +36909,7 @@ MonoBehaviour:
   SpawnsAMonster: 0
   Boiler: 0
   Sink: 0
-  working: 1
+  working: 0
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -36886,6 +36919,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 1936881956}
 --- !u!61 &1116999458
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37121,6 +37156,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!61 &1126745286
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37815,6 +37852,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!61 &1182866663
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38148,6 +38187,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!1001 &1241702610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39684,6 +39725,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!1 &1475431168
 GameObject:
   m_ObjectHideFlags: 0
@@ -40395,6 +40438,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!61 &1516205134
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41073,6 +41118,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!1 &1607981472
 GameObject:
   m_ObjectHideFlags: 0
@@ -46956,6 +47003,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!1 &1802041587
 GameObject:
   m_ObjectHideFlags: 0
@@ -47599,6 +47648,8 @@ MonoBehaviour:
   player: {fileID: 1007444368}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: -118.2, y: 25.7, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!1 &1828188632
 GameObject:
   m_ObjectHideFlags: 0
@@ -48082,6 +48133,8 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
 --- !u!1 &1861619824
 GameObject:
   m_ObjectHideFlags: 0
@@ -48639,6 +48692,135 @@ MonoBehaviour:
   player: {fileID: 0}
   studyLocation: {x: 0, y: 0, z: 0}
   loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
+--- !u!1 &1936881954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1936881955}
+  - component: {fileID: 1936881956}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1936881955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936881954}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1116999456}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1936881956
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936881954}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 254bbf164729cf545ade19166f3cdfd3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1954522118
 GameObject:
   m_ObjectHideFlags: 0
