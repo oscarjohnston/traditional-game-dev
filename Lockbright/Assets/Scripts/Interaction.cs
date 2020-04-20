@@ -30,6 +30,13 @@ public class Interaction : MonoBehaviour
     public GameObject[] returns;
     public Vector3[] spawnpoints;
 
+    // Added for Ladders
+    public bool loungeLadder;
+    public bool studyLadder;
+    public GameObject player;
+    public Vector3 studyLocation;
+    public Vector3 loungeLocation;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,11 +53,23 @@ public class Interaction : MonoBehaviour
     {
         BubbleText.text = InteractionText;
 
+        // turn sink "Hot" in about ten seconds
         if (Sink && !(working))
         {
             Invoke("SinkIsHot", 10f);
         }
 
+        // move parkourist from ladder to ladder
+        if (PlayerRequirement != null && Class.Equals(PlayerRequirement) && loungeLadder)
+        {
+            player.transform.position = studyLocation;
+        }
+        if (PlayerRequirement != null && Class.Equals(PlayerRequirement) && studyLadder)
+        {
+            player.transform.position = loungeLocation;
+        }
+
+        // preReq for bookshelfs to work off of each other
         if (preReq != null && preReq.spawned)
         {
             // Check if this object has spawned its item yet
@@ -197,6 +216,7 @@ public class Interaction : MonoBehaviour
                             if (Boiler)
                             {
                                 working = true;
+                                preReq.working = true;
                             }
                         }
                     }
