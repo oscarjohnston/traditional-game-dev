@@ -259,15 +259,19 @@ public class Interaction : MonoBehaviour
                             
                             if (musicPlayer)
                             {
+                                print("Activating Music Player");
+
                                 //play music
                                 song.Play();
 
+                                /*
                                 // Stall for 16 seconds
                                 float GoalTime = Time.deltaTime + 16;
                                 while(Time.deltaTime < GoalTime)
                                 {
                                     print(Time.deltaTime);
                                 }
+                                */
 
                                 // Move the key over to the music box's location instead of the player's inventory, adjusted down a bit
                                 reward.transform.position = this.gameObject.transform.position + new Vector3(0,-10,0);

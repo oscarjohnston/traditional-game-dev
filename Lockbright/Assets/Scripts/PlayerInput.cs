@@ -496,6 +496,7 @@ public class PlayerInput : MonoBehaviour
         // Play noise
         game_controller.PlayTakeDamageSound();
 
+        print("Health:  " + health);
         // Check if it's time to die
         if (health <= 0)
         {
@@ -519,7 +520,7 @@ public class PlayerInput : MonoBehaviour
     /// </summary>
     private void Die()
     {
-        DropItem();
+        if (grabbed) { DropItem(); }
 
         Dead = true;
         this.gameObject.SetActive(false);
