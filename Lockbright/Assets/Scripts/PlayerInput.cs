@@ -614,11 +614,38 @@ public class PlayerInput : MonoBehaviour
 
             switch (HeldItem.name)
             {
-                case "Books":
-                    BubbleText.text = "Whatever the book says";
+                case "Book Of Fruit":
+                    BubbleText.text = "In the last phase of life, the plant will produce a fruit that may be more delicious to consume in this stage.";
                     return;
                 case "Cookbook":
                     BubbleText.text = "Cultist Wine: Tastes much like blood and is attractive to water-dwellers. Combine Pale Tonic, Fresh Mossflower, and Pomegranate together; then warm to body temperature.";
+                    return;
+                case "Loose Ledger":
+                    BubbleText.text = "Stored in the westernmost bookcase should be the books of seeds and sprouts, in that order. The easternmost bookcase will store the books of flowers and fruit, in that order.";
+                    return;
+                case "Book Of Sprouts":
+                    BubbleText.text = "In the second phase of life, the seeds will grow to green, leafy sprouts.";
+                    return;
+                case "Book Of Flowers":
+                    BubbleText.text = "In the third phase of life, the sprouts will grow to flowers. Strawberries, specifically, are white.";
+                    return;
+                case "Monster Manual":
+                    BubbleText.text = "Curiously enough, the monsters of Lockbright enjoy music. It calms them.";
+                    return;
+                case "Dispensary Note":
+                    BubbleText.text = "Please donate ten examples of published works written in the language of our culture.";
+                    return;
+                case "Lusty Lore":
+                    BubbleText.text = "\"I must finish my cleaning, sir. The mistress will have my head if I do not!\"\n\"Cleaning? I have something for you- polish my spear.\"\n\"But sir! It's huge! It could take all night!\"\n\"Plenty of time, my sweet. Plenty of time.\"";
+                    return;
+                case "Book Of Charms":
+                    BubbleText.text = "A sun charm requires heat from two elements. To achieve this, douse a mystic fireball in boiled water.";
+                    return;
+                case "Book Of Seeds":
+                    BubbleText.text = "In the first phase of life, a seed should be planted in fertile soil, watered sufficiently, and provided plenty of natural light.";
+                    return;
+                case "Master's Diary":
+                    BubbleText.text = "The boiler, when broken, was repaired by securing it with rope, installing a new heat-bulb, fueling it with glowing engery oil, and then it may be lit for continued use.";
                     return;
                 default:
                     BubbleText.text = "This item can't be read";
