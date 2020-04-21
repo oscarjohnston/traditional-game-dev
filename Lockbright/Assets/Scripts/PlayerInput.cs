@@ -504,6 +504,17 @@ public class PlayerInput : MonoBehaviour
     }
 
     /// <summary>
+    /// Helper method that will heal the player for 1 HP and update the slider
+    /// </summary>
+    private void heal()
+    {
+        if (health < 5) { health++; }
+
+        // Change Health UI Meter
+        HealthBar.value = health;
+    }
+
+    /// <summary>
     /// This kills the character and puts a time for them to come back to life
     /// </summary>
     private void Die()
@@ -626,6 +637,19 @@ public class PlayerInput : MonoBehaviour
         // TODO: Figure out healing radius
         // TODO: Fire off healing glow effect
 
+        // Send out a large Raycast looking for players to heal
+        Collider2D[] collide = Physics2D.OverlapBoxAll(transform.position, new Vector2(40, 40), 0);
+        foreach(Collider2D collision in collide)
+        {
+            // If a player is found, heal them
+            if(collision.gameObject.tag == "Player")
+            {
+                PlayerInput player = collision.gameObject.GetComponent<PlayerInput>();
+
+                player.heal();
+            }
+        }
+
         // Heal a Dried Mossflower if held
         if (grabbed && HeldItem.name == "Dried Mossflower")
         {
@@ -646,6 +670,8 @@ public class PlayerInput : MonoBehaviour
             HeldItemImage.sprite = HeldItem.GetComponent<SpriteRenderer>().sprite;
         }
     }
+
+    
 
     /// <summary>
     /// This function will drop an item if there is one. This is done by dereferncing the item held

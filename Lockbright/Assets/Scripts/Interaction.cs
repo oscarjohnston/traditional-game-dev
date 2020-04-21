@@ -256,17 +256,25 @@ public class Interaction : MonoBehaviour
                                 preReq.working = true;
                             }
 
+                            
                             if (musicPlayer)
                             {
                                 //play music
                                 song.Play();
 
-                                Invoke("bingbong", 16f);
+                                // Stall for 16 seconds
+                                float GoalTime = Time.deltaTime + 16;
+                                while(Time.deltaTime < GoalTime)
+                                {
+                                    print(Time.deltaTime);
+                                }
 
-                                HeldItem = reward;
-                                HeldItem.GetComponent<HeldItems>().CanPickThisUp = true;
-                                HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
-                                grabbed = true;
+                                // Move the key over to the music box's location instead of the player's inventory, adjusted down a bit
+                                reward.transform.position = this.gameObject.transform.position + new Vector3(0,-10,0);
+
+                                // Make sure the reward has been set for pickup and now exists on the Player sorting layer
+                                reward.GetComponent<HeldItems>().CanPickThisUp = true;
+                                reward.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
                             }
                         }
                     }
