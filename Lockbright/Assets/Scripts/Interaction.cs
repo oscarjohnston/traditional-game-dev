@@ -41,6 +41,15 @@ public class Interaction : MonoBehaviour
     public bool musicPlayer;
     public AudioSource song;
 
+    // Study Door stuff
+    public bool StudyDoor;
+
+    // Stairs
+    public bool landing;
+    public bool mainHall;
+    public Vector3 landingLocation;
+    public Vector3 mainHallLocation;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,16 +70,40 @@ public class Interaction : MonoBehaviour
         if (Sink && !(working))
         {
             Invoke("SinkIsHot", 10f);
+            return;
         }
 
         // move parkourist from ladder to ladder
         if (PlayerRequirement != null && Class.Equals(PlayerRequirement) && loungeLadder)
         {
             player.transform.position = studyLocation;
+            return;
         }
         if (PlayerRequirement != null && Class.Equals(PlayerRequirement) && studyLadder)
         {
             player.transform.position = loungeLocation;
+            return;
+        }
+
+        // Move Player from stair to stair
+        if (landing)
+        {
+            //move to mainhall
+
+            return;
+        }
+        if (mainHall)
+        {
+            //move to landing
+
+            return;
+        }
+
+        // Literally just remove the door lol
+        if(StudyDoor && HeldItem == requirement[0])
+        {
+            Destroy(this.gameObject);
+            return;
         }
 
         // preReq for bookshelfs to work off of each other

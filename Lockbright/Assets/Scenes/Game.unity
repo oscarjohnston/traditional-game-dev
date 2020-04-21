@@ -247,6 +247,156 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &23187131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 23187132}
+  - component: {fileID: 23187135}
+  - component: {fileID: 23187134}
+  - component: {fileID: 23187133}
+  m_Layer: 0
+  m_Name: Study Door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &23187132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23187131}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.86, y: -0.89, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 639955290}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &23187133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23187131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
+  fridgeMonster: {fileID: 0}
+  requirement: []
+  PlayerRequirement: 
+  reward: {fileID: 0}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  spawned: 0
+  RewardText: 
+  InteractionText: 
+  CanWinTheGame: 0
+  SpawnsAMonster: 0
+  Boiler: 0
+  Sink: 0
+  working: 0
+  finalShelf: 0
+  preReq: {fileID: 0}
+  returns: []
+  spawnpoints: []
+  loungeLadder: 0
+  studyLadder: 0
+  player: {fileID: 0}
+  studyLocation: {x: 0, y: 0, z: 0}
+  loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
+  StudyDoor: 1
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
+--- !u!61 &23187134
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23187131}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.13, y: 0.72}
+  m_EdgeRadius: 0
+--- !u!212 &23187135
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23187131}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &42954046 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3006525338518837568, guid: a4d96c0b867d75b429c9918138d0c7dc,
@@ -328,6 +478,7 @@ GameObject:
   - component: {fileID: 50917817}
   - component: {fileID: 50917819}
   - component: {fileID: 50917818}
+  - component: {fileID: 50917820}
   m_Layer: 0
   m_Name: Stairs
   m_TagString: Untagged
@@ -424,6 +575,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &50917820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50917816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
+  fridgeMonster: {fileID: 0}
+  requirement: []
+  PlayerRequirement: 
+  reward: {fileID: 0}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  spawned: 0
+  RewardText: 
+  InteractionText: 
+  CanWinTheGame: 0
+  SpawnsAMonster: 0
+  Boiler: 0
+  Sink: 0
+  working: 0
+  finalShelf: 0
+  preReq: {fileID: 0}
+  returns: []
+  spawnpoints: []
+  loungeLadder: 0
+  studyLadder: 0
+  player: {fileID: 0}
+  studyLocation: {x: 0, y: 0, z: 0}
+  loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 1
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &55601970
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +890,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &83662567
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,6 +2953,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &269298908
 GameObject:
   m_ObjectHideFlags: 0
@@ -7882,6 +8085,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &313831448
 GameObject:
   m_ObjectHideFlags: 0
@@ -8011,7 +8219,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &320081357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8054,7 +8262,7 @@ Transform:
   - {fileID: 1884029225}
   - {fileID: 638510538}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &320081360
 BoxCollider2D:
@@ -22911,6 +23119,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &437331776
 GameObject:
   m_ObjectHideFlags: 0
@@ -23315,6 +23528,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!50 &461873254
 Rigidbody2D:
   serializedVersion: 4
@@ -23747,6 +23965,7 @@ GameObject:
   - component: {fileID: 514190034}
   - component: {fileID: 514190036}
   - component: {fileID: 514190035}
+  - component: {fileID: 514190037}
   m_Layer: 0
   m_Name: Stairs
   m_TagString: Untagged
@@ -23843,6 +24062,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &514190037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514190033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game_controller: {fileID: 0}
+  fridgeMonster: {fileID: 0}
+  requirement: []
+  PlayerRequirement: 
+  reward: {fileID: 0}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  spawned: 0
+  RewardText: 
+  InteractionText: 
+  CanWinTheGame: 0
+  SpawnsAMonster: 0
+  Boiler: 0
+  Sink: 0
+  working: 0
+  finalShelf: 0
+  preReq: {fileID: 0}
+  returns: []
+  spawnpoints: []
+  loungeLadder: 0
+  studyLadder: 0
+  player: {fileID: 0}
+  studyLocation: {x: 0, y: 0, z: 0}
+  loungeLocation: {x: 0, y: 0, z: 0}
+  musicPlayer: 0
+  song: {fileID: 0}
+  StudyDoor: 0
+  landing: 1
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &515496306
 GameObject:
   m_ObjectHideFlags: 0
@@ -24448,6 +24709,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &541579399
 GameObject:
   m_ObjectHideFlags: 0
@@ -25529,6 +25795,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &585379528
 GameObject:
   m_ObjectHideFlags: 0
@@ -25899,6 +26170,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!61 &586959762
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26019,6 +26295,95 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 515548275}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &637287587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 637287588}
+  - component: {fileID: 637287591}
+  - component: {fileID: 637287590}
+  - component: {fileID: 637287589}
+  m_Layer: 0
+  m_Name: Guard Monster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &637287588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637287587}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -88.1, y: -18.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1173218777}
+  - {fileID: 1219891324}
+  m_Father: {fileID: 1666800954}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &637287589
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637287587}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12, y: 12}
+  m_EdgeRadius: 0
+--- !u!114 &637287590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637287587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996942a8f69a1f042894ccf814d642a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 1219891324}
+--- !u!114 &637287591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637287587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43b7a48be6e56e4f9c1b2f14c8820d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  Front_Animator: {fileID: 1078310454}
+  Back_Animator: {fileID: 1114673321}
 --- !u!1 &638510537
 GameObject:
   m_ObjectHideFlags: 0
@@ -26127,6 +26492,7 @@ Transform:
   m_LocalScale: {x: 33.17815, y: 33.17815, z: 33.17815}
   m_Children:
   - {fileID: 514190034}
+  - {fileID: 23187132}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26277,6 +26643,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &644056432
 GameObject:
   m_ObjectHideFlags: 0
@@ -34073,6 +34444,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &996291204
 GameObject:
   m_ObjectHideFlags: 0
@@ -34301,6 +34677,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &1007444368
 GameObject:
   m_ObjectHideFlags: 0
@@ -34997,6 +35378,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &1055738732
 GameObject:
   m_ObjectHideFlags: 0
@@ -35147,6 +35533,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &1058346408
 GameObject:
   m_ObjectHideFlags: 0
@@ -36896,7 +37287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game_controller: {fileID: 0}
-  fridgeMonster: {fileID: 0}
+  fridgeMonster: {fileID: 637287590}
   requirement:
   - {fileID: 1878713177}
   PlayerRequirement: 
@@ -36906,7 +37297,7 @@ MonoBehaviour:
   RewardText: 
   InteractionText: 
   CanWinTheGame: 0
-  SpawnsAMonster: 0
+  SpawnsAMonster: 1
   Boiler: 0
   Sink: 0
   working: 0
@@ -36921,6 +37312,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 1936881956}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!61 &1116999458
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37158,6 +37554,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!61 &1126745286
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37538,13 +37939,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173218776}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.97, y: 60.4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 84.5, y: -35.4, z: 0}
+  m_LocalScale: {x: 1.5731, y: 1.5731, z: 1.5731}
   m_Children:
   - {fileID: 1493049299}
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_Father: {fileID: 637287588}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1173218778
 MonoBehaviour:
@@ -37854,6 +38255,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!61 &1182866663
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37949,6 +38355,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sortingOrderBase: 5000
   offset: -1
+--- !u!1 &1219891323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1219891324}
+  m_Layer: 0
+  m_Name: Destination
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1219891324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219891323}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -114.5, y: -5.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 637287588}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1220282028
 GameObject:
   m_ObjectHideFlags: 0
@@ -38189,6 +38625,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1001 &1241702610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39727,6 +40168,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &1475431168
 GameObject:
   m_ObjectHideFlags: 0
@@ -40440,6 +40886,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!61 &1516205134
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41120,6 +41571,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &1607981472
 GameObject:
   m_ObjectHideFlags: 0
@@ -41468,6 +41924,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1666800954}
+  - component: {fileID: 1666800955}
   m_Layer: 0
   m_Name: Lounge WhiteBox
   m_TagString: Untagged
@@ -41499,9 +41956,23 @@ Transform:
   - {fileID: 1900788229}
   - {fileID: 1126745284}
   - {fileID: 1116999456}
+  - {fileID: 637287588}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1666800955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666800953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996942a8f69a1f042894ccf814d642a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 0}
 --- !u!1 &1677012516
 GameObject:
   m_ObjectHideFlags: 0
@@ -47005,6 +47476,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &1802041587
 GameObject:
   m_ObjectHideFlags: 0
@@ -47650,6 +48126,11 @@ MonoBehaviour:
   loungeLocation: {x: -118.2, y: 25.7, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &1828188632
 GameObject:
   m_ObjectHideFlags: 0
@@ -48135,6 +48616,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &1861619824
 GameObject:
   m_ObjectHideFlags: 0
@@ -48694,6 +49180,11 @@ MonoBehaviour:
   loungeLocation: {x: 0, y: 0, z: 0}
   musicPlayer: 0
   song: {fileID: 0}
+  StudyDoor: 0
+  landing: 0
+  mainHall: 0
+  landingLocation: {x: 0, y: 0, z: 0}
+  mainHallLocation: {x: 0, y: 0, z: 0}
 --- !u!1 &1936881954
 GameObject:
   m_ObjectHideFlags: 0
