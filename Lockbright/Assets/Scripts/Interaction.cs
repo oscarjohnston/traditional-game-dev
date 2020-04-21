@@ -102,7 +102,11 @@ public class Interaction : MonoBehaviour
         // Literally just remove the door lol
         if(StudyDoor && HeldItem == requirement[0])
         {
+            BubbleText.text = RewardText;
             Destroy(this.gameObject);
+            Destroy(HeldItem);
+            grabbed = false;
+
             return;
         }
 

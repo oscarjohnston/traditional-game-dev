@@ -343,13 +343,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game_controller: {fileID: 0}
   fridgeMonster: {fileID: 0}
-  requirement: []
+  requirement:
+  - {fileID: 885251249}
   PlayerRequirement: 
   reward: {fileID: 0}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: 
-  InteractionText: 
+  RewardText: Hooray! I can get in!
+  InteractionText: It's a locked door to the study. Got to look for a key.
   CanWinTheGame: 0
   SpawnsAMonster: 0
   Boiler: 0
