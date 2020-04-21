@@ -432,6 +432,11 @@ public class PlayerInput : MonoBehaviour
                         return;
                     }
                 }
+                // Ignore players
+                else if(collision.tag == "Player")
+                {
+                    continue;
+                }
 
                 // Save the collided with name for later to put in speech bubble
                 collidedWithName = collision.name;
