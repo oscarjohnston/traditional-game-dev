@@ -261,24 +261,13 @@ public class Interaction : MonoBehaviour
                             {
                                 print("Activating Music Player");
 
+                                spawned = true;
+                                grabbed = false;
+
                                 //play music
                                 song.Play();
 
-                                /*
-                                // Stall for 16 seconds
-                                float GoalTime = Time.deltaTime + 16;
-                                while(Time.deltaTime < GoalTime)
-                                {
-                                    print(Time.deltaTime);
-                                }
-                                */
-
-                                // Move the key over to the music box's location instead of the player's inventory, adjusted down a bit
-                                reward.transform.position = this.gameObject.transform.position + new Vector3(0,-10,0);
-
-                                // Make sure the reward has been set for pickup and now exists on the Player sorting layer
-                                reward.GetComponent<HeldItems>().CanPickThisUp = true;
-                                reward.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
+                                Invoke("DropStudyKey", 16f);
                             }
                         }
                     }
@@ -293,9 +282,14 @@ public class Interaction : MonoBehaviour
         working = true;
     }
 
-    void bingbong()
+    void DropStudyKey()
     {
+        // Move the key over to the music box's location instead of the player's inventory, adjusted down a bit
+        reward.transform.position = this.gameObject.transform.position + new Vector3(0, -10, 0);
 
+        // Make sure the reward has been set for pickup and now exists on the Player sorting layer
+        reward.GetComponent<HeldItems>().CanPickThisUp = true;
+        reward.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
     }
 }
 
