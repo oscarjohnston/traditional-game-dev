@@ -53,16 +53,13 @@ public class Interaction : MonoBehaviour
     // Trunk Puzzle
     private int TrunkItemsRemaining = 2;
 
+    // Front Door Puzzle
+    private int FrontDoorItemsRemaining = 4;
+
     // Start is called before the first frame update
     void Start()
     {
         spawned = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void TryToInteractWithThisObject(string Class, ref GameObject HeldItem, ref Text BubbleText, ref bool grabbed)
@@ -115,6 +112,30 @@ public class Interaction : MonoBehaviour
                     HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
                     BubbleText.text = RewardText;
                     
+                }
+            }
+
+            return;
+        }
+        else if(this.gameObject.name == "Front Door")
+        {
+            print("Trying to leave at front door");
+
+            // If not spawned and held item matches one of the requirements
+            if (!spawned && (HeldItem == requirement[0] || HeldItem == requirement[1] || HeldItem == requirement[2] || HeldItem == requirement[3]))
+            {
+                // Delete the held item and decrement the required items
+                FrontDoorItemsRemaining--;
+                Destroy(HeldItem.gameObject);
+                grabbed = false;
+
+                BubbleText.text = "I was able to get one of the locks! Just " + FrontDoorItemsRemaining + " keys to go!";
+
+                // Handle if the items required is now zero to win the game
+                if (FrontDoorItemsRemaining == 0)
+                {
+                    BubbleText.text = "We Escaped!";
+                    game_controller.InvokeWinGameEvent();
                 }
             }
 
