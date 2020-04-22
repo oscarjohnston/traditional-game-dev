@@ -11,7 +11,7 @@ public class CameraPan : MonoBehaviour
     public Transform P4;
 
     // How many units should we keep from the players
-    public float zoomFactor = 1.5f;
+    public float zoomFactor = 0.1f;
     public float followTimeDelta = 0.8f;
     public float ShiftCameraUpwards;
 
@@ -42,7 +42,7 @@ public class CameraPan : MonoBehaviour
         maxX = Mathf.Max(xPositions);
         minX = Mathf.Min(xPositions);
         maxY = Mathf.Max(yPositions);
-        minY = Mathf.Max(yPositions);
+        minY = Mathf.Min(yPositions);
 
         // Pass these values in for the player distances
         FixedCameraFollowSmooth(new Vector2(minX, minY), new Vector2(maxX, maxY));
@@ -73,5 +73,21 @@ public class CameraPan : MonoBehaviour
         // Snap when close enough to prevent annoying slerp behavior
         if ((cameraDestination - cam.transform.position).magnitude <= 0.05f)
             cam.transform.position = cameraDestination;
+
+        // Minimum camera positions
+        if(cam.transform.position.z < -4)
+        {
+            cam.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y, -4);
+        }
+        if(cam.orthographicSize < 40)
+        {
+            cam.orthographicSize = 40;
+        }
+
+        // Max camera positions
+        if (cam.orthographicSize > 135)
+        {
+            cam.orthographicSize = 135;
+        }
     }
 }

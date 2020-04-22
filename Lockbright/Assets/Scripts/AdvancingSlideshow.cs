@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class AdvancingSlideshow : MonoBehaviour
 {
@@ -11,10 +12,13 @@ public class AdvancingSlideshow : MonoBehaviour
     private bool SlideshowIsActive = false;
     private bool ButtonIsPressable;
 
+    public Image AButton;
+
     // Start is called before the first frame update
     void Start()
     {
         ButtonIsPressable = false;
+        AButton.gameObject.SetActive(false);
         SlideshowIsActive = false;
         CurrentSlide = 0;
         SetCurrentSlideToShow();
@@ -28,6 +32,7 @@ public class AdvancingSlideshow : MonoBehaviour
         if(Input.GetButtonDown("A_Button_1") || Input.GetButtonDown("A_Button_2") || Input.GetButtonDown("A_Button_3") || Input.GetButtonDown("A_Button_4"))
         {
             ButtonIsPressable = false;
+            AButton.gameObject.SetActive(false);
             AdvanceSlideshow();
             Invoke("MakeButtonPressable", 2.0f);
         }
@@ -36,6 +41,7 @@ public class AdvancingSlideshow : MonoBehaviour
     private void MakeButtonPressable()
     {
         ButtonIsPressable = true;
+        AButton.gameObject.SetActive(true);
     }
 
     private void AdvanceSlideshow()
@@ -71,6 +77,7 @@ public class AdvancingSlideshow : MonoBehaviour
     public void ActivateSlideshow()
     {
         SlideshowIsActive = true;
+        AButton.gameObject.SetActive(false);
         Invoke("MakeButtonPressable", 2.0f);
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Epilogue : MonoBehaviour
 {
@@ -10,10 +11,13 @@ public class Epilogue : MonoBehaviour
 
     public GameObject CreditScreen;
 
+    public Image AButton;
+
     // Start is called before the first frame update
     void Start()
     {
         ButtonIsPressable = false;
+        AButton.gameObject.SetActive(false);
         Invoke("MakeButtonPressable", 2.0f);
     }
 
@@ -31,6 +35,7 @@ public class Epilogue : MonoBehaviour
             else
             {
                 ButtonIsPressable = false;
+                AButton.gameObject.SetActive(false);
                 MoveToCredits();
                 Invoke("MakeButtonPressable", 2.0f);
             }
@@ -52,5 +57,6 @@ public class Epilogue : MonoBehaviour
     private void MakeButtonPressable()
     {
         ButtonIsPressable = true;
+        AButton.gameObject.SetActive(true);
     }
 }

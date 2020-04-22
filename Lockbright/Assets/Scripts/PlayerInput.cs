@@ -176,17 +176,21 @@ public class PlayerInput : MonoBehaviour
             return;
         }
 
+        
+
         // Change character input
         if (Input.GetButtonDown("LB_Button_" + PlayerNumber))
         {
-            Invoke("ChangePlayerNumberDown", INTERACTABLE_TIME);
+            Invoke("ChangePlayerNumberDown", 0.2f);
             return;
         }
         else if (Input.GetButtonDown("RB_Button_" + PlayerNumber))
         {
-            Invoke("ChangePlayerNumberUp", INTERACTABLE_TIME);
+            Invoke("ChangePlayerNumberUp", 0.2f);
             return;
         }
+
+        
 
         // Input for movement
         xInput = Input.GetAxis("Horizontal" +  PlayerNumber);
