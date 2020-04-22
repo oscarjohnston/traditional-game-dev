@@ -50,6 +50,9 @@ public class Interaction : MonoBehaviour
     public Vector3 landingLocation;
     public Vector3 mainHallLocation;
 
+    // Trunk Puzzle
+    private int TrunkItemsRemaining = 2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +68,58 @@ public class Interaction : MonoBehaviour
     public void TryToInteractWithThisObject(string Class, ref GameObject HeldItem, ref Text BubbleText, ref bool grabbed)
     {
         BubbleText.text = InteractionText;
+
+        // Handle the closed trunk to turn into the open trunk
+        if(this.gameObject.name == "Trunk")
+        {
+            BubbleText.text = RewardText;
+
+            // Place the open trunk where this trunk was, shift it down 5.2 exactly
+            returns[0].transform.position = transform.position + new Vector3(0, 5.2f, 0);
+
+            // Place reward off to the left
+            reward.transform.position = this.gameObject.transform.position + new Vector3(-20, 0, 0);
+
+            // Make sure the reward has been set for pickup and now exists on the Player sorting layer
+            reward.GetComponent<HeldItems>().CanPickThisUp = true;
+            reward.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
+
+            // Destroy the closed trunk
+            Destroy(this.gameObject);
+
+            return;
+        }
+        else if(this.gameObject.name == "Opened Trunk and Sun Puzzle")
+        {
+            print("Trying to do the sun puzzle");
+
+            // If not spawned and held item matches one of the requirements
+            if (!spawned && (HeldItem == requirement[0] || HeldItem == requirement[1]))
+            {
+                // Delete the held item and decrement the required items
+                TrunkItemsRemaining--;
+                Destroy(HeldItem.gameObject);
+                grabbed = false;
+
+                BubbleText.text = "I was able to place one of the charms";
+
+                // Handle if the items required is now zero to give the sun key
+                if(TrunkItemsRemaining == 0)
+                {
+                    print("Trunk Puzzle Solved");
+
+                    spawned = true;
+                    HeldItem = reward;
+                    grabbed = true;
+                    HeldItem.GetComponent<HeldItems>().CanPickThisUp = true;
+                    HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
+                    BubbleText.text = RewardText;
+                    
+                }
+            }
+
+            return;
+        }
 
         // turn sink "Hot" in about ten seconds
         if (Sink && !(working))
