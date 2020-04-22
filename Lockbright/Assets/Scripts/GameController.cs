@@ -19,6 +19,9 @@ public class GameController : MonoBehaviour
     public Text TimerText;
     public Text GameOverText;
 
+    // Bookshelf Puzzle
+    private int BookshelfCounter = 3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,5 +83,16 @@ public class GameController : MonoBehaviour
     public void PlayTakeDamageSound()
     {
         TakeDamageSound.Invoke();
+    }
+
+    public void DecrementBookshelfCounter()
+    {
+        BookshelfCounter--;
+
+        // If the requirements fulfilled, spawn the Dusty Record
+        if(BookshelfCounter == 0)
+        {
+            // TODO: Spawn Dusty Record
+        }
     }
 }

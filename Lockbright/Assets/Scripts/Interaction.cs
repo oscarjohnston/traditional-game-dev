@@ -141,6 +141,13 @@ public class Interaction : MonoBehaviour
 
             return;
         }
+        // TODO: Change all the objects to Bookcase so it can all go through this one thing
+        else if(this.gameObject.name == "BookCase")
+        {
+            game_controller.DecrementBookshelfCounter();
+
+            //TODO: Implement rest of book requirements and rewards, bubble text etc.
+        }
 
         // turn sink "Hot" in about ten seconds
         if (Sink && !(working))
@@ -365,7 +372,7 @@ public class Interaction : MonoBehaviour
     void DropStudyKey()
     {
         // Move the key over to the music box's location instead of the player's inventory, adjusted down a bit
-        reward.transform.position = this.gameObject.transform.position + new Vector3(0, -10, 0);
+        reward.transform.position = this.gameObject.transform.position + new Vector3(-15, 0, 0);
 
         // Make sure the reward has been set for pickup and now exists on the Player sorting layer
         reward.GetComponent<HeldItems>().CanPickThisUp = true;

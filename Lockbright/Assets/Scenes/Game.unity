@@ -25131,7 +25131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game_controller: {fileID: 0}
+  game_controller: {fileID: 585379530}
   fridgeMonster: {fileID: 0}
   requirement:
   - {fileID: 1106082614}
@@ -35860,7 +35860,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007444368}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 65, y: -22.3, z: 0}
+  m_LocalPosition: {x: 122.7, y: -22.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 534747806}
@@ -49989,12 +49989,12 @@ PrefabInstance:
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -512
+      value: -168.1
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 53
+      value: -38.7
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
