@@ -654,7 +654,7 @@ public class PlayerInput : MonoBehaviour
                     BubbleText.text = "In the first phase of life, a seed should be planted in fertile soil, watered sufficiently, and provided plenty of natural light.";
                     return;
                 case "Master's Diary":
-                    BubbleText.text = "The boiler, when broken, was repaired by securing it with rope, installing a new heat-bulb, fueling it with glowing engery oil, and then it may be lit for continued use.";
+                    BubbleText.text = "The boiler, when broken, was repaired by securing it with rope, installing a new heat-bulb, fueling it with glowing energy oil, and then it may be lit for continued use.";
                     return;
                 default:
                     BubbleText.text = "This item can't be read";
