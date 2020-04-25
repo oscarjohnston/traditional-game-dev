@@ -15,12 +15,7 @@ public class Interaction : MonoBehaviour
     public bool spawned;
     public string RewardText;
     public string InteractionText;
-    public bool CanWinTheGame = false;
     public bool SpawnsAMonster = false;
-
-    // Added for Sink and Boiler
-    public bool Boiler;
-    public bool Sink;
 
     public bool working;
 
@@ -56,10 +51,17 @@ public class Interaction : MonoBehaviour
     // Front Door Puzzle
     private int FrontDoorItemsRemaining = 4;
 
+    // Generic Requirement Puzzle Counter
+    private int GenericItemsRemaining;
+
     // Start is called before the first frame update
     void Start()
     {
         spawned = false;
+        GenericItemsRemaining = requirement.Length;
+
+        // Setup the gmae controller at the start for all interaction objects
+        game_controller = GameObject.Find("Game Controller").GetComponent<GameController>();
     }
 
     public void TryToInteractWithThisObject(string Class, ref GameObject HeldItem, ref Text BubbleText, ref bool grabbed)
@@ -67,7 +69,7 @@ public class Interaction : MonoBehaviour
         BubbleText.text = InteractionText;
 
         // Handle the closed trunk to turn into the open trunk
-        if(this.gameObject.name == "Trunk")
+        if (this.gameObject.name == "Trunk")
         {
             BubbleText.text = RewardText;
 
@@ -86,7 +88,7 @@ public class Interaction : MonoBehaviour
 
             return;
         }
-        else if(this.gameObject.name == "Opened Trunk and Sun Puzzle")
+        else if (this.gameObject.name == "Opened Trunk and Sun Puzzle")
         {
             print("Trying to do the sun puzzle");
 
@@ -101,7 +103,7 @@ public class Interaction : MonoBehaviour
                 BubbleText.text = "I was able to place one of the charms";
 
                 // Handle if the items required is now zero to give the sun key
-                if(TrunkItemsRemaining == 0)
+                if (TrunkItemsRemaining == 0)
                 {
                     print("Trunk Puzzle Solved");
 
@@ -111,13 +113,13 @@ public class Interaction : MonoBehaviour
                     HeldItem.GetComponent<HeldItems>().CanPickThisUp = true;
                     HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
                     BubbleText.text = RewardText;
-                    
+
                 }
             }
 
             return;
         }
-        else if(this.gameObject.name == "Front Door")
+        else if (this.gameObject.name == "Front Door")
         {
             print("Trying to leave at front door");
 
@@ -142,18 +144,36 @@ public class Interaction : MonoBehaviour
             return;
         }
         // TODO: Change all the objects to Bookcase so it can all go through this one thing
-        else if(this.gameObject.name == "BookCase")
+        else if (this.gameObject.name == "BookCase")
         {
             game_controller.DecrementBookshelfCounter();
 
             //TODO: Implement rest of book requirements and rewards, bubble text etc.
         }
 
-        // turn sink "Hot" in about ten seconds
-        if (Sink && !(working))
+        else if (this.gameObject.name == "Sink (Bathroom)")
         {
-            Invoke("SinkIsHot", 10f);
-            return;
+            if(game_controller.IsBoilerOn() && HeldItem == requirement[0])
+            {
+                // Remove the fireball
+                Destroy(HeldItem.gameObject);
+
+                // Give the player the reward item
+                HeldItem = reward;
+                HeldItem.GetComponent<HeldItems>().CanPickThisUp = true;
+                HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
+                grabbed = true;
+                spawned = true;
+
+                BubbleText.text = RewardText;
+            }
+            // Activate sink in 10 seconds
+            else if(!game_controller.IsBoilerOn())
+            {
+                Invoke("SinkIsHot", 10f);
+                BubbleText.text = "Looks like the water will take a while to heat up";
+                return;
+            }
         }
 
         // move parkourist from ladder to ladder
@@ -183,7 +203,7 @@ public class Interaction : MonoBehaviour
         }
 
         // Literally just remove the door lol
-        if(StudyDoor && HeldItem == requirement[0])
+        if (StudyDoor && HeldItem == requirement[0])
         {
             BubbleText.text = RewardText;
             Destroy(this.gameObject);
@@ -193,20 +213,62 @@ public class Interaction : MonoBehaviour
             return;
         }
 
-        // preReq for bookshelfs to work off of each other
-        if (preReq != null && preReq.spawned)
+        // Check if this object has spawned its item yet
+        if (!spawned)
         {
-            // Check if this object has spawned its item yet
-            if (!spawned)
+            // Is the player holding the right item? (and optionally the correct Player?)
+            if (requirement.Length == 0)
             {
-                // Is the player holding the right item? (and optionally the correct Player?)
-                if (requirement.Length == 0)
+                if (PlayerRequirement != null && Class.Equals(PlayerRequirement))
                 {
-                    if (PlayerRequirement != null && Class.Equals(PlayerRequirement))
+                    BubbleText.text = RewardText;
+
+                    Destroy(HeldItem);
+                    if (reward != null && working)
                     {
+                        HeldItem = reward;
+                        HeldItem.GetComponent<HeldItems>().CanPickThisUp = true;
+                        HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
+                        grabbed = true;
+                        spawned = true;
+                    }
+                    else if (working)
+                    {
+                        grabbed = false;
+                        spawned = true;
+                    }
+                    //Instantiate(reward, spawnPoint, new Quaternion(0, 0, 0, 0));
+                }
+            }
+            else
+            {
+                foreach (GameObject required in requirement)
+                {
+                    if (HeldItem == required || (PlayerRequirement != null && Class.Equals(PlayerRequirement)))
+                    {
+                        // This held item is one of the required items, so decrement the counter and figure out if the requirement is met
+                        GenericItemsRemaining--;
+
+                        // Take the player's item and clear their held item status
+                        Destroy(HeldItem);
+                        grabbed = false;
+
+                        // If this item is not yet ready to be awarded, put in some text and return
+                        if (GenericItemsRemaining > 1)
+                        {
+                            BubbleText.text = "Nice! This only requires " + GenericItemsRemaining + " more items.";
+                            return;
+                        }
+                        else if (GenericItemsRemaining == 1)
+                        {
+                            BubbleText.text = "Nice! This requires 1 more item.";
+                            return;
+                        }
+
+                        // Otherwise, the requirement is at 0 and ready for reward
                         BubbleText.text = RewardText;
 
-                        Destroy(HeldItem);
+
                         if (reward != null && working)
                         {
                             HeldItem = reward;
@@ -220,153 +282,50 @@ public class Interaction : MonoBehaviour
                             grabbed = false;
                             spawned = true;
                         }
-                        //Instantiate(reward, spawnPoint, new Quaternion(0, 0, 0, 0));
-                    }
-                }
-                else
-                {
-                    foreach (GameObject required in requirement)
-                    {
-                        if (HeldItem == required || (PlayerRequirement != null && Class.Equals(PlayerRequirement)))
+
+                        // Handle Specific object's activation
+                        if (musicPlayer)
                         {
-                            // This will fire the game winning event
-                            if (CanWinTheGame)
-                            {
-                                game_controller.InvokeWinGameEvent();
-                            }
-                            else if (SpawnsAMonster)
-                            {
-                                fridgeMonster.SpawnMonster();
-                            }
+                            print("Activating Music Player");
 
-                            BubbleText.text = RewardText;
+                            spawned = true;
 
-                            Destroy(HeldItem);
-                            if (reward != null && working)
-                            {
-                                HeldItem = reward;
-                                HeldItem.GetComponent<HeldItems>().CanPickThisUp = true;
-                                HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
-                                grabbed = true;
-                                spawned = true;
-                            }
-                            else if (working)
-                            {
-                                grabbed = false;
-                                spawned = true;
-                            }
-                            //Instantiate(reward, spawnPoint, new Quaternion(0, 0, 0, 0));
+                            //play music
+                            song.Play();
 
-                            if (Boiler)
-                            {
-                                working = true;
-                            }
+                            Invoke("DropStudyKey", 16f);
+                        }
 
-                            if (finalShelf)
+                        else if (finalShelf)
+                        {
+                            for (int i = 0; i < returns.Length; i++)
                             {
-                                for (int i = 0; i < returns.Length; i++)
-                                {
-                                    Instantiate(returns[i], spawnpoints[i], new Quaternion(0, 0, 0, 0));
-                                }
+                                Instantiate(returns[i], spawnpoints[i], new Quaternion(0, 0, 0, 0));
                             }
+                        }
+
+                        else if (this.gameObject.name == "Broken Boiler")
+                        {
+                            game_controller.CanTurnTheBoilerOn();
+                        }
+
+                        // Spawn the monster at the sink
+                        else if (SpawnsAMonster)
+                        {
+                            fridgeMonster.SpawnMonster();
                         }
                     }
                 }
             }
         }
-        else
-        {
-            // Check if this object has spawned its item yet
-            if (!spawned)
-            {
-                // Is the player holding the right item? (and optionally the correct Player?)
-                if (requirement.Length == 0)
-                {
-                    if (PlayerRequirement != null && Class.Equals(PlayerRequirement))
-                    {
-                        BubbleText.text = RewardText;
-
-                        Destroy(HeldItem);
-                        if (reward != null && working)
-                        {
-                            HeldItem = reward;
-                            HeldItem.GetComponent<HeldItems>().CanPickThisUp = true;
-                            HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
-                            grabbed = true;
-                            spawned = true;
-                        }
-                        else if (working)
-                        {
-                            grabbed = false;
-                            spawned = true;
-                        }
-                        //Instantiate(reward, spawnPoint, new Quaternion(0, 0, 0, 0));
-                    }
-                }
-                else
-                {
-                    foreach (GameObject required in requirement)
-                    {
-                        if (HeldItem == required || (PlayerRequirement != null && Class.Equals(PlayerRequirement)))
-                        {
-                            // This will fire the game winning event
-                            if (CanWinTheGame)
-                            {
-                                game_controller.InvokeWinGameEvent();
-                            }
-                            else if (SpawnsAMonster)
-                            {
-                                fridgeMonster.SpawnMonster();
-                            }
-
-                            BubbleText.text = RewardText;
-
-                            Destroy(HeldItem);
-                            if (reward != null && working)
-                            {
-                                HeldItem = reward;
-                                HeldItem.GetComponent<HeldItems>().CanPickThisUp = true;
-                                HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
-                                grabbed = true;
-                                spawned = true;
-                            }
-                            else if (working)
-                            {
-                                grabbed = false;
-                                spawned = true;
-                            }
-                            //Instantiate(reward, spawnPoint, new Quaternion(0, 0, 0, 0));
-
-                            if (Boiler)
-                            {
-                                working = true;
-                                preReq.working = true;
-                            }
-
-                            
-                            if (musicPlayer)
-                            {
-                                print("Activating Music Player");
-
-                                spawned = true;
-                                grabbed = false;
-
-                                //play music
-                                song.Play();
-
-                                Invoke("DropStudyKey", 16f);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
     }
 
+    /// <summary>
+    /// Calls the game controller to turn on the boiler because the sink has heated up
+    /// </summary>
     void SinkIsHot()
     {
-        working = true;
+        game_controller.SinkTurnOnBoilerOverride();
     }
 
     void DropStudyKey()

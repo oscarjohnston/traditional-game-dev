@@ -22,6 +22,12 @@ public class GameController : MonoBehaviour
     // Bookshelf Puzzle
     private int BookshelfCounter = 3;
 
+    // Boiler Puzzle
+    private bool BoilerIsOn = false;
+    private bool CanBoilerBeTurnedOn = false;
+    public Sprite RepairedBoiler;
+    public GameObject Boiler;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -94,5 +100,37 @@ public class GameController : MonoBehaviour
         {
             // TODO: Spawn Dusty Record
         }
+    }
+
+    public void TurnOnTheBoiler()
+    {
+        if (CanBoilerBeTurnedOn)
+        {
+            print("Boiler Has been turned on successfully");
+
+            // Swap out the boiler image
+            Boiler.GetComponent<SpriteRenderer>().sprite = RepairedBoiler;
+            BoilerIsOn = true;
+        }
+    }
+
+    public void CanTurnTheBoilerOn()
+    {
+        print("Boiler can now be turned on");
+        CanBoilerBeTurnedOn = true;
+    }
+
+    public bool IsBoilerOn()
+    {
+        return BoilerIsOn;
+    }
+
+    public void SinkTurnOnBoilerOverride()
+    {
+        print("Boiler Has been turned on successfully");
+
+        // Swap out the boiler image
+        Boiler.GetComponent<SpriteRenderer>().sprite = RepairedBoiler;
+        BoilerIsOn = true;
     }
 }

@@ -55,6 +55,7 @@ public class PlayerInput : MonoBehaviour
     public Image HeldItemImage;
 
     // Interactable variables
+    private GameObject InteractingObject;
     private Interaction InteractingWith;
     public bool Interacting;
     // Optionally Stove
@@ -567,9 +568,13 @@ public class PlayerInput : MonoBehaviour
             StoveInteractingWith.LightOrUnlightTheStove();
             return;
         }
+        else if(Interacting && InteractingObject.name == "Broken Boiler")
+        {
+            game_controller.TurnOnTheBoiler();
+        }
 
         // Fireball optional
-        if (grabbed && HeldItem.name == "Dim-ball")
+        if (grabbed && HeldItem.name == "Dim-Ball")
         {
             Destroy(HeldItem);
             HeldItem = GameObject.Find("Fireball");
@@ -671,9 +676,6 @@ public class PlayerInput : MonoBehaviour
         FireParticle.Invoke();
         game_controller.PlayIllusionistAbilitySound();
 
-        // TODO: Figure out healing radius
-        // TODO: Fire off healing glow effect
-
         // Send out a large Raycast looking for players to heal
         Collider2D[] collide = Physics2D.OverlapBoxAll(transform.position, new Vector2(40, 40), 0);
         foreach(Collider2D collision in collide)
@@ -735,7 +737,8 @@ public class PlayerInput : MonoBehaviour
 
         // Get the interaction object if it exists
         this.InteractingWith = collision.collider.GetComponent<Interaction>();
-        if(InteractingWith != null)
+        this.InteractingObject = collision.collider.gameObject;
+        if (InteractingWith != null)
         {
             Interacting = true;
         }
@@ -749,6 +752,7 @@ public class PlayerInput : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision)
     {
+        this.InteractingObject = null;
         InteractingWith = null;
         Interacting = false;
         StoveInteractingWith = null;
