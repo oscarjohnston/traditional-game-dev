@@ -92,6 +92,12 @@ public class Interaction : MonoBehaviour
         {
             print("Trying to do the sun puzzle");
 
+            // If the player isn't holding an item then just return
+            if (HeldItem == null)
+            {
+                return;
+            }
+
             // If not spawned and held item matches one of the requirements
             if (!spawned && (HeldItem == requirement[0] || HeldItem == requirement[1]))
             {
@@ -122,6 +128,12 @@ public class Interaction : MonoBehaviour
         else if (this.gameObject.name == "Front Door")
         {
             print("Trying to leave at front door");
+
+            // If the player isn't holding an item then just return
+            if (HeldItem == null)
+            {
+                return;
+            }
 
             // If not spawned and held item matches one of the requirements
             if (!spawned && (HeldItem == requirement[0] || HeldItem == requirement[1] || HeldItem == requirement[2] || HeldItem == requirement[3]))
@@ -244,6 +256,9 @@ public class Interaction : MonoBehaviour
             {
                 foreach (GameObject required in requirement)
                 {
+                    // Handle when a required item has been fulfilled
+                    if(required == null) { continue; }
+
                     if (HeldItem == required || (PlayerRequirement != null && Class.Equals(PlayerRequirement)))
                     {
                         // This held item is one of the required items, so decrement the counter and figure out if the requirement is met
