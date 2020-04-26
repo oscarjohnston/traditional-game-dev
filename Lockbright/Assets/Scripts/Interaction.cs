@@ -89,6 +89,27 @@ public class Interaction : MonoBehaviour
 
             return;
         }
+        else if(this.gameObject.name == "Sink")
+        {
+            if(!spawned && HeldItem != null && (HeldItem == requirement[0] || HeldItem == requirement[1]))
+            {
+                // Take the item
+                Destroy(HeldItem.gameObject);
+                grabbed = false;
+
+                // Give Reward Item
+                spawned = true;
+                HeldItem = reward;
+                grabbed = true;
+                HeldItem.GetComponent<HeldItems>().CanPickThisUp = true;
+                HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
+                BubbleText.text = RewardText;
+
+                // Spawn the monster at the sink
+                fridgeMonster.SpawnMonster();
+            }
+        }
+
         else if (this.gameObject.name == "Opened Trunk and Sun Puzzle")
         {
             print("Trying to do the sun puzzle");
@@ -329,11 +350,7 @@ public class Interaction : MonoBehaviour
                             game_controller.CanTurnTheBoilerOn();
                         }
 
-                        // Spawn the monster at the sink
-                        else if (SpawnsAMonster)
-                        {
-                            fridgeMonster.SpawnMonster();
-                        }
+                        
                     }
                 }
             }

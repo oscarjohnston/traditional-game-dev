@@ -83,6 +83,9 @@ public class PlayerInput : MonoBehaviour
 
     public UnityEvent FireParticle;
 
+    // Fireball Boolean
+    private bool CanBeBurned;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -107,6 +110,8 @@ public class PlayerInput : MonoBehaviour
 
         StartingPosition = this.transform.position;
         Dead = false;
+
+        CanBeBurned = true;
     }
 
     // Update is called once per frame
@@ -480,10 +485,17 @@ public class PlayerInput : MonoBehaviour
         }
 
         // If someone other than burner is holding fireball they take damage
-        if (grabbed && HeldItem.name == "Fireball" && Class != "Burner")
+        if (CanBeBurned && grabbed && HeldItem.name == "Fireball" && Class != "Burner")
         {
-            Invoke("TakeDamage", 1.5f);
+            CanBeBurned = false;
+            TakeDamage();
+            Invoke("CanBeBurnedAgain", 1.5f);
         }
+    }
+
+    private void CanBeBurnedAgain()
+    {
+        CanBeBurned = true;
     }
 
     /// <summary>
