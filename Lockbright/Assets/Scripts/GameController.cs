@@ -21,6 +21,8 @@ public class GameController : MonoBehaviour
 
     // Bookshelf Puzzle
     private int BookshelfCounter = 3;
+    private static int DustyRecordCounter = 4;
+    public GameObject DustyRecord;
 
     // Boiler Puzzle
     private bool BoilerIsOn = false;
@@ -95,10 +97,19 @@ public class GameController : MonoBehaviour
     {
         BookshelfCounter--;
 
+    }
+
+    public void DecrementDustyRecordCounter()
+    {
+        DustyRecordCounter--;
+
+        print("Dusty Record Counter is now:  " + DustyRecordCounter);
+
         // If the requirements fulfilled, spawn the Dusty Record
-        if(BookshelfCounter == 0)
+        if (DustyRecordCounter == 0)
         {
-            // TODO: Spawn Dusty Record
+            print("Moving Dusty Record into position");
+            DustyRecord.transform.position = new Vector3(125, -42 ,0);
         }
     }
 

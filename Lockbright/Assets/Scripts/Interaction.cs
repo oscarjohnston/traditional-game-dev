@@ -24,6 +24,7 @@ public class Interaction : MonoBehaviour
     public Interaction preReq;
     public GameObject[] returns;
     public Vector3[] spawnpoints;
+    public bool IsBookshelf;
 
     // Added for Ladders
     public bool loungeLadder;
@@ -155,13 +156,6 @@ public class Interaction : MonoBehaviour
 
             return;
         }
-        // TODO: Change all the objects to Bookcase so it can all go through this one thing
-        else if (this.gameObject.name == "BookCase")
-        {
-            game_controller.DecrementBookshelfCounter();
-
-            //TODO: Implement rest of book requirements and rewards, bubble text etc.
-        }
 
         else if (this.gameObject.name == "Sink (Bathroom)")
         {
@@ -261,12 +255,21 @@ public class Interaction : MonoBehaviour
 
                     if (HeldItem == required || (PlayerRequirement != null && Class.Equals(PlayerRequirement)))
                     {
+                        print("Found required item");
+
                         // This held item is one of the required items, so decrement the counter and figure out if the requirement is met
                         GenericItemsRemaining--;
 
                         // Take the player's item and clear their held item status
                         Destroy(HeldItem);
                         grabbed = false;
+
+                        // If it's a bookshelf, need to tell the game controller to decrement the count for dusty record
+                        if (IsBookshelf)
+                        {
+                            print("Its a bookshelf, telling game controller to decrement counter");
+                            game_controller.DecrementDustyRecordCounter();
+                        }
 
                         // If this item is not yet ready to be awarded, put in some text and return
                         if (GenericItemsRemaining > 1)
@@ -310,6 +313,8 @@ public class Interaction : MonoBehaviour
 
                             Invoke("DropStudyKey", 16f);
                         }
+
+                        
 
                         else if (finalShelf)
                         {

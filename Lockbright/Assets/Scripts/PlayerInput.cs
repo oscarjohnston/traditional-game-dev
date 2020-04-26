@@ -484,13 +484,6 @@ public class PlayerInput : MonoBehaviour
         {
             Invoke("TakeDamage", 1.5f);
         }
-
-
-        // Win the prototype
-        if(HeldItem != null && HeldItem.name == "Charred Key")
-        {
-            game_controller.InvokeWinGameEvent();
-        }
     }
 
     /// <summary>

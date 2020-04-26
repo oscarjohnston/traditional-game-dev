@@ -357,6 +357,7 @@ MonoBehaviour:
   preReq: {fileID: 0}
   returns: []
   spawnpoints: []
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -2833,6 +2834,7 @@ MonoBehaviour:
   preReq: {fileID: 0}
   returns: []
   spawnpoints: []
+  IsBookshelf: 0
   loungeLadder: 1
   studyLadder: 0
   player: {fileID: 1007444368}
@@ -7996,6 +7998,7 @@ MonoBehaviour:
   preReq: {fileID: 0}
   returns: []
   spawnpoints: []
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -23285,6 +23288,7 @@ MonoBehaviour:
   - {fileID: 1182866660}
   spawnpoints:
   - {x: -14.3, y: -54.4, z: 0}
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -23820,6 +23824,7 @@ MonoBehaviour:
   preReq: {fileID: 0}
   returns: []
   spawnpoints: []
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -25125,7 +25130,7 @@ MonoBehaviour:
   reward: {fileID: 0}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: 
+  RewardText: All books have been shelved here.
   InteractionText: 
   SpawnsAMonster: 0
   working: 1
@@ -25133,6 +25138,7 @@ MonoBehaviour:
   preReq: {fileID: 0}
   returns: []
   spawnpoints: []
+  IsBookshelf: 1
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -26216,6 +26222,7 @@ MonoBehaviour:
   preReq: {fileID: 0}
   returns: []
   spawnpoints: []
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -26650,6 +26657,7 @@ MonoBehaviour:
   TimeLeft: 600
   TimerText: {fileID: 720699787}
   GameOverText: {fileID: 1404380957}
+  DustyRecord: {fileID: 1878713177}
   RepairedBoiler: {fileID: 21300000, guid: 1760025daa1d85d4890e8f73d191bd0f, type: 3}
   Boiler: {fileID: 1055738732}
 --- !u!1001 &586227711
@@ -27116,6 +27124,7 @@ MonoBehaviour:
   preReq: {fileID: 0}
   returns: []
   spawnpoints: []
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -33456,175 +33465,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sortingOrderBase: 5000
   offset: -1
---- !u!1 &865974853
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 865974854}
-  - component: {fileID: 865974858}
-  - component: {fileID: 865974857}
-  - component: {fileID: 865974856}
-  - component: {fileID: 865974855}
-  m_Layer: 0
-  m_Name: Lounge Blocker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &865974854
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865974853}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 109, y: -32, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
-  m_Children: []
-  m_Father: {fileID: 1438235190}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &865974855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865974853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game_controller: {fileID: 0}
-  fridgeMonster: {fileID: 0}
-  requirement: []
-  PlayerRequirement: 
-  reward: {fileID: 0}
-  spawnPoint: {x: 0, y: 0, z: 0}
-  spawned: 0
-  RewardText: 
-  InteractionText: Locked for Demo
-  SpawnsAMonster: 0
-  working: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
-  returns: []
-  spawnpoints: []
-  loungeLadder: 0
-  studyLadder: 0
-  player: {fileID: 0}
-  studyLocation: {x: 0, y: 0, z: 0}
-  loungeLocation: {x: 0, y: 0, z: 0}
-  musicPlayer: 0
-  song: {fileID: 0}
-  StudyDoor: 0
-  landing: 0
-  mainHall: 0
-  landingLocation: {x: 0, y: 0, z: 0}
-  mainHallLocation: {x: 0, y: 0, z: 0}
---- !u!50 &865974856
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865974853}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &865974857
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865974853}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.41, y: 2.2}
-  m_EdgeRadius: 0
---- !u!212 &865974858
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865974853}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 40985296ee755af4293e3cb65cd3d3e2, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1019477407
-  m_SortingLayer: 3
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &868731979
 GameObject:
   m_ObjectHideFlags: 0
@@ -33952,175 +33792,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 885251247}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &887927970
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 887927971}
-  - component: {fileID: 887927975}
-  - component: {fileID: 887927974}
-  - component: {fileID: 887927973}
-  - component: {fileID: 887927972}
-  m_Layer: 0
-  m_Name: Study Blocker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &887927971
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887927970}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 107.9, y: 48.8, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
-  m_Children: []
-  m_Father: {fileID: 1438235190}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &887927972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887927970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game_controller: {fileID: 0}
-  fridgeMonster: {fileID: 0}
-  requirement: []
-  PlayerRequirement: 
-  reward: {fileID: 0}
-  spawnPoint: {x: 0, y: 0, z: 0}
-  spawned: 0
-  RewardText: 
-  InteractionText: Locked for Demo
-  SpawnsAMonster: 0
-  working: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
-  returns: []
-  spawnpoints: []
-  loungeLadder: 0
-  studyLadder: 0
-  player: {fileID: 0}
-  studyLocation: {x: 0, y: 0, z: 0}
-  loungeLocation: {x: 0, y: 0, z: 0}
-  musicPlayer: 0
-  song: {fileID: 0}
-  StudyDoor: 0
-  landing: 0
-  mainHall: 0
-  landingLocation: {x: 0, y: 0, z: 0}
-  mainHallLocation: {x: 0, y: 0, z: 0}
---- !u!50 &887927973
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887927970}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &887927974
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887927970}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.41, y: 2.2}
-  m_EdgeRadius: 0
---- !u!212 &887927975
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 887927970}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 40985296ee755af4293e3cb65cd3d3e2, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1019477407
-  m_SortingLayer: 3
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &895371313 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1320210487082284669, guid: e0ac378ae65de2b4695513a4ac2eb9df,
@@ -35310,6 +34981,7 @@ MonoBehaviour:
   preReq: {fileID: 0}
   returns: []
   spawnpoints: []
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -35540,6 +35212,7 @@ MonoBehaviour:
   preReq: {fileID: 0}
   returns: []
   spawnpoints: []
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -36226,11 +35899,12 @@ MonoBehaviour:
   fridgeMonster: {fileID: 0}
   requirement:
   - {fileID: 559537870}
+  - {fileID: 1954522118}
   PlayerRequirement: 
   reward: {fileID: 0}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: 
+  RewardText: All books have been shelved here.
   InteractionText: 
   SpawnsAMonster: 0
   working: 1
@@ -36238,6 +35912,7 @@ MonoBehaviour:
   preReq: {fileID: 535436336}
   returns: []
   spawnpoints: []
+  IsBookshelf: 1
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -36391,6 +36066,7 @@ MonoBehaviour:
   - {fileID: 0}
   spawnpoints:
   - {x: 11, y: -56.4, z: 0}
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -38178,6 +37854,7 @@ MonoBehaviour:
   preReq: {fileID: 0}
   returns: []
   spawnpoints: []
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -38417,6 +38094,7 @@ MonoBehaviour:
   preReq: {fileID: 0}
   returns: []
   spawnpoints: []
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -39120,6 +38798,7 @@ MonoBehaviour:
   preReq: {fileID: 0}
   returns: []
   spawnpoints: []
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -39567,6 +39246,7 @@ MonoBehaviour:
   preReq: {fileID: 0}
   returns: []
   spawnpoints: []
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -40383,181 +40063,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353554978}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.2, y: -32.8, z: 0}
+  m_LocalPosition: {x: 125.4, y: -42.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1373023192
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1373023193}
-  - component: {fileID: 1373023197}
-  - component: {fileID: 1373023196}
-  - component: {fileID: 1373023195}
-  - component: {fileID: 1373023194}
-  m_Layer: 0
-  m_Name: Bedroom Blocker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1373023193
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373023192}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55.9, y: 63.4, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
-  m_Children: []
-  m_Father: {fileID: 1438235190}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1373023194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373023192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4506efaa1d966b478e0679e0ea0c176, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game_controller: {fileID: 0}
-  fridgeMonster: {fileID: 0}
-  requirement: []
-  PlayerRequirement: 
-  reward: {fileID: 0}
-  spawnPoint: {x: 0, y: 0, z: 0}
-  spawned: 0
-  RewardText: 
-  InteractionText: Locked for Demo
-  SpawnsAMonster: 0
-  working: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
-  returns: []
-  spawnpoints: []
-  loungeLadder: 0
-  studyLadder: 0
-  player: {fileID: 0}
-  studyLocation: {x: 0, y: 0, z: 0}
-  loungeLocation: {x: 0, y: 0, z: 0}
-  musicPlayer: 0
-  song: {fileID: 0}
-  StudyDoor: 0
-  landing: 0
-  mainHall: 0
-  landingLocation: {x: 0, y: 0, z: 0}
-  mainHallLocation: {x: 0, y: 0, z: 0}
---- !u!50 &1373023195
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373023192}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &1373023196
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373023192}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.41, y: 2.2}
-  m_EdgeRadius: 0
---- !u!212 &1373023197
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373023192}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 40985296ee755af4293e3cb65cd3d3e2, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1019477407
-  m_SortingLayer: 3
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &1388311802 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4716741398881270983, guid: f9eda469437ce7e4b9b19e2539f4209b,
@@ -41296,39 +40807,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!1 &1438235189
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1438235190}
-  m_Layer: 0
-  m_Name: Publisher Blockers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1438235190
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1438235189}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1373023193}
-  - {fileID: 865974854}
-  - {fileID: 887927971}
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1462076911
 GameObject:
   m_ObjectHideFlags: 0
@@ -41465,6 +40943,7 @@ MonoBehaviour:
   preReq: {fileID: 0}
   returns: []
   spawnpoints: []
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -42713,6 +42192,7 @@ MonoBehaviour:
   preReq: {fileID: 0}
   returns: []
   spawnpoints: []
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -48754,6 +48234,7 @@ MonoBehaviour:
   preReq: {fileID: 0}
   returns: []
   spawnpoints: []
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -49187,6 +48668,7 @@ MonoBehaviour:
   preReq: {fileID: 0}
   returns: []
   spawnpoints: []
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 1
   player: {fileID: 1007444368}
@@ -49543,7 +49025,7 @@ GameObject:
   - component: {fileID: 1847371874}
   - component: {fileID: 1847371876}
   m_Layer: 0
-  m_Name: BookCase 3
+  m_Name: BookCase 3 Lounge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49674,6 +49156,7 @@ MonoBehaviour:
   - {x: -166.1, y: 34.7, z: 0}
   - {x: -132.5, y: 34.7, z: 0}
   - {x: -80.1, y: 34.7, z: 0}
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
@@ -49781,12 +49264,12 @@ PrefabInstance:
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -168.1
+      value: -59.7
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -38.7
+      value: -30.6
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
@@ -50235,6 +49718,7 @@ MonoBehaviour:
   preReq: {fileID: 0}
   returns: []
   spawnpoints: []
+  IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
   player: {fileID: 0}
