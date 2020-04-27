@@ -115,6 +115,16 @@ public class Interaction : MonoBehaviour
             // If not spawned and held item matches one of the requirements
             if (!spawned && (HeldItem == requirement[0] || HeldItem == requirement[1]))
             {
+                // Activate the visuals
+                if(HeldItem.name == "West Sun Charm")
+                {
+                    game_controller.ActivateWestCharm();
+                }
+                else if(HeldItem.name == "East Sun Charm")
+                {
+                    game_controller.ActivateEastCharm();
+                }
+
                 // Delete the held item and decrement the required items
                 TrunkItemsRemaining--;
                 Destroy(HeldItem.gameObject);

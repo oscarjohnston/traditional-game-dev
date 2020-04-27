@@ -38,6 +38,10 @@ public class GameController : MonoBehaviour
     public GameObject HalfMoonBrick;
     public GameObject CrescentMoonBrick;
 
+    // Open Trunk Charm Visuals
+    public GameObject EastCharm;
+    public GameObject WestCharm;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -167,5 +171,15 @@ public class GameController : MonoBehaviour
     public void ActivateCrescentMoonBrick()
     {
         CrescentMoonBrick.SetActive(true);
+    }
+
+    public void ActivateWestCharm()
+    {
+        WestCharm.SetActive(true);
+    }
+
+    public void ActivateEastCharm()
+    {
+        EastCharm.SetActive(true);
     }
 }
