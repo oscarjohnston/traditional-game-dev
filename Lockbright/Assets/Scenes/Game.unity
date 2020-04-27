@@ -2823,7 +2823,7 @@ MonoBehaviour:
   reward: {fileID: 0}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: The ladder is revealed!
+  RewardText: Climbed up to the Study.
   InteractionText: Only an acrobat can get up here!
   SpawnsAMonster: 0
   working: 1
@@ -7940,9 +7940,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1418791767
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayerID: -636104201
+  m_SortingLayer: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b5955a72d354eae4a9d8dd6dcb1e0cff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -27556,7 +27556,7 @@ PrefabInstance:
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.4
+      value: -24.4
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
@@ -27703,7 +27703,7 @@ PrefabInstance:
     - target: {fileID: 9011067505113302452, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17318ea8484fbb5419ada5bea45efc55, type: 3}
@@ -47677,7 +47677,7 @@ PrefabInstance:
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -65.8
+      value: -56.9
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
@@ -48562,7 +48562,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0, y: 0.69}
+  m_Offset: {x: -0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -48573,7 +48573,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.41, y: 0.71}
+  m_Size: {x: 0.44, y: 1.72}
   m_EdgeRadius: 0
 --- !u!212 &1822100719
 SpriteRenderer:
@@ -48643,8 +48643,7 @@ MonoBehaviour:
   reward: {fileID: 0}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: A worn ladder, too dangerous for most. An acrobat might be able to handle
-    it.
+  RewardText: Climbed down to the Lounge.
   InteractionText: A worn ladder, too dangerous for most. An acrobat might be able
     to handle it.
   SpawnsAMonster: 0

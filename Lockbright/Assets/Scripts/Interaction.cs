@@ -198,19 +198,21 @@ public class Interaction : MonoBehaviour
         }
 
         // move parkourist from ladder to ladder
-        if (PlayerRequirement != null && Class.Equals(PlayerRequirement) && loungeLadder)
+        else if (PlayerRequirement != null && Class.Equals(PlayerRequirement) && loungeLadder)
         {
             player.transform.position = studyLocation.transform.position;
+            BubbleText.text = RewardText;
             return;
         }
-        if (PlayerRequirement != null && Class.Equals(PlayerRequirement) && studyLadder)
+        else if (PlayerRequirement != null && Class.Equals(PlayerRequirement) && studyLadder)
         {
             player.transform.position = loungeLocation.transform.position;
+            BubbleText.text = RewardText;
             return;
         }
 
         // Literally just remove the door lol
-        if (StudyDoor && HeldItem == requirement[0])
+        else if (StudyDoor && HeldItem == requirement[0])
         {
             BubbleText.text = RewardText;
             Destroy(this.gameObject);
