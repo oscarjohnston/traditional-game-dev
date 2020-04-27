@@ -30,8 +30,8 @@ public class Interaction : MonoBehaviour
     public bool loungeLadder;
     public bool studyLadder;
     public GameObject player;
-    public Vector3 studyLocation;
-    public Vector3 loungeLocation;
+    public GameObject studyLocation;
+    public GameObject loungeLocation;
 
     // Record player
     public bool musicPlayer;
@@ -39,12 +39,6 @@ public class Interaction : MonoBehaviour
 
     // Study Door stuff
     public bool StudyDoor;
-
-    // Stairs
-    public bool landing;
-    public bool mainHall;
-    public Vector3 landingLocation;
-    public Vector3 mainHallLocation;
 
     // Trunk Puzzle
     private int TrunkItemsRemaining = 2;
@@ -206,26 +200,12 @@ public class Interaction : MonoBehaviour
         // move parkourist from ladder to ladder
         if (PlayerRequirement != null && Class.Equals(PlayerRequirement) && loungeLadder)
         {
-            player.transform.position = studyLocation;
+            player.transform.position = studyLocation.transform.position;
             return;
         }
         if (PlayerRequirement != null && Class.Equals(PlayerRequirement) && studyLadder)
         {
-            player.transform.position = loungeLocation;
-            return;
-        }
-
-        // Move Player from stair to stair
-        if (landing)
-        {
-            //move to mainhall
-
-            return;
-        }
-        if (mainHall)
-        {
-            //move to landing
-
+            player.transform.position = loungeLocation.transform.position;
             return;
         }
 
