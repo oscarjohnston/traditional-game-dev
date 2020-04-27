@@ -268,7 +268,15 @@ public class Interaction : MonoBehaviour
 
                     if (HeldItem == required || (PlayerRequirement != null && Class.Equals(PlayerRequirement)))
                     {
-                        print("Found required item");
+                        // Double check the held item before it's destroyed for the moon puzzle visuals
+                        if(HeldItem.name == "Crescent Moon Brick")
+                        {
+                            game_controller.ActivateCrescentMoonBrick();
+                        }
+                        else if (HeldItem.name == "Half Moon Brick")
+                        {
+                            game_controller.ActivateHalfMoonBrick();
+                        }
 
                         // This held item is one of the required items, so decrement the counter and figure out if the requirement is met
                         GenericItemsRemaining--;

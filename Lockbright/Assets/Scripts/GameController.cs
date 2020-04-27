@@ -34,6 +34,10 @@ public class GameController : MonoBehaviour
     public GameObject StudyLadder;
     public GameObject LoungeLadder;
 
+    // Moon Brick Puzzle Visuals
+    public GameObject HalfMoonBrick;
+    public GameObject CrescentMoonBrick;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -153,5 +157,15 @@ public class GameController : MonoBehaviour
     {
         StudyLadder.SetActive(true);
         LoungeLadder.SetActive(true);
+    }
+
+    public void ActivateHalfMoonBrick()
+    {
+        HalfMoonBrick.SetActive(true);
+    }
+
+    public void ActivateCrescentMoonBrick()
+    {
+        CrescentMoonBrick.SetActive(true);
     }
 }
