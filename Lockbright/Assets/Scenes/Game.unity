@@ -352,10 +352,7 @@ MonoBehaviour:
   RewardText: Hooray! I can get in!
   InteractionText: It's a locked door to the study. Got to look for a key.
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
@@ -2825,10 +2822,7 @@ MonoBehaviour:
   RewardText: Climbed up to the Study.
   InteractionText: Only an acrobat can get up here!
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 1
   studyLadder: 0
@@ -7980,10 +7974,7 @@ MonoBehaviour:
   RewardText: You got the luxurious key... so pretty...
   InteractionText: It looks to be some sort of book-drop.
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
@@ -23263,12 +23254,8 @@ MonoBehaviour:
   RewardText: I opened the trunk and found a diary and some sort of sun puzzle.
   InteractionText: 
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns:
   - {fileID: 1182866660}
-  spawnpoints:
-  - {x: -14.3, y: -54.4, z: 0}
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
@@ -23797,10 +23784,7 @@ MonoBehaviour:
   InteractionText: 'The front door requires four keys to open again: one lock is simple,
     one is luxurious, one is luminescent, and one is shiny.'
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
@@ -25106,10 +25090,7 @@ MonoBehaviour:
   RewardText: All books have been shelved here.
   InteractionText: The books here look like they might be about seeds and sprouts...
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 1
   loungeLadder: 0
   studyLadder: 0
@@ -26185,10 +26166,7 @@ MonoBehaviour:
   RewardText: You leapt on the bed and got a fresh lightbulb!
   InteractionText: I see a lightbulb above the bed, maybe one of us can reach it.
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
@@ -26644,12 +26622,12 @@ PrefabInstance:
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 81.3
+      value: -209.8
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -69.5
+      value: -66.1
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
@@ -27168,10 +27146,7 @@ MonoBehaviour:
   RewardText: The dimball was lit!
   InteractionText: This lamp reminds you of the sun. Can it be focused to make fire?
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
@@ -33674,12 +33649,12 @@ PrefabInstance:
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -209.8
+      value: -517.9
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 66.2
+      value: 47.1
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
@@ -35020,10 +34995,7 @@ MonoBehaviour:
   RewardText: I got the book!
   InteractionText: You notice books on the fridge; only an acrobat can reach them...
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
@@ -35337,10 +35309,7 @@ MonoBehaviour:
   RewardText: 
   InteractionText: It's a chandellier that hangs over the void...
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
@@ -36033,10 +36002,7 @@ MonoBehaviour:
   RewardText: All books have been shelved here.
   InteractionText: The books here look like they might be about flowers and fruit...
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 535436336}
   returns: []
-  spawnpoints: []
   IsBookshelf: 1
   loungeLadder: 0
   studyLadder: 0
@@ -36180,12 +36146,8 @@ MonoBehaviour:
   RewardText: The boiler is fixed! Let's see if we have hot water now...
   InteractionText: The old boiler is broken and could be fixed for instant hot water.
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns:
   - {fileID: 0}
-  spawnpoints:
-  - {x: 11, y: -56.4, z: 0}
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
@@ -38056,10 +38018,7 @@ MonoBehaviour:
   RewardText: I key popped out when it broke!
   InteractionText: It is an old phonograph.
   SpawnsAMonster: 1
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
@@ -38324,10 +38283,7 @@ MonoBehaviour:
   RewardText: You got the Moon Key!
   InteractionText: There are three slots, one was already filled, for moon-like bricks.
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
@@ -39026,10 +38982,7 @@ MonoBehaviour:
   RewardText: I got the Sun Key!
   InteractionText: Looks like there is a slot for two charms.
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
@@ -39549,10 +39502,7 @@ MonoBehaviour:
   RewardText: This simple key seems to fit the front door!
   InteractionText: You hear scratching sound coming from the sink...
   SpawnsAMonster: 1
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
@@ -40685,12 +40635,12 @@ PrefabInstance:
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -205.3
+      value: -513.4
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 86
+      value: 66.9
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
@@ -41442,10 +41392,7 @@ MonoBehaviour:
   RewardText: You got the West Sun Charm!
   InteractionText: The water is ice-cold.
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
@@ -42686,10 +42633,7 @@ MonoBehaviour:
   RewardText: You got the Faded Fiction!
   InteractionText: This shelf is full of fictions, but not in the common tongue.
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
@@ -48430,12 +48374,12 @@ PrefabInstance:
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -233.7
+      value: -541.8
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -63.8
+      value: -82.9
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
@@ -48723,10 +48667,7 @@ MonoBehaviour:
   RewardText: You got the Lusty Lore!
   InteractionText: This shelf is full of lusy lores, but not in the common tongue.
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
@@ -49154,10 +49095,7 @@ MonoBehaviour:
   InteractionText: A worn ladder, too dangerous for most. An acrobat might be able
     to handle it.
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 1
@@ -49628,10 +49566,7 @@ MonoBehaviour:
   RewardText: Got the Loose Ledger and the ladder came down.
   InteractionText: Pulling the book brought the ladder down.
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
@@ -50265,10 +50200,7 @@ MonoBehaviour:
   RewardText: It's lit!
   InteractionText: It's itchin' to be lit...
   SpawnsAMonster: 0
-  finalShelf: 0
-  preReq: {fileID: 0}
   returns: []
-  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
