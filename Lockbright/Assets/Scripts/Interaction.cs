@@ -313,6 +313,9 @@ public class Interaction : MonoBehaviour
                             song.Play();
 
                             Invoke("DropStudyKey", 16f);
+
+                            // Move monster
+                            fridgeMonster.SpawnMonster();
                         }
 
                         
