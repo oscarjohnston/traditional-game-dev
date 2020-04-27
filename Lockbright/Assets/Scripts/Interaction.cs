@@ -17,8 +17,6 @@ public class Interaction : MonoBehaviour
     public string InteractionText;
     public bool SpawnsAMonster = false;
 
-    public bool working;
-
     // Added for bookshelfs
     public bool finalShelf;
     public Interaction preReq;
@@ -235,9 +233,6 @@ public class Interaction : MonoBehaviour
                 }
                 else
                 {
-                    print("Requirement is 0");
-
-
                     BubbleText.text = RewardText;
                     spawned = true;
 
@@ -256,6 +251,12 @@ public class Interaction : MonoBehaviour
                         HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
                         grabbed = true;
                     }
+                }
+
+                // Specific case to activate the ladder system
+                if (this.gameObject.name == "Right Lounge Bookcase")
+                {
+                    game_controller.ActivateLadderSystem();
                 }
             }
             else
@@ -299,17 +300,12 @@ public class Interaction : MonoBehaviour
                         BubbleText.text = RewardText;
 
 
-                        if (reward != null && working)
+                        if (reward != null)
                         {
                             HeldItem = reward;
                             HeldItem.GetComponent<HeldItems>().CanPickThisUp = true;
                             HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
                             grabbed = true;
-                            spawned = true;
-                        }
-                        else if (working)
-                        {
-                            grabbed = false;
                             spawned = true;
                         }
 

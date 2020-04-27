@@ -352,7 +352,6 @@ MonoBehaviour:
   RewardText: Hooray! I can get in!
   InteractionText: It's a locked door to the study. Got to look for a key.
   SpawnsAMonster: 0
-  working: 0
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -2713,7 +2712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &267423903
 Transform:
   m_ObjectHideFlags: 0
@@ -2826,7 +2825,6 @@ MonoBehaviour:
   RewardText: Climbed up to the Study.
   InteractionText: Only an acrobat can get up here!
   SpawnsAMonster: 0
-  working: 1
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -7982,7 +7980,6 @@ MonoBehaviour:
   RewardText: You got the luxurious key... so pretty...
   InteractionText: It looks to be some sort of book-drop.
   SpawnsAMonster: 0
-  working: 1
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -23266,7 +23263,6 @@ MonoBehaviour:
   RewardText: I opened the trunk and found a diary and some sort of sun puzzle.
   InteractionText: 
   SpawnsAMonster: 0
-  working: 0
   finalShelf: 0
   preReq: {fileID: 0}
   returns:
@@ -23801,7 +23797,6 @@ MonoBehaviour:
   InteractionText: 'The front door requires four keys to open again: one lock is simple,
     one is luxurious, one is luminescent, and one is shiny.'
   SpawnsAMonster: 0
-  working: 0
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -25111,7 +25106,6 @@ MonoBehaviour:
   RewardText: All books have been shelved here.
   InteractionText: The books here look like they might be about seeds and sprouts...
   SpawnsAMonster: 0
-  working: 1
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -26191,7 +26185,6 @@ MonoBehaviour:
   RewardText: You leapt on the bed and got a fresh lightbulb!
   InteractionText: I see a lightbulb above the bed, maybe one of us can reach it.
   SpawnsAMonster: 0
-  working: 1
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -26630,6 +26623,8 @@ MonoBehaviour:
   DustyRecord: {fileID: 1878713177}
   RepairedBoiler: {fileID: 21300000, guid: 1760025daa1d85d4890e8f73d191bd0f, type: 3}
   Boiler: {fileID: 1055738732}
+  StudyLadder: {fileID: 1822100716}
+  LoungeLadder: {fileID: 267423902}
 --- !u!1001 &586227711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27089,7 +27084,6 @@ MonoBehaviour:
   RewardText: The dimball was lit!
   InteractionText: This lamp reminds you of the sun. Can it be focused to make fire?
   SpawnsAMonster: 0
-  working: 1
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -34942,7 +34936,6 @@ MonoBehaviour:
   RewardText: I got the book!
   InteractionText: You notice books on the fridge; only an acrobat can reach them...
   SpawnsAMonster: 0
-  working: 1
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -35169,7 +35162,6 @@ MonoBehaviour:
   RewardText: 
   InteractionText: It's a chandellier that hangs over the void...
   SpawnsAMonster: 0
-  working: 1
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -35865,7 +35857,6 @@ MonoBehaviour:
   RewardText: All books have been shelved here.
   InteractionText: The books here look like they might be about flowers and fruit...
   SpawnsAMonster: 0
-  working: 1
   finalShelf: 0
   preReq: {fileID: 535436336}
   returns: []
@@ -36013,7 +36004,6 @@ MonoBehaviour:
   RewardText: The boiler is fixed! Let's see if we have hot water now...
   InteractionText: The old boiler is broken and could be fixed for instant hot water.
   SpawnsAMonster: 0
-  working: 0
   finalShelf: 0
   preReq: {fileID: 0}
   returns:
@@ -37799,7 +37789,6 @@ MonoBehaviour:
   RewardText: I key popped out when it broke!
   InteractionText: It is an old phonograph.
   SpawnsAMonster: 1
-  working: 0
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -38065,7 +38054,6 @@ MonoBehaviour:
   RewardText: You got the Moon Key!
   InteractionText: There are three slots, one was already filled, for moon-like bricks.
   SpawnsAMonster: 0
-  working: 1
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -38273,12 +38261,12 @@ PrefabInstance:
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -231.4
+      value: -52.5
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4
+      value: 14.5
       objectReference: {fileID: 0}
     - target: {fileID: 3836383081272609450, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
@@ -38765,7 +38753,6 @@ MonoBehaviour:
   RewardText: I got the Sun Key!
   InteractionText: Looks like there is a slot for two charms.
   SpawnsAMonster: 0
-  working: 0
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -39209,7 +39196,6 @@ MonoBehaviour:
   RewardText: This simple key seems to fit the front door!
   InteractionText: You hear scratching sound coming from the sink...
   SpawnsAMonster: 1
-  working: 1
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -40057,7 +40043,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353554978}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 125.1, y: 107.4, z: 0}
+  m_LocalPosition: {x: 190.7, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -40932,7 +40918,6 @@ MonoBehaviour:
   RewardText: You got the West Sun Charm!
   InteractionText: The water is ice-cold.
   SpawnsAMonster: 0
-  working: 0
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -42177,7 +42162,6 @@ MonoBehaviour:
   RewardText: You got the Faded Fiction!
   InteractionText: This shelf is full of fictions, but not in the common tongue.
   SpawnsAMonster: 0
-  working: 1
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -48215,7 +48199,6 @@ MonoBehaviour:
   RewardText: You got the Lusty Lore!
   InteractionText: This shelf is full of lusy lores, but not in the common tongue.
   SpawnsAMonster: 0
-  working: 1
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -48533,7 +48516,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1822100717
 Transform:
   m_ObjectHideFlags: 0
@@ -48647,7 +48630,6 @@ MonoBehaviour:
   InteractionText: A worn ladder, too dangerous for most. An acrobat might be able
     to handle it.
   SpawnsAMonster: 0
-  working: 1
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []
@@ -49114,28 +49096,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game_controller: {fileID: 0}
   fridgeMonster: {fileID: 0}
-  requirement:
-  - {fileID: 1954522118}
+  requirement: []
   PlayerRequirement: 
-  reward: {fileID: 1878713177}
-  spawnPoint: {x: 0, y: 0, z: 0}
+  reward: {fileID: 1169228374}
+  spawnPoint: {x: 190, y: 2, z: 0}
   spawned: 0
-  RewardText: You got the dusty record!
-  InteractionText: You see a case with vynl records in it.
+  RewardText: Got the Loose Ledger and the ladder came down.
+  InteractionText: Pulling the book brought the ladder down.
   SpawnsAMonster: 0
-  working: 1
   finalShelf: 0
-  preReq: {fileID: 1032330224}
-  returns:
-  - {fileID: 1106082614}
-  - {fileID: 191367695}
-  - {fileID: 559537870}
-  - {fileID: 1954522118}
-  spawnpoints:
-  - {x: -178.2, y: 34.7, z: 0}
-  - {x: -166.1, y: 34.7, z: 0}
-  - {x: -132.5, y: 34.7, z: 0}
-  - {x: -80.1, y: 34.7, z: 0}
+  preReq: {fileID: 0}
+  returns: []
+  spawnpoints: []
   IsBookshelf: 0
   loungeLadder: 0
   studyLadder: 0
@@ -49689,7 +49661,6 @@ MonoBehaviour:
   RewardText: It's lit!
   InteractionText: It's itchin' to be lit...
   SpawnsAMonster: 0
-  working: 1
   finalShelf: 0
   preReq: {fileID: 0}
   returns: []

@@ -30,6 +30,10 @@ public class GameController : MonoBehaviour
     public Sprite RepairedBoiler;
     public GameObject Boiler;
 
+    // Ladder System
+    public GameObject StudyLadder;
+    public GameObject LoungeLadder;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -143,5 +147,11 @@ public class GameController : MonoBehaviour
         // Swap out the boiler image
         Boiler.GetComponent<SpriteRenderer>().sprite = RepairedBoiler;
         BoilerIsOn = true;
+    }
+
+    public void ActivateLadderSystem()
+    {
+        StudyLadder.SetActive(true);
+        LoungeLadder.SetActive(true);
     }
 }
