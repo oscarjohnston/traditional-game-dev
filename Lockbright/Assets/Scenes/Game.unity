@@ -40057,7 +40057,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353554978}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 125.4, y: -42.2, z: 0}
+  m_LocalPosition: {x: 125.1, y: 107.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42172,7 +42172,7 @@ MonoBehaviour:
   requirement: []
   PlayerRequirement: 
   reward: {fileID: 100812792}
-  spawnPoint: {x: 0, y: 0, z: 0}
+  spawnPoint: {x: 125, y: 107, z: 0}
   spawned: 0
   RewardText: You got the Faded Fiction!
   InteractionText: This shelf is full of fictions, but not in the common tongue.
@@ -48210,7 +48210,7 @@ MonoBehaviour:
   requirement: []
   PlayerRequirement: 
   reward: {fileID: 916557071}
-  spawnPoint: {x: 0, y: 0, z: 0}
+  spawnPoint: {x: 125, y: 107, z: 0}
   spawned: 0
   RewardText: You got the Lusty Lore!
   InteractionText: This shelf is full of lusy lores, but not in the common tongue.

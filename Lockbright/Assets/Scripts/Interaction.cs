@@ -228,25 +228,34 @@ public class Interaction : MonoBehaviour
             // Is the player holding the right item? (and optionally the correct Player?)
             if (requirement.Length == 0)
             {
-                if (PlayerRequirement != null && Class.Equals(PlayerRequirement))
+                // If it's the wrong player requirement, do nothing
+                if (PlayerRequirement != "" && !Class.Equals(PlayerRequirement))
                 {
-                    BubbleText.text = RewardText;
+                    return;
+                }
+                else
+                {
+                    print("Requirement is 0");
 
-                    Destroy(HeldItem);
-                    if (reward != null && working)
+
+                    BubbleText.text = RewardText;
+                    spawned = true;
+
+                    // If the player is already holding an item, spawn the item at spawnpoint 0
+                    if (HeldItem != null && reward != null)
+                    {
+                        reward.GetComponent<HeldItems>().CanPickThisUp = true;
+                        reward.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
+                        reward.transform.position = spawnPoint;
+                    }
+                    // Otherwise if there's a reward, give it to the player
+                    else if (reward != null)
                     {
                         HeldItem = reward;
                         HeldItem.GetComponent<HeldItems>().CanPickThisUp = true;
                         HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
                         grabbed = true;
-                        spawned = true;
                     }
-                    else if (working)
-                    {
-                        grabbed = false;
-                        spawned = true;
-                    }
-                    //Instantiate(reward, spawnPoint, new Quaternion(0, 0, 0, 0));
                 }
             }
             else
@@ -334,8 +343,6 @@ public class Interaction : MonoBehaviour
                         {
                             game_controller.CanTurnTheBoilerOn();
                         }
-
-                        
                     }
                 }
             }
