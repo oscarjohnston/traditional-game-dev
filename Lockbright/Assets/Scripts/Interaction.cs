@@ -18,10 +18,7 @@ public class Interaction : MonoBehaviour
     public bool SpawnsAMonster = false;
 
     // Added for bookshelfs
-    public bool finalShelf;
-    public Interaction preReq;
     public GameObject[] returns;
-    public Vector3[] spawnpoints;
     public bool IsBookshelf;
 
     // Added for Ladders
@@ -341,16 +338,6 @@ public class Interaction : MonoBehaviour
 
                             // Move monster
                             fridgeMonster.SpawnMonster();
-                        }
-
-                        
-
-                        else if (finalShelf)
-                        {
-                            for (int i = 0; i < returns.Length; i++)
-                            {
-                                Instantiate(returns[i], spawnpoints[i], new Quaternion(0, 0, 0, 0));
-                            }
                         }
 
                         else if (this.gameObject.name == "Broken Boiler")
