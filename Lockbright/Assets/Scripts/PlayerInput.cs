@@ -652,7 +652,7 @@ public class PlayerInput : MonoBehaviour
                     BubbleText.text = "Curiously enough, the monsters of Lockbright enjoy music. It calms them.";
                     return;
                 case "Dispensary Note":
-                    BubbleText.text = "Please donate ten examples of published works written in the language of our culture.";
+                    BubbleText.text = "Please donate six examples of published works written in the language of our culture.";
                     return;
                 case "Lusty Lore":
                     BubbleText.text = "\"I must finish my cleaning, sir. The mistress will have my head if I do not!\"\n\"Cleaning? I have something for you- polish my spear.\"\n\"But sir! It's huge! It could take all night!\"\n\"Plenty of time, my sweet. Plenty of time.\"";

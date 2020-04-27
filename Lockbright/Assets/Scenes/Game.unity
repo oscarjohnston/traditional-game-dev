@@ -2823,8 +2823,8 @@ MonoBehaviour:
   reward: {fileID: 0}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: 
-  InteractionText: 
+  RewardText: The ladder is revealed!
+  InteractionText: Only an acrobat can get up here!
   SpawnsAMonster: 0
   working: 1
   finalShelf: 0
@@ -7974,17 +7974,13 @@ MonoBehaviour:
   - {fileID: 916557071}
   - {fileID: 1832139210}
   - {fileID: 1169228374}
-  - {fileID: 1106082614}
-  - {fileID: 191367695}
-  - {fileID: 559537870}
-  - {fileID: 1954522118}
   - {fileID: 174942882}
   PlayerRequirement: 
   reward: {fileID: 1787931028}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: 
-  InteractionText: 
+  RewardText: You got the luxurious key... so pretty...
+  InteractionText: It looks to be some sort of book-drop.
   SpawnsAMonster: 0
   working: 1
   finalShelf: 0
@@ -23267,7 +23263,7 @@ MonoBehaviour:
   reward: {fileID: 174942882}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: I opened the trunk and found a dairy.
+  RewardText: I opened the trunk and found a dairy and some sort of sun puzzle.
   InteractionText: 
   SpawnsAMonster: 0
   working: 0
@@ -23802,7 +23798,8 @@ MonoBehaviour:
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
   RewardText: 
-  InteractionText: 
+  InteractionText: 'The front door requires four keys to open again: one lock is simple,
+    one is luxurious, one is luminescent, and one is shiny.'
   SpawnsAMonster: 0
   working: 0
   finalShelf: 0
@@ -24995,7 +24992,7 @@ GameObject:
   - component: {fileID: 535436334}
   - component: {fileID: 535436336}
   m_Layer: 0
-  m_Name: BookCase 1 Lounge
+  m_Name: Left Lounge Bookcase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25112,7 +25109,7 @@ MonoBehaviour:
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
   RewardText: All books have been shelved here.
-  InteractionText: 
+  InteractionText: The books here look like they might be about seeds and sprouts...
   SpawnsAMonster: 0
   working: 1
   finalShelf: 0
@@ -26191,7 +26188,7 @@ MonoBehaviour:
   reward: {fileID: 555109900}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: Got the lightbulb!
+  RewardText: You leapt on the bed and got a fresh lightbulb!
   InteractionText: I see a lightbulb above the bed, maybe one of us can reach it.
   SpawnsAMonster: 0
   working: 1
@@ -27089,8 +27086,8 @@ MonoBehaviour:
   reward: {fileID: 661931162}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: 
-  InteractionText: 
+  RewardText: The dimball was lit!
+  InteractionText: This lamp reminds you of the sun. Can it be focused to make fire?
   SpawnsAMonster: 0
   working: 1
   finalShelf: 0
@@ -27669,7 +27666,7 @@ PrefabInstance:
     - target: {fileID: 8723185862172619875, guid: 17318ea8484fbb5419ada5bea45efc55,
         type: 3}
       propertyPath: ItemDescription
-      value: This note contains a list of ten somethings. Only a linguist can tell
+      value: This note contains a list of six somethings. Only a linguist can tell
         what those things are.
       objectReference: {fileID: 0}
     - target: {fileID: 9011067505113302452, guid: 17318ea8484fbb5419ada5bea45efc55,
@@ -35170,7 +35167,7 @@ MonoBehaviour:
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
   RewardText: 
-  InteractionText: 
+  InteractionText: It's a chandellier that hangs over the void...
   SpawnsAMonster: 0
   working: 1
   finalShelf: 0
@@ -35749,7 +35746,7 @@ GameObject:
   - component: {fileID: 1032330222}
   - component: {fileID: 1032330224}
   m_Layer: 0
-  m_Name: BookCase 2 Lounge
+  m_Name: Center Lounge Bookcase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35866,7 +35863,7 @@ MonoBehaviour:
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
   RewardText: All books have been shelved here.
-  InteractionText: 
+  InteractionText: The books here look like they might be about flowers and fruit...
   SpawnsAMonster: 0
   working: 1
   finalShelf: 0
@@ -36013,8 +36010,8 @@ MonoBehaviour:
   reward: {fileID: 0}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: 
-  InteractionText: 
+  RewardText: The boiler is fixed! Let's see if we have hot water now...
+  InteractionText: The old boiler is broken and could be fixed for instant hot water.
   SpawnsAMonster: 0
   working: 0
   finalShelf: 0
@@ -37799,8 +37796,8 @@ MonoBehaviour:
   reward: {fileID: 885251249}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: 
-  InteractionText: 
+  RewardText: I key popped out when it broke!
+  InteractionText: It is an old phonograph.
   SpawnsAMonster: 1
   working: 0
   finalShelf: 0
@@ -38065,8 +38062,8 @@ MonoBehaviour:
   reward: {fileID: 1404990951}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: 
-  InteractionText: 
+  RewardText: You got the Moon Key!
+  InteractionText: There are three slots, one was already filled, for moon-like bricks.
   SpawnsAMonster: 0
   working: 1
   finalShelf: 0
@@ -38765,7 +38762,7 @@ MonoBehaviour:
   reward: {fileID: 586227713}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: I got the sun key!
+  RewardText: I got the Sun Key!
   InteractionText: Looks like there is a slot for two charms.
   SpawnsAMonster: 0
   working: 0
@@ -40932,8 +40929,8 @@ MonoBehaviour:
   reward: {fileID: 360585960}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: 
-  InteractionText: 
+  RewardText: You got the West Sun Charm!
+  InteractionText: The water is ice-cold.
   SpawnsAMonster: 0
   working: 0
   finalShelf: 0
@@ -42063,7 +42060,7 @@ GameObject:
   - component: {fileID: 1596631924}
   - component: {fileID: 1596631926}
   m_Layer: 0
-  m_Name: BookCase 1
+  m_Name: Center Bookcase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42177,8 +42174,8 @@ MonoBehaviour:
   reward: {fileID: 100812792}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: 
-  InteractionText: 
+  RewardText: You got the Faded Fiction!
+  InteractionText: This shelf is full of fictions, but not in the common tongue.
   SpawnsAMonster: 0
   working: 1
   finalShelf: 0
@@ -48101,7 +48098,7 @@ GameObject:
   - component: {fileID: 1790497326}
   - component: {fileID: 1790497328}
   m_Layer: 0
-  m_Name: BookCase 2
+  m_Name: North Bookcase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48215,8 +48212,8 @@ MonoBehaviour:
   reward: {fileID: 916557071}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: 
-  InteractionText: 
+  RewardText: You got the Lusty Lore!
+  InteractionText: This shelf is full of lusy lores, but not in the common tongue.
   SpawnsAMonster: 0
   working: 1
   finalShelf: 0
@@ -48646,8 +48643,10 @@ MonoBehaviour:
   reward: {fileID: 0}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: 
-  InteractionText: 
+  RewardText: A worn ladder, too dangerous for most. An acrobat might be able to handle
+    it.
+  InteractionText: A worn ladder, too dangerous for most. An acrobat might be able
+    to handle it.
   SpawnsAMonster: 0
   working: 1
   finalShelf: 0
@@ -49007,7 +49006,7 @@ GameObject:
   - component: {fileID: 1847371874}
   - component: {fileID: 1847371876}
   m_Layer: 0
-  m_Name: BookCase 3 Lounge
+  m_Name: Right Lounge Bookcase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49122,8 +49121,8 @@ MonoBehaviour:
   reward: {fileID: 1878713177}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: 
-  InteractionText: 
+  RewardText: You got the dusty record!
+  InteractionText: You see a case with vynl records in it.
   SpawnsAMonster: 0
   working: 1
   finalShelf: 0
@@ -49688,8 +49687,8 @@ MonoBehaviour:
   reward: {fileID: 0}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: 
-  InteractionText: 
+  RewardText: It's lit!
+  InteractionText: It's itchin' to be lit...
   SpawnsAMonster: 0
   working: 1
   finalShelf: 0
