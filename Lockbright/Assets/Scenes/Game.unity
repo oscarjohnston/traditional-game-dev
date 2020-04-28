@@ -38611,7 +38611,7 @@ MonoBehaviour:
   reward: {fileID: 885251249}
   spawnPoint: {x: 0, y: 0, z: 0}
   spawned: 0
-  RewardText: I key popped out when it broke!
+  RewardText: It started playing music.
   InteractionText: It is an old phonograph.
   SpawnsAMonster: 1
   returns: []
