@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     public UnityEvent ScholarAbilitySound;
     public UnityEvent IllusionistAbilitySound;
     public UnityEvent TakeDamageSound;
+    public UnityEvent ChangeCharacters;
 
     public float TimeLeft;
     public Text TimerText;
@@ -184,5 +185,10 @@ public class GameController : MonoBehaviour
     public void ActivateEastCharm()
     {
         EastCharm.SetActive(true);
+    }
+
+    public void PlayChangeCharacterEvent()
+    {
+        ChangeCharacters.Invoke();
     }
 }

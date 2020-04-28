@@ -801,6 +801,8 @@ public class PlayerInput : MonoBehaviour
         GameObject.Find("Player 4").GetComponent<PlayerInput>().PlayerNumber = shiftRight(GameObject.Find("Player 4").GetComponent<PlayerInput>().PlayerNumber);
 
         print("Players shift right");
+
+        game_controller.PlayChangeCharacterEvent();
     }
 
     private void ChangePlayerNumberDown()
@@ -811,6 +813,8 @@ public class PlayerInput : MonoBehaviour
         GameObject.Find("Player 4").GetComponent<PlayerInput>().PlayerNumber = shiftLeft(GameObject.Find("Player 4").GetComponent<PlayerInput>().PlayerNumber);
 
         print("Players shift left");
+
+        game_controller.PlayChangeCharacterEvent();
     }
 
     private void ActivateSpeechBubble()
