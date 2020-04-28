@@ -132,6 +132,7 @@ public class PlayerInput : MonoBehaviour
                 grabbed = true;
                 HeldItem = PickupPromptObject;
                 SpeechBubble.SetActive(false);
+                BubbleText.text = "";
                 PickupPromptOn = false;
 
                 // Put into UI Inventory
@@ -147,6 +148,7 @@ public class PlayerInput : MonoBehaviour
             else if(Input.GetButtonDown("B_Button_" + PlayerNumber))
             {
                 SpeechBubble.SetActive(false);
+                BubbleText.text = "";
                 PickupPromptOn = false;
             }
             return;
@@ -165,6 +167,7 @@ public class PlayerInput : MonoBehaviour
                 // Pickup the new item
                 HeldItem = SwapPromptObject;
                 SpeechBubble.SetActive(false);
+                BubbleText.text = "";
                 SwapPromptOn = false;
 
                 // Put into UI Inventory
@@ -177,6 +180,7 @@ public class PlayerInput : MonoBehaviour
             else if (Input.GetButtonDown("B_Button_" + PlayerNumber))
             {
                 SpeechBubble.SetActive(false);
+                BubbleText.text = "";
                 SwapPromptOn = false;
             }
             return;
@@ -652,7 +656,7 @@ public class PlayerInput : MonoBehaviour
                     BubbleText.text = "Curiously enough, the monsters of Lockbright enjoy music. It calms them.";
                     return;
                 case "Dispensary Note":
-                    BubbleText.text = "Please donate six examples of published works written in the language of our culture.";
+                    BubbleText.text = "Please donate seven examples of published works written in the language of our culture.";
                     return;
                 case "Lusty Lore":
                     BubbleText.text = "\"I must finish my cleaning, sir. The mistress will have my head if I do not!\"\n\"Cleaning? I have something for you- polish my spear.\"\n\"But sir! It's huge! It could take all night!\"\n\"Plenty of time, my sweet. Plenty of time.\"";
@@ -818,6 +822,7 @@ public class PlayerInput : MonoBehaviour
     private void DeactivateSpeechBubble()
     {
         SpeechBubble.SetActive(false);
+        BubbleText.text = "";
     }
 
 }

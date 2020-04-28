@@ -29,6 +29,7 @@ public class GameController : MonoBehaviour
     private bool CanBoilerBeTurnedOn = false;
     public Sprite RepairedBoiler;
     public GameObject Boiler;
+    public GameObject BoilerLight;
 
     // Ladder System
     public GameObject StudyLadder;
@@ -121,7 +122,7 @@ public class GameController : MonoBehaviour
         if (DustyRecordCounter == 0)
         {
             print("Moving Dusty Record into position");
-            DustyRecord.transform.position = new Vector3(125, -42 ,0);
+            DustyRecord.transform.position = new Vector3(140, 11 ,0);
         }
     }
 
@@ -134,6 +135,7 @@ public class GameController : MonoBehaviour
             // Swap out the boiler image
             Boiler.GetComponent<SpriteRenderer>().sprite = RepairedBoiler;
             BoilerIsOn = true;
+            BoilerLight.SetActive(true);
         }
     }
 
