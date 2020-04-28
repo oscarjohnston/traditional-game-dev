@@ -193,10 +193,10 @@ public class Interaction : MonoBehaviour
 
                 BubbleText.text = RewardText;
             }
-            // Activate sink in 10 seconds
+            // Activate sink in 20 seconds
             else if(!game_controller.IsBoilerOn())
             {
-                Invoke("SinkIsHot", 10f);
+                Invoke("SinkIsHot", 20f);
                 BubbleText.text = "Looks like the water will take a while to heat up";
                 return;
             }

@@ -711,7 +711,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.75
-  m_Text: 'Soon after our heros escape, they reported their finding to the town mayor.
+  m_Text: 'Soon after our heroes escape, they reported their finding to the town mayor.
     The task to temper Lockbright was then deemed "a lost cause". After careful consideration
     about the beautiful and historic house, the Town of Salem voted to set the house
     ablaze in a heat of holy fire, to purge the evil and cursed within.
@@ -1670,9 +1670,26 @@ MonoBehaviour:
   TakeDamageSound:
     m_PersistentCalls:
       m_Calls: []
+  ChangeCharacters:
+    m_PersistentCalls:
+      m_Calls: []
   TimeLeft: 0
   TimerText: {fileID: 0}
   GameOverText: {fileID: 0}
+  DustyRecord: {fileID: 0}
+  BookOfSeeds: {fileID: 0}
+  BookOfSprouts: {fileID: 0}
+  BookOfFlowers: {fileID: 0}
+  BookOfFruit: {fileID: 0}
+  RepairedBoiler: {fileID: 0}
+  Boiler: {fileID: 0}
+  BoilerLight: {fileID: 0}
+  StudyLadder: {fileID: 0}
+  LoungeLadder: {fileID: 0}
+  HalfMoonBrick: {fileID: 0}
+  CrescentMoonBrick: {fileID: 0}
+  EastCharm: {fileID: 0}
+  WestCharm: {fileID: 0}
 --- !u!4 &1863038944
 Transform:
   m_ObjectHideFlags: 0

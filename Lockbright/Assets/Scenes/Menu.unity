@@ -4810,8 +4810,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The scholar is knowledgable in all languages, even dead from ancient cultists.
-    She can interpret hints from written text  for others.
+  m_Text: The scholar is knowledgable in all languages, even dead ones from ancient
+    cults. She can interpret hints from written text  for others.
 --- !u!222 &1005120368
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7135,7 +7135,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: The acrobat's special ability is to run faster and climb normally dangerous
-    objects. She is adept at reaching areas no one else wants to.
+    objects. She is adept at reaching areas no one else can get to.
 --- !u!222 &1385424120
 CanvasRenderer:
   m_ObjectHideFlags: 0

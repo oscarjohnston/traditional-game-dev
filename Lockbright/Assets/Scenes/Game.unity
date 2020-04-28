@@ -51552,7 +51552,7 @@ MonoBehaviour:
   spawnPoint: {x: 125, y: 107, z: 0}
   spawned: 0
   RewardText: You got the Lusty Lore!
-  InteractionText: This shelf is full of lusy lores, but not in the common tongue.
+  InteractionText: This shelf is full of lusty lores, but not in the common tongue.
   SpawnsAMonster: 0
   returns: []
   IsBookshelf: 0
