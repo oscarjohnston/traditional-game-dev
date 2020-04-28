@@ -123,6 +123,7 @@ public class GameController : MonoBehaviour
         {
             print("Moving Dusty Record into position");
             DustyRecord.transform.position = new Vector3(140, 11 ,0);
+            DustyRecord.GetComponent<HeldItems>().CanPickThisUp = true;
         }
     }
 
