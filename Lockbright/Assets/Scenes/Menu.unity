@@ -3197,7 +3197,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The restorer is intent on healing others. Additionally, she is adept is
+  m_Text: The restorer is intent on healing others. Additionally, she is adept in
     renewing objects from old and decrepid to fresh and useful.
 --- !u!222 &586013499
 CanvasRenderer:
