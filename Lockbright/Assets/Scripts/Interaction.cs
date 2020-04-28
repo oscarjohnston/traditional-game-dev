@@ -314,16 +314,6 @@ public class Interaction : MonoBehaviour
                         // Otherwise, the requirement is at 0 and ready for reward
                         BubbleText.text = RewardText;
 
-
-                        if (reward != null)
-                        {
-                            HeldItem = reward;
-                            HeldItem.GetComponent<HeldItems>().CanPickThisUp = true;
-                            HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
-                            grabbed = true;
-                            spawned = true;
-                        }
-
                         // Handle Specific object's activation
                         if (musicPlayer)
                         {
@@ -338,6 +328,17 @@ public class Interaction : MonoBehaviour
 
                             // Move monster
                             fridgeMonster.SpawnMonster();
+
+                            return;
+                        }
+
+                        if (reward != null)
+                        {
+                            HeldItem = reward;
+                            HeldItem.GetComponent<HeldItems>().CanPickThisUp = true;
+                            HeldItem.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
+                            grabbed = true;
+                            spawned = true;
                         }
 
                         else if (this.gameObject.name == "Broken Boiler")
