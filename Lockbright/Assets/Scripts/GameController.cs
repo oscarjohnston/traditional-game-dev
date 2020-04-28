@@ -24,6 +24,11 @@ public class GameController : MonoBehaviour
     private int BookshelfCounter = 3;
     private static int DustyRecordCounter = 4;
     public GameObject DustyRecord;
+    // Bookshelf Icons
+    public GameObject BookOfSeeds;
+    public GameObject BookOfSprouts;
+    public GameObject BookOfFlowers;
+    public GameObject BookOfFruit;
 
     // Boiler Puzzle
     private bool BoilerIsOn = false;
@@ -190,5 +195,25 @@ public class GameController : MonoBehaviour
     public void PlayChangeCharacterEvent()
     {
         ChangeCharacters.Invoke();
+    }
+
+    public void ActivateSeeds()
+    {
+        BookOfSeeds.SetActive(true);
+    }
+
+    public void ActivateSprouts()
+    {
+        BookOfSprouts.SetActive(true);
+    }
+
+    public void ActivateFlowers()
+    {
+        BookOfFlowers.SetActive(true);
+    }
+
+    public void ActivateFruit()
+    {
+        BookOfFruit.SetActive(true);
     }
 }

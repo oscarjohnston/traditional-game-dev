@@ -297,6 +297,22 @@ public class Interaction : MonoBehaviour
                         {
                             print("Its a bookshelf, telling game controller to decrement counter");
                             game_controller.DecrementDustyRecordCounter();
+                            
+                            switch (HeldItem.name)
+                            {
+                                case "Book Of Seeds":
+                                    game_controller.ActivateSeeds();
+                                    return;
+                                case "Book Of Sprouts":
+                                    game_controller.ActivateSprouts();
+                                    return;
+                                case "Book Of Flowers":
+                                    game_controller.ActivateFlowers();
+                                    return;
+                                case "Book Of Fruit":
+                                    game_controller.ActivateFruit();
+                                    return;
+                            }
                         }
 
                         // If this item is not yet ready to be awarded, put in some text and return
