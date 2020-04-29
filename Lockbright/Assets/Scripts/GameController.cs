@@ -164,6 +164,7 @@ public class GameController : MonoBehaviour
         // Swap out the boiler image
         Boiler.GetComponent<SpriteRenderer>().sprite = RepairedBoiler;
         BoilerIsOn = true;
+        BoilerLight.SetActive(true);
     }
 
     public void ActivateLadderSystem()
