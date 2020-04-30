@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 92683012}
   - component: {fileID: 92683011}
   m_Layer: 5
-  m_Name: Body Text (2)
+  m_Name: Special Thanks Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -722,8 +722,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 35}
-  m_SizeDelta: {x: 550, y: 20}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 550, y: 78.1}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &92683011
 MonoBehaviour:
@@ -756,7 +756,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.75
-  m_Text: '... to Alex Johnstone and EAE from the University of Utah'
+  m_Text: 'To Alex Johnstone and EAE from the University of Utah
+
+
+    And to Freesound.org for the audio'
 --- !u!222 &92683012
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3300,7 +3303,7 @@ GameObject:
   - component: {fileID: 603859774}
   - component: {fileID: 603859773}
   m_Layer: 5
-  m_Name: Body Text (1)
+  m_Name: Developers Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3320,10 +3323,10 @@ RectTransform:
   m_Father: {fileID: 1701454768}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -80}
-  m_SizeDelta: {x: 550, y: 294.7}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &603859773
 MonoBehaviour:
@@ -3356,10 +3359,34 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.75
-  m_Text: "PRODUCER, PROJECT MANAGER, SOUND DESIGNER, \nLEVEL DESIGNER, GRAPHIC DESIGNER,
-    UI DESIGNER\n\nPenny Kite\n\nLEAD ENGINEER AND PROGRAMMER\n\nOscar Johnston\n\nGAME
-    AND PUZZLE PROGRAMMER\n\nKyle Georgi\n\nCHARACTER ARTIST AND ANIMATOR\n\nMilu
-    Gan\n\nENVIRONMENT AND OBJECT ARTIST\n\nBella D'Angelo"
+  m_Text: 'PRODUCER, PROJECT MANAGER, SOUND/LEVEL/GRAPHIC/UI DESIGNER
+
+
+    Penny Kite
+
+
+    LEAD ENGINEER AND PROGRAMMER
+
+
+    Oscar Johnston
+
+
+    GAME AND PUZZLE PROGRAMMER
+
+
+    Kyle Georgi
+
+
+    CHARACTER ARTIST AND ANIMATOR
+
+
+    Milu Gan
+
+
+    ENVIRONMENT AND OBJECT ARTIST
+
+
+    Bella D''Angelo'
 --- !u!222 &603859774
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4503,9 +4530,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
+    m_HighlightedColor: {r: 0.48235297, g: 0.4784314, b: 0.043137256, a: 1}
     m_PressedColor: {r: 0.2784314, g: 0.2784314, b: 0.2784314, a: 1}
-    m_SelectedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
+    m_SelectedColor: {r: 0.48235297, g: 0.4784314, b: 0.043137256, a: 1}
     m_DisabledColor: {r: 0.2784314, g: 0.2784314, b: 0.2784314, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -4632,9 +4659,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
+    m_HighlightedColor: {r: 0.48235297, g: 0.4784314, b: 0.043137256, a: 1}
     m_PressedColor: {r: 0.2784314, g: 0.2784314, b: 0.2784314, a: 1}
-    m_SelectedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
+    m_SelectedColor: {r: 0.48235297, g: 0.4784314, b: 0.043137256, a: 1}
     m_DisabledColor: {r: 0.2784314, g: 0.2784314, b: 0.2784314, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -10467,9 +10494,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
+    m_HighlightedColor: {r: 0.48235297, g: 0.4784314, b: 0.043137256, a: 1}
     m_PressedColor: {r: 0.2784314, g: 0.2784314, b: 0.2784314, a: 1}
-    m_SelectedColor: {r: 0.7843138, g: 0.7843138, b: 0.7843138, a: 1}
+    m_SelectedColor: {r: 0.48235297, g: 0.4784314, b: 0.043137256, a: 1}
     m_DisabledColor: {r: 0.2784314, g: 0.2784314, b: 0.2784314, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1

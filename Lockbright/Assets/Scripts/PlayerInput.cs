@@ -641,10 +641,10 @@ public class PlayerInput : MonoBehaviour
                     BubbleText.text = "In the last phase of life, the plant will produce a fruit that may be more delicious to consume in this stage.";
                     return;
                 case "Cookbook":
-                    BubbleText.text = "Cultist Wine: Tastes much like blood and is attractive to water-dwellers. Combine Pale Tonic, Fresh Mossflower, and Pomegranate together; then warm to body temperature.";
+                    BubbleText.text = "Cultist Wine: Tastes much like blood and is attractive to the monster in the sink. Combine Pale Tonic, Fresh Mossflower, and Pomegranate together; then boil on high.";
                     return;
                 case "Loose Ledger":
-                    BubbleText.text = "Stored in the westernmost bookcase should be the books of seeds and sprouts, in that order. The easternmost bookcase will store the books of flowers and fruit, in that order.";
+                    BubbleText.text = "Stored in the westernmost bookcase should be the books of seeds and sprouts. The center bookcase will store the books of flowers and fruit.";
                     return;
                 case "Book Of Sprouts":
                     BubbleText.text = "In the second phase of life, the seeds will grow to green, leafy sprouts.";
@@ -653,10 +653,10 @@ public class PlayerInput : MonoBehaviour
                     BubbleText.text = "In the third phase of life, the sprouts will grow to flowers. Strawberries, specifically, are white.";
                     return;
                 case "Monster Manual":
-                    BubbleText.text = "Curiously enough, the monsters of Lockbright enjoy music. It calms them.";
+                    BubbleText.text = "While one-eyed monsters of Lockbright are terrified of people, they are compelled by blood. Two-eyed monsters, however, enjoy music. It calms them.";
                     return;
                 case "Dispensary Note":
-                    BubbleText.text = "Please donate seven examples of published works written in the language of our culture.";
+                    BubbleText.text = "Please donate seven examples of published works written in the language of our culture: a diary, a lusty lore, a fiction, a manual, a ledger, a book of charms, and a cookbook.";
                     return;
                 case "Lusty Lore":
                     BubbleText.text = "\"I must finish my cleaning, sir. The mistress will have my head if I do not!\"\n\"Cleaning? I have something for you- polish my spear.\"\n\"But sir! It's huge! It could take all night!\"\n\"Plenty of time, my sweet. Plenty of time.\"";
@@ -668,7 +668,10 @@ public class PlayerInput : MonoBehaviour
                     BubbleText.text = "In the first phase of life, a seed should be planted in fertile soil, watered sufficiently, and provided plenty of natural light.";
                     return;
                 case "Master's Diary":
-                    BubbleText.text = "The boiler, when broken, was repaired by securing it with rope, installing a new heat-bulb, fueling it with glowing energy oil, and then it may be lit for continued use.";
+                    BubbleText.text = "The boiler, when broken, is repaired by securing it with rope, installing a new heat-bulb, fueling it with glowing oil, and then it may be lit for hot water.";
+                    return;
+                case "Faded Fiction":
+                    BubbleText.text = "Once upon a midnight dreary, while I pondered weak and weary, over a many quaint and curious volume of forgotten lore...";
                     return;
                 default:
                     BubbleText.text = "This item can't be read";
